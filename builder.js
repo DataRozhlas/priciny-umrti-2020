@@ -20,6 +20,11 @@ function uvozovky(text) {
   const srcText = text.replace(/&quot;/g, "\"");
   [...srcText].forEach((letter) => {
     switch (letter) {
+      case "„":
+      case "“":
+        uvozovkyCount += 1;
+        outText += letter;
+        break;
       case "\"":
         if (!isTag) {
           outText += uvozovkyCount % 2 ? "“" : "„";
