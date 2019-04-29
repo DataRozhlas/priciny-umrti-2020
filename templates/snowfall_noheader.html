@@ -1,25 +1,30 @@
 <div class="b-data__content" id="content">
-{libraries}
-<script type="text/javascript">document.getElementsByTagName('article')[0].classList.add('b-data--no-img');</script>
-{styles}
-<div class="row-main row-main--article">
-<h1 class="b-data__title b-data__title--sm">
-{title}
-</h1>
-</div>
-{column}
-<p class="text-bold text-lg">{perex}</p>
-</div>
+  {libraries}
+  <script type="text/javascript">
+    document.getElementsByTagName('article')[0].classList.add('b-data--no-img');
+  </script>
+  {styles}
 
-<!--[[ZPRAVY_SNOWFALL_METADATA:]]-->
-{column}
-{mainphoto}
+  <div class="row-main row-main--article">
+  <h1 class="b-data__title b-data__title--sm">
+    {title}
+  </h1>
+  </div>
 
-{content}
+  {column} 
+    <p class="text-bold text-lg">
+      {perex}
+    </p>
+  </div>
 
-<p class="meta meta--right meta--big">
-<!--[[ZPRAVY_SNOWFALL_AUTHORS:FOOTER]]-->
-</p>
-</div>
-<!--[[ZPRAVY_SNOWFALL_RELATED:ARTICLES]]-->
+  <!--[[ZPRAVY_SNOWFALL_METADATA:]]-->
+
+  {column}
+    {mainphoto}
+    {content}
+    <p class="meta meta--right meta--big">
+      <!--[[ZPRAVY_SNOWFALL_AUTHORS:FOOTER]]-->
+    </p>
+  </div>
+  <!--[[ZPRAVY_SNOWFALL_RELATED:ARTICLES]]-->
 </div>
