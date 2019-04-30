@@ -7,10 +7,16 @@
 <header class="b-data__header">
 	<div class="row-main">
 		<h1 class="b-data__title">
-			<strong>
-				{title}
+			<strong id="snfl-title-div">
+				<!--[[ZPRAVY_TITLE:]]-->
 			</strong>
 		</h1>
+
+		<script>
+			if (window.location.href.indexOf("www.irozhlas") < 0) {
+				document.getElementById("snfl-title-div").innerHTML = "{title}";
+			}
+		</script>
 
 		<p class="meta meta--lg">
 			<!--[[ZPRAVY_SNOWFALL_AUTHORS:]]-->

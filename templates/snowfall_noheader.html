@@ -6,9 +6,14 @@
   {styles}
 
   <div class="row-main row-main--article">
-  <h1 class="b-data__title b-data__title--sm">
-    {title}
-  </h1>
+    <h1 class="b-data__title b-data__title--sm" id="snfl-title-div">
+      <!--[[ZPRAVY_TITLE:]]-->
+    </h1>
+    <script>
+      if (window.location.href.indexOf("www.irozhlas") < 0) {
+        document.getElementById("snfl-title-div").innerHTML = "{title}";
+      }
+    </script>
   </div>
 
   {column} 
