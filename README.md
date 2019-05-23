@@ -12,7 +12,7 @@ Jelikož si každý projekt nese dost "svého" bince, je vhodné pro každý čl
 - Nový projekt: vytvoří složku s naklonovaným builderem
 
 ```bash
-smzd.py addnode nazev-projektu
+smzd.py add nazev-projektu
 ```
 
 - Nový projekt: vytvoří prázdnou složku
