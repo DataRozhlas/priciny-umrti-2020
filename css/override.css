@@ -1,15 +1,15 @@
-article li {
-    background: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-article ul, article ol {
+ul.snowfall, ol.snowfall {
     list-style: initial !important;
     font-size: medium !important;
     line-height: 1.5 !important;
 }
 
-article hr {
+ul.snowfall > li, ol.snowfall > li {
+    background: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+hr.snowfall {
     max-width: none !important;
 }
