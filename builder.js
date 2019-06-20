@@ -8,7 +8,7 @@ const webpackConfig = require("./webpack.config");
 const toWatch = ["./article.md", "./js", "./css"];
 
 const libraryPresets = {
-  jquery: "https://code.jquery.com/jquery-3.3.1.min.js",
+  jquery: "https://code.jquery.com/jquery-3.4.1.min.js",
   highcharts: "https://code.highcharts.com/highcharts.js",
   d3: "https://d3js.org/d3.v3.min.js",
 };
