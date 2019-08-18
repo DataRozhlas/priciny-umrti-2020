@@ -1,6 +1,4 @@
-﻿import { byeIE } from "./byeie"; // loučíme se s IE
-
-byeIE();
+﻿import "./byeie"; // loučíme se s IE
 
 /*
 // snadné načtení souboru pro každého!
