@@ -157,7 +157,9 @@ const build = async (mode) => {
 
 async function main() {
   if (process.argv[2] === "watch") {
-    process.stdout.write("Sledování...\n");
+    process.stdout.write("První build...\n");
+    await build("development");
+    process.stdout.write("\nSledování...\n");
     toWatch.forEach((name) => {
       let fsWait = false;
       fs.watch(name, async (event, filename) => {
