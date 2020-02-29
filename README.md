@@ -84,3 +84,10 @@ Build vytvoří `output.html`, jehož obsah následně vrazíte do hlavní polo�
 ## Kontrola na serveru
 
 Po pushnutí na GitHub článek najdete na adrese `data.irozhlas.cz/nazev-projektu`.
+
+## Volitelné assety
+
+Vložení fotogalerie  
+```html
+<!--[[ZPRAVY_PHOTOGALLERY_PLACEHOLDER:2]]-->
+```
