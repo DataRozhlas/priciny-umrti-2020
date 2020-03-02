@@ -91,3 +91,41 @@ Vložení fotogalerie
 ```html
 <!--[[ZPRAVY_PHOTOGALLERY_PLACEHOLDER:2]]-->
 ```
+
+A další...
+
+```html
+<!--[[ZPRAVY_...
+
+
+TITLE
+
+SUMMARY
+
+SVG (zde s dava name ikonky)
+
+SECTION
+
+DOMICIL
+
+AUDIO_PLAYER (+ fid)
+
+PHOTOGALLERY_PLACEHOLDER
+
+PHOTOVIEWER (
+SNOWFALL_RELATED
+SNOWFALL_METADATA
+SNOWFALL_KEYWORDS
+SNOWFALL_AUTHORS
+MAIN_IMAGE (+ image style)
+
+DATE_PUBLICATION (+ format, default Y-m-d)
+LIVEREPORT (+ id)
+ESPORT_TENNIS_RANKING (+ typ a tyden)
+ESPORT_SPORT_TABLE (+ id souteze a den)
+ESPORT_COMPETITION_ROUND (+ id souteze a kolo)
+TWEET (+ id)
+
+ARTICLE (+ nid, pozice, s fotkou ano/ne)
+ASSET (+ typ assetu - pouziva se jen pro filmovou recenzi)
+```
