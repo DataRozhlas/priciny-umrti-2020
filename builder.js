@@ -45,6 +45,14 @@ function uvozovky(text) {
   return outText;
 }
 
+function pevneMezery(text) {
+  [' a ', ' i ', ' o ', ' u ', ' k ', ' s ', ' v ', ' z '].forEach(pr => {
+    const re = new RegExp(pr, 'g');
+    text = text.replace(re, ' ' + pr.replace(/ /g, '') + '&nbsp;')
+  })
+  return text
+}
+
 const build = async (mode) => {
   webpackConfig.mode = mode;
   const compiler = webpack(webpackConfig);
@@ -53,6 +61,9 @@ const build = async (mode) => {
   const sourceParts = fs.readFileSync("./article.md", "utf8").split("---");
   const header = yaml(sourceParts[0]);
   let body = sourceParts[1];
+
+  body = pevneMezery(body)
+
 
   // setting up external libraries and styles set in the header
   let libLinks = "";
