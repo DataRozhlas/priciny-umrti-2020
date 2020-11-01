@@ -15,9 +15,15 @@ options: [] #wide, noheader (, nopic)
 <wide>
   <div id="prvni-republika-pribehy">
     <svg class="viz"></svg>
-    <div class="step" data-step="1"></div>
-    <div class="step" data-step="2"></div>
-    <div class="step" data-step="3"></div>
+    <div class="step" data-step="1">
+      <div class="step-text">Olololoo 1</div>
+    </div>
+    <div class="step" data-step="2">
+      <div class="step-text">Olololoo 2</div>
+    </div>
+    <div class="step" data-step="3">
+      <div class="step-text">Olololoo 3</div>
+    </div>
   </div>
 </wide>
 

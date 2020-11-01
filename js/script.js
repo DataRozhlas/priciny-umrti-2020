@@ -1,6 +1,6 @@
 ﻿import "./byeie"; // loučíme se s IE
 
-import "./prvni-republika"
+import "./prvni-republika-pribehy"
 
 /*
 // snadné načtení souboru pro každého!
