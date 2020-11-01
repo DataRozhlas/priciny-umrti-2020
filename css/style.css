@@ -1,0 +1,20 @@
+body {
+  /* TODO: vyresit mobile */
+  overflow: initial !important;
+}
+
+#prvni-republika-pribehy {
+  position: relative;
+}
+
+#prvni-republika-pribehy > .step {
+  height: 100vh;
+}
+
+#prvni-republika-pribehy > .viz {
+  position: sticky;
+  top: 10%;
+  height: 80vh;
+  width: 100%;
+  /* background: red; */
+}

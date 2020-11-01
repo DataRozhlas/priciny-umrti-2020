@@ -12,7 +12,14 @@ options: [] #wide, noheader (, nopic)
 
 ## Kapitola 2: První republika (1919-1948, války + Němci)
 
-<div id="prvni-republika-pribehy"></div>
+<wide>
+  <div id="prvni-republika-pribehy">
+    <svg class="viz"></svg>
+    <div class="step" data-step="1"></div>
+    <div class="step" data-step="2"></div>
+    <div class="step" data-step="3"></div>
+  </div>
+</wide>
 
 ## Kapitola 3: Reálný socialismus (1949-1989, zaostávání za Západem)
 
