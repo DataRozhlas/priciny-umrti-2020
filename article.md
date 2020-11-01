@@ -12,6 +12,8 @@ options: [] #wide, noheader (, nopic)
 
 ## Kapitola 2: První republika (1919-1948, války + Němci)
 
+<div id="prvni-republika-pribehy"></div>
+
 ## Kapitola 3: Reálný socialismus (1949-1989, zaostávání za Západem)
 
 ## Kapitola 4: Současnost (1989-2018, srovnávání s Evropou)

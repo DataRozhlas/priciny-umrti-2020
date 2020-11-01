@@ -1,5 +1,7 @@
 ﻿import "./byeie"; // loučíme se s IE
 
+import "./prvni-republika"
+
 /*
 // snadné načtení souboru pro každého!
 fetch("https://blabla.cz/blabla.json")
