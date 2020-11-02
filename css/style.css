@@ -8,23 +8,41 @@ body {
 }
 
 #prvni-republika-pribehy > .step {
-  height: 100vh;
   position: relative;
+  padding-bottom: 15vh;
+  z-index: 3;
+}
+
+/* Highlight active step for debug purposes */
+#prvni-republika-pribehy > .step {
+  border: 1px solid transparent;
+}
+#prvni-republika-pribehy > .step.is-active {
+  border: 1px solid #ddd;
+}
+
+#prvni-republika-pribehy > div:nth-child(2) {
+  margin-top: -90vh;
+}
+
+#prvni-republika-pribehy:after {
+  content: '';
+  display: block;
+  height: 80vh;
 }
 
 #prvni-republika-pribehy > .step > .step-text {
-  position: absolute;
-  top: 50%;
-  left: calc(50% - 100px);
-  width: 200px;
-  background: white;
-  padding: 30px;
-  box-shadow: 0px 2px 10px black;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 #prvni-republika-pribehy > .viz {
   position: sticky;
-  top: 10%;
+  top: 20%;
   height: 80vh;
   width: 100%;
+  background: white;
+  z-index: 4;
+  margin-top: 10vh;
+  padding: 20px;
 }

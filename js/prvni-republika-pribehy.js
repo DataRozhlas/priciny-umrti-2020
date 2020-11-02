@@ -8,14 +8,16 @@ import { setHighlightLine, setContextLine, setVisitedLine, setHighlightToAllLine
 
 const initScrollama = ({ vizSvg, vizSteps }) => {
   // instantiate the scrollama
-  const scroller = scrollama({ debug: true, offset: 0.5 });
+  const scroller = scrollama();
 
   // setup the instance, pass callback functions
   scroller
     .setup({
+      debug: true,
+      offset: 0.15,
       step: "#prvni-republika-pribehy .step",
     })
-    .onStepEnter(({ direction, index }) => {
+    .onStepEnter(({ element, direction, index }) => {
       console.log('onStepEnter', { direction, index })
 
       if (direction === 'down' && vizSteps[index - 1] && vizSteps[index - 1].stepDown) {
@@ -25,9 +27,13 @@ const initScrollama = ({ vizSvg, vizSteps }) => {
       if (direction === 'up' && vizSteps[index + 1] && vizSteps[index + 1].stepUp) {
         vizSteps[index + 1].stepUp({ vizSvg })
       }
+
+      element.classList.add('is-active')
     })
-    .onStepExit(({ direction, index }) => {
+    .onStepExit(({ element, direction, index }) => {
       console.log('onStepExit', { direction, index })
+
+      element.classList.remove('is-active')
     });
 
   // setup resize event
@@ -35,8 +41,8 @@ const initScrollama = ({ vizSvg, vizSteps }) => {
 }
 
 const initViz = ({ vizSvg, data, axes }) => {
-  const width = 500;
-  const height = 500
+  const { width, height } = vizSvg.node().getBoundingClientRect()
+
   const margin = ({ top: 20, right: 30, bottom: 30, left: 40 })
 
   const yAxis = g => g
@@ -167,6 +173,7 @@ const vizSteps = {
   })
 
   const vizSvg = d3.select("#prvni-republika-pribehy .viz")
+
   initViz({ vizSvg, data : dataByCat, axes: {x: years} });
   initScrollama({ vizSvg, vizSteps });  
 })();

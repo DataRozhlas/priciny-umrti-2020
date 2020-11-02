@@ -12,26 +12,42 @@ options: [] #wide, noheader (, nopic)
 
 ## Kapitola 2: První republika (1919-1948, války + Němci)
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod vel diam vel sollicitudin. Nulla vehicula fringilla tellus sit amet mattis. Fusce eget aliquam lorem, sed blandit arcu. Mauris nibh metus, gravida vel pellentesque vulputate, sollicitudin eu erat. Curabitur rutrum, ex ac pharetra congue, eros est consequat tellus, a semper lectus ex sed urna. Aliquam vitae neque sed tortor tincidunt condimentum. Aenean suscipit nibh nisl, quis elementum dolor efficitur id. Vestibulum molestie dapibus neque, a finibus lacus scelerisque vitae.
+
+Nulla pulvinar ultrices mi in facilisis. Sed fermentum nisl dui, nec lobortis felis iaculis et. Etiam sem arcu, placerat euismod feugiat sit amet, vehicula nec erat. Curabitur convallis, eros non aliquam accumsan, nunc urna convallis purus, quis pretium massa arcu eu massa. In ullamcorper venenatis lectus id volutpat. Nunc felis urna, aliquet eu nisi eu, sodales porttitor massa. Proin vel risus eu nunc elementum vestibulum. Proin eu posuere nisi. In tortor lorem, lacinia id vehicula in, faucibus congue nunc. Sed eu bibendum mi. 
+
 <wide>
   <div id="prvni-republika-pribehy">
     <svg class="viz"></svg>
     <div class="step" data-step="1">
-      <div class="step-text">Olololoo 0</div>
+      <div class="step-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod vel diam vel sollicitudin. Nulla vehicula fringilla tellus sit amet mattis.
+      </div>
     </div>
     <div class="step" data-step="2">
-      <div class="step-text">Olololoo 1</div>
+      <div class="step-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod vel diam vel sollicitudin. Nulla vehicula fringilla tellus sit amet mattis.
+      </div>
     </div>
     <div class="step" data-step="3">
-      <div class="step-text">Olololoo 2</div>
+      <div class="step-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod vel diam vel sollicitudin. Nulla vehicula fringilla tellus sit amet mattis.
+      </div>
     </div>
     <div class="step" data-step="4">
-      <div class="step-text">Olololoo 3</div>
+      <div class="step-text">
+        Olololoo 3
+      </div>
     </div>
     <div class="step" data-step="5">
-      <div class="step-text">Olololoo 4</div>
+      <div class="step-text">
+        Olololoo 4
+      </div>
     </div>
     <div class="step" data-step="6">
-      <div class="step-text">Olololoo 5</div>
+      <div class="step-text">
+        Olololoo 5
+      </div>
     </div>
   </div>
 </wide>
