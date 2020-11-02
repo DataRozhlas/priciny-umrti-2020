@@ -18,20 +18,26 @@ const initScrollama = ({ vizSvg, vizSteps }) => {
       step: "#prvni-republika-pribehy .step",
     })
     .onStepEnter(({ element, direction, index }) => {
-      console.log('onStepEnter', { direction, index })
+      const stepNo = parseInt(element.dataset.step, 10)
 
-      if (direction === 'down' && vizSteps[index - 1] && vizSteps[index - 1].stepDown) {
-        vizSteps[index - 1].stepDown({ vizSvg })
+      // console.log('onStepEnter', { direction, stepNo })
+
+      if (direction === 'down' && vizSteps[stepNo - 1] && vizSteps[stepNo - 1].stepDown) {
+        console.log(`Calling ${stepNo - 1}.stepDown`)
+        vizSteps[stepNo - 1].stepDown({ vizSvg })
       }
 
-      if (direction === 'up' && vizSteps[index + 1] && vizSteps[index + 1].stepUp) {
-        vizSteps[index + 1].stepUp({ vizSvg })
+      if (direction === 'up' && vizSteps[stepNo + 1] && vizSteps[stepNo + 1].stepUp) {
+        console.log(`Calling ${stepNo + 1}.stepUp`)
+        vizSteps[stepNo + 1].stepUp({ vizSvg })
       }
 
       element.classList.add('is-active')
     })
     .onStepExit(({ element, direction, index }) => {
-      console.log('onStepExit', { direction, index })
+      const stepNo = parseInt(element.dataset.step, 10)
+
+      // console.log('onStepExit', { direction, stepNo })
 
       element.classList.remove('is-active')
     });
@@ -97,13 +103,13 @@ const initViz = ({ vizSvg, data, axes }) => {
 }
 
 const vizSteps = {
-  0: {
+  1: {
     stepDown: ({ vizSvg }) => {
       setContextToAllLines({ svg: vizSvg, svgClass: "lines"})
       setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
     }
   },
-  1: {
+  2: {
     stepUp: ({ vizSvg }) => {
       setHighlightToAllLines({ svg: vizSvg, svgClass: "lines"})
     },
@@ -111,7 +117,7 @@ const vizSteps = {
       setHighlightLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
     }
   },
-  2: {
+  3: {
     stepUp: ({ vizSvg }) => {
       setContextLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
       setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
@@ -120,7 +126,7 @@ const vizSteps = {
       setVisitedLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné"})
     }
   }, 
-  3: {
+  4: {
     stepUp: ({ vizSvg }) => {
       setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
     },
@@ -129,7 +135,7 @@ const vizSteps = {
       setHighlightLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
     }
   },
-  4: {
+  5: {
     stepUp: ({ vizSvg }) => {
       setHighlightLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
       setContextLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
@@ -139,7 +145,7 @@ const vizSteps = {
       setHighlightLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
     }
   }, 
-  5: {
+  6: {
     stepUp: ({ vizSvg }) => {
       setHighlightLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
       setContextLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
