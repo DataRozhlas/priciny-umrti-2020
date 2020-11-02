@@ -16,13 +16,22 @@ options: [] #wide, noheader (, nopic)
   <div id="prvni-republika-pribehy">
     <svg class="viz"></svg>
     <div class="step" data-step="1">
-      <div class="step-text">Olololoo 1</div>
+      <div class="step-text">Olololoo 0</div>
     </div>
     <div class="step" data-step="2">
-      <div class="step-text">Olololoo 2</div>
+      <div class="step-text">Olololoo 1</div>
     </div>
     <div class="step" data-step="3">
+      <div class="step-text">Olololoo 2</div>
+    </div>
+    <div class="step" data-step="4">
       <div class="step-text">Olololoo 3</div>
+    </div>
+    <div class="step" data-step="5">
+      <div class="step-text">Olololoo 4</div>
+    </div>
+    <div class="step" data-step="6">
+      <div class="step-text">Olololoo 5</div>
     </div>
   </div>
 </wide>
