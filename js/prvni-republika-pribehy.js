@@ -2,11 +2,8 @@ import * as d3 from 'd3'
 import "intersection-observer";
 import scrollama from "scrollama";
 import data_1919_men from "../data/1919-1948_m_std_clean.js"
-import { colors, animationDuration } from "./visualization_config.js"
-
-const getKebabCase = (cat) => {
-  return cat.replace(/\s+/g, '-').toLowerCase();
-}
+import { getSvgElementId } from "./utilities.js"
+import { setHighlightLine, setContextLine, setVisitedLine, setHighlightToAllLines, setContextToAllLines } from "./scroll-actions.js"
 
 
 const initScrollama = ({ vizSvg, vizSteps }) => {
@@ -41,8 +38,6 @@ const initViz = ({ vizSvg, data, axes }) => {
   const width = 500;
   const height = 500
   const margin = ({ top: 20, right: 30, bottom: 30, left: 40 })
-
-  console.log("----", data)
 
   const yAxis = g => g
     .attr("transform", `translate(${margin.left},0)`)
@@ -85,7 +80,7 @@ const initViz = ({ vizSvg, data, axes }) => {
     .enter()
     .append("path")
     .attr("class", "lines")
-    .attr("id", d => "line-" + getKebabCase(d.category))
+    .attr("id", d => getSvgElementId( "line", d.category ))
     .attr("d", d => line(d.data) )
     .attr("stroke", "gray")
     .attr("stroke-width", 1)
@@ -98,154 +93,50 @@ const initViz = ({ vizSvg, data, axes }) => {
 const vizSteps = {
   0: {
     stepDown: ({ vizSvg }) => {
-      // unhighlight all categories
-      vizSvg
-        .selectAll("path.lines")
-        .transition()
-        .duration(animationDuration)
-        .ease(d3.easeLinear)
-        .attr("stroke", colors["context"])
-      
-      // highlight n. nakazlive a cizopasne
-      vizSvg
-        .select("#line-nemoci-nakažlivé-a-cizopasné")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["cizopasne"])
-        .attr("stroke-width", 2)
+      setContextToAllLines({ svg: vizSvg, svgClass: "lines"})
+      setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
     }
   },
   1: {
     stepUp: ({ vizSvg }) => {
-      // highlight all categories
-      vizSvg
-        .selectAll("path")
-        .transition()
-        .duration(animationDuration)
-        .ease(d3.easeLinear)
-        .attr("stroke", colors["default"])
-        .attr("stroke-width", 1)
+      setHighlightToAllLines({ svg: vizSvg, svgClass: "lines"})
     },
     stepDown: ({ vizSvg }) => {
-      // highlight n. obehu krevniho
-      vizSvg
-        .select("#line-nemoci-ústrojí-oběhu-krevního")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["krevni"])
-        .attr("stroke-width", 2)
+      setHighlightLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
     }
   },
   2: {
     stepUp: ({ vizSvg }) => {
-      // highlight n. obehu krevniho
-      vizSvg
-        .select("#line-nemoci-ústrojí-oběhu-krevního")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["context"])
-        .attr("stroke-width", 1)
-
-      // highlight n. nakazlive a cizopasne
-      vizSvg
-        .select("#line-nemoci-nakažlivé-a-cizopasné")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["cizopasne"])
-        .attr("stroke-width", 2)
+      setContextLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
+      setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
     },
     stepDown: ({ vizSvg }) => {
-      // unhighlight n. nakazlive a cizopasne
-      vizSvg
-        .select("#line-nemoci-nakažlivé-a-cizopasné")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["default"])
-        .attr("stroke-width", 1)
-
+      setVisitedLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné"})
     }
   }, 
   3: {
     stepUp: ({ vizSvg }) => {
-      // highlight n. nakazlive a cizopasne
-      vizSvg
-        .select("#line-nemoci-nakažlivé-a-cizopasné")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["cizopasne"])
-        .attr("stroke-width", 2)
+      setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
     },
     stepDown: ({ vizSvg }) => {
-      // unhighlight n. obehu krevniho
-      vizSvg
-      .select("#line-nemoci-ústrojí-oběhu-krevního")
-      .transition()
-      .duration(animationDuration)
-      .attr("stroke", colors["default"])
-      .attr("stroke-width", 1)
-
-      // highlight rakoviny
-      vizSvg
-      .select("#line-rakovina-a-jiné-nádory")
-      .transition()
-      .duration(animationDuration)
-      .attr("stroke", colors["rakovina"])
-      .attr("stroke-width", 2)
+      setVisitedLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního"})
+      setHighlightLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
     }
   },
   4: {
     stepUp: ({ vizSvg }) => {
-      // highlight n. obehu krevniho
-      vizSvg
-      .select("#line-nemoci-ústrojí-oběhu-krevního")
-      .transition()
-      .duration(animationDuration)
-      .attr("stroke", colors["krevni"])
-      .attr("stroke-width", 2)
-
-      // unhighlight rakoviny
-      vizSvg
-      .select("#line-rakovina-a-jiné-nádory")
-      .transition()
-      .duration(animationDuration)
-      .attr("stroke", colors["context"])
-      .attr("stroke-width", 1)
+      setHighlightLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
+      setContextLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
     },
     stepDown: ({ vizSvg }) => {
-      // unhighlight rakoviny
-      vizSvg
-        .select("#line-rakovina-a-jiné-nádory")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["default"])
-        .attr("stroke-width", 1)
-
-      // unhighlight rakoviny
-      vizSvg
-        .select("#line-válečné-akce-a-soudní-poprava")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["valka"])
-        .attr("stroke-width", 2)
+      setVisitedLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
+      setHighlightLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
     }
   }, 
   5: {
     stepUp: ({ vizSvg }) => {
-      // highlight rakoviny
-      vizSvg
-        .select("#line-rakovina-a-jiné-nádory")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["rakovina"])
-        .attr("stroke-width", 2)
-
-      // unhighlight rakoviny
-      vizSvg
-        .select("#line-válečné-akce-a-soudní-poprava")
-        .transition()
-        .duration(animationDuration)
-        .attr("stroke", colors["context"])
-        .attr("stroke-width", 1)
+      setHighlightLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
+      setContextLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
     },
     stepDown: ({ vizSvg }) => {
 
@@ -262,7 +153,6 @@ const vizSteps = {
 };
 
 (() => {
-  console.log(data_1919_men);
 
   const categories = new Set(data_1919_men.map(d => d.Skupina))
   const years = new Set(data_1919_men.map(d => d.Rok))
@@ -276,14 +166,7 @@ const vizSteps = {
     )
   })
 
-  console.log(dataByCat);
-
   const vizSvg = d3.select("#prvni-republika-pribehy .viz")
   initViz({ vizSvg, data : dataByCat, axes: {x: years} });
   initScrollama({ vizSvg, vizSteps });  
 })();
-
-const sumup = (sum, value) => {
-  return sum + value;
-}
-
