@@ -2,20 +2,12 @@ import * as d3 from 'd3'
 import "intersection-observer";
 import scrollama from "scrollama";
 import data_1919_men from "../data/1919-1948_m_std_clean.js"
+import { colors, animationDuration } from "./visualization_config.js"
 
 const getKebabCase = (cat) => {
   return cat.replace(/\s+/g, '-').toLowerCase();
 }
 
-const animationDuration = 100;
-const colors = {
-  "default" : "#AFB1A9",
-  "context" : "#E1E2DF",
-  "cizopasne" : "#f95d6a",
-  "krevni" : "#ffa600",
-  "rakovina" : "#a05195",
-  "valka": "#665191"
-}
 
 const initScrollama = ({ vizSvg, vizSteps }) => {
   // instantiate the scrollama
