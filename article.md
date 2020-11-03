@@ -18,40 +18,64 @@ Nulla pulvinar ultrices mi in facilisis. Sed fermentum nisl dui, nec lobortis fe
 
 <wide>
   <div id="prvni-republika-pribehy">
-    <svg class="viz"></svg>
+    <div class="viz-container">
+      <svg class="viz"></svg>
+      <div class="dots"></div>
+    </div>
     <div class="step" data-step="1">
       <div class="step-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod vel diam vel sollicitudin. Nulla vehicula fringilla tellus sit amet mattis.
+        <h3>Vývoj úmrtí 1919-1948</h3>
+        <p>
+          (Vyvoj standardizovaneho poctu umrti behem prvni republiky, pres 2. svetovou az do komunistickeho prevratu. Zmeny vysvetlime nasledujicimi pribehy!)
+        </p>
       </div>
     </div>
     <div class="step" data-step="2">
       <div class="step-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod vel diam vel sollicitudin. Nulla vehicula fringilla tellus sit amet mattis.
+        <h3>Posun v léčbě tuberkulózy</h3>
+        <p>
+          V poválečných letech byly největší hrozbou infekční nemoci. Nejobávanější byla tuberkulóza – mezi infekcemi měla na svědomí 60 až 70 procent úmrtí a zabíjela v každém věku, včetně dětského. Během první republiky se podařilo úmrtnost na infekce díky lepší zdravotní péči a lepší výživě snížit na třetinu.
+        </p>
       </div>
     </div>
     <div class="step" data-step="3">
       <div class="step-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod vel diam vel sollicitudin. Nulla vehicula fringilla tellus sit amet mattis.
+        <h3>Šiřící se obezita</h3>
+        <p>
+          Okamžik, kdy nemoci srdce přebraly prvenství v úmrtnosti od infekčních nemocí, je pro medicínu důležitý. U tuberkulózy je ochranným faktorem obezita; u nemocí srdce je naopak riziková. V následujících letech proto ubylo například inzerátů na bonbóny, po kterých spolehlivě ztloustnete.
+        </p>
       </div>
     </div>
     <div class="step" data-step="4">
       <div class="step-text">
-        Olololoo 3
+        <h3>Civilizační choroby</h3>
+        <p>
+          Rapidní prodloužení života znamenalo vyšší úmrtnost na civlizační choroby; typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce se mezi příčinami úmrtí objevily poprvé v roce 1895, ve dvacátých letech už šlo o nejčastější příčinu.
+        </p>
       </div>
     </div>
     <div class="step" data-step="5">
       <div class="step-text">
-        Olololoo 4
+        <h3>Civilizační choroby</h3>
+        <p>
+          Rapidní prodloužení života znamenalo vyšší úmrtnost na civlizační choroby; typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce se mezi příčinami úmrtí objevily poprvé v roce 1895, ve dvacátých letech už šlo o nejčastější příčinu.
+        </p>
       </div>
     </div>
     <div class="step" data-step="6">
       <div class="step-text">
-        Olololoo 5
+        <h3>Oběti 2. světové války</h3>
+        <p>
+          Během válečných let dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1 790 popravených. Ještě kritičtější byl konec války, kdy při vojenských akcích zemřelo asi 14 tisíc civilních osob. Přibylo také obětí úrazů, dopravních nehod, vražd a sebevražd. V datech chybí ti, které evidovaly německé úřady: deportované osoby i německá část populace. 
+        </p>
       </div>
     </div>
     <div class="step" data-step="7">
       <div class="step-text">
-        Olololoo 6
+        <h3>A zbytek!</h3>
+        <p>
+          Hrajte si.
+        </p>
       </div>
     </div>
   </div>

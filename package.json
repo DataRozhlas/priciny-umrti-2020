@@ -28,6 +28,7 @@
     "d3-transition": "^2.0.0",
     "intersection-observer": "^0.11.0",
     "js-yaml": "^3.13.1",
+    "lodash": "^4.17.20",
     "marked": "^0.7.0",
     "scrollama": "^2.2.1",
     "webpack": "^4.41.0"

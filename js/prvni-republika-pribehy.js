@@ -1,6 +1,9 @@
 import * as d3 from 'd3'
 import "intersection-observer";
 import scrollama from "scrollama";
+import times from 'lodash/times'
+import debounce from 'lodash/debounce'
+
 import data_1919_men from "../data/1919-1948_m_std_clean.js"
 import { getKebabCase, getSvgElementId } from "./utilities.js"
 import { setHighlightLine, setContextLine, setVisitedLine, setHighlightToAllLines, setContextToAllLines, setDarkToAllLines } from "./scroll-actions.js"
@@ -8,13 +11,11 @@ import { getCategoryColor, labelPosition } from './visualization_config.js';
 
 
 const initScrollama = ({ vizSvg, vizSteps }) => {
-  // instantiate the scrollama
   const scroller = scrollama();
 
-  // setup the instance, pass callback functions
   scroller
     .setup({
-      debug: true,
+      // debug: true,
       offset: 0.15,
       step: "#prvni-republika-pribehy .step",
     })
@@ -34,6 +35,15 @@ const initScrollama = ({ vizSvg, vizSteps }) => {
       }
 
       element.classList.add('is-active')
+
+      document.querySelectorAll('#prvni-republika-pribehy .dots .dot').forEach(dotElement => {
+        dotElement.classList.remove('is-active')
+      })
+
+      const dotElement = document.querySelector(`#prvni-republika-pribehy .dots .dot-step-${stepNo}`)
+      if (dotElement) {
+        dotElement.classList.add('is-active') 
+      }
     })
     .onStepExit(({ element, direction, index }) => {
       const stepNo = parseInt(element.dataset.step, 10)
@@ -43,12 +53,37 @@ const initScrollama = ({ vizSvg, vizSteps }) => {
       element.classList.remove('is-active')
     });
 
-  // setup resize event
   window.addEventListener("resize", scroller.resize);
+
+  const onDotClick = (stepNo) => {
+    const stepElements = document.querySelectorAll('#prvni-republika-pribehy .step')
+    stepElements.forEach(stepElement => {
+      if (stepElement.dataset.step === String(stepNo)) {
+        stepElement.scrollIntoView()
+      }
+    })
+  }
+
+  // Create dots
+  const stepsCount = document.querySelectorAll('#prvni-republika-pribehy .step').length
+  const dotsElement = document.querySelector('#prvni-republika-pribehy .dots')
+  times(stepsCount, index => {
+    const stepNo = index + 1
+
+    const dotButton = document.createElement('button');
+    dotButton.classList.add('dot')
+    dotButton.classList.add(`dot-step-${stepNo}`)
+    if (stepNo === 1) {
+      dotButton.classList.add('is-active')
+    }
+    dotButton.addEventListener('click', e => onDotClick(stepNo))
+
+    dotsElement.append(dotButton)
+  })
 }
 
 const initViz = ({ vizSvg, data, axes }) => {
-  const { width, height } = vizSvg.node().getBoundingClientRect()
+  const { width, height } = vizSvg.node().parentNode.getBoundingClientRect()
 
   const margin = ({ top: 20, right: 30, bottom: 200, left: 40 })
 
@@ -208,6 +243,17 @@ const vizSteps = {
 
   const vizSvg = d3.select("#prvni-republika-pribehy .viz")
 
-  initViz({ vizSvg, data : dataByCat, axes: {x: years} });
-  initScrollama({ vizSvg, vizSteps });  
+  initViz({ vizSvg, data: dataByCat, axes: { x: years } });
+  initScrollama({ vizSvg, vizSteps });
+
+  const reinitVizAfterResize = () => {
+    console.log('yo')
+    // Remove everything inside the svg element before reinitializing the viz
+    vizSvg.selectAll("*").remove();
+
+    initViz({ vizSvg, data: dataByCat, axes: { x: years } });
+  }
+  const reinitVizAfterResizeDebounced = debounce(reinitVizAfterResize, 200)
+
+  window.addEventListener('resize', reinitVizAfterResizeDebounced)
 })();
