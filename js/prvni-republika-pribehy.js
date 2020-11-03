@@ -93,8 +93,8 @@ const initViz = ({ vizSvg, data, axes }) => {
     .data(data)
     .enter()
     .append("path")
-      .attr("class", "lines")
       .attr("id", d => getSvgElementId( "line", d.category ))
+      .attr("class", "lines")
       .attr("d", d => line(d.data) )
       .attr("stroke", getCategoryColor("default"))
       .attr("stroke-width", 1)
@@ -111,10 +111,11 @@ const initViz = ({ vizSvg, data, axes }) => {
     .enter()
     .append('text')
     .text(d => d.category)
+    .attr('class', 'series-label')
+    .attr("id", d => getSvgElementId( "text", d.category ))
     .attr('x', d => x(labelPosition[getKebabCase(d.category)].x ))
     .attr('y', d => y(labelPosition[getKebabCase(d.category)].y ))
     .style('fill', d => getCategoryColor(getKebabCase(d.category)))
-    .attr('class', 'series-label')
 }
 
 const vizSteps = {

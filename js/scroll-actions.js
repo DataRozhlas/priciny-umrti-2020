@@ -8,6 +8,9 @@ export const setHighlightLine = ({ svg, category }) => {
     .duration(animationDuration)
     .attr("stroke", getCategoryColor(category))
     .attr("stroke-width", 2)
+
+  svg.select("#" + getSvgElementId("text", category))
+    .attr("visibility", "visible")
 }
 
 export const setContextLine = ({ svg, category }) => {
@@ -16,6 +19,9 @@ export const setContextLine = ({ svg, category }) => {
     .duration(animationDuration)
     .attr("stroke", getCategoryColor("context"))
     .attr("stroke-width", 1)
+    
+  svg.select("#" + getSvgElementId("text", category))
+    .attr("visibility", "hidden")
 }
 
 export const setVisitedLine = ({ svg, category }) => {
@@ -24,6 +30,9 @@ export const setVisitedLine = ({ svg, category }) => {
     .duration(animationDuration)
     .attr("stroke", getCategoryColor("visited"))
     .attr("stroke-width", 1)
+
+  svg.select("#" + getSvgElementId("text", category))
+    .attr("visibility", "hidden")
 }
 
 export const setDarkToAllLines = ({ svg, svgClass }) => {
@@ -33,8 +42,10 @@ export const setDarkToAllLines = ({ svg, svgClass }) => {
     .ease(d3.easeLinear)
     .attr("stroke", getCategoryColor("default"))
     .attr("stroke-width", 1)
-    // .attr("stroke", "#000")
-  }
+    
+  svg.selectAll("text.series-label")
+    .attr("visibility", "hidden")
+}
 
 export const setContextToAllLines = ({ svg, svgClass }) => {
   svg.selectAll("path." + svgClass)
@@ -43,6 +54,9 @@ export const setContextToAllLines = ({ svg, svgClass }) => {
     .ease(d3.easeLinear)
     .attr("stroke", getCategoryColor("context"))
     .attr("stroke-width", 1)
+
+  svg.selectAll("text.series-label")
+    .attr("visibility", "hidden")
 }
 
 export const setHighlightToAllLines = ({ svg, svgClass }) => {
@@ -57,5 +71,8 @@ export const setHighlightToAllLines = ({ svg, svgClass }) => {
       return getCategoryColor(getKebabCase(d.category))
     })
     .attr("stroke-width", 2)
+
+  svg.selectAll("text.series-label")
+    .attr("visibility", "visible")
 }
 

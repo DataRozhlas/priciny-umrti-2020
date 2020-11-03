@@ -38,9 +38,9 @@ export const getCategoryColor = (category) => {
 
 export const labelPosition = {
   "nemoci-nakažlivé-a-cizopasné" : { x: 1927, y: 250 },
-  "nemoci-ústrojí-oběhu-krevního" : { x: 1930, y: 380 },
+  "nemoci-ústrojí-oběhu-krevního" : { x: 1929, y: 380 },
   "rakovina-a-jiné-nádory" : { x: 1933, y: 220 },
-  "válečné-akce-a-soudní-poprava" :  { x: 1936, y: 100 },
+  "válečné-akce-a-soudní-poprava" :  { x: 1935, y: 100 },
   "stařecká-sešlost" :  { x: 1923, y: 500 },
   "nemoci-ústrojů-dýchacích" :  { x: 1937, y: 150 },
   "nemoci-soustavy-nervové-a-smyslových-ústrojů" :  { x: 1921, y: 140 },

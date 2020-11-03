@@ -49,6 +49,11 @@ Nulla pulvinar ultrices mi in facilisis. Sed fermentum nisl dui, nec lobortis fe
         Olololoo 5
       </div>
     </div>
+    <div class="step" data-step="7">
+      <div class="step-text">
+        Olololoo 6
+      </div>
+    </div>
   </div>
 </wide>
 
