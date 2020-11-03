@@ -50,7 +50,7 @@ const initScrollama = ({ vizSvg, vizSteps }) => {
 const initViz = ({ vizSvg, data, axes }) => {
   const { width, height } = vizSvg.node().getBoundingClientRect()
 
-  const margin = ({ top: 20, right: 30, bottom: 30, left: 40 })
+  const margin = ({ top: 20, right: 30, bottom: 200, left: 40 })
 
   const yAxis = g => g
     .attr("transform", `translate(${margin.left},0)`)
