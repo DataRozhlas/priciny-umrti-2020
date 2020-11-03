@@ -2,8 +2,9 @@ import * as d3 from 'd3'
 import "intersection-observer";
 import scrollama from "scrollama";
 import data_1919_men from "../data/1919-1948_m_std_clean.js"
-import { getSvgElementId } from "./utilities.js"
-import { setHighlightLine, setContextLine, setVisitedLine, setHighlightToAllLines, setContextToAllLines } from "./scroll-actions.js"
+import { getKebabCase, getSvgElementId } from "./utilities.js"
+import { setHighlightLine, setContextLine, setVisitedLine, setHighlightToAllLines, setContextToAllLines, setDarkToAllLines } from "./scroll-actions.js"
+import { getCategoryColor, labelPosition } from './visualization_config.js';
 
 
 const initScrollama = ({ vizSvg, vizSteps }) => {
@@ -87,19 +88,33 @@ const initViz = ({ vizSvg, data, axes }) => {
     .call(yAxis);
 
   // svg
-  const lines = svg.selectAll("path.lines")
+  const lines = svg.append("g").attr("class", "g-lines")
+  lines.selectAll("path.lines")
     .data(data)
     .enter()
     .append("path")
-    .attr("class", "lines")
-    .attr("id", d => getSvgElementId( "line", d.category ))
-    .attr("d", d => line(d.data) )
-    .attr("stroke", "gray")
-    .attr("stroke-width", 1)
-    .attr("stroke-linejoin", "round")
-    .attr("stroke-linecap", "round")
-    .attr("fill", "none")
-    
+      .attr("class", "lines")
+      .attr("id", d => getSvgElementId( "line", d.category ))
+      .attr("d", d => line(d.data) )
+      .attr("stroke", getCategoryColor("default"))
+      .attr("stroke-width", 1)
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
+      .attr("fill", "none")
+      .append('p')
+      .text("Hello")
+  
+  const labels = svg.append("g").attr('class', 'g-labels')
+  // const labels = d3.select('#prvni-republika-pribehy').append("div").attr('class', 'div-labels')
+  labels.selectAll('text')
+    .data(data)
+    .enter()
+    .append('text')
+    .text(d => d.category)
+    .attr('x', d => x(labelPosition[getKebabCase(d.category)].x ))
+    .attr('y', d => y(labelPosition[getKebabCase(d.category)].y ))
+    .style('fill', d => getCategoryColor(getKebabCase(d.category)))
+    .attr('class', 'series-label')
 }
 
 const vizSteps = {
@@ -111,7 +126,7 @@ const vizSteps = {
   },
   2: {
     stepUp: ({ vizSvg }) => {
-      setHighlightToAllLines({ svg: vizSvg, svgClass: "lines"})
+      setDarkToAllLines({ svg: vizSvg, svgClass: "lines"})
     },
     stepDown: ({ vizSvg }) => {
       setHighlightLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
@@ -151,17 +166,29 @@ const vizSteps = {
       setContextLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
     },
     stepDown: ({ vizSvg }) => {
+      setHighlightToAllLines({ svg: vizSvg, svgClass: "lines" })
+    }
+  },
+  7: {
+    stepUp: ({ vizSvg }) => {
+      setContextToAllLines({ svg: vizSvg, svgClass: "lines"})
+      setHighlightLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
+      setVisitedLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné"})
+      setVisitedLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního"})
+      setVisitedLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })     
+    },
+    stepDown: ({ vizSvg }) => {
 
     }
   },
-  // X: {
-  //   stepUp: ({ vizSvg }) => {
-
-  //   },
-  //   stepDown: ({ vizSvg }) => {
-
-  //   }
-  // },
+      // X: {
+      //   stepUp: ({ vizSvg }) => {
+    
+      //   },
+      //   stepDown: ({ vizSvg }) => {
+    
+      //   }
+      // },
 };
 
 (() => {
