@@ -110,3 +110,9 @@ html, body {
     border-width: 1px;
   }
 }
+
+.mock-content {
+  text-align: center;
+  font-style: italic;
+  margin: 4rem 0;
+}

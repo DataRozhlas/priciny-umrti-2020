@@ -6,15 +6,83 @@ styles: []
 libraries: [] #jquery, d3, highcharts, datatables
 options: [] #wide, noheader (, nopic)
 ---
-## Úvod: S covidem, nebo na covid?
 
-## Kapitola 1: Umírání za císaře pána (1785-1918, protodemografie)
+Představte si situaci: pacient, který se celoživotně léčí s cukrovkou a bere léky na vysoký krevní tlak, zemře na komplikace spojené s novým koronavirem. Jaká je hlavní příčina smrti? Diabetes, hypertenze, nebo covid-19?
 
-## Kapitola 2: První republika (1919-1948, války + Němci)
+Pod svícnem pandemie se zdá jasné, že koronavirus. Jenže bez souběžných zdravotních problémů – komorbidit – nemoc obvykle nezabíjí. „Příčina úmrtí: covid-19“ je neúplná informace, která skrývá, že jde o pacienta s dlouhodobými potížemi.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod vel diam vel sollicitudin. Nulla vehicula fringilla tellus sit amet mattis. Fusce eget aliquam lorem, sed blandit arcu. Mauris nibh metus, gravida vel pellentesque vulputate, sollicitudin eu erat. Curabitur rutrum, ex ac pharetra congue, eros est consequat tellus, a semper lectus ex sed urna. Aliquam vitae neque sed tortor tincidunt condimentum. Aenean suscipit nibh nisl, quis elementum dolor efficitur id. Vestibulum molestie dapibus neque, a finibus lacus scelerisque vitae.
+Opačný případ, kdy lékař upřednostní některou z dlouhodobých příčin, zase povede k tomu, že pacient bude chybět mezi oběťmi covidu. Přitom je evidentní, že virus mu život zkrátil, často výrazně. Lékaři mluví o 10 až 20 letech.
 
-Nulla pulvinar ultrices mi in facilisis. Sed fermentum nisl dui, nec lobortis felis iaculis et. Etiam sem arcu, placerat euismod feugiat sit amet, vehicula nec erat. Curabitur convallis, eros non aliquam accumsan, nunc urna convallis purus, quis pretium massa arcu eu massa. In ullamcorper venenatis lectus id volutpat. Nunc felis urna, aliquet eu nisi eu, sodales porttitor massa. Proin vel risus eu nunc elementum vestibulum. Proin eu posuere nisi. In tortor lorem, lacinia id vehicula in, faucibus congue nunc. Sed eu bibendum mi. 
+Statistika příčin úmrtí, která má značný vliv na podobu dnešní lékařské péče, přitom předpokládá, že příčina úmrtí je jen jedna. Pokud ale zdravotnická statistika systematicky upřednostní kterýkoliv ze zmíněných zdravotních problémů – což musí, nemají-li být data nahodilá – nutně přichází o část informace.
+
+Nahraďte covid-19 ve zmíněném příkladu chřipkou a máte představu o dilematu, které zdravotnictví řeší přinejmenším posledních sto let. Odpověď má přitom přímý následek: společnost, která „dá přednost“ vysokému tlaku, najde v rozpočtu víc peněz pro léky na hypertenzi; tam, kde preferují chřipku, dostane přednost vakcína proti této nemoci.
+
+<div id="graf-0.1-komorbidita" class="mock-content">
+Tady přibude graf / img
+
+Komorbidita úmrtí na covid
+
+Jaké onemocnění se často vyskytují současně při úmrtí na covid?
+</div>
+
+<h2> Kapitola 1: Umírání za císaře pána (1785-1918, protodemografie) </h2>
+
+Důvod, proč začali panovníci hlídat, kolik a jak starých poddaných mají, byly války. Důvod, proč začali sledovat, na co umírají, epidemie.
+
+V sedmnáctém století, kdy zakladatel epidemiologie John Graunt v Londýně krasopisně kreslil první úmrtnostní tabulky, byl ještě aktuální mor; na konci osmnáctého, kdy statistická novinka dorazila do rakouské říše, už morové rány odezněly. Místo něj teď křižovaly Evropu vlny pravých neštovic, cholery a záškrtu.
+
+V českých zemích byli prvními demografy kněží, zmiňuje v knize Tisíc let obyvatelstva českých zemí pozoruhodný demograf Vladimír Srb. „Církevní výkazy o konskribovaných duších“ evidovaly v každé farnosti sňatky, narození a úmrtí od roku 1762. Čísla se nedochovala.
+
+Světská moc následovala tu církevní se zpožděním dvou desítek let. Osvícenského císaře Josefa II. znají školáci díky tolerančnímu patentu a zrušení nevolnictví. Císař byl ovšem hlavně pragmatik a cílem josefinských reforem byla centralizace a racionalizace říše. Zavedl povinná psí vodítka a nenápadným patentem z února 1784 také úřední evidenci obyvatel. 
+
+První rakouská statistika úmrtí znala šest příčin smrti: nemoci obyčejné (gewöhnliche), místní (Ortskrankheit) a epidemické, sebevraždy, vraždy a úrazy. Pro sledování epidemií takové rozlišení stačilo.
+
+„Pokud jde o epidemické nemoci, byl největší zájem věnován neštovicím a choleře,“ píše Srb. „V roce 1808 vyšel dvorský dekret, který předpisoval lékařům hlášení hromadného výskytu úmrtí v obci na stejnou, ale kteroukoliv nemoc nadřízeným úřadům. Byla to jakási primitivní epidemiologická ohlašovací služba,“ tedy Protodušek. 
+
+<div id="fotka-1.0-nejstarsi-umrti" class="mock-content">
+Tady přibude fotka
+
+Nejstarší dochované příčiny úmrtí (1828)
+</div>
+
+Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předci dožívali v průměru stejného věku jako ve středověku – necelých třiceti let. Na základě kosterních nálezů odhadují historici střední délku života v osmém až desátém století na 27,6 roku. O tisíc let později to podle císařových dat bylo 28,2 roku.
+
+Data z 18. století přitom napovídají, co životy zkracovalo: riskantní byl zejména kojenecký a dětský věk; charakteristické zuby v grafu pak odpovídají válečným rokům a vlnám epidemií.
+
+<div id="1.1-graf-stredni-delka" class="mock-content">
+Tady přibude graf
+
+Střední délka života v 19. století
+
+(1806, 1810, 1814: „Vysoká úmrtnost na začátku století byla jedním z důsledků napoleonských válek.“; 1831-3: cholera; 1843: ?; 1848: revoluce; 1850, 1855: ?; 1866: prusko-rakouská válka; 1872-3: epidemie neštovic; 1000 let, 08.jpg + 17.jpg)
+</div>
+
+Život se začal výrazněji prodlužovat až na konci století s rozvojem veřejného zdravotnictví. Experiment s dostupnou lékařskou péčí si mocnářství nejprve odbylo mimo mocenská centra – na Moravě. Zákon o veřejném zdravotnictví zde začal platit v roce 1884, hned v dalších letech je evidentní propad úmrtnosti – u infekčních nemocí na polovinu. Pro velký úspěch tak císař prosadil s několikaletým zpožděním stejné zákony i v Čechách a rakouském Tyrolsku a Vorarlbersku.
+
+Když trochu předběhneme, během necelých 200 let se délka života protáhla z 28 na bezmála 80 let. Rozhodně ale nešlo o plynulou změnu: jsou období jako přelom 19. a 20. století, kdy se během jedné generace život prodloužil o 40 procent. V jiných dobách se nárůst délky života téměř zastavil, v některých desetiletích dokonce obrátil – například za reálného socialismu.
+
+<div id="1.2-graf-zmena-stredni-delka" class="mock-content">
+Tady přibude graf
+
+změna střední délky života (abs., %) 1830 až 2019
+
+třicetiletá období (1000 let, 17.jpg) 
+</div>
+
+<h2> Kapitola 2: První republika (1919-1948, války + Němci)</h2>
+
+<b>Mezinárodní klasifikace nemocí</b>
+Zavádí se bezprostřední příčina úmrtí: mkn-3 → mkn-5
+
+<b>Roztomilé diagnózy</b>
+
+<b>Vrozený nesprávný tvar srdce</b>
+
+<div id="2.0-graf-metodika-std-umrti" class="mock-content">
+Tady přibude graf
+
+Toto bude vysvětlení tří typů úmrtí (abs, rel, std)
+</div>
 
 <wide>
   <div id="prvni-republika-pribehy">
@@ -81,7 +149,8 @@ Nulla pulvinar ultrices mi in facilisis. Sed fermentum nisl dui, nec lobortis fe
   </div>
 </wide>
 
-## Kapitola 3: Reálný socialismus (1949-1989, zaostávání za Západem)
+
+<h2> Kapitola 3: Reálný socialismus (1949-1989, zaostávání za Západem) </h2>
 
 ## Kapitola 4: Současnost (1989-2018, srovnávání s Evropou)
 
