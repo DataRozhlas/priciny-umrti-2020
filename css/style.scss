@@ -1,0 +1,12 @@
+html, body {
+  // TODO: position:sticky potrebuje, aby v kazdym nadrazenym blokovym elementu
+  // nebyl overflow scroll nebo hidden. Nicmene ty se ted v html/body pouzivaj
+  // na mobilu ke schovani menu. Co s tim?
+  overflow: initial !important;
+}
+
+.mock-content {
+  text-align: center;
+  font-style: italic;
+  margin: 4rem 0;
+}

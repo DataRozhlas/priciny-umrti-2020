@@ -2,6 +2,7 @@ const fs = require("fs");
 const md = require("marked");
 const yaml = require("js-yaml").safeLoad;
 const webpack = require("webpack");
+const sass = require('sass');
 const CleanCSS = require("clean-css");
 const webpackConfig = require("./webpack.config");
 
@@ -90,10 +91,19 @@ const build = async (mode) => {
   header.styles = styleLinks;
 
   // compressing and inlining local CSS
-  process.stdout.write("Balení stylů... ");
+  process.stdout.write("Balení stylů... \n");
   let styleInput = "";
   fs.readdirSync("./css/").forEach((file) => {
-    styleInput += fs.readFileSync(`./css/${file}`, "utf8");
+    if (file.match(/.*\.scss$/g)) {
+      try {
+        const sassResult = sass.renderSync({ file: `./css/${file}` });
+
+        styleInput += sassResult.css.toString();
+      } catch (error) {
+        process.stdout.write(`Nepodařilo se zparsovat soubor se styly ${file}, error: \n`);
+        process.stdout.write(error.formatted + "\n\n");
+      }
+    }
   });
   header.styles += `<style>${new CleanCSS().minify(styleInput).styles}</style>`;
 
@@ -142,7 +152,7 @@ const build = async (mode) => {
   });
 
   // webpacking
-  process.stdout.write("Balení skriptů... ");
+  process.stdout.write("Balení skriptů... \n");
 
   const promise = new Promise((resolve) => {
     compiler.run((err, stats) => {
@@ -180,7 +190,7 @@ async function main() {
             fsWait = false;
           }, 1000);
 
-          process.stdout.write(`Soubor ${filename} změnen.\nRebuildování... `);
+          process.stdout.write(`Soubor ${filename} změnen.\nRebuildování... \n`);
           const built = await build("development");
           process.stdout.write(`\n${built} index.html je aktuální.\n`);
         }
