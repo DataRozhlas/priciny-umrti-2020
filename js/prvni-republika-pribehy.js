@@ -1,5 +1,4 @@
 import * as d3 from 'd3'
-import * as d3Annotation from 'd3-svg-annotation'
 import "intersection-observer";
 import scrollama from "scrollama";
 import times from 'lodash/times'
@@ -8,9 +7,6 @@ import debounce from 'lodash/debounce'
 import { getCategoryId, getSvgElementId } from "./utilities.js"
 import { setHighlightLine, setContextLine, setVisitedLine, setHighlightToAllLines, setContextToAllLines, setDarkToAllLines } from "./scroll-actions.js"
 import { getCategoryColor } from './visualization_config.js';
-
-// Extend d3 with the annotation library properties
-Object.assign(d3, d3Annotation)
 
 const initScrollama = ({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd, vizSteps, viz }) => {
   const scroller = scrollama();
