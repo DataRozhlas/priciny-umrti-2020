@@ -49,13 +49,12 @@ Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předc
 
 Data z 18. století přitom napovídají, co životy zkracovalo: riskantní byl zejména kojenecký a dětský věk; charakteristické zuby v grafu pak odpovídají válečným rokům a vlnám epidemií.
 
-<div id="1.2-graf-stredni-delka" class="mock-content">
+<img src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1.1 Střední délka života 19.stol 2020-11-09-03.svg" />
+<!-- <div id="1.1-graf-stredni-delka" class="mock-content">
 Tady přibude graf
-
 Střední délka života v 19. století
-
 (1806, 1810, 1814: „Vysoká úmrtnost na začátku století byla jedním z důsledků napoleonských válek.“; 1831-3: cholera; 1843: ?; 1848: revoluce; 1850, 1855: ?; 1866: prusko-rakouská válka; 1872-3: epidemie neštovic; 1000 let, 08.jpg + 17.jpg)
-</div>
+</div> -->
 
 Život se začal výrazněji prodlužovat až na konci století s rozvojem veřejného zdravotnictví. Experiment s dostupnou lékařskou péčí si mocnářství nejprve odbylo mimo mocenská centra – na Moravě. Zákon o veřejném zdravotnictví zde začal platit v roce 1884, hned v dalších letech je evidentní propad úmrtnosti – u infekčních nemocí na polovinu. Pro velký úspěch tak císař prosadil s několikaletým zpožděním stejné zákony i v Čechách a rakouském Tyrolsku a Vorarlbersku.
 
