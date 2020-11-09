@@ -49,7 +49,7 @@ Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předc
 
 Data z 18. století přitom napovídají, co životy zkracovalo: riskantní byl zejména kojenecký a dětský věk; charakteristické zuby v grafu pak odpovídají válečným rokům a vlnám epidemií.
 
-<div id="1.1-graf-stredni-delka" class="mock-content">
+<div id="1.2-graf-stredni-delka" class="mock-content">
 Tady přibude graf
 
 Střední délka života v 19. století
