@@ -6,6 +6,8 @@ export const colors = {
   "context" : "#E1E2DF",
   // "context" : "#0f0",
 
+  "celkem": "#000000",
+
   "nemoci-nakažlivé-a-cizopasné" : "#f95d6a",
   "rakovina-a-jiné-nádory" : "#a05195",
   "nemoci-ústrojí-oběhu-krevního" : "#ffa600",
@@ -34,30 +36,4 @@ export const animationDuration = 100;
 
 export const getCategoryColor = (category) => {
   return colors[category] ? colors[category] : colors["default"]
-}
-
-export const labelPosition = {
-  "nemoci-nakažlivé-a-cizopasné" : { x: 1927, y: 250 },
-  "nemoci-ústrojí-oběhu-krevního" : { x: 1929, y: 380 },
-  "rakovina-a-jiné-nádory" : { x: 1933, y: 220 },
-  "válečné-akce-a-soudní-poprava" :  { x: 1935, y: 100 },
-  "stařecká-sešlost" :  { x: 1923, y: 500 },
-  "nemoci-ústrojů-dýchacích" :  { x: 1937, y: 150 },
-  "nemoci-soustavy-nervové-a-smyslových-ústrojů" :  { x: 1921, y: 140 },
-  "nemoci-ústrojí-zažívacího" :  { x: 1930, y: 75 },
-  "sebevraždy" :  { x: 1922, y: 42 },
-
-
-  "neurčité-příčiny-smrti" :  { x: 1920, y: -50 },
-  "nemoci-rheumatické,-výživové,-žláz-s-vnitřním-vyměšováním,-jiné-nemoci-celkové-a-avitaminos" : { x: 1920, y: -70 },
-  "nemoci-krve-a-ústrojů-krvetvorných" :  { x: 1920, y: -90 },
-  "otravy-vleklé" :  { x: 1920, y: -110 },
-  "nemoci-ústrojí-močového-a-pohlavního" :  { x: 1930, y: -50 },
-  "nemoci-kůže-a-vaziva-podkožního" :  { x: 1930, y: -130 },
-  "nemoci-kostí-a-ústrojí-pohybu" :  { x: 1934, y: -90 },
-  "vrozené-vady-vývojové" :  { x: 1926, y: -110 },
-  "zvláštní-nemoci-útlého-věku" :  { x: 1920, y: -130 },
-  "vraždy-a-zabití" :  { x: 1920, y: -150 },
-  "úrazy-při-dopravě" :  { x: 1938, y: -130 },
-  "úrazy-a-otravy-mimo-dopravu" :  { x: 1938, y: -110 },
 }
