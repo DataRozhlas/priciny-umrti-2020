@@ -61,13 +61,12 @@ Střední délka života v 19. století
 
 Když trochu předběhneme, během necelých 200 let se délka života protáhla z 28 na bezmála 80 let. Rozhodně ale nešlo o plynulou změnu: jsou období jako přelom 19. a 20. století, kdy se během jedné generace život prodloužil o 40 procent. V jiných dobách se nárůst délky života téměř zastavil, v některých desetiletích dokonce obrátil – například za reálného socialismu.
 
-<div id="1.2-graf-zmena-stredni-delka" class="mock-content">
+<img src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1.1 Střední délka života 2020-11-09-03.svg" />
+<!-- <div id="1.2-graf-zmena-stredni-delka" class="mock-content">
 Tady přibude graf
-
 změna střední délky života (abs., %) 1830 až 2019
-
 třicetiletá období (1000 let, 17.jpg) 
-</div>
+</div> -->
 
 <h2> Kapitola 2: První republika (1919-1948, války + Němci)</h2>
 
@@ -94,27 +93,11 @@ Toto bude vysvětlení tří typů úmrtí (abs, rel, std)
       <div class="step-text">
         <h3>Vývoj úmrtí 1919-1948</h3>
         <p>
-          <em>Vyvoj standardizovaneho poctu umrti behem prvni republiky, pres 2. svetovou az do komunistickeho prevratu. Zmeny vysvetlime nasledujicimi pribehy!</em>
+          (Vyvoj standardizovaneho poctu umrti behem prvni republiky, pres 2. svetovou az do komunistickeho prevratu. Zmeny vysvetlime nasledujicimi pribehy!)
         </p>
       </div>
     </div>
     <div class="step" data-step="2">
-      <div class="step-text">
-        <h3>Od první republiky, přes 2. světovou válku</h3>
-        <p>
-          <em>Komentar k tomu, o jaka leta jde. Ne vsichni ctenari znaji tenhle kontext z hlavy. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
-        </p>
-      </div>
-    </div>
-    <div class="step" data-step="3">
-      <div class="step-text">
-        <h3>22 skupin příčin úmrtí</h3>
-        <p>
-          <em>Komentar k tomu, proc jich je 22. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ante sed urna pretium elementum sed eget tellus.</em>
-        </p>
-      </div>
-    </div>
-    <div class="step" data-step="4">
       <div class="step-text">
         <h3>Posun v léčbě tuberkulózy</h3>
         <p>
@@ -122,7 +105,7 @@ Toto bude vysvětlení tří typů úmrtí (abs, rel, std)
         </p>
       </div>
     </div>
-    <div class="step" data-step="5">
+    <div class="step" data-step="3">
       <div class="step-text">
         <h3>Šiřící se obezita</h3>
         <p>
@@ -130,23 +113,23 @@ Toto bude vysvětlení tří typů úmrtí (abs, rel, std)
         </p>
       </div>
     </div>
+    <div class="step" data-step="4">
+      <div class="step-text">
+        <h3>Civilizační choroby</h3>
+        <p>
+          Rapidní prodloužení života znamenalo vyšší úmrtnost na civlizační choroby; typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce se mezi příčinami úmrtí objevily poprvé v roce 1895, ve dvacátých letech už šlo o nejčastější příčinu.
+        </p>
+      </div>
+    </div>
+    <div class="step" data-step="5">
+      <div class="step-text">
+        <h3>Civilizační choroby</h3>
+        <p>
+          Rapidní prodloužení života znamenalo vyšší úmrtnost na civlizační choroby; typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce se mezi příčinami úmrtí objevily poprvé v roce 1895, ve dvacátých letech už šlo o nejčastější příčinu.
+        </p>
+      </div>
+    </div>
     <div class="step" data-step="6">
-      <div class="step-text">
-        <h3>Civilizační choroby</h3>
-        <p>
-          Rapidní prodloužení života znamenalo vyšší úmrtnost na civlizační choroby; typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce se mezi příčinami úmrtí objevily poprvé v roce 1895, ve dvacátých letech už šlo o nejčastější příčinu.
-        </p>
-      </div>
-    </div>
-    <div class="step" data-step="7">
-      <div class="step-text">
-        <h3>Civilizační choroby</h3>
-        <p>
-          Rapidní prodloužení života znamenalo vyšší úmrtnost na civlizační choroby; typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce se mezi příčinami úmrtí objevily poprvé v roce 1895, ve dvacátých letech už šlo o nejčastější příčinu.
-        </p>
-      </div>
-    </div>
-    <div class="step" data-step="8">
       <div class="step-text">
         <h3>Oběti 2. světové války</h3>
         <p>
@@ -154,7 +137,7 @@ Toto bude vysvětlení tří typů úmrtí (abs, rel, std)
         </p>
       </div>
     </div>
-    <div class="step" data-step="9">
+    <div class="step" data-step="7">
       <div class="step-text">
         <h3>A zbytek!</h3>
         <p>
