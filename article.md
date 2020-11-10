@@ -2,7 +2,7 @@ title: "Od moru ke covidu"
 perex: "S covidem, nebo na covid? Na otázku, která na jaře zamotala hlavu celé civilizaci – tedy jaká je příčina úmrtí – hledá medicína odpověď přes sto let. Odpověď přitom rozhoduje o tom, čemu zdravotnictví věnuje pozornost a kam tečou peníze."
 coverimg:
 coverimg_note:
-styles: []
+styles: [https://fonts.googleapis.com/css2?family=Asap]
 libraries: [] #jquery, d3, highcharts, datatables
 options: [] #wide, noheader (, nopic)
 ---
@@ -100,7 +100,7 @@ Toto bude vysvětlení tří typů úmrtí (abs, rel, std)
       <div class="step-text">
         <h3>Od první republiky, přes 2. světovou válku</h3>
         <p>
-          <em>Komentar k tomu, o jaka leta jde. Ne vsichni ctenari znaji tenhle kontext z hlavy. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
+          <em>Kratky komentar k zobrazovanemu obdobi.</em>
         </p>
       </div>
     </div>
@@ -108,7 +108,7 @@ Toto bude vysvětlení tří typů úmrtí (abs, rel, std)
       <div class="step-text">
         <h3>22 skupin příčin úmrtí</h3>
         <p>
-          <em>Komentar k tomu, proc jich je 22. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ante sed urna pretium elementum sed eget tellus.</em>
+          <em>Komentar k tomu, proc jich je 22.</em>
         </p>
       </div>
     </div>
@@ -138,17 +138,17 @@ Toto bude vysvětlení tří typů úmrtí (abs, rel, std)
     </div>
     <div class="step" data-step="7">
       <div class="step-text">
-        <h3>Civilizační choroby</h3>
+        <h3>Oběti 2. světové války</h3>
         <p>
-          Rapidní prodloužení života znamenalo vyšší úmrtnost na civlizační choroby; typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce se mezi příčinami úmrtí objevily poprvé v roce 1895, ve dvacátých letech už šlo o nejčastější příčinu.
+          Během válečných let dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1 790 popravených. Ještě kritičtější byl konec války, kdy při vojenských akcích zemřelo asi 14 tisíc civilních osob. Přibylo také obětí úrazů, dopravních nehod, vražd a sebevražd. V datech chybí ti, které evidovaly německé úřady: deportované osoby i německá část populace. 
         </p>
       </div>
     </div>
     <div class="step" data-step="8">
       <div class="step-text">
-        <h3>Oběti 2. světové války</h3>
+        <h3>Ženy vs. muži</h3>
         <p>
-          Během válečných let dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1 790 popravených. Ještě kritičtější byl konec války, kdy při vojenských akcích zemřelo asi 14 tisíc civilních osob. Přibylo také obětí úrazů, dopravních nehod, vražd a sebevražd. V datech chybí ti, které evidovaly německé úřady: deportované osoby i německá část populace. 
+          <em>Za Heydrichiady a osvobozovacich boju umiralo vyrazne vice muzu nez zen.</em>
         </p>
       </div>
     </div>
