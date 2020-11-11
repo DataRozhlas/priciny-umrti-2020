@@ -5,18 +5,13 @@ import times from 'lodash/times'
 import debounce from 'lodash/debounce'
 import kebabCase from 'lodash/kebabCase'
 
-import { getCategoryId, getSvgElementId } from "./utilities.js"
-import { setHighlightLine, setContextLine, setVisitedLine, setHighlightToAllLines, setContextToAllLines, setDarkToAllLines } from "./scroll-actions.js"
-import { getCategoryColor } from './visualization_config.js';
-import { active } from 'd3';
-
 const initScrollama = ({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd, vizSteps, viz }) => {
   const scroller = scrollama();
 
   scroller
     .setup({
       // debug: true,
-      offset: 0.15,
+      offset: 0.2,
       step: "#prvni-republika-pribehy .step",
     })
     .onStepEnter(({ element, direction, index }) => {
@@ -81,9 +76,12 @@ const initScrollama = ({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd, vizS
     dotsElement.append(dotButton)
   })
 
-  return () => {
-    window.removeEventListener("resize", scroller.resize);    
-    scroller.destroy()
+  return {
+    destroy: () => {
+      window.removeEventListener("resize", scroller.resize);    
+      scroller.destroy()
+      dotsElement.selectAll('*').remove()
+    }
   }
 }
 
@@ -120,13 +118,6 @@ const initViz = ({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd }) => {
     .call(d3.axisLeft(yTotal))
     // Remove the axis line to make the chart lighter
     .call(g => g.select(".domain").attr('stroke-width', 0))
-    // .call(g => g.select(".domain").remove())
-    // TODO: add label "standardizované úmrtí na 100 tis. obyv."
-    // .call(g => g.select(".tick:last-of-type text").clone()
-    //   .attr("x", 3)
-    //   .attr("text-anchor", "start")
-    //   .attr("font-weight", "bold")
-    //   .text("Yo"))
 
   const xAxis = g => g
     .attr("transform", `translate(0,${height - vizMargin.bottom})`)
@@ -137,11 +128,11 @@ const initViz = ({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd }) => {
         .tickFormat(d3.timeFormat('%Y'))
     )
 
-    vizSvg.append("g")
+  vizSvg.append("g")
     .attr("class", "g-axis-x")
     .call(xAxis);
 
-    vizSvg.append("g")
+  vizSvg.append("g")
     .attr("class", "g-axis-y")
     .call(yAxis);
 
@@ -166,7 +157,7 @@ const initViz = ({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd }) => {
     .x(d => x(d3.timeParse('%Y')(d.rok)))
     .y(d => yCategories(d.value ? d.value : 0))
 
-  const svgLinesG = vizSvg.append("g")
+  vizSvg.append("g")
     .attr("class", "g-lines")
   
   const totalCategory = data1919MzStd.find(category => category.skupina === 'Celkem')
@@ -178,36 +169,21 @@ const initViz = ({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd }) => {
     style: 'active',
     activeColor: categoryColorsActive['Celkem']
   })
-
-  // svgLinesG.selectAll("path.lines")
-  //   // Display only the total line
-  //   .data(data1919MzStd.filter(category => category.skupina === 'Celkem'))
-  //   .enter()
-  //   .append("path")
-  //     .attr("id", category => getSvgElementId( "prvni-republika-pribehy-line", category.skupina ))
-  //     .attr("class", "lines")
-  //     .attr("d", category => lineTotal(category.data))
-  //     .attr("stroke", getCategoryColor('celkem'))
-  //     .attr("stroke-width", 2)
-  //     .attr("stroke-linejoin", "round")
-  //     .attr("stroke-linecap", "round")
-  //     .attr("fill", "none")
   
   // 4. Labels
 
-  // const svgLabelsG = svg.append("g")
-  //   .attr('class', 'g-labels')
+  vizSvg.append("g")
+    .attr('class', 'g-line-labels')
 
-  // svgLabelsG.selectAll('text')
-  //   .data(data1919MzStdWithoutTotal)
-  //   .enter()
-  //   .append('text')
-  //   .text(category => category.skupina)
-  //   .attr('class', 'series-label')
-  //   .attr("id", category => getSvgElementId("prvni-republika-pribehy-label", category.skupina))
-  //   .attr('x', category => x(labelPosition[getCategoryId(category.skupina)].x))
-  //   .attr('y', category => y(labelPosition[getCategoryId(category.skupina)].y))
-  //   .style('fill', category => getCategoryColor(getCategoryId(category.skupina)))
+  addCategoryLineLabel({
+    vizSvg,
+    categoryName: 'Celkem',
+    position: {
+      x: x(categoryLineLabelPositions['Celkem'].x),
+      y: yTotal(categoryLineLabelPositions['Celkem'].y),
+      textAnchor: categoryLineLabelPositions['Celkem'].textAnchor
+    }
+  })
 
   return {
     x,
@@ -217,13 +193,15 @@ const initViz = ({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd }) => {
     height,
     lineTotal,
     lineCategories,
-    svgLinesG
+    destroy: () => {
+      vizSvg.selectAll('*').remove();
+    }
   }
 }
 
 const vizSteps = {
   2: {
-    fromPrevious: ({ vizSvg, viz, data1919MzStd }) => {
+    fromPrevious: ({ vizSvg, viz }) => {
       const { x, yTotal } = viz
 
       const svgXAxisAnnotationsG = vizSvg.append('g')
@@ -255,7 +233,7 @@ const vizSteps = {
         .attr('height', yTotal(0) - yTotal(2200) + 50)
         .attr('x', x(d3.timeParse('%Y')(1939)))
         .attr('y', yTotal(2200))
-        .style("fill", "#f1f1f1")
+        .style("fill", "#f5f5f5")
         .attr('opacity', 0)
         .transition()
         .duration(700)
@@ -324,7 +302,7 @@ const vizSteps = {
 
   3: {
     fromPrevious: ({ vizSvg, viz, data1919MzStd }) => {
-      const { x, yCategories, lineTotal, lineCategories, svgLinesG } = viz
+      const { x, yTotal, yCategories, lineTotal, lineCategories } = viz
 
       const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
       const data1919MzStdCategoryTotal = data1919MzStd.find(category => category.skupina === 'Celkem')
@@ -347,7 +325,8 @@ const vizSteps = {
         })
       })
 
-      // 3. Animation part 1: "Break" the total line into category lines
+      // 3. Animation part 1: "Break" the total line into category lines and fade away
+      // the total line label
 
       data1919MzStdWithoutTotal.forEach(category => {
         changeCategoryLine({
@@ -358,6 +337,18 @@ const vizSteps = {
           duration: 700,
           style: 'anonymous'
         })
+      })
+
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Celkem',
+        position: {
+          x: x(categoryLineLabelPositions['Celkem'].x),
+          y: yTotal(categoryLineLabelPositions['Celkem'].y),
+          textAnchor: categoryLineLabelPositions['Celkem'].textAnchor
+        },
+        opacity: 0,
+        duration: 700
       })
 
       // 4. Animation part 2: Change the scale of Y axis and lines to match the categories
@@ -422,7 +413,7 @@ const vizSteps = {
       
     },
     backToPrevious: ({ vizSvg, viz, data1919MzStd }) => {
-      const { yTotal, lineTotal } = viz
+      const { x, yTotal, lineTotal } = viz
 
       const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
       const data1919MzStdCategoryTotal = data1919MzStd.find(category => category.skupina === 'Celkem')
@@ -433,6 +424,17 @@ const vizSteps = {
         d: lineTotal(data1919MzStdCategoryTotal.data),
         style: 'active',
         activeColor: categoryColorsActive['Celkem']
+      })
+
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Celkem',
+        position: {
+          x: x(categoryLineLabelPositions['Celkem'].x),
+          y: yTotal(categoryLineLabelPositions['Celkem'].y),
+          textAnchor: categoryLineLabelPositions['Celkem'].textAnchor
+        },
+        opacity: 1
       })
 
       data1919MzStdWithoutTotal.forEach(category => {
@@ -455,6 +457,8 @@ const vizSteps = {
       changeActiveNonTotalCategoryLines({
         vizSvg,
         line: viz.lineCategories,
+        x: viz.x,
+        y: viz.yCategories,
         data1919MzStd,
         activeCategoryNames: ['Nemoci nakažlivé a cizopasné']
       })
@@ -472,6 +476,8 @@ const vizSteps = {
           style: 'anonymous'
         })
       })
+
+      removeCategoryLineLabel({ vizSvg, categoryName: 'Nemoci nakažlivé a cizopasné' })
     }
   },
 
@@ -480,6 +486,8 @@ const vizSteps = {
       changeActiveNonTotalCategoryLines({
         vizSvg,
         line: viz.lineCategories,
+        x: viz.x,
+        y: viz.yCategories,
         data1919MzStd,
         activeCategoryNames: ['Nemoci nakažlivé a cizopasné', 'Nemoci ústrojí oběhu krevního']
       })
@@ -488,6 +496,8 @@ const vizSteps = {
       changeActiveNonTotalCategoryLines({
         vizSvg,
         line: viz.lineCategories,
+        x: viz.x,
+        y: viz.yCategories,
         data1919MzStd,
         activeCategoryNames: ['Nemoci nakažlivé a cizopasné']
       })
@@ -499,6 +509,8 @@ const vizSteps = {
       changeActiveNonTotalCategoryLines({
         vizSvg,
         line: viz.lineCategories,
+        x: viz.x,
+        y: viz.yCategories,
         data1919MzStd,
         activeCategoryNames: ['Rakovina a jiné nádory']
       })
@@ -507,6 +519,8 @@ const vizSteps = {
       changeActiveNonTotalCategoryLines({
         vizSvg,
         line: viz.lineCategories,
+        x: viz.x,
+        y: viz.yCategories,
         data1919MzStd,
         activeCategoryNames: ['Nemoci nakažlivé a cizopasné', 'Nemoci ústrojí oběhu krevního']
       })
@@ -518,6 +532,8 @@ const vizSteps = {
       changeActiveNonTotalCategoryLines({
         vizSvg,
         line: viz.lineCategories,
+        x: viz.x,
+        y: viz.yCategories,
         data1919MzStd,
         activeCategoryNames: ['Válečné akce a soudní poprava']
       })
@@ -528,6 +544,8 @@ const vizSteps = {
       changeActiveNonTotalCategoryLines({
         vizSvg,
         line: viz.lineCategories,
+        x: viz.x,
+        y: viz.yCategories,
         data1919MzStd,
         activeCategoryNames: ['Rakovina a jiné nádory']
       })
@@ -544,9 +562,26 @@ const vizSteps = {
       const data1919MStdCategoryWar = data1919MStd.find(category => category.skupina === categoryWarName)
       const data1919ZStdCategoryWar = data1919ZStd.find(category => category.skupina === categoryWarName)
 
-      // 1. Instantly remove the men+women category war line
+      // 1. Instantly remove the men+women category war line and the label
 
       removeCategoryLine({ vizSvg, categoryName: 'Válečné akce a soudní poprava' })
+
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava'].textAnchor
+        },
+        opacity: 0,
+        duration: 700
+      })
+
+      removeCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava',
+      })
 
       // 2. Instantly add separate men and women lines using the men+women data
 
@@ -565,7 +600,7 @@ const vizSteps = {
         activeColor: categoryColorsActive['Válečné akce a soudní poprava']
       })
 
-      // 3. Break the men+women line to the separate lines using animation
+      // 3. Break the men+women line to the separate lines using animation and add labels
 
       changeCategoryLine({
         vizSvg,
@@ -584,10 +619,56 @@ const vizSteps = {
         duration: 700
       })
 
+      addCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava - muži',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].textAnchor
+        },
+        opacity: 0
+      })
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava - muži',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].textAnchor
+        },
+        opacity: 1,
+        duration: 700
+      })
+
+      addCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava - ženy',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].textAnchor
+        },
+        opacity: 0
+      })
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava - ženy',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].textAnchor
+        },
+        opacity: 1,
+        duration: 700
+      })
     },
     backToPrevious: ({ vizSvg, viz, data1919MzStd }) => {
       removeCategoryLine({ vizSvg, categoryName: 'Válečné akce a soudní poprava - muži' })
       removeCategoryLine({ vizSvg, categoryName: 'Válečné akce a soudní poprava - ženy' })
+
+      removeCategoryLineLabel({ vizSvg, categoryName: 'Válečné akce a soudní poprava - muži' })
+      removeCategoryLineLabel({ vizSvg, categoryName: 'Válečné akce a soudní poprava - ženy' })
 
       const categoryWarName = 'Válečné akce a soudní poprava'
       const data1919MzStdCategoryWar = data1919MzStd.find(category => category.skupina === categoryWarName)
@@ -603,6 +684,8 @@ const vizSteps = {
       changeActiveNonTotalCategoryLines({
         vizSvg,
         line: viz.lineCategories,
+        x: viz.x,
+        y: viz.yCategories,
         data1919MzStd,
         activeCategoryNames: ['Válečné akce a soudní poprava']
       })
@@ -614,7 +697,7 @@ const vizSteps = {
       const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
       const data1919MzStdCategoryWar = data1919MzStd.find(category => category.skupina === 'Válečné akce a soudní poprava')
 
-      // 1. Animate the separate men and women category war lines together
+      // 1. Animate the separate men and women category war lines together and fade away labels (and remove them)
 
       changeCategoryLine({
         vizSvg,
@@ -632,6 +715,32 @@ const vizSteps = {
         activeColor: categoryColorsActive['Válečné akce a soudní poprava'],
         duration: 700
       })
+      
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava - muži',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].textAnchor
+        },
+        opacity: 0,
+        duration: 700
+      })
+      removeCategoryLineLabel({ vizSvg, categoryName: 'Válečné akce a soudní poprava - muži', delay: 700 })
+
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava - ženy',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].textAnchor
+        },
+        opacity: 0,
+        duration: 700
+      })
+      removeCategoryLineLabel({ vizSvg, categoryName: 'Válečné akce a soudní poprava - ženy', delay: 700 })
 
       // 2. Then instantly remove the separate lines and replace them with single men+women line again
  
@@ -695,129 +804,28 @@ const vizSteps = {
         style: 'active',
         activeColor: categoryColorsActive['Válečné akce a soudní poprava - ženy']
       })
+
+      addCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava - muži',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].textAnchor
+        }
+      })
+      addCategoryLineLabel({
+        vizSvg,
+        categoryName: 'Válečné akce a soudní poprava - ženy',
+        position: {
+          x: viz.x(categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].x),
+          y: viz.yCategories(categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].y),
+          textAnchor: categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].textAnchor
+        }
+      })
     }
   }
-
-  // 1: {
-  //   stepDown: ({ vizSvg }) => {
-  //     // const annotations = [
-  //     //   {
-  //     //     note: {
-  //     //       label: 'Yo',
-  //     //       title: 'Foo'
-  //     //     },
-  //     //     data: {
-  //     //       x: data.timeParse('%Y')(1919)
-  //     //     },
-  //     //     subject: {
-  //     //       y1: margin.top,
-  //     //       y2: height - margin.bottom
-  //     //     }
-  //     //   }
-  //     // ]
-
-  //     // const makeAnnotations = d3.annotation()
-  //     //   .type(d3.annotationXYThreshold)
-  //     //   .annotations(annotations)
-
-  //     // vizSvg.append('g')
-  //     //   .attr('class', 'g-annotations')
-  //     //   .call(makeAnnotations)
-  //   }
-  // },
-  // 2: {
-  //   stepDown: () => {
-
-  //   }
-  // },
-  // 3: {
-  //   stepDown: () => {
-
-  //   }
-  // }
-
-
-  // 1: {
-  //   stepDown: ({ vizSvg }) => {
-  //     setContextToAllLines({ svg: vizSvg, svgClass: "lines"})
-  //     setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
-  //   }
-  // },
-  // 2: {
-  //   stepUp: ({ vizSvg }) => {
-  //     setDarkToAllLines({ svg: vizSvg, svgClass: "lines"})
-  //   },
-  //   stepDown: ({ vizSvg }) => {
-  //     setHighlightLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
-  //   }
-  // },
-  // 3: {
-  //   stepUp: ({ vizSvg }) => {
-  //     setContextLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
-  //     setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
-  //   },
-  //   stepDown: ({ vizSvg }) => {
-  //     setVisitedLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné"})
-  //   }
-  // }, 
-  // 4: {
-  //   stepUp: ({ vizSvg }) => {
-  //     setHighlightLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné" })
-  //   },
-  //   stepDown: ({ vizSvg }) => {
-  //     setVisitedLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního"})
-  //     setHighlightLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
-  //   }
-  // },
-  // 5: {
-  //   stepUp: ({ vizSvg }) => {
-  //     setHighlightLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního" })
-  //     setContextLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
-  //   },
-  //   stepDown: ({ vizSvg }) => {
-  //     setVisitedLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
-  //     setHighlightLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
-  //   }
-  // }, 
-  // 6: {
-  //   stepUp: ({ vizSvg }) => {
-  //     setHighlightLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })
-  //     setContextLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
-  //   },
-  //   stepDown: ({ vizSvg }) => {
-  //     setHighlightToAllLines({ svg: vizSvg, svgClass: "lines" })
-  //   }
-  // },
-  // 7: {
-  //   stepUp: ({ vizSvg }) => {
-  //     setContextToAllLines({ svg: vizSvg, svgClass: "lines"})
-  //     setHighlightLine({ svg: vizSvg, category: "válečné-akce-a-soudní-poprava" })
-  //     setVisitedLine({ svg: vizSvg, category: "nemoci-nakažlivé-a-cizopasné"})
-  //     setVisitedLine({ svg: vizSvg, category: "nemoci-ústrojí-oběhu-krevního"})
-  //     setVisitedLine({ svg: vizSvg, category: "rakovina-a-jiné-nádory" })     
-  //   },
-  //   stepDown: ({ vizSvg }) => {
-
-  //   }
-  // },
-      // X: {
-      //   stepUp: ({ vizSvg }) => {
-    
-      //   },
-      //   stepDown: ({ vizSvg }) => {
-    
-      //   }
-      // },
-};
-
-// const CATEGORY_NAMES = {
-//   INFEKCE: "nemoci-nakazlive-a-cizopasne",
-//   SRDCE: "nemoci-ustroji-obehu-krevniho",
-//   RAKOVINA: "rakovina-a-jine-nadory",
-//   VALECNE_AKCE: "valecne-akce-a-soudni-poprava",
-//   STARECKA_SESLOST: "starecka-seslost",
-  
-// }
+}
 
 const vizMargin = ({ top: 60, right: 30, bottom: 200, left: 60 })
 
@@ -851,34 +859,51 @@ const categoryColorsActive = {
   'Neurčité příčiny smrti': '#f58a5a'
 };
 
-const labelPosition = {
-  "nemoci-nakazlive-a-cizopasne" : { x: 1927, y: 250 },
-  "nemoci-ustroji-obehu-krevniho" : { x: 1929, y: 380 },
-  "rakovina-a-jine-nadory" : { x: 1933, y: 220 },
-  "valecne-akce-a-soudni-poprava" :  { x: 1935, y: 100 },
-  "starecka-seslost" :  { x: 1923, y: 500 },
-  "nemoci-ustroju-dychacich" :  { x: 1937, y: 150 },
-  "nemoci-soustavy-nervove-a-smyslovych-ustroju" :  { x: 1921, y: 140 },
-  "nemoci-ustroji-zazivaciho" :  { x: 1930, y: 75 },
-  "sebevrazdy" :  { x: 1922, y: 42 },
+const categoryLineLabelPositions = {
+  'Celkem': { x: d3.timeParse('%Y')(1927), y: 1700, textAnchor: 'start' },
+  'Nemoci nakažlivé a cizopasné': { x: d3.timeParse('%Y')(1927), y: 250, textAnchor: 'start' },
+  'Nemoci ústrojí oběhu krevního': { x: d3.timeParse('%Y')(1929), y: 380, textAnchor: 'start' },
+  'Rakovina a jiné nádory': { x: d3.timeParse('%Y')(1933), y: 220, textAnchor: 'start' },
+  'Válečné akce a soudní poprava': { x: d3.timeParse('%Y')(1940), y: 40, textAnchor: 'end' },
 
-
-  "neurcite-priciny-smrti" :  { x: 1920, y: -50 },
-  "nemoci-rheumaticke-vyzivove-zlaz-s-vnitrnim-vymesovanim-jine-nemoci-celkove-a-avitaminos" : { x: 1920, y: -70 },
-  "nemoci-krve-a-ustroju-krvetvornych" :  { x: 1920, y: -90 },
-  "otravy-vlekle" :  { x: 1920, y: -110 },
-  "nemoci-ustroji-mocoveho-a-pohlavniho" :  { x: 1930, y: -50 },
-  "nemoci-kuze-a-vaziva-podkozniho" :  { x: 1930, y: -130 },
-  "nemoci-kosti-a-ustroji-pohybu" :  { x: 1934, y: -90 },
-  "vrozene-vady-vyvojove" :  { x: 1926, y: -110 },
-  "zvlastni-nemoci-utleho-veku" :  { x: 1920, y: -130 },
-  "vrazdy-a-zabiti" :  { x: 1920, y: -150 },
-  "urazy-pri-doprave" :  { x: 1938, y: -130 },
-  "urazy-a-otravy-mimo-dopravu" :  { x: 1938, y: -110 },
-  "nemoci-tehotenstvi-porodu-a-stavu-poporodniho": { x: 1938, y: -110 }
+  'Válečné akce a soudní poprava - muži': { x: d3.timeParse('%Y')(1945), y: 260, textAnchor: 'end' },
+  'Válečné akce a soudní poprava - ženy': { x: d3.timeParse('%Y')(1944), y: 70, textAnchor: 'end' },
 }
 
-const changeActiveNonTotalCategoryLines = ({ vizSvg, data1919MzStd, line, activeCategoryNames }) => {
+const categoryLineLabelTexts = {
+  'Celkem': 'Celkové počty úmrtí',
+  'Válečné akce a soudní poprava - muži': 'Muži',
+  'Válečné akce a soudní poprava - ženy': 'Ženy'
+}
+
+// const labelPosition = {
+//   "nemoci-nakazlive-a-cizopasne" : { x: 1927, y: 250 },
+//   "nemoci-ustroji-obehu-krevniho" : { x: 1929, y: 380 },
+//   "rakovina-a-jine-nadory" : { x: 1933, y: 220 },
+//   "valecne-akce-a-soudni-poprava" :  { x: 1935, y: 100 },
+//   "starecka-seslost" :  { x: 1923, y: 500 },
+//   "nemoci-ustroju-dychacich" :  { x: 1937, y: 150 },
+//   "nemoci-soustavy-nervove-a-smyslovych-ustroju" :  { x: 1921, y: 140 },
+//   "nemoci-ustroji-zazivaciho" :  { x: 1930, y: 75 },
+//   "sebevrazdy" :  { x: 1922, y: 42 },
+
+
+//   "neurcite-priciny-smrti" :  { x: 1920, y: -50 },
+//   "nemoci-rheumaticke-vyzivove-zlaz-s-vnitrnim-vymesovanim-jine-nemoci-celkove-a-avitaminos" : { x: 1920, y: -70 },
+//   "nemoci-krve-a-ustroju-krvetvornych" :  { x: 1920, y: -90 },
+//   "otravy-vlekle" :  { x: 1920, y: -110 },
+//   "nemoci-ustroji-mocoveho-a-pohlavniho" :  { x: 1930, y: -50 },
+//   "nemoci-kuze-a-vaziva-podkozniho" :  { x: 1930, y: -130 },
+//   "nemoci-kosti-a-ustroji-pohybu" :  { x: 1934, y: -90 },
+//   "vrozene-vady-vyvojove" :  { x: 1926, y: -110 },
+//   "zvlastni-nemoci-utleho-veku" :  { x: 1920, y: -130 },
+//   "vrazdy-a-zabiti" :  { x: 1920, y: -150 },
+//   "urazy-pri-doprave" :  { x: 1938, y: -130 },
+//   "urazy-a-otravy-mimo-dopravu" :  { x: 1938, y: -110 },
+//   "nemoci-tehotenstvi-porodu-a-stavu-poporodniho": { x: 1938, y: -110 }
+// }
+
+const changeActiveNonTotalCategoryLines = ({ vizSvg, data1919MzStd, line, x, y, activeCategoryNames }) => {
   const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
 
   data1919MzStdWithoutTotal.forEach(category => {
@@ -897,11 +922,91 @@ const changeActiveNonTotalCategoryLines = ({ vizSvg, data1919MzStd, line, active
       activeColor,
       duration: 700
     })
+
+    const labelExists = isAddedCategoryLineLabel({ vizSvg, categoryName: category.skupina })
+
+    if (activeCategoryNames.includes(category.skupina) && !labelExists) {
+      addCategoryLineLabel({
+        vizSvg,
+        categoryName: category.skupina,
+        position: {
+          x: x(categoryLineLabelPositions[category.skupina].x),
+          y: y(categoryLineLabelPositions[category.skupina].y),
+          textAnchor: categoryLineLabelPositions[category.skupina].textAnchor
+        },
+        opacity: 0
+      })
+
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: category.skupina,
+        position: {
+          x: x(categoryLineLabelPositions[category.skupina].x),
+          y: y(categoryLineLabelPositions[category.skupina].y),
+          textAnchor: categoryLineLabelPositions[category.skupina].textAnchor
+        },
+        opacity: 1,
+        duration: 700
+      })
+    } else if (!activeCategoryNames.includes(category.skupina) && labelExists) {
+      changeCategoryLineLabel({
+        vizSvg,
+        categoryName: category.skupina,
+        position: {
+          x: x(categoryLineLabelPositions[category.skupina].x),
+          y: y(categoryLineLabelPositions[category.skupina].y),
+          textAnchor: categoryLineLabelPositions[category.skupina].textAnchor
+        },
+        opacity: 0,
+        duration: 700
+      })
+
+      removeCategoryLineLabel({
+        vizSvg,
+        categoryName: category.skupina,
+        delay: 700
+      })
+    }
   })
 
   activeCategoryNames.forEach(categoryName => {
     bringCategoryLineToFront({ vizSvg, categoryName })  
   })
+}
+
+const changeCategoryLineLabel = ({ vizSvg, categoryName, position, opacity = 1, duration = 0, delay = 0 }) => {
+  const textToDisplay = categoryLineLabelTexts[categoryName] ? categoryLineLabelTexts[categoryName] : categoryName
+
+  vizSvg.select(`.g-line-labels .${kebabCase(categoryName)}`)
+    .transition()
+    .duration(duration)
+    .delay(delay)
+    .text(textToDisplay)
+    .attr('x', position.x)
+    .attr('y', position.y)
+    .attr('text-anchor', position.textAnchor)
+    .attr('fill', categoryColorsActive[categoryName])
+    .attr('opacity', opacity)
+}
+
+const addCategoryLineLabel = ({ vizSvg, categoryName, position, opacity = 1 }) => {
+  vizSvg.select('.g-line-labels')
+    .append('text')
+    .attr('class', kebabCase(categoryName))
+
+  changeCategoryLineLabel({ vizSvg, categoryName, position, opacity })
+}
+
+const removeCategoryLineLabel = ({ vizSvg, categoryName, delay = 0 }) => {
+  vizSvg.select(`.g-line-labels .${kebabCase(categoryName)}`)
+    .transition()
+    .duration(0)
+    .delay(delay)
+    .remove()
+}
+
+const isAddedCategoryLineLabel = ({ vizSvg, categoryName }) => {
+  return !vizSvg.select(`.g-line-labels .${kebabCase(categoryName)}`).empty()
 }
 
 const changeCategoryLine = ({ vizSvg, categoryName, d, style, activeColor, duration = 0, delay = 0 }) => {
@@ -970,18 +1075,16 @@ const removeCategoryLine = ({ vizSvg, categoryName, delay = 0 }) => {
     data1919ZStd,
   ]) => {
     const vizSvg = d3.select("#prvni-republika-pribehy .viz")
-    const vizDots = d3.select("#prvni-republika-pribehy .dots")
     
     let viz = initViz({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd });
-    let destroyScrollama = initScrollama({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd, vizSteps, viz });
+    let scroller = initScrollama({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd, vizSteps, viz });
 
     const reinitVizAfterResize = () => {
-      vizSvg.selectAll('*').remove();
-      vizDots.selectAll('*').remove();
-      destroyScrollama();
+      viz.destroy();
+      scroller.destroy();
   
       viz = initViz({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd });
-      destroyScrollama = initScrollama({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd, vizSteps, viz });
+      scroller = initScrollama({ vizSvg, data1919MzStd, data1919MStd, data1919ZStd, vizSteps, viz });
     }
     const reinitVizAfterResizeDebounced = debounce(reinitVizAfterResize, 200)
   
