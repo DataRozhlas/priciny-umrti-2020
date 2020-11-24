@@ -387,7 +387,7 @@ const vizSteps = {
         x,
         y: yCategories,
         data1919MzStd,
-        activeCategoryNames: ['Nemoci nakažlivé a cizopasné']
+        activeCategoryNames: ['Stařecká sešlost']
       })
     },
     onScrollUpFromStep: ({ svg, lineCategories, data1919MzStd }) => {
@@ -402,11 +402,34 @@ const vizSteps = {
         })
       })
 
-      removeCategoryLineLabel({ svg, categoryName: 'Nemoci nakažlivé a cizopasné' })
+      removeCategoryLineLabel({ svg, categoryName: 'Stařecká sešlost' })
     }
   },
 
   4: {
+    onScrollDownToStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
+      changeActiveNonTotalCategoryLines({
+        svg,
+        line: lineCategories,
+        x,
+        y: yCategories,
+        data1919MzStd,
+        activeCategoryNames: ['Nemoci nakažlivé a cizopasné']
+      })
+    },
+    onScrollUpFromStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
+      changeActiveNonTotalCategoryLines({
+        svg,
+        line: lineCategories,
+        x,
+        y: yCategories,
+        data1919MzStd,
+        activeCategoryNames: ['Stařecká sešlost']
+      })
+    }
+  },
+
+  5: {
     onScrollDownToStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
       changeActiveNonTotalCategoryLines({
         svg,
@@ -429,7 +452,7 @@ const vizSteps = {
     }
   },
 
-  5: {
+  6: {
     onScrollDownToStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
       changeActiveNonTotalCategoryLines({
         svg,
@@ -437,7 +460,7 @@ const vizSteps = {
         x,
         y: yCategories,
         data1919MzStd,
-        activeCategoryNames: ['Rakovina a jiné nádory']
+        activeCategoryNames: ['Rakovina a jiné nádory', 'Nemoci ústrojí oběhu krevního']
       })
     },
     onScrollUpFromStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
@@ -452,7 +475,7 @@ const vizSteps = {
     }
   },
 
-  6: {
+  7: {
     onScrollDownToStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
       changeActiveNonTotalCategoryLines({
         svg,
@@ -472,14 +495,14 @@ const vizSteps = {
         x,
         y: yCategories,
         data1919MzStd,
-        activeCategoryNames: ['Rakovina a jiné nádory']
+        activeCategoryNames: ['Rakovina a jiné nádory', 'Nemoci ústrojí oběhu krevního']
       })
 
       // TODO: hide annotations for 42 and 45
     }
   },
 
-  7: {
+  8: {
     onScrollDownToStep: ({ svg, data1919MzStd, data1919MStd, data1919ZStd, x, yCategories, lineCategories }) => {
       const categoryWarName = 'Válečné akce a soudní poprava'
 
@@ -617,7 +640,7 @@ const vizSteps = {
     }
   },
 
-  8: {
+  9: {
     onScrollDownToStep: ({ svg, data1919MzStd, x, yCategories, lineCategories }) => {
       const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
       const data1919MzStdCategoryWar = data1919MzStd.find(category => category.skupina === 'Válečné akce a soudní poprava')
@@ -786,6 +809,7 @@ const categoryColorsActive = {
 
 const categoryLineLabelPositions = {
   'Celkem': { x: d3.timeParse('%Y')(1927), y: 1700, textAnchor: 'start' },
+  'Stařecká sešlost': { x: d3.timeParse('%Y')(1925), y: 400, textAnchor: 'start' },
   'Nemoci nakažlivé a cizopasné': { x: d3.timeParse('%Y')(1927), y: 250, textAnchor: 'start' },
   'Nemoci ústrojí oběhu krevního': { x: d3.timeParse('%Y')(1929), y: 380, textAnchor: 'start' },
   'Rakovina a jiné nádory': { x: d3.timeParse('%Y')(1933), y: 220, textAnchor: 'start' },

@@ -126,6 +126,12 @@ Teď už je všechno připravené k tomu, abyste si prohlédli vývoj příčin 
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
+      <h3>Stařecká sešlost</h3>
+      <p>
+        V roce 1919 zemřelo s diagnózou <em>stařecká sešlost</em> 28 487 lidí, o třicet let později 5&nbsp;185 lidí. Neznamená to, že by v českých zemích ubylo sešlých starců – jen tolik, že během první republiky se zpřesnila statistika. Stáří jako příčinu úmrtí lékaři obvykle uváděli, pokud neznali přesný důvod.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
       <h3>Posun v léčbě tuberkulózy</h3>
       <p>
         V poválečných letech byly největší hrozbou infekční nemoci. Nejobávanější byla tuberkulóza – mezi infekcemi měla na svědomí 60 až 70 procent úmrtí a zabíjela v každém věku, včetně dětského. Během první republiky se podařilo úmrtnost na infekce díky lepší zdravotní péči a lepší výživě snížit na třetinu.
@@ -146,19 +152,19 @@ Teď už je všechno připravené k tomu, abyste si prohlédli vývoj příčin 
     <div class="datarozhlas-scrolly-step">
       <h3>Oběti 2. světové války</h3>
       <p>
-        Během válečných let dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1 790 popravených. Ještě kritičtější byl konec války, kdy při vojenských akcích zemřelo asi 14 tisíc civilních osob. Přibylo také obětí úrazů, dopravních nehod, vražd a sebevražd. V datech chybí ti, které evidovaly německé úřady: deportované osoby i německá část populace. 
+        Během válečných let dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1 790 popravených. Ještě kritičtější byl konec války, kdy při vojenských akcích zemřelo asi 14 tisíc civilních osob. Přibylo také obětí úrazů, dopravních nehod, vražd a sebevražd. V datech chybí ti, které evidovaly německé úřady: deportované osoby i německá část populace.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
       <h3>Ženy vs. muži</h3>
       <p>
-        <em>Za Heydrichiady a osvobozovacich boju umiralo vyrazne vice muzu nez zen.</em>
+        Typickými civilními oběťmi války byli chlapci a muži mezi desíti a třiceti lety. U heydrichiády je poměr mužských a ženských obětí asi 8:1, u osvobozovacích bojů 3:1.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>A zbytek!</h3>
+      <h3>Všech 22 skupin příčin úmrtí</h3>
       <p>
-        Hrajte si.
+        <em>Hrajte si.</em>
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
