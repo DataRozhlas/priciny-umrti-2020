@@ -1,0 +1,104 @@
+import debounce from 'lodash/debounce'
+import times from 'lodash/times'
+
+import datarozhlasScrolly from "./datarozhlas_scrolly"
+import { initViz } from './prvni_republika_pribehy_viz'
+
+const prvniRepublikaPribehy = async () => {
+  const data = await fetchData()
+
+  const dots = initDots()
+
+  let viz = initViz('.prvni-republika-pribehy-viz', data)
+  let scrolly = datarozhlasScrolly('.prvni-republika-pribehy-scrolly', {
+    onScrollDownToStep: (index) => {
+      viz.onScrollDownToStep(index);
+      dots.onScrollDownToStep(index);
+    },
+    onScrollUpFromStep: (index) => {
+      viz.onScrollUpFromStep(index);
+      dots.onScrollUpFromStep(index);
+    },
+  })
+
+  const reinitVizAfterResize = debounce(() => {
+    viz.destroy()
+    scrolly.destroy()
+
+    viz = initViz('.prvni-republika-pribehy-viz', data)
+    scrolly = datarozhlasScrolly('.prvni-republika-pribehy-scrolly', {
+      onScrollDownToStep: (index) => {
+        viz.onScrollDownToStep(index);
+        dots.onScrollDownToStep(index);
+      },
+      onScrollUpFromStep: (index) => {
+        viz.onScrollUpFromStep(index);
+        dots.onScrollUpFromStep(index);
+      },
+    })
+  }, 200)
+
+  window.addEventListener('resize', reinitVizAfterResize)
+}
+
+document.addEventListener('DOMContentLoaded', prvniRepublikaPribehy);
+
+const fetchData = () => {
+  return Promise.all([
+    fetch('data/1919_mz_std.json').then(response => {
+      return !response.error ? response.json() : Promise.reject()
+    }),
+    fetch('data/1919_m_std.json').then(response => {
+      return !response.error ? response.json() : Promise.reject()
+    }),
+    fetch('data/1919_z_std.json').then(response => {
+      return !response.error ? response.json() : Promise.reject()
+    }),
+  ]).then(([
+    data1919MzStd,
+    data1919MStd,
+    data1919ZStd,
+  ]) => {
+    return { data1919MzStd, data1919MStd, data1919ZStd }
+  })
+}
+
+const initDots = () => {
+  const stepsCount = document.querySelectorAll('.prvni-republika-pribehy-scrolly .datarozhlas-scrolly-step').length
+  const dotsElement = document.querySelector('.prvni-republika-pribehy-dots')
+  times(stepsCount, index => {
+    const stepIndex = index
+
+    const dotButton = document.createElement('button');
+    dotButton.classList.add('dot')
+    dotButton.classList.add(`dot-step-${stepIndex}`)
+    if (stepIndex === 0) {
+      dotButton.classList.add('is-active')
+    }
+    // TODO:
+    // dotButton.addEventListener('click', e => onDotClick(stepIndex))
+
+    dotsElement.append(dotButton)
+  })
+
+  return {
+    onScrollDownToStep: (index) => {
+      dotsElement.querySelectorAll('.dot').forEach(dotElement => {
+        dotElement.classList.remove('is-active')
+
+        if (dotElement.classList.contains(`dot-step-${index}`)) {
+          dotElement.classList.add('is-active')
+        }
+      })
+    },
+    onScrollUpFromStep: (index) => {
+      dotsElement.querySelectorAll('.dot').forEach(dotElement => {
+        dotElement.classList.remove('is-active')
+
+        if (dotElement.classList.contains(`dot-step-${index - 1}`)) {
+          dotElement.classList.add('is-active')
+        }
+      })
+    }
+  }
+}

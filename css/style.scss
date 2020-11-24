@@ -1,8 +1,22 @@
-html, body {
-  // TODO: position:sticky potrebuje, aby v kazdym nadrazenym blokovym elementu
-  // nebyl overflow scroll nebo hidden. Nicmene ty se ted v html/body pouzivaj
-  // na mobilu ke schovani menu. Co s tim?
-  overflow: initial !important;
+@import "./datarozhlas_scrolly_mixins";
+
+.priciny-umrti-scrolly {
+  @include datarozhlas-scrolly-height(300px);  
+
+  // For tiny mobile landscape when rozhlas navbar is not displayed
+  @media (max-height: 549.9px) and (max-width: 767.9px) {
+    @include datarozhlas-scrolly-height(180px);
+  }
+
+  // For bigger mobile landscape when rozhlas navbar is displayed
+  @media (max-height: 549.9px) and (min-width: 768px) {
+    @include datarozhlas-scrolly-height(220px);
+  }
+
+  .datarozhlas-scrolly-step {
+    max-width: 620px;
+    margin: 0 auto;
+  }
 }
 
 .mock-content {

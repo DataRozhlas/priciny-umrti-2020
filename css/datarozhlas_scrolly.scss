@@ -1,0 +1,24 @@
+.datarozhlas-scrolly {
+  position: relative;
+
+  // Using the ::after element at the end of the scrolly container
+  // as a placeholder for the sticky element
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+  }
+}
+
+.datarozhlas-scrolly-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.datarozhlas-scrolly-sticky {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+}

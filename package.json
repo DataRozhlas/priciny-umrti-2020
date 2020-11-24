@@ -24,6 +24,7 @@
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.1.0",
     "clean-css": "^4.2.3",
+    "core-js": "^3.7.0",
     "d3": "^6.2.0",
     "d3-fetch": "^2.0.0",
     "d3-transition": "^2.0.0",

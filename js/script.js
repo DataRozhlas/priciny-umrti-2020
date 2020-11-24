@@ -1,6 +1,6 @@
 ﻿import "./byeie"; // loučíme se s IE
 
-import "./prvni-republika-pribehy"
+import "./prvni_republika_pribehy"
 
 /*
 // snadné načtení souboru pro každého!
@@ -10,3 +10,5 @@ fetch("https://blabla.cz/blabla.json")
     // tady jde provést s daty cokoliv
   });
 */
+
+

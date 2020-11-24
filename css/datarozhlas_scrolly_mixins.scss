@@ -1,0 +1,5 @@
+@mixin datarozhlas-scrolly-height($height) {
+  .datarozhlas-scrolly-step { min-height: #{$height}; }
+  .datarozhlas-scrolly-sticky { height: calc(100vh - #{$height}); }
+  &.datarozhlas-scrolly::after { height: calc(100vh - #{$height}); }
+}
