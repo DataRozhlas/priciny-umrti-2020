@@ -110,7 +110,7 @@ Teď už je všechno připravené k tomu, abyste si prohlédli vývoj příčin 
     <div class="datarozhlas-scrolly-step">
       <h3>Vývoj úmrtí 1919-1948</h3>
       <p>
-        <em>Vyvoj standardizovaneho poctu umrti behem prvni republiky, pres 2. svetovou az do komunistickeho prevratu. Zmeny vysvetlime nasledujicimi pribehy!</em>
+        Od konce první světové války do únorového převratu klesla úmrtnost o třetinu: z 2034 na 1324 úmrtí na 100 000 obyvatel.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
@@ -122,7 +122,7 @@ Teď už je všechno připravené k tomu, abyste si prohlédli vývoj příčin 
     <div class="datarozhlas-scrolly-step">
       <h3>22 skupin příčin úmrtí</h3>
       <p>
-        <em>Komentar k tomu, proc jich je 22.</em>
+        Příčiny úmrtí se v tomto období seskupují do 16 skupin přirozených úmrtí: nemocí, vrozených vad, novorozenecké úmrtnosti i stáří. Vedle nich statistika ukazuje externí příčiny úmrtí jako vraždy, sebevraždy, dopravní nehody nebo náhodné úrazy.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
@@ -162,9 +162,9 @@ Teď už je všechno připravené k tomu, abyste si prohlédli vývoj příčin 
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Všech 22 skupin příčin úmrtí</h3>
+      <h3>Proklikejte si</h3>
       <p>
-        <em>Hrajte si.</em>
+        Nyní si sami můžete prohlédnout kompletní data.
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
