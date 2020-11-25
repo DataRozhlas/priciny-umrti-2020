@@ -1,5 +1,4 @@
 import debounce from 'lodash/debounce'
-import times from 'lodash/times'
 
 import datarozhlasScrolly from "./datarozhlas_scrolly"
 import { initViz } from './prvni_republika_pribehy_viz'
@@ -64,22 +63,27 @@ const fetchData = () => {
 }
 
 const initDots = () => {
-  const stepsCount = document.querySelectorAll('.prvni-republika-pribehy-scrolly .datarozhlas-scrolly-step').length
   const dotsElement = document.querySelector('.prvni-republika-pribehy-dots')
-  times(stepsCount, index => {
-    const stepIndex = index
 
-    const dotButton = document.createElement('button');
-    dotButton.classList.add('dot')
-    dotButton.classList.add(`dot-step-${stepIndex}`)
-    if (stepIndex === 0) {
-      dotButton.classList.add('is-active')
-    }
-    // TODO:
-    // dotButton.addEventListener('click', e => onDotClick(stepIndex))
+  document.querySelectorAll('.prvni-republika-pribehy-scrolly .datarozhlas-scrolly-step')
+    .forEach((stepElement, stepIndex) => {
+      const dotButton = document.createElement('button');
+      dotButton.classList.add('dot')
+      dotButton.classList.add(`dot-step-${stepIndex}`)
+      if (stepIndex === 0) {
+        dotButton.classList.add('is-active')
+      }
 
-    dotsElement.append(dotButton)
-  })
+      dotButton.addEventListener('click', () => {
+        window.scroll({
+          top: window.scrollY + stepElement.getBoundingClientRect().top,
+          left: 0,
+          behavior: 'smooth'
+        })
+      })
+  
+      dotsElement.append(dotButton)
+    })
 
   return {
     onScrollDownToStep: (index) => {

@@ -7,6 +7,10 @@ export const initViz = (svgSelector, data) => {
   // We want the parent div of the svg to get the available space
   const { width, height } = svg.node().parentNode.getBoundingClientRect()
 
+  const margin = width < 768
+    ? { top: 50, right: 20, bottom: 70, left: 55 }
+    : { top: 60, right: 30, bottom: 100, left: 60 }
+
   svg.attr("viewBox", [0, 0, width, height]);
 
   const { data1919MzStd, data1919MStd, data1919ZStd } = data
@@ -18,31 +22,31 @@ export const initViz = (svgSelector, data) => {
 
   const x = d3.scaleUtc()
     .domain(d3.extent(years))
-    .range([vizMargin.left, width - vizMargin.right])
+    .range([margin.left, width - margin.right])
 
   const yTotal = d3.scaleLinear()
     .domain([0, d3.max(data1919MzStd.map(category => d3.max(category.data.map(d => (d.value))) ))])
     .nice()
-    .range([height - vizMargin.bottom, vizMargin.top])
+    .range([height - margin.bottom, margin.top])
 
   const yCategories = d3.scaleLinear()
     .domain([0, d3.max(data1919MzStdWithoutTotal.map(category => d3.max(category.data.map(d => (d.value))) ))])
     .nice()
-    .range([height - vizMargin.bottom, vizMargin.top])
+    .range([height - margin.bottom, margin.top])
 
   // 2. Axes
 
   const yAxis = g => g
-    .attr("transform", `translate(${vizMargin.left},0)`)
+    .attr("transform", `translate(${margin.left},0)`)
     .call(d3.axisLeft(yTotal))
     // Remove the axis line to make the chart lighter
     .call(g => g.select(".domain").attr('stroke-width', 0))
 
   const xAxis = g => g
-    .attr("transform", `translate(0,${height - vizMargin.bottom})`)
+    .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(
       d3.axisBottom(x)
-        .ticks(d3.timeYear.every(1))
+        .ticks(d3.timeYear.every(width < 768 ? 5 : 1))
         .tickSizeOuter(0)
         .tickFormat(d3.timeFormat('%Y'))
     )
@@ -60,11 +64,11 @@ export const initViz = (svgSelector, data) => {
 
   const axisXLabel = svgAxesLabelsG.append('text')
     .attr('class', 'axis-x-label')
-    .attr('y', vizMargin.top - 35)
+    .attr('y', margin.top - 35)
     .attr('text-anchor', 'end')
 
-  axisXLabel.append('tspan').text('Std.').attr('x', vizMargin.left - 8)
-  axisXLabel.append('tspan').text('úmrtnost').attr('dy', 12).attr('x', vizMargin.left - 8)
+  axisXLabel.append('tspan').text('Std.').attr('x', margin.left - 8)
+  axisXLabel.append('tspan').text('úmrtnost').attr('dy', 12).attr('x', margin.left - 8)
 
   // 3. Lines
 
@@ -113,7 +117,10 @@ export const initViz = (svgSelector, data) => {
     yTotal,
     yCategories,
     lineTotal,
-    lineCategories
+    lineCategories,
+    width,
+    height,
+    margin
   }
 
   return {
@@ -135,7 +142,7 @@ export const initViz = (svgSelector, data) => {
 
 const vizSteps = {
   1: {
-    onScrollDownToStep: ({ svg, x, yTotal }) => {
+    onScrollDownToStep: ({ svg, x, yTotal, width }) => {
       const svgXAxisAnnotationsG = svg.append('g')
         .attr('class', 'g-xaxis-annotations')
         // Makes the <g> element first under <svg>, therefore behind
@@ -148,8 +155,7 @@ const vizSteps = {
         .attr('class', 'first-republic-label')
         .text('První republika')
         .attr('x', x(d3.timeParse('%Y')(1929)))
-        // .attr('y', 38)
-        .attr('y', yTotal(0) + 40)
+        .attr('y', yTotal(0) + (width < 768 ? 32 : 40))
         .attr('text-anchor', 'middle')
         .attr('opacity', 0)
         .transition()
@@ -161,8 +167,7 @@ const vizSteps = {
       svgXAxisAnnotationsG.append('rect')
         .attr('class', 'secondww-rect')
         .attr('width', x(d3.timeParse('%Y')(1945)) - x(d3.timeParse('%Y')(1939)))
-        // .attr('height', yTotal(0) - 15)
-        .attr('height', yTotal(0) - yTotal(2200) + 50)
+        .attr('height', yTotal(0) - yTotal(2200) + (width < 768 ? 37 : 50))
         .attr('x', x(d3.timeParse('%Y')(1939)))
         .attr('y', yTotal(2200))
         .style("fill", "#f5f5f5")
@@ -177,23 +182,20 @@ const vizSteps = {
         .attr('class', 'secondww-label')
         .text('2. světová válka')
         .attr('x', x(d3.timeParse('%Y')(1942)))
-        // .attr('y', 38)
-        .attr('y', yTotal(0) + 40)
+        .attr('y', yTotal(0) + (width < 768 ? 32 : 40))
         .attr('text-anchor', 'middle')
         .attr('opacity', 0)
         .transition()
         .duration(700)
-        .attr('opacity', 1)
+        .attr('opacity', 1);
 
       // Communist coup line
 
       svgXAxisAnnotationsG.append('line')
         .attr('class', 'communist-coup-line')
         .attr('x1', x(d3.timeParse('%Y')(1948)))
-        // .attr('y1', yTotal(0))
         .attr('y1', yTotal(0) + 50)
         .attr('x2', x(d3.timeParse('%Y')(1948)))
-        // .attr('y2', 15)
         .attr('y2', yTotal(2200))
         .attr("stroke", '#cccccc')
         .attr("stroke-width", 1)
@@ -204,24 +206,36 @@ const vizSteps = {
         .attr('opacity', 0)
         .transition()
         .duration(700)
-        .attr('opacity', 1)
+        .attr('opacity', 1);
 
       // Communist coup label
 
-      const communistCoupLabel = svgXAxisAnnotationsG.append('text')
-        .attr('class', 'communist-coup-label')
-        // .attr('y', 60)
-        .attr('y', yTotal(0) + 35)
+      if (width < 768) {
+        svgXAxisAnnotationsG.append('text')
+          .attr('class', 'communist-coup-label')
+          .text('Komunistický převrat')
+          .attr('x', x(d3.timeParse('%Y')(1948)) - 3)
+          .attr('y', yTotal(0) + 50)
+          .attr('text-anchor', 'end')
+          .attr('opacity', 0)
+          .transition()
+          .duration(700)
+          .attr('opacity', 1);          
+      } else {
+        const communistCoupLabel = svgXAxisAnnotationsG.append('text')
+          .attr('class', 'communist-coup-label')
+          .attr('y', yTotal(0) + 35)
 
-        .attr('text-anchor', 'end')
+          .attr('text-anchor', 'end')
 
-      communistCoupLabel.attr('opacity', 0)
-        .transition()
-        .duration(700)
-        .attr('opacity', 1)
+        communistCoupLabel.attr('opacity', 0)
+          .transition()
+          .duration(700)
+          .attr('opacity', 1)
 
-      communistCoupLabel.append('tspan').text('Komunistický').attr('x', x(d3.timeParse('%Y')(1948)) - 5)
-      communistCoupLabel.append('tspan').text('převrat').attr('dy', 15).attr('x', x(d3.timeParse('%Y')(1948)) - 5)
+        communistCoupLabel.append('tspan').text('Komunistický').attr('x', x(d3.timeParse('%Y')(1948)) - 5)
+        communistCoupLabel.append('tspan').text('převrat').attr('dy', 15).attr('x', x(d3.timeParse('%Y')(1948)) - 5)
+      }
     },
     onScrollUpFromStep: ({ svg }) => {
       // Remove annotations
@@ -232,7 +246,7 @@ const vizSteps = {
   },
 
   2: {
-    onScrollDownToStep: ({ svg, x, yTotal, yCategories, lineTotal, lineCategories, data1919MzStd }) => {
+    onScrollDownToStep: ({ svg, x, yTotal, yCategories, lineTotal, lineCategories, data1919MzStd, margin }) => {
       const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
       const data1919MzStdCategoryTotal = data1919MzStd.find(category => category.skupina === 'Celkem')
 
@@ -283,7 +297,7 @@ const vizSteps = {
       // 4. Animation part 2: Change the scale of Y axis and lines to match the categories
 
       const yAxis = g => g
-        .attr("transform", `translate(${vizMargin.left},0)`)
+        .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(yCategories))
 
       svg.select('.g-axis-y')
@@ -302,46 +316,9 @@ const vizSteps = {
           delay: 700,
           style: 'anonymous'
         })
-      })
-
-      // 5. Move annotations below the axis
-
-      // const svgXAxisAnnotationsG = svg.select('.g-xaxis-annotations')
-
-      // svgXAxisAnnotationsG.select('.first-republic-label')
-      //   .transition()
-      //   .duration(700)
-      //   .delay(1400)
-      //   .attr('y', yCategories(0) + 40)
-
-      // svgXAxisAnnotationsG.select('.secondww-rect')
-      //   .transition()
-      //   .duration(700)
-      //   .delay(1400)
-      //   .attr('height', 50)
-      //   .attr('y', yCategories(0))
-
-      // svgXAxisAnnotationsG.select('.secondww-label')
-      //   .transition()
-      //   .duration(700)
-      //   .delay(1400)
-      //   .attr('y', yCategories(0) + 40)
-
-      // svgXAxisAnnotationsG.select('.communist-coup-line')
-      //   .transition()
-      //   .duration(700)
-      //   .delay(1400)
-      //   .attr('y1', yCategories(0) + 50)
-      //   .attr('y2', yCategories(0))
-
-      // svgXAxisAnnotationsG.select('.communist-coup-label')
-      //   .transition()
-      //   .duration(700)
-      //   .delay(1400)
-      //   .attr('y', yCategories(0) + 35)
-      
+      })    
     },
-    onScrollUpFromStep: ({ svg, x, yTotal, lineTotal, data1919MzStd }) => {
+    onScrollUpFromStep: ({ svg, x, yTotal, lineTotal, data1919MzStd, margin }) => {
       const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
       const data1919MzStdCategoryTotal = data1919MzStd.find(category => category.skupina === 'Celkem')
 
@@ -369,7 +346,7 @@ const vizSteps = {
       })
 
       const yAxis = g => g
-        .attr("transform", `translate(${vizMargin.left},0)`)
+        .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(yTotal))
 
       svg.select('.g-axis-y')
@@ -486,7 +463,29 @@ const vizSteps = {
         activeCategoryNames: ['Válečné akce a soudní poprava']
       })
 
-      // TODO: show annotations for 42 and 45
+      svg.append('image')
+        .attr('class', 'line-annotation-heydrich')
+        .attr('x', x(d3.timeParse('%Y')(1942)) - 100 + 6)
+        .attr('y', yCategories(35) - 60)
+        .attr('width', 100)
+        .attr('height', 60)
+        .attr('href', 'assets/2.2 Kompletní příčiny úmrtí/Válečné akce - šipka Heydrichiáda.svg')
+        .attr('opacity', 0)
+        .transition()
+        .duration(700)
+        .attr('opacity', 1)
+
+      svg.append('image')
+        .attr('class', 'line-annotation-freeing')
+        .attr('x', x(d3.timeParse('%Y')(1945)) - 129 + 6)
+        .attr('y', yCategories(165) - 63)
+        .attr('width', 129)
+        .attr('height', 63)
+        .attr('href', 'assets/2.2 Kompletní příčiny úmrtí/Válečné akce - šipka Osvobozovací boje.svg')
+        .attr('opacity', 0)
+        .transition()
+        .duration(700)
+        .attr('opacity', 1)
     },
     onScrollUpFromStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
       changeActiveNonTotalCategoryLines({
@@ -498,7 +497,8 @@ const vizSteps = {
         activeCategoryNames: ['Rakovina a jiné nádory', 'Nemoci ústrojí oběhu krevního']
       })
 
-      // TODO: hide annotations for 42 and 45
+      svg.select('.line-annotation-heydrich').remove()
+      svg.select('.line-annotation-freeing').remove()
     }
   },
 
@@ -548,7 +548,7 @@ const vizSteps = {
         activeColor: categoryColorsActive['Válečné akce a soudní poprava']
       })
 
-      // 3. Break the men+women line to the separate lines using animation and add labels
+      // 3. Break the men+women line to the separate lines using animation, add labels, and hide annotations
 
       changeCategoryLine({
         svg,
@@ -610,6 +610,18 @@ const vizSteps = {
         opacity: 1,
         duration: 700
       })
+
+      svg.select('.line-annotation-heydrich')
+        .transition()
+        .duration(700)
+        .attr('opacity', 0)
+        .remove()
+
+      svg.select('.line-annotation-freeing')
+        .transition()
+        .duration(700)
+        .attr('opacity', 0)
+        .remove()
     },
     onScrollUpFromStep: ({ svg, data1919MzStd, x, yCategories, lineCategories }) => {
       removeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava - muži' })
@@ -637,6 +649,30 @@ const vizSteps = {
         data1919MzStd,
         activeCategoryNames: ['Válečné akce a soudní poprava']
       })
+
+      svg.append('image')
+        .attr('class', 'line-annotation-heydrich')
+        .attr('x', x(d3.timeParse('%Y')(1942)) - 100 + 6)
+        .attr('y', yCategories(35) - 60)
+        .attr('width', 100)
+        .attr('height', 60)
+        .attr('href', 'assets/2.2 Kompletní příčiny úmrtí/Válečné akce - šipka Heydrichiáda.svg')
+        .attr('opacity', 0)
+        .transition()
+        .duration(700)
+        .attr('opacity', 1)
+
+      svg.append('image')
+        .attr('class', 'line-annotation-freeing')
+        .attr('x', x(d3.timeParse('%Y')(1945)) - 129 + 6)
+        .attr('y', yCategories(165) - 63)
+        .attr('width', 129)
+        .attr('height', 63)
+        .attr('href', 'assets/2.2 Kompletní příčiny úmrtí/Válečné akce - šipka Osvobozovací boje.svg')
+        .attr('opacity', 0)
+        .transition()
+        .duration(700)
+        .attr('opacity', 1)
     }
   },
 
@@ -774,8 +810,6 @@ const vizSteps = {
     }
   }
 }
-
-const vizMargin = ({ top: 60, right: 30, bottom: 100, left: 60 })
 
 const categoryColorsActive = {
   'Celkem': '#000000',

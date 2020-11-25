@@ -30,6 +30,14 @@ svg.prvni-republika-pribehy-viz {
     font-size: 14px;
     font-weight: 700;
   }
+
+  @media (max-width: 767.9px) {
+    .g-axes-labels text,
+    .g-xaxis-annotations text,
+    .g-line-labels text {
+      font-size: 11px;
+    }
+  }
 }
 
 .prvni-republika-pribehy-dots {
@@ -58,13 +66,25 @@ svg.prvni-republika-pribehy-viz {
     }
   }
 
-  @media (max-width: 767.9px) {
+  // @media (max-width: 767.9px) {
+  //   width: 10px;
+  //   right: -5px;
+
+  //   .dot {
+  //     width: 8px;
+  //     height: 8px;
+  //     border-width: 1px;
+  //   }
+  // }
+
+  @media (max-height: 549.9px), (max-width: 767.9px) {
     width: 10px;
-    right: -5px;
+    bottom: 30px;
+    right: -10px;
 
     .dot {
-      width: 8px;
-      height: 8px;
+      width: 5px;
+      height: 6px;
       border-width: 1px;
     }
   }

@@ -3,14 +3,18 @@
 .priciny-umrti-scrolly {
   @include datarozhlas-scrolly-height(300px);  
 
+  @media (max-width: 767.9px) {
+    @include datarozhlas-scrolly-height(250px);
+  }
+
   // For tiny mobile landscape when rozhlas navbar is not displayed
   @media (max-height: 549.9px) and (max-width: 767.9px) {
-    @include datarozhlas-scrolly-height(180px);
+    @include datarozhlas-scrolly-height(120px);
   }
 
   // For bigger mobile landscape when rozhlas navbar is displayed
   @media (max-height: 549.9px) and (min-width: 768px) {
-    @include datarozhlas-scrolly-height(220px);
+    @include datarozhlas-scrolly-height(160px);
   }
 
   .datarozhlas-scrolly-step {
