@@ -21,8 +21,10 @@ const prvniRepublikaPribehy = async () => {
   })
 
   let windowInnerWidthBefore = window.innerWidth
+  let windowInnerHeightBefore = window.innerHeight
+
   const reinitVizAfterResize = debounce(e => {
-    if (windowInnerWidthBefore !== window.innerWidth) {
+    if (windowInnerWidthBefore !== window.innerWidth || windowInnerHeightBefore < window.innerHeight) {
       viz.destroy()
       scrolly.destroy()
 
@@ -39,6 +41,7 @@ const prvniRepublikaPribehy = async () => {
       })
 
       windowInnerWidthBefore = window.innerWidth
+      windowInnerHeightBefore = window.innerHeight
     }
   }, 200)
 
