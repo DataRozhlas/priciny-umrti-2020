@@ -1,7 +1,7 @@
 title: "Od moru ke covidu"
 perex: "S covidem, nebo na covid? Na otázku, která na jaře zamotala hlavu celé civilizaci – tedy jaká je příčina úmrtí – hledá medicína odpověď přes sto let. Odpověď přitom rozhoduje o tom, čemu zdravotnictví věnuje pozornost a kam tečou peníze."
 coverimg: assets/0 Úvodní ilustrace.jpg
-coverimg_note:
+coverimg_note: ""
 styles: [https://fonts.googleapis.com/css2?family=Asap]
 libraries: [] #jquery, d3, highcharts, datatables
 options: [] #wide, noheader (, nopic)
