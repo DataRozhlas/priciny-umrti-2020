@@ -32,6 +32,7 @@ export default function datarozhlasScrolly(containerSelector, { onScrollDownToSt
     if (!scrollListenerTicking) {
       window.requestAnimationFrame(() => {
         const { top: containerTop, height: containerHeight } = containerEl.getBoundingClientRect()
+        const { height: stickyHeight } = stickyEl.getBoundingClientRect()
 
         // containerTop = 0 means the top of scrolly container is aligned with top
         // of viewport. containerTop > 0 means we are before the scrolly container,
@@ -40,8 +41,10 @@ export default function datarozhlasScrolly(containerSelector, { onScrollDownToSt
           stickyEl.style.bottom = null;
           stickyEl.style.top = String(containerTop + stepHeight) + 'px';
         } else if ((containerTop + containerHeight) < viewportHeight) {
-          stickyEl.style.bottom = String(viewportHeight - containerTop - containerHeight) + 'px'
-          stickyEl.style.top = null;
+          // stickyEl.style.bottom = String(viewportHeight - containerTop - containerHeight) + 'px'
+          // stickyEl.style.top = null;
+          stickyEl.style.top = String(containerHeight + containerTop - stickyHeight) + 'px'
+          stickyEl.style.bottom = null;
         } else {
           stickyEl.style.bottom = '0px'
           stickyEl.style.top = null;
