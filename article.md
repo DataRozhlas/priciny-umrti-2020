@@ -294,6 +294,58 @@ příběhy komunismu
   <img src="assets/4 Ilustrace kapitoly/006.jpg" alt="">
 </div>
 
-<h2>Kapitola 4: Současnost (1989-2018, srovnávání s Evropou) + Budoucnost</h2>
+<h2>Kapitola 4: Současnost (1989-2018, srovnávání s Evropou)</h2>
+
+Sametová revoluce ze dne na den změnila politický režim. Proměnit tak setrvačný obor jako zdravotnictví je ovšem záležitost na desítky let. Zvlášť ukazatele jako délka dožití se mění zvolna, jelikož starší generace se většinou drží svých životních návyků a zlozvyků, k nim se přidává zdravotní zátěž z minulých let. 
+
+Pivo a párek ostatně stále patří k obrazu spokojeného Čecha a <a href="https://www.vlada.cz/cz/ppov/protidrogova-politika/media/vyrocni-zprava-o-drogach-mira-uzivani-alkoholu--tabaku-nebo-konopnych-latek-zustava-v-cr-vysoka--situace-se-lepsi-u-dospivajicich-184879/" target="_blank">spotřeba alkoholu ani cigaret neklesá</a>. Dobrá zpráva je, že mladší generace pije i kouří méně. Špatná, že oba zlozvyky se tím pádem koncentrují mezi méně staršími lidmi a přibývá rizikových pijáků.
+
+„I v polovině 90. let zaostává Česká republika za ostatními vyspělými zeměmi Evropy [v ukazateli střední délky života] zhruba o sedm až deset kalendářních let,“ píše v publikaci Tisíc let obyvatelstva českých zemí demograf Vladimír Srb.
+
+<div class="mock-content">
+Tady přibude recyklovaný graf
+
+změna střední délky života
+</div>
+
+Do devadesátých let Češi naňahňali <a href="https://cs.wikipedia.org/wiki/Druh%C3%BD_demografick%C3%BD_p%C5%99echod" target="_blank">hodnotovou revoluci</a>, která na Západě probíhá od let šedesátých. V zemi tak <a href="https://www.irozhlas.cz/zpravy-domov/kalkulacka-spocitejte-si-kdy-vas-ceka-svatba-dite-rozvod-nebo-umrti_1704241238_sam" target="_blank">během několika roků</a> po pádu režimu stoupl věk pro první dítě o pět let, pro první svatbu o sedm let, polovina manželství v té době končila rozvodem. Poměr dětí a seniorů se v tomto období <a href="https://www.irozhlas.cz/zpravy-domov/-v-roce-1989-bylo-v-cesku-deti-skoro-dvakrat-vic-nez-senioru-pomer-se-otaci_201411100044_vkourimsky" target="_blank">změnil ve prospěch seniorů</a>.
+
+Radikální experiment s hledáním štěstí <em>teď hned</em> se vyčerpal během nultých let, od té doby se demografické ukazatele ustálily na nové hladině.
+
+S nástupem individualismu se zvýšila také životní úroveň a s ní délka života. Po šedivých normalizačních letech se tak život Čechů začal znovu prodlužovat. Jazykem sociální medicíny začala tranzice z <em>období degenerativních a člověkem způsobených nemocí</em> do <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5429583/" target="_blank"><em>věku opožděných degenerativních onemocnění</em></a>.
+
+Přesto je i dnes v datech o délce dožití patrné, <a href="https://interaktivni.rozhlas.cz/umrti-srdce/" target="_blank">kudy vedla železná opona</a> mezi Západem a Východem. Třicet let po pádu Berlínské zdi se rozdíl v délce dožití sice snížil na tři až pět let, ale úplnému vymazání vytrvale odolává.
+
+<div class="mock-content">
+Tady přibude mapa
+
+délka dožití podle regionu NUTS2
+</div>
+
+V čem jsou hlavní rozdíly mezi Západem a Východem? Jaké příčiny úmrtí kde převažují? Dají se vysvětlit životním stylem? Pokud ne, kde je zakopaný pes? Tyhle otázky bychom měli umět vysvětlit pouhým pohledem do dat – přesně od toho je mezinárodní číselník nemocí, který využívají všechny evropské země.
+
+Aktuální příklad: Španělsko zaznamenalo během první covidové vlny 34 tisíc obětí nemoci, ale celková úmrtnost se proti dlouhodobému průměru zvedla o 56 tisíc lidí. Rozdíl jsou případy, u kterých statistici zaznamenali jinou příčinu úmrtí, ačkoliv jde o důsledek covidové vlny. 
+
+Ve Francii byl oficiální počet obětí podobný – 31 tisíc – ale na rozdíl od Španělska toto číslo odpovídá celkovému nárůstu úmrtnosti.
+
+Jak si to vysvětlit? Každá země zkrátka určuje příčinu úmrtí odlišně. Nemusíme se ani dívat do zemí jako Rusko s oficiálním počtem jarních obětí covidu 14 tisíc a zvýšením úmrtnosti o 83 tisíc. Navzdory stejným pravidlům jsou <a href="https://www.economist.com/graphic-detail/2020/07/15/tracking-covid-19-excess-deaths-across-countries" target="_blank">výsledná čísla podstatně odlišná</a> i v Evropě. Ani Česku se problém s rozdílem mezi oficiálními počty obětí covidu a zvýšenou úmrtností <a href="https://www.irozhlas.cz/zpravy-domov/koronavirus-umrti-celkem-statistika-zemreli_2011050600_pek" target="_blank">nevyhnul</a>.
+
+Těžko vysvětlitelné rozdíly najdeme také u dlouhodobých příčin úmrtí. Stačí se podívat na Německo, Francii a Velkou Británii: první má podstatně vyšší podíl obětí oběhové soustavy, druhá nemocí trávicí soustavy, třetí problémů s dýchacím ústrojům.
+
+<div class="mock-content">
+Tady přibude graf
+
+Rozdíly v úmrtnosti na některé příčiny podle země
+</div>
+
+Při porovnávání časové řady uvnitř jedné země se nicméně na některé dlouhodobé trendy spolehnout dá. V Česku se jich od sametové revoluce dá vysledovat hned několik.
+
+<div class="mock-content">
+Tady přibude scrollytelling
+
+Příběhy
+</div>
+
+<h2>Kapitola 5: Budoucnost (MKN-11, sdružené příčiny úmrtí)</h2>
 
 ...
