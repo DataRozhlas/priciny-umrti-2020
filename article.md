@@ -1,6 +1,6 @@
 title: "Od moru ke covidu"
 perex: "S covidem, nebo na covid? Na otázku, která na jaře zamotala hlavu celé civilizaci – tedy jaká je příčina úmrtí – hledá medicína odpověď přes sto let. Odpověď přitom rozhoduje o tom, čemu zdravotnictví věnuje pozornost a kam tečou peníze."
-coverimg:
+coverimg: assets/0 Úvodní ilustrace.jpg
 coverimg_note:
 styles: [https://fonts.googleapis.com/css2?family=Asap]
 libraries: [] #jquery, d3, highcharts, datatables
@@ -23,6 +23,14 @@ Tady přibude graf / img
 Komorbidita úmrtí na covid
 
 Jaké onemocnění se často vyskytují současně při úmrtí na covid?
+</div>
+
+<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
+  <img src="assets/1 Ilustrace kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/1 Ilustrace kapitoly/002.jpg" alt="">
+  <img src="assets/1 Ilustrace kapitoly/003.jpg" alt="">
+  <img src="assets/1 Ilustrace kapitoly/004.jpg" alt="">
+  <img src="assets/1 Ilustrace kapitoly/005.jpg" alt="">
 </div>
 
 <h2>Kapitola 1: Umírání za císaře pána (1785-1918, protodemografie)</h2>
@@ -72,6 +80,14 @@ Jedním z nejúspěšnějších období, co se týče prodloužení délky živo
 Samotná válka si podle Srba vyžádala asi 300 tisíc přímých obětí, které ovšem v oficiální statistice chybí. Později historici jeho odhad například pomocí sčítání vdov <a href="https://www.dotyk.cz/publicistika/na-frontach-1-svetove-valky-padlo-kolem-200-tisic-cechu-odhaduje-statistik-20181113.html" target="_blank">upravili na 200 tisíc</a>. Srb ovšem vypočítává také nepřímé oběti: odhaduje, že kvůli válce nepřišlo na svět 910 tisíc dětí neboli 8,8 procenta předválečné populace.
 
 Slabé válečné ročníky se mimochodem zařezávají do statistiky dodnes: důvod, proč jsou české školky několik let poloprázdné a vzápětí přeplněné, je právě rozkolísání porodnosti za první světové války. Podobný problém řeší většina evropských zemí; u některých se ještě prohloubil za druhé války, nejpalčivěji nenarozenou generaci <a href="https://www.irozhlas.cz/zpravy-svet/rusove-proti-rusum-zeme-v-nevyhlasene-obcanske-valce_1504291200_zlo" target="_blank">vnímá Rusko</a>.
+
+<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-2">
+  <img src="assets/2 Ilustrace kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/2 Ilustrace kapitoly/002.jpg" alt="">
+  <img src="assets/2 Ilustrace kapitoly/003.jpg" alt="">
+  <img src="assets/2 Ilustrace kapitoly/004.jpg" alt="">
+  <img src="assets/2 Ilustrace kapitoly/005.jpg" alt="">
+</div>
 
 <h2>Kapitola 2: První republika (1919-1948, války + Němci)</h2>
 
@@ -192,6 +208,15 @@ Na frontě podle demografa zahynulo také 190 tisíc českých Němců a další
 
 Na rozdíl od první světové války ovšem nedošlo k zásadnímu propadu porodnosti ani nárůstu úmrtnosti – u české populace se v době protektorátu obě čísla rozkolísala, ale dlouhodobé trendy se nezměnily.
 
+<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-3">
+  <img src="assets/3 Ilustrace kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/3 Ilustrace kapitoly/002.jpg" alt="">
+  <img src="assets/3 Ilustrace kapitoly/003.jpg" alt="">
+  <img src="assets/3 Ilustrace kapitoly/004.jpg" alt="">
+  <img src="assets/3 Ilustrace kapitoly/005.jpg" alt="">
+  <img src="assets/3 Ilustrace kapitoly/006.jpg" alt="">
+</div>
+
 <h2>Kapitola 3: Komunismus (1949-1989)</h2>
 
 Také po druhé světové válce následuje éra, kdy úmrtnost padala a věk se prodlužoval: díky antibiotikům – a později také očkování – se povedlo vymýtit strašidlo dětské tuberkulózy, spály nebo záškrtu. Podobný průběh se odehrál v celé Evropě a většině industrializovaných zemí.
@@ -260,4 +285,15 @@ Tady přibude scrollytelling
 příběhy komunismu
 </div>
 
-## Kapitola 4: Současnost (1989-2018, srovnávání s Evropou) + Budoucnost
+<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4">
+  <img src="assets/4 Ilustrace kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/4 Ilustrace kapitoly/002.jpg" alt="">
+  <img src="assets/4 Ilustrace kapitoly/003.jpg" alt="">
+  <img src="assets/4 Ilustrace kapitoly/004.jpg" alt="">
+  <img src="assets/4 Ilustrace kapitoly/005.jpg" alt="">
+  <img src="assets/4 Ilustrace kapitoly/006.jpg" alt="">
+</div>
+
+<h2>Kapitola 4: Současnost (1989-2018, srovnávání s Evropou) + Budoucnost</h2>
+
+...

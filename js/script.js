@@ -1,5 +1,6 @@
 ﻿import "./byeie"; // loučíme se s IE
 
+import "./ilustrace_kapitol"
 import "./prvni_republika_pribehy"
 
 /*
