@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "node builder.js watch",
     "build": "node builder.js build",
-    "serve": "python -m http.server 3000"
+    "serve": "python -m http.server --bind 0.0.0.0 3000"
   },
   "repository": {
     "type": "git",

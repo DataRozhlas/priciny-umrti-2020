@@ -11,5 +11,3 @@ fetch("https://blabla.cz/blabla.json")
     // tady jde provést s daty cokoliv
   });
 */
-
-
