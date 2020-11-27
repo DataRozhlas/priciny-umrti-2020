@@ -57,7 +57,7 @@ Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předc
 
 Data z 18. století přitom napovídají, co životy zkracovalo: riskantní byl zejména kojenecký a dětský věk; charakteristické zuby v grafu pak odpovídají válečným rokům a vlnám epidemií.
 
-<img src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1.1 Střední délka života 19.stol 2020-11-09-03.svg" />
+<img src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1.1 Stredni delka zivota 19.stol 2020-11-09-03.svg" />
 <!-- <div id="1.1-graf-stredni-delka" class="mock-content">
 Tady přibude graf
 Střední délka života v 19. století
@@ -68,7 +68,7 @@ Střední délka života v 19. století
 
 Když trochu předběhneme, během necelých 200 let se délka života protáhla z 28 na bezmála 80 let. Rozhodně ale nešlo o plynulou změnu: jsou období jako přelom 19. a 20. století, kdy se během jedné generace život prodloužil o 40 procent. V jiných dobách se nárůst délky života téměř zastavil, v některých desetiletích dokonce obrátil – například za reálného socialismu.
 
-<img src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1.1 Střední délka života 2020-11-09-03.svg" />
+<img src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1.1 Stredni delka zivota 2020-11-09-03.svg" />
 <!-- <div id="1.2-graf-zmena-stredni-delka" class="mock-content">
 Tady přibude graf
 změna střední délky života (abs., %) 1830 až 2019
