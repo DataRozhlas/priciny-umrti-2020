@@ -16,6 +16,10 @@ const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => 
     return;
   }
 
+  const stepsContainerElement = document.createElement('div')
+  stepsContainerElement.classList.add('priciny-umrti-ilustrace-kapitoly-steps-container')
+  containerEl.append(stepsContainerElement)
+
   const { width } = containerEl.getBoundingClientRect()
   const height = width * heightToWidthRatio
   containerEl.style.height = `${height}px`;
@@ -24,7 +28,7 @@ const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => 
     const stepElement = document.createElement('div')
     stepElement.classList.add('priciny-umrti-ilustrace-kapitoly-step')
     
-    containerEl.append(stepElement)
+    stepsContainerElement.append(stepElement)
   })
 
   const frameElements = document.querySelectorAll(`${containerSelector} img`);
@@ -34,7 +38,7 @@ const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => 
   scroller
     .setup({
       offset: .5,
-      step: `${containerSelector} .priciny-umrti-ilustrace-kapitoly-step`,
+      step: `${containerSelector} .priciny-umrti-ilustrace-kapitoly-steps-container .priciny-umrti-ilustrace-kapitoly-step`,
     })
     .onStepEnter(({ element, direction, index }) => {
       frameElements.forEach(el => el.classList.remove('active'))
