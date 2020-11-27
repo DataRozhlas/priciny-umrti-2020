@@ -20,21 +20,26 @@ const prvniRepublikaPribehy = async () => {
     },
   })
 
-  const reinitVizAfterResize = debounce(() => {
-    viz.destroy()
-    scrolly.destroy()
+  let windowInnerWidthBefore = window.innerWidth
+  const reinitVizAfterResize = debounce(e => {
+    if (windowInnerWidthBefore !== window.innerWidth) {
+      viz.destroy()
+      scrolly.destroy()
 
-    viz = initViz('.prvni-republika-pribehy-viz', data)
-    scrolly = datarozhlasScrolly('.prvni-republika-pribehy-scrolly', {
-      onScrollDownToStep: (index) => {
-        viz.onScrollDownToStep(index);
-        dots.onScrollDownToStep(index);
-      },
-      onScrollUpFromStep: (index) => {
-        viz.onScrollUpFromStep(index);
-        dots.onScrollUpFromStep(index);
-      },
-    })
+      viz = initViz('.prvni-republika-pribehy-viz', data)
+      scrolly = datarozhlasScrolly('.prvni-republika-pribehy-scrolly', {
+        onScrollDownToStep: (index) => {
+          viz.onScrollDownToStep(index);
+          dots.onScrollDownToStep(index);
+        },
+        onScrollUpFromStep: (index) => {
+          viz.onScrollUpFromStep(index);
+          dots.onScrollUpFromStep(index);
+        },
+      })
+
+      windowInnerWidthBefore = window.innerWidth
+    }
   }, 200)
 
   window.addEventListener('resize', reinitVizAfterResize)

@@ -41,12 +41,17 @@ const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => 
       frameElements[index].classList.add('active')
     })
 
+  let windowInnerWidthBefore = window.innerWidth
   window.addEventListener('resize', debounce(e => {
-    const { width } = containerEl.getBoundingClientRect()
-    const height = width * heightToWidthRatio
-    containerEl.style.height = `${height}px`;
+    if (window.innerWidth !== windowInnerWidthBefore) {
+      const { width } = containerEl.getBoundingClientRect()
+      const height = width * heightToWidthRatio
+      containerEl.style.height = `${height}px`;
 
-    scroller.resize(e)
+      scroller.resize(e)
+
+      windowInnerWidthBefore = window.innerWidth
+    }
   }, 200))
 }
 
