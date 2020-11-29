@@ -112,10 +112,10 @@ Příčiny úmrtí jsou v klasifikaci sdružené do skupin podle typu, napříkl
 <div class="b-inline">
   <div class="b-inline__wrap">
     <div class="b-inline__content">
-      <img src="assets/2.1 Vesele diagnozy.jpg" alt="" style="width: 100%">
+      <img src="assets/2.1 Vesele diagnozy.jpg" alt="" class="priciny-umrti-vesele-diagnozy-img">
       <p class="text-sm text-bold text-uppercase">Veselé diagnózy</p>
       <p class="text-sm">
-        <em>Tady bude jeste kratky text k veselym diagnozam</em>
+        <em>Tady bude jeste kratky text k veselym diagnozam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor metus eu rhoncus faucibus. Curabitur ut blandit nisi, vel rhoncus nisl. Maecenas finibus, tortor in volutpat feugiat, diam nisi tempus nibh, at semper lectus dui in massa.</em>
       </p>
     </div>
   </div>
