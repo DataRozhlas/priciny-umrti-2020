@@ -68,6 +68,10 @@
   }
 }
 
+.b-data__bg::before {
+  background: rgba(0,0,0,0.6)
+}
+
 .mock-content {
   text-align: center;
   font-style: italic;
