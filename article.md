@@ -102,18 +102,30 @@ MKN vznikla roku 1893 a po úspěchu ve Spojených státech se počátkem 20. st
 Autoři nového systému navíc počítali s tím, že zároveň s rozvojem medicíny se bude klasifikace rozšiřovat – navrhli proto upravit klasifikaci každých deset let. V roce 1919, kdy statistiku zavádělo Československo, byla platná druhá revize, označovaná MKN-2. 
 
 <div class="mock-content">
-Tady přibude ilustrace
+Tady přibude ilustrace 2.0
 
 MKN-2, případně MKN-10
 </div>
 
 Příčiny úmrtí jsou v klasifikaci sdružené do skupin podle typu, například <em>infekční nemoci</em> nebo <em>úrazy</em>. Zatímco konkrétní příčiny úmrtí – <em>tuberkulóza</em> nebo <em>uštknutí</em> – se mezi revizemi často mění, méně podrobné třídy příčin většinou zůstávají stabilní. Díky tomu můžeme s opatrností srovnávat čísla v čase.
 
+<div class="b-inline">
+  <div class="b-inline__wrap">
+    <div class="b-inline__content">
+      <img src="assets/2.1 Vesele diagnozy.jpg" alt="" style="width: 100%">
+      <p class="text-sm text-bold text-uppercase">Veselé diagnózy</p>
+      <p class="text-sm">
+        <em>Tady bude jeste kratky text k veselym diagnozam</em>
+      </p>
+    </div>
+  </div>
+</div>
+
 I struktura tříd příčin úmrtí se ale v minulosti jednou změnila. Shodou okolností opět zároveň s politickým režimem v Československu: v roce 1948. Nejprve proto ukážeme část statistiky pro období 1919 až 1948. 
 
 K tomu zbývá vyřešit poslední problém: po roce 1938 přišlo Československo o pohraničí a s ním o část obyvatel. Ze statistik tak zmizely Sudety, s nástupem protektorátu pak i německé obyvatelstvo vnitrozemí. V počtech úmrtí je proto po roce 1938 schodek.
 
-<div id="2.0-graf-metodika-std-umrti" class="mock-content">
+<div id="2.2-graf-metodika-std-umrti" class="mock-content">
 Tady přibude scrollytelling
 
 Vysvětlení tří typů úmrtí (abs, rel, std)
