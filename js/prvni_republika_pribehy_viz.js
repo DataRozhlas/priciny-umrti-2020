@@ -740,18 +740,20 @@ const vizSteps = {
         delay: 700
       })
 
-      // 3. And activate all the lines
+      // 3. And activate all the other lines
 
       data1919MzStdWithoutTotal.forEach(category => {
-        changeCategoryLine({
-          svg,
-          categoryName: category.skupina,
-          d: lineCategories(category.data),
-          style: 'active',
-          activeColor: categoryColorsActive[category.skupina],
-          duration: 700,
-          delay: 700
-        })
+        if (category.skupina !== 'Válečné akce a soudní poprava') {
+          console.log(category.skupina)
+          changeCategoryLine({
+            svg,
+            categoryName: category.skupina,
+            d: lineCategories(category.data),
+            style: 'active',
+            activeColor: categoryColorsActive[category.skupina],
+            duration: 700
+          })
+        }
       })
 
     },
@@ -998,12 +1000,12 @@ const bringCategoryLineToFront = ({ svg, categoryName }) => {
     .raise()
 }
 
-const addCategoryLine = ({ svg, categoryName, d, style, activeColor }) => {
+const addCategoryLine = ({ svg, categoryName, d, style, activeColor, duration = 0, delay = 0 }) => {
   svg.select('.g-lines')
     .append('path')
     .attr('class', kebabCase(categoryName))
 
-  changeCategoryLine({ svg, categoryName, d, style, activeColor })
+  changeCategoryLine({ svg, categoryName, d, style, activeColor, duration, delay })
 }
 
 const removeCategoryLine = ({ svg, categoryName, delay = 0 }) => {

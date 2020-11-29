@@ -60,6 +60,13 @@ svg.prvni-republika-pribehy-viz {
     background: #ccc;
     border-radius: 50%;
 
+    transition: background-color 100ms ease 0s;
+    transition: border-color 100ms ease 0s;
+
+    &:hover, &:active {
+      background: #888;
+    }
+
     &.is-active {
       background: black;
       border-color: black;
