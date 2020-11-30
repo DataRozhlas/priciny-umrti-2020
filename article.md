@@ -360,4 +360,40 @@ Příběhy
 
 <h2>Kapitola 5: Budoucnost (MKN-11, sdružené příčiny úmrtí)</h2>
 
-...
+Úmrtnost na hlavní příčiny úmrtí – nemoci oběhové soustavy a novotvary – v posledních letech klesá. V jejich stínu se ale vrací rizika spojená s infekčními nemocemi.
+
+„Zatímco ‚staré‘ infekce jsou na prahu vyhubení, objevují se nové,“ <a href="https://owncloud.cesnet.cz/index.php/s/m8ngF4L6LB2L4wJ" target="_blank">píše ve své dizertaci</a> demografka Markéta Pechholdová z katedry demografie VŠE. Typickými příklady nových infekcí jsou podle ní například bakterie rezistentní vůči antibiotikům nebo nemoci přenesené ze zvířat. Upozorňuje také na návrat nemocí, proti kterým je vakcína dostupná – spalniček, dětské obrny, záškrtu a černého kašle.
+
+V posledních letech se i tak infekce podílely na úmrtnosti ani ne dvěma procenty. Proč si jich všímat?
+
+Za prvé, jsou s nimi spojená velká rizika. Problémy nemocí přenesených ze zvířat není potřeba představovat – zatímco epidemii netopýřího viru SARS v roce 2002 se ještě podařilo zastavit včas, prasečí chřipka v roce 2009 se rozšířila po celé planetě a stála půl milionu životů. Aktuální pandemie dosud přibližně třikrát tolik. Podobně nebezpečná je rostoucí rezistence bakterií na antibiotika: podle WHO jde o <a href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance" target="_blank">jedno z nejpodceňovanějších zdravotních rizik</a>.
+
+Za druhé, oproti nemocem srdce nebo rakovině zabíjejí infekční nemoci v nižším věku, některé výrazně – například AIDS. Pokud bychom se tedy ptali, o kolik roků nemoc zkrátila život, infekční nemoci budou hrát větší roli než zmíněná dvě procenta. Mimochodem, ve <a href="https://data.oecd.org/healthstat/potential-years-of-life-lost.htm" target="_blank">statistice potenciálně ztracených let</a> i ukazateli <a href="https://stats.oecd.org/index.aspx?queryid=96018" target="_blank">vyhnutelné úmrtnosti</a> je na tom Česko ve srovnání zemí OECD relativně špatně.
+
+<div class="mock-content">
+Tady přibude graf
+
+úmrtnost podle věku
+</div>
+
+Třetí důvod je z pohledu článku nejpodstatnější: část úmrtí na infekce se ve statistikách neobjeví. Při souběhu více nemocí dávají pravidla pro výběr hlavní příčiny úmrtí přednost té závažnější z nemocí. Pokud tedy pacient s ischemickou chorobou srdeční zemře s chřipkou, jako příčina úmrtí se uvede nemoc srdce . Přestože chřipka mohla život zkrátit o několik let. Ostatně jde o stejný problém, který se dnes řeší v souvislosti s covidem.
+
+Jako příklad „neviditelné“ nemoci Pechholdová zmiňuje takzvané septikémie neboli sepse: bakteriální infekce, které se mohou objevit třeba po operaci. Podle demografky sepse velmi často doprovází úmrtí na jinou příčinu – v pravidlech pro stanovení hlavní příčiny úmrtí mají nicméně tak nízkou prioritu, že se mezi příčinami úmrtí objevují spíš vzácně. Zdravotnictví tak může nebezpečí této diagnózy podceňovat.
+
+Způsobem, jak podobné diagnózy zviditelnit, jsou takzvané sdružené příčiny úmrtí. Jde o koncept, kdy se za hlavní příčinu nepovažuje jedna nemoc, ale celý řetězec zdravotních problémů. Místo rozhodování, zda uvést poslední článek řetězce jako za první republiky, nebo jeho začátek, jak je tomu dnes, se uvede celá posloupnost.
+
+Mimochodem, nejde o novinku.
+
+„Také u nás jsme třídili a v letech 1925 až 1937 publikovali tabulky s kombinovanými příčinami smrti,“ píše Srb. „Avšak později pro nákladnost třídění a poměrně malé využití dat bylo od třídění upuštěno.“
+
+O téměř sto let později se vynořují nápady sdružené příčiny úmrtí rehabilitovat.
+
+<div class="mock-content">
+Tady přibude graf
+
+Septikémie
+</div>
+
+Spor mezi tábory na covid a s covidem ukazuje, proč se k němu vrátit: uzavřít celý život jednou diagnózou je nejen nepravdivé, ale také nebezpečné.
+
+
