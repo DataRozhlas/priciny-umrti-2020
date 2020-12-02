@@ -844,9 +844,9 @@ const categoryColorsActive = {
 };
 
 const categoryLineLabelPositions = {
-  'Celkem': { x: d3.timeParse('%Y')(1927), y: 1700, textAnchor: 'start' },
+  'Celkem': { x: d3.timeParse('%Y')(1927), y: 2000, textAnchor: 'start' },
   'Stařecká sešlost': { x: d3.timeParse('%Y')(1925), y: 400, textAnchor: 'start' },
-  'Nemoci nakažlivé a cizopasné': { x: d3.timeParse('%Y')(1927), y: 250, textAnchor: 'start' },
+  'Nemoci nakažlivé a cizopasné': { x: d3.timeParse('%Y')(1928), y: 270, textAnchor: 'start' },
   'Nemoci ústrojí oběhu krevního': { x: d3.timeParse('%Y')(1929), y: 380, textAnchor: 'start' },
   'Rakovina a jiné nádory': { x: d3.timeParse('%Y')(1933), y: 220, textAnchor: 'start' },
   'Válečné akce a soudní poprava': { x: d3.timeParse('%Y')(1940), y: 40, textAnchor: 'end' },
