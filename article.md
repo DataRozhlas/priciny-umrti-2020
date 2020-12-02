@@ -31,6 +31,8 @@ Jaké onemocnění se často vyskytují současně při úmrtí na covid?
   <img src="assets/1 Ilustrace kapitoly/003.jpg" alt="">
   <img src="assets/1 Ilustrace kapitoly/004.jpg" alt="">
   <img src="assets/1 Ilustrace kapitoly/005.jpg" alt="">
+  <img src="assets/1 Ilustrace kapitoly/006.jpg" alt="">
+  <img src="assets/1 Ilustrace kapitoly/007.jpg" alt="">
 </div>
 
 <h2>Kapitola 1: Umírání za císaře pána (1785-1918, protodemografie)</h2>
