@@ -1,6 +1,6 @@
 title: "Od moru ke covidu"
 perex: "S covidem, nebo na covid? Na otázku, která na jaře zamotala hlavu celé civilizaci – tedy jaká je příčina úmrtí – hledá medicína odpověď přes sto let. Odpověď přitom rozhoduje o tom, čemu zdravotnictví věnuje pozornost a kam tečou peníze."
-coverimg: "assets/0 Uvodni ilustrace.jpg"
+coverimg: assets/0_uvodni_ilustrace.jpg
 coverimg_note: ""
 styles: [https://fonts.googleapis.com/css2?family=Asap]
 libraries: [] #jquery, d3, highcharts, datatables
@@ -26,13 +26,13 @@ Jaké onemocnění se často vyskytují současně při úmrtí na covid?
 </div>
 
 <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
-  <img src="assets/1 Ilustrace kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/1 Ilustrace kapitoly/002.jpg" alt="">
-  <img src="assets/1 Ilustrace kapitoly/003.jpg" alt="">
-  <img src="assets/1 Ilustrace kapitoly/004.jpg" alt="">
-  <img src="assets/1 Ilustrace kapitoly/005.jpg" alt="">
-  <img src="assets/1 Ilustrace kapitoly/006.jpg" alt="">
-  <img src="assets/1 Ilustrace kapitoly/007.jpg" alt="">
+  <img src="assets/1_ilustrace_kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/1_ilustrace_kapitoly/002.jpg" alt="">
+  <img src="assets/1_ilustrace_kapitoly/003.jpg" alt="">
+  <img src="assets/1_ilustrace_kapitoly/004.jpg" alt="">
+  <img src="assets/1_ilustrace_kapitoly/005.jpg" alt="">
+  <img src="assets/1_ilustrace_kapitoly/006.jpg" alt="">
+  <img src="assets/1_ilustrace_kapitoly/007.jpg" alt="">
 </div>
 
 <h2>Kapitola 1: Umírání za císaře pána (1785-1918, protodemografie)</h2>
@@ -59,7 +59,7 @@ Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předc
 
 Data z 18. století přitom napovídají, co životy zkracovalo: riskantní byl zejména kojenecký a dětský věk; charakteristické zuby v grafu pak odpovídají válečným rokům a vlnám epidemií.
 
-<img src="assets/1.1 Stredni delka zivota 19.stol 2020-11-09-03.svg" />
+<img src="assets/1_1_stredni_delka_zivota_19stol_2020-11-09-03.svg" />
 <!-- <div id="1.1-graf-stredni-delka" class="mock-content">
 Tady přibude graf
 Střední délka života v 19. století
@@ -70,7 +70,7 @@ Střední délka života v 19. století
 
 Když trochu předběhneme, během necelých 200 let se délka života protáhla z 28 na bezmála 80 let. Rozhodně ale nešlo o plynulou změnu: jsou období jako přelom 19. a 20. století, kdy se během jedné generace život prodloužil o 40 procent. V jiných dobách se nárůst délky života téměř zastavil, v některých desetiletích dokonce obrátil – například za reálného socialismu.
 
-<img src="assets/1.2 Stredni delka zivota 2020-11-09-03.svg" />
+<img src="assets/1_2_stredni_delka_zivota_2020-11-09-03.svg" />
 <!-- <div id="1.2-graf-zmena-stredni-delka" class="mock-content">
 Tady přibude graf
 změna střední délky života (abs., %) 1830 až 2019
@@ -84,11 +84,11 @@ Samotná válka si podle Srba vyžádala asi 300 tisíc přímých obětí, kter
 Slabé válečné ročníky se mimochodem zařezávají do statistiky dodnes: důvod, proč jsou české školky několik let poloprázdné a vzápětí přeplněné, je právě rozkolísání porodnosti za první světové války. Podobný problém řeší většina evropských zemí; u některých se ještě prohloubil za druhé války, nejpalčivěji nenarozenou generaci <a href="https://www.irozhlas.cz/zpravy-svet/rusove-proti-rusum-zeme-v-nevyhlasene-obcanske-valce_1504291200_zlo" target="_blank">vnímá Rusko</a>.
 
 <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-2">
-  <img src="assets/2 Ilustrace kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/2 Ilustrace kapitoly/002.jpg" alt="">
-  <img src="assets/2 Ilustrace kapitoly/003.jpg" alt="">
-  <img src="assets/2 Ilustrace kapitoly/004.jpg" alt="">
-  <img src="assets/2 Ilustrace kapitoly/005.jpg" alt="">
+  <img src="assets/2_ilustrace_kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/2_ilustrace_kapitoly/002.jpg" alt="">
+  <img src="assets/2_ilustrace_kapitoly/003.jpg" alt="">
+  <img src="assets/2_ilustrace_kapitoly/004.jpg" alt="">
+  <img src="assets/2_ilustrace_kapitoly/005.jpg" alt="">
 </div>
 
 <h2>Kapitola 2: První republika (1919-1948, války + Němci)</h2>
@@ -114,7 +114,7 @@ Příčiny úmrtí jsou v klasifikaci sdružené do skupin podle typu, napříkl
 <div class="b-inline">
   <div class="b-inline__wrap">
     <div class="b-inline__content">
-      <img src="assets/2.1 Vesele diagnozy.jpg" alt="" class="priciny-umrti-vesele-diagnozy-img">
+      <img src="assets/2_1_vesele_diagnozy.jpg" alt="" class="priciny-umrti-vesele-diagnozy-img">
       <p class="text-sm text-bold text-uppercase">Veselé diagnózy</p>
       <p class="text-sm">
         <em>Tady bude jeste kratky text k veselym diagnozam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor metus eu rhoncus faucibus. Curabitur ut blandit nisi, vel rhoncus nisl. Maecenas finibus, tortor in volutpat feugiat, diam nisi tempus nibh, at semper lectus dui in massa.</em>
@@ -223,12 +223,12 @@ Na frontě podle demografa zahynulo také 190 tisíc českých Němců a další
 Na rozdíl od první světové války ovšem nedošlo k zásadnímu propadu porodnosti ani nárůstu úmrtnosti – u české populace se v době protektorátu obě čísla rozkolísala, ale dlouhodobé trendy se nezměnily.
 
 <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-3">
-  <img src="assets/3 Ilustrace kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/3 Ilustrace kapitoly/002.jpg" alt="">
-  <img src="assets/3 Ilustrace kapitoly/003.jpg" alt="">
-  <img src="assets/3 Ilustrace kapitoly/004.jpg" alt="">
-  <img src="assets/3 Ilustrace kapitoly/005.jpg" alt="">
-  <img src="assets/3 Ilustrace kapitoly/006.jpg" alt="">
+  <img src="assets/3_ilustrace_kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/3_ilustrace_kapitoly/002.jpg" alt="">
+  <img src="assets/3_ilustrace_kapitoly/003.jpg" alt="">
+  <img src="assets/3_ilustrace_kapitoly/004.jpg" alt="">
+  <img src="assets/3_ilustrace_kapitoly/005.jpg" alt="">
+  <img src="assets/3_ilustrace_kapitoly/006.jpg" alt="">
 </div>
 
 <h2>Kapitola 3: Komunismus (1949-1989)</h2>
@@ -300,12 +300,12 @@ příběhy komunismu
 </div>
 
 <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4">
-  <img src="assets/4 Ilustrace kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/4 Ilustrace kapitoly/002.jpg" alt="">
-  <img src="assets/4 Ilustrace kapitoly/003.jpg" alt="">
-  <img src="assets/4 Ilustrace kapitoly/004.jpg" alt="">
-  <img src="assets/4 Ilustrace kapitoly/005.jpg" alt="">
-  <img src="assets/4 Ilustrace kapitoly/006.jpg" alt="">
+  <img src="assets/4_ilustrace_kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/4_ilustrace_kapitoly/002.jpg" alt="">
+  <img src="assets/4_ilustrace_kapitoly/003.jpg" alt="">
+  <img src="assets/4_ilustrace_kapitoly/004.jpg" alt="">
+  <img src="assets/4_ilustrace_kapitoly/005.jpg" alt="">
+  <img src="assets/4_ilustrace_kapitoly/006.jpg" alt="">
 </div>
 
 <h2>Kapitola 4: Současnost (1989-2018, srovnávání s Evropou)</h2>
@@ -358,6 +358,15 @@ Při porovnávání časové řady uvnitř jedné země se nicméně na někter�
 Tady přibude scrollytelling
 
 Příběhy
+</div>
+
+<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
+  <img src="assets/5_ilustrace_kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/5_ilustrace_kapitoly/002.jpg" alt="">
+  <img src="assets/5_ilustrace_kapitoly/003.jpg" alt="">
+  <img src="assets/5_ilustrace_kapitoly/004.jpg" alt="">
+  <img src="assets/5_ilustrace_kapitoly/005.jpg" alt="">
+  <img src="assets/5_ilustrace_kapitoly/006.jpg" alt="">
 </div>
 
 <h2>Kapitola 5: Budoucnost (MKN-11, sdružené příčiny úmrtí)</h2>

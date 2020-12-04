@@ -7,6 +7,7 @@ const ilustraceKapitol = () => {
   initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-2', 771 / 1800)
   initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-3', 771 / 1800)
   initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-4', 771 / 1800)
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-5', 771 / 1800)
 }
 
 const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => {
