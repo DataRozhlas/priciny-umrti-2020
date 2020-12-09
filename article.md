@@ -89,6 +89,7 @@ Slabé válečné ročníky se mimochodem zařezávají do statistiky dodnes: d�
   <img src="assets/2_ilustrace_kapitoly/003.jpg" alt="">
   <img src="assets/2_ilustrace_kapitoly/004.jpg" alt="">
   <img src="assets/2_ilustrace_kapitoly/005.jpg" alt="">
+  <img src="assets/2_ilustrace_kapitoly/006.jpg" alt="">
 </div>
 
 <h2>Kapitola 2: První republika (1919-1948, války + Němci)</h2>
