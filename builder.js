@@ -183,7 +183,7 @@ async function main() {
     process.stdout.write("\nSledování...\n");
     toWatch.forEach((name) => {
       let fsWait = false;
-      fs.watch(name, async (event, filename) => {
+      fs.watch(name, { recursive: true }, async (event, filename) => {
         if (filename) {
           if (fsWait) return;
           fsWait = setTimeout(() => {
