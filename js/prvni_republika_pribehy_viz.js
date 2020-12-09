@@ -8,8 +8,10 @@ export const initViz = (svgSelector, data) => {
   const { width, height } = svg.node().parentNode.getBoundingClientRect()
 
   const margin = width < 768
-    ? { top: 50, right: 20, bottom: 70, left: 55 }
+    ? { top: 55, right: 20, bottom: 70, left: 55 }
     : { top: 60, right: 30, bottom: 100, left: 60 }
+
+  const showLegendOnSide = width >= 768
 
   svg.attr("viewBox", [0, 0, width, height]);
 
@@ -24,6 +26,10 @@ export const initViz = (svgSelector, data) => {
     .domain(d3.extent(years))
     .range([margin.left, width - margin.right])
 
+  const xExplore = d3.scaleUtc()
+    .domain(d3.extent(years))
+    .range([margin.left, width - margin.right - (showLegendOnSide ? 250 : 0)])
+
   const yTotal = d3.scaleLinear()
     .domain([0, d3.max(data1919MzStd.map(category => d3.max(category.data.map(d => (d.value))) ))])
     .nice()
@@ -34,6 +40,11 @@ export const initViz = (svgSelector, data) => {
     .nice()
     .range([height - margin.bottom, margin.top])
 
+  const yExplore = d3.scaleLinear()
+    .domain([0, d3.max(data1919MzStdWithoutTotal.map(category => d3.max(category.data.map(d => (d.value))) ))])
+    .nice()
+    .range([height - margin.bottom - (showLegendOnSide ? 0 : 40), margin.top])
+
   // 2. Axes
 
   const yAxis = g => g
@@ -42,11 +53,26 @@ export const initViz = (svgSelector, data) => {
     // Remove the axis line to make the chart lighter
     .call(g => g.select(".domain").attr('stroke-width', 0))
 
+  const yAxisExplore = g => g
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(yExplore))
+    // Remove the axis line to make the chart lighter
+    .call(g => g.select(".domain").attr('stroke-width', 0))
+
   const xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(
       d3.axisBottom(x)
         .ticks(d3.timeYear.every(width < 768 ? 5 : 1))
+        .tickSizeOuter(0)
+        .tickFormat(d3.timeFormat('%Y'))
+    )
+
+  const xAxisExplore = g => g
+    .attr("transform", `translate(0,${height - margin.bottom - (showLegendOnSide ? 0 : 40)})`)
+    .call(
+      d3.axisBottom(xExplore)
+        .ticks(d3.timeYear.every(width < 768 ? 5 : 2))
         .tickSizeOuter(0)
         .tickFormat(d3.timeFormat('%Y'))
     )
@@ -64,11 +90,12 @@ export const initViz = (svgSelector, data) => {
 
   const axisXLabel = svgAxesLabelsG.append('text')
     .attr('class', 'axis-x-label')
-    .attr('y', margin.top - 35)
+    .attr('y', margin.top - 45)
     .attr('text-anchor', 'end')
 
-  axisXLabel.append('tspan').text('Std.').attr('x', margin.left - 8)
-  axisXLabel.append('tspan').text('úmrtnost').attr('dy', 12).attr('x', margin.left - 8)
+  axisXLabel.append('tspan').text('Úmrtí na').attr('x', margin.left)
+  axisXLabel.append('tspan').text('100 tisíc').attr('dy', 14).attr('x', margin.left)
+  axisXLabel.append('tspan').text('(std. 1948)').attr('dy', 14).attr('x', margin.left)
 
   // 3. Lines
 
@@ -79,6 +106,10 @@ export const initViz = (svgSelector, data) => {
   const lineCategories = d3.line()
     .x(d => x(d3.timeParse('%Y')(d.rok)))
     .y(d => yCategories(d.value ? d.value : 0))
+
+  const lineExplore = d3.line()
+    .x(d => xExplore(d3.timeParse('%Y')(d.rok)))
+    .y(d => yExplore(d.value ? d.value : 0))
 
   svg.append("g")
     .attr("class", "g-lines")
@@ -110,17 +141,33 @@ export const initViz = (svgSelector, data) => {
 
   const viz = {
     svg,
+    
     data1919MzStd,
     data1919MStd,
     data1919ZStd,
+    
     x,
+    xExplore,
+    
     yTotal,
     yCategories,
+    yExplore,
+    
+    yAxis,
+    yAxisExplore,
+
+    xAxis,
+    xAxisExplore,
+    
     lineTotal,
     lineCategories,
+    lineExplore,
+    
     width,
     height,
-    margin
+    margin,
+    
+    showLegendOnSide
   }
 
   return {
@@ -167,9 +214,9 @@ const vizSteps = {
       svgXAxisAnnotationsG.append('rect')
         .attr('class', 'secondww-rect')
         .attr('width', x(d3.timeParse('%Y')(1945)) - x(d3.timeParse('%Y')(1939)))
-        .attr('height', yTotal(0) - yTotal(2200) + (width < 768 ? 37 : 50))
+        .attr('height', yTotal(0) - yTotal(2400) + (width < 768 ? 37 : 50))
         .attr('x', x(d3.timeParse('%Y')(1939)))
-        .attr('y', yTotal(2200))
+        .attr('y', yTotal(2400))
         .style("fill", "#f5f5f5")
         .attr('opacity', 0)
         .transition()
@@ -196,7 +243,7 @@ const vizSteps = {
         .attr('x1', x(d3.timeParse('%Y')(1948)))
         .attr('y1', yTotal(0) + 50)
         .attr('x2', x(d3.timeParse('%Y')(1948)))
-        .attr('y2', yTotal(2200))
+        .attr('y2', yTotal(2400))
         .attr("stroke", '#cccccc')
         .attr("stroke-width", 1)
         .attr('stroke-dasharray', '4,4')
@@ -656,7 +703,7 @@ const vizSteps = {
         .attr('y', yCategories(35) - 60)
         .attr('width', 100)
         .attr('height', 60)
-        .attr('href', 'assets/2.2 Kompletní příčiny úmrtí/Válečné akce - šipka Heydrichiáda.svg')
+        .attr('href', 'assets/2_3_kompletni_priciny_umrti/valecne_akce_sipka_heydrichiada.svg')
         .attr('opacity', 0)
         .transition()
         .duration(700)
@@ -668,7 +715,7 @@ const vizSteps = {
         .attr('y', yCategories(165) - 63)
         .attr('width', 129)
         .attr('height', 63)
-        .attr('href', 'assets/2.2 Kompletní příčiny úmrtí/Válečné akce - šipka Osvobozovací boje.svg')
+        .attr('href', 'assets/2_3_kompletni_priciny_umrti/valecne_akce_sipka_osvobozovaci_boje.svg')
         .attr('opacity', 0)
         .transition()
         .duration(700)
@@ -677,7 +724,22 @@ const vizSteps = {
   },
 
   9: {
-    onScrollDownToStep: ({ svg, data1919MzStd, x, yCategories, lineCategories }) => {
+    onScrollDownToStep: ({
+      svg,    
+      data1919MzStd,      
+      x,
+      xExplore,
+      yCategories,
+      yExplore,
+      xAxisExplore,
+      yAxisExplore,
+      lineCategories,
+      lineExplore,
+      showLegendOnSide,
+      margin,
+      width,
+      height
+    }) => {
       const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
       const data1919MzStdCategoryWar = data1919MzStd.find(category => category.skupina === 'Válečné akce a soudní poprava')
 
@@ -744,7 +806,6 @@ const vizSteps = {
 
       data1919MzStdWithoutTotal.forEach(category => {
         if (category.skupina !== 'Válečné akce a soudní poprava') {
-          console.log(category.skupina)
           changeCategoryLine({
             svg,
             categoryName: category.skupina,
@@ -755,6 +816,41 @@ const vizSteps = {
           })
         }
       })
+
+      // 4. 
+
+      // data1919MzStdWithoutTotal.forEach(category => {
+      //   changeCategoryLine({
+      //     svg,
+      //     categoryName: category.skupina,
+      //     d: lineExplore(category.data),
+      //     style: 'active',
+      //     activeColor: categoryColorsActive[category.skupina],
+      //     delay: 700,
+      //     duration: 700
+      //   })
+      // })
+
+      // svg.select('.g-axis-y')
+      //   .transition()
+      //   .duration(700)
+      //   .delay(700)
+      //   .call(yAxisExplore);
+
+      // svg.select('.g-axis-x')
+      //   .transition()
+      //   .duration(700)
+      //   .delay(700)
+      //   .call(xAxisExplore);
+
+      // const svgXAxisAnnotationsG = d3.select('.g-xaxis-annotations')
+
+      // svgXAxisAnnotationsG.select('.first-republic-label')
+      //   .transition()
+      //   .duration(700)
+      //   .delay(700)
+      //   .attr('x', xExplore(d3.timeParse('%Y')(1929)))
+      //   .attr('y', yExplore(0) + (width < 768 ? 32 : 40))
 
     },
     onScrollUpFromStep: ({ svg, data1919MzStd, data1919MStd, data1919ZStd, x, yCategories, lineCategories }) => {
