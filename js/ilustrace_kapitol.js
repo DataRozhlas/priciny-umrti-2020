@@ -1,36 +1,36 @@
-import "intersection-observer";
-import scrollama from "scrollama";
-import debounce from 'lodash/debounce'
+import 'intersection-observer';
+import scrollama from 'scrollama';
+import debounce from 'lodash/debounce';
 
 const ilustraceKapitol = () => {
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-1', 771 / 1800)
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-2', 771 / 1800)
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-3', 771 / 1800)
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-4', 771 / 1800)
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-5', 771 / 1800)
-}
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-1', 771 / 1800);
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-2', 771 / 1800);
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-3', 771 / 1800);
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-4', 771 / 1800);
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-5', 771 / 1800);
+};
 
 const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => {
-  const containerEl = document.querySelector(containerSelector)
+  const containerEl = document.querySelector(containerSelector);
   if (!containerEl) {
-    console.error(`Could not find scrolly container by selector "${containerSelector}"`)
+    console.error(`Could not find scrolly container by selector "${containerSelector}"`);
     return;
   }
 
-  const stepsContainerElement = document.createElement('div')
-  stepsContainerElement.classList.add('priciny-umrti-ilustrace-kapitoly-steps-container')
-  containerEl.append(stepsContainerElement)
+  const stepsContainerElement = document.createElement('div');
+  stepsContainerElement.classList.add('priciny-umrti-ilustrace-kapitoly-steps-container');
+  containerEl.append(stepsContainerElement);
 
-  const { width } = containerEl.getBoundingClientRect()
-  const height = width * heightToWidthRatio
+  const { width } = containerEl.getBoundingClientRect();
+  const height = width * heightToWidthRatio;
   containerEl.style.height = `${height}px`;
 
   containerEl.querySelectorAll('img').forEach(() => {
-    const stepElement = document.createElement('div')
-    stepElement.classList.add('priciny-umrti-ilustrace-kapitoly-step')
-    
-    stepsContainerElement.append(stepElement)
-  })
+    const stepElement = document.createElement('div');
+    stepElement.classList.add('priciny-umrti-ilustrace-kapitoly-step');
+
+    stepsContainerElement.append(stepElement);
+  });
 
   const frameElements = document.querySelectorAll(`${containerSelector} img`);
 
@@ -38,26 +38,29 @@ const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => 
 
   scroller
     .setup({
-      offset: .5,
+      offset: 0.5,
       step: `${containerSelector} .priciny-umrti-ilustrace-kapitoly-steps-container .priciny-umrti-ilustrace-kapitoly-step`,
     })
     .onStepEnter(({ element, direction, index }) => {
-      frameElements.forEach(el => el.classList.remove('active'))
-      frameElements[index].classList.add('active')
-    })
+      frameElements.forEach((el) => el.classList.remove('active'));
+      frameElements[index].classList.add('active');
+    });
 
-  let windowInnerWidthBefore = window.innerWidth
-  window.addEventListener('resize', debounce(e => {
-    if (window.innerWidth !== windowInnerWidthBefore) {
-      const { width } = containerEl.getBoundingClientRect()
-      const height = width * heightToWidthRatio
-      containerEl.style.height = `${height}px`;
+  let windowInnerWidthBefore = window.innerWidth;
+  window.addEventListener(
+    'resize',
+    debounce((e) => {
+      if (window.innerWidth !== windowInnerWidthBefore) {
+        const { width } = containerEl.getBoundingClientRect();
+        const height = width * heightToWidthRatio;
+        containerEl.style.height = `${height}px`;
 
-      scroller.resize(e)
+        scroller.resize(e);
 
-      windowInnerWidthBefore = window.innerWidth
-    }
-  }, 200))
-}
+        windowInnerWidthBefore = window.innerWidth;
+      }
+    }, 200)
+  );
+};
 
 document.addEventListener('DOMContentLoaded', ilustraceKapitol);

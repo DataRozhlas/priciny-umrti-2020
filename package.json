@@ -36,5 +36,7 @@
     "scrollama": "^2.2.1",
     "webpack": "^4.44.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
 }

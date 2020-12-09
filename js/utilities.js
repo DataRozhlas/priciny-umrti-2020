@@ -1,13 +1,13 @@
-import kebabCase from 'lodash/kebabCase'
+import kebabCase from 'lodash/kebabCase';
 
 // TODO error handling
 
 export const getKebabCase = (category) => {
-  return category ? category.replace(/\s+/g, '-').toLowerCase() : undefined
-}
+  return category ? category.replace(/\s+/g, '-').toLowerCase() : undefined;
+};
 
-export const getCategoryId = (categoryName) => kebabCase(categoryName)
+export const getCategoryId = (categoryName) => kebabCase(categoryName);
 
 export const getSvgElementId = (type, categoryName) => {
-  return (type && categoryName) ? type + "-" + getCategoryId(categoryName) : undefined
-}
+  return type && categoryName ? type + '-' + getCategoryId(categoryName) : undefined;
+};

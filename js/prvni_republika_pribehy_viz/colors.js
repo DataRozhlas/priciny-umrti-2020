@@ -1,5 +1,5 @@
 export const categoryColorsActive = {
-  'Celkem': '#000000',
+  Celkem: '#000000',
   'Nemoci nakažlivé a cizopasné': '#f95d6a',
   'Nemoci ústrojí oběhu krevního': '#ffa600',
   'Rakovina a jiné nádory': '#a05195',
@@ -21,9 +21,9 @@ export const categoryColorsActive = {
   'Vrozené vady vývojové': '#f97b72',
   'Zvláštní nemoci útlého věku': '#4b4b8f',
   'Stařecká sešlost': '#a5aa99',
-  'Sebevraždy': '#0ebcbf',
+  Sebevraždy: '#0ebcbf',
   'Vraždy a zabití': '#5158bb',
   'Úrazy při dopravě': '#9e52aa',
   'Úrazy a otravy mimo dopravu': '#eb4776',
-  'Neurčité příčiny smrti': '#f58a5a'
-}
+  'Neurčité příčiny smrti': '#f58a5a',
+};

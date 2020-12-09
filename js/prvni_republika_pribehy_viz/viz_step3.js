@@ -1,6 +1,6 @@
-import * as d3 from 'd3'
+import * as d3 from 'd3';
 
-import * as lines from './lines'
+import * as lines from './lines';
 
 const vizStep3 = {
   onScrollDownToStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
@@ -10,23 +10,23 @@ const vizStep3 = {
       x,
       y: yCategories,
       data1919MzStd,
-      activeCategoryNames: ['Stařecká sešlost']
-    })
+      activeCategoryNames: ['Stařecká sešlost'],
+    });
   },
   onScrollUpFromStep: ({ svg, lineCategories, data1919MzStd }) => {
-    const data1919MzStdWithoutTotal = data1919MzStd.filter(category => category.skupina !== 'Celkem')
+    const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
 
-    data1919MzStdWithoutTotal.forEach(category => {
+    data1919MzStdWithoutTotal.forEach((category) => {
       lines.changeCategoryLine({
         svg,
         categoryName: category.skupina,
         d: lineCategories(category.data),
-        style: 'anonymous'
-      })
-    })
+        style: 'anonymous',
+      });
+    });
 
-    lines.removeCategoryLineLabel({ svg, categoryName: 'Stařecká sešlost' })
-  }
-}
+    lines.removeCategoryLineLabel({ svg, categoryName: 'Stařecká sešlost' });
+  },
+};
 
-export default vizStep3
+export default vizStep3;

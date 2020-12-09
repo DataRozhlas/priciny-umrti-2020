@@ -1,6 +1,6 @@
-import * as d3 from 'd3'
+import * as d3 from 'd3';
 
-import * as lines from './lines'
+import * as lines from './lines';
 
 const vizStep4 = {
   onScrollDownToStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
@@ -10,8 +10,8 @@ const vizStep4 = {
       x,
       y: yCategories,
       data1919MzStd,
-      activeCategoryNames: ['Nemoci nakažlivé a cizopasné']
-    })
+      activeCategoryNames: ['Nemoci nakažlivé a cizopasné'],
+    });
   },
   onScrollUpFromStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
     lines.changeActiveNonTotalCategoryLines({
@@ -20,9 +20,9 @@ const vizStep4 = {
       x,
       y: yCategories,
       data1919MzStd,
-      activeCategoryNames: ['Stařecká sešlost']
-    })
-  }
-}
+      activeCategoryNames: ['Stařecká sešlost'],
+    });
+  },
+};
 
-export default vizStep4
+export default vizStep4;

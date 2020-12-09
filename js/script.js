@@ -1,7 +1,7 @@
-﻿import "./byeie"; // loučíme se s IE
+﻿import './byeie'; // loučíme se s IE
 
-import "./ilustrace_kapitol"
-import "./prvni_republika_pribehy"
+import './ilustrace_kapitol';
+import './prvni_republika_pribehy';
 
 /*
 // snadné načtení souboru pro každého!
