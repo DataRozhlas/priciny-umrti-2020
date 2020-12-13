@@ -3,7 +3,7 @@ import * as d3 from 'd3';
 import * as colors from './colors';
 import * as lines from './lines';
 
-const vizStep2 = {
+export default {
   onScrollDownToStep: ({ svg, x, yTotal, yCategories, lineTotal, lineCategories, data1919MzStd, margin }) => {
     const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
     const data1919MzStdCategoryTotal = data1919MzStd.find((category) => category.skupina === 'Celkem');
@@ -102,5 +102,3 @@ const vizStep2 = {
     svg.select('.g-axis-y').transition().duration(700).call(yAxis);
   },
 };
-
-export default vizStep2;
