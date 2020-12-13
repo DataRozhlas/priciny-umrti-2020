@@ -1,7 +1,10 @@
 import * as d3 from 'd3';
 
+import * as axes from './axes';
 import * as colors from './colors';
+import * as legend from './legend';
 import * as lines from './lines';
+import * as xAxisAnnotations from './x_axis_annotations';
 
 import vizStep1 from './viz_step1';
 import vizStep2 from './viz_step2';
@@ -31,17 +34,22 @@ export const initViz = (svgSelector, data) => {
   // We want the parent div of the svg to get the available space
   const { width, height } = svg.node().parentNode.getBoundingClientRect();
 
-  const margin =
-    width < 768 ? { top: 55, right: 20, bottom: 70, left: 55 } : { top: 60, right: 30, bottom: 100, left: 60 };
-
   const showLegendOnSide = width >= 768;
+
+  // Prepare the margins
+  let margin = { top: 60, right: 30, bottom: 100, left: 60 };
+  let marginExplore = { ...margin, right: margin.right + 235 }; // legend on the right
+  if (!showLegendOnSide) {
+    margin = { top: 55, right: 20, bottom: 70, left: 55 };
+    marginExplore = { ...margin /* bottom: margin.bottom + 40 */ }; // legend button on the bottom
+  }
 
   svg.attr('viewBox', [0, 0, width, height]);
 
   const { data1919MzStd, data1919MStd, data1919ZStd } = data;
   const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
 
-  // 1. Prepare data functions
+  // Prepare data functions
 
   const years = data1919MzStd[0].data.map((d) => d3.timeParse('%Y')(d.rok));
 
@@ -53,7 +61,7 @@ export const initViz = (svgSelector, data) => {
   const xExplore = d3
     .scaleUtc()
     .domain(d3.extent(years))
-    .range([margin.left, width - margin.right - (showLegendOnSide ? 250 : 0)]);
+    .range([marginExplore.left, width - marginExplore.right]);
 
   const yTotal = d3
     .scaleLinear()
@@ -71,59 +79,9 @@ export const initViz = (svgSelector, data) => {
     .scaleLinear()
     .domain([0, d3.max(data1919MzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
     .nice()
-    .range([height - margin.bottom - (showLegendOnSide ? 0 : 40), margin.top]);
+    .range([height - marginExplore.bottom, marginExplore.top]);
 
-  // 2. Axes
-
-  const yAxis = (g) =>
-    g
-      .attr('transform', `translate(${margin.left},0)`)
-      .call(d3.axisLeft(yTotal))
-      // Remove the axis line to make the chart lighter
-      .call((g) => g.select('.domain').attr('stroke-width', 0));
-
-  const yAxisExplore = (g) =>
-    g
-      .attr('transform', `translate(${margin.left},0)`)
-      .call(d3.axisLeft(yExplore))
-      // Remove the axis line to make the chart lighter
-      .call((g) => g.select('.domain').attr('stroke-width', 0));
-
-  const xAxis = (g) =>
-    g.attr('transform', `translate(0,${height - margin.bottom})`).call(
-      d3
-        .axisBottom(x)
-        .ticks(d3.timeYear.every(width < 768 ? 5 : 1))
-        .tickSizeOuter(0)
-        .tickFormat(d3.timeFormat('%Y'))
-    );
-
-  const xAxisExplore = (g) =>
-    g.attr('transform', `translate(0,${height - margin.bottom - (showLegendOnSide ? 0 : 40)})`).call(
-      d3
-        .axisBottom(xExplore)
-        .ticks(d3.timeYear.every(width < 768 ? 5 : 2))
-        .tickSizeOuter(0)
-        .tickFormat(d3.timeFormat('%Y'))
-    );
-
-  svg.append('g').attr('class', 'g-axis-x').call(xAxis);
-
-  svg.append('g').attr('class', 'g-axis-y').call(yAxis);
-
-  const svgAxesLabelsG = svg.append('g').attr('class', 'g-axes-labels');
-
-  const axisXLabel = svgAxesLabelsG
-    .append('text')
-    .attr('class', 'axis-x-label')
-    .attr('y', margin.top - 45)
-    .attr('text-anchor', 'end');
-
-  axisXLabel.append('tspan').text('Úmrtí na').attr('x', margin.left);
-  axisXLabel.append('tspan').text('100 tisíc').attr('dy', 14).attr('x', margin.left);
-  axisXLabel.append('tspan').text('(std. 1948)').attr('dy', 14).attr('x', margin.left);
-
-  // 3. Lines
+  // Line functions
 
   const lineTotal = d3
     .line()
@@ -140,31 +98,7 @@ export const initViz = (svgSelector, data) => {
     .x((d) => xExplore(d3.timeParse('%Y')(d.rok)))
     .y((d) => yExplore(d.value ? d.value : 0));
 
-  svg.append('g').attr('class', 'g-lines');
-
-  const totalCategory = data1919MzStd.find((category) => category.skupina === 'Celkem');
-
-  lines.addCategoryLine({
-    svg,
-    categoryName: 'Celkem',
-    d: lineTotal(totalCategory.data),
-    style: 'active',
-    activeColor: colors.categoryColorsActive['Celkem'],
-  });
-
-  // 4. Labels
-
-  svg.append('g').attr('class', 'g-line-labels');
-
-  lines.addCategoryLineLabel({
-    svg,
-    categoryName: 'Celkem',
-    position: {
-      x: x(lines.categoryLineLabelPositions['Celkem'].x),
-      y: yTotal(lines.categoryLineLabelPositions['Celkem'].y),
-      textAnchor: lines.categoryLineLabelPositions['Celkem'].textAnchor,
-    },
-  });
+  // Put together viz object
 
   const viz = {
     svg,
@@ -180,12 +114,6 @@ export const initViz = (svgSelector, data) => {
     yCategories,
     yExplore,
 
-    yAxis,
-    yAxisExplore,
-
-    xAxis,
-    xAxisExplore,
-
     lineTotal,
     lineCategories,
     lineExplore,
@@ -193,13 +121,56 @@ export const initViz = (svgSelector, data) => {
     width,
     height,
     margin,
+    marginExplore,
 
     showLegendOnSide,
   };
 
+  // Axes
+
+  axes.updateXAxis(viz, { x: viz.x, margin: viz.margin });
+  axes.updateYAxis(viz, { y: viz.yTotal, margin: viz.margin });
+  axes.createYAxisLabel(viz);
+
+  // Lines
+
+  lines.createLinesGroup(viz);
+
+  const totalCategory = data1919MzStd.find((category) => category.skupina === 'Celkem');
+
+  lines.addCategoryLine({
+    svg,
+    categoryName: 'Celkem',
+    d: lineTotal(totalCategory.data),
+    style: 'active',
+    activeColor: colors.categoryColorsActive['Celkem'],
+  });
+
+  // Line labels
+
+  lines.createLineLabelsGroup(viz);
+
+  lines.addCategoryLineLabel({
+    svg,
+    categoryName: 'Celkem',
+    position: {
+      x: x(lines.categoryLineLabelPositions['Celkem'].x),
+      y: yTotal(lines.categoryLineLabelPositions['Celkem'].y),
+      textAnchor: lines.categoryLineLabelPositions['Celkem'].textAnchor,
+    },
+  });
+
+  // X axis annotations
+
+  xAxisAnnotations.createXAxisAnnotationsGroup(viz);
+
   return {
     destroy: () => {
-      svg.selectAll('*').remove();
+      viz.svg.selectAll('*').remove();
+
+      if (legend.isAddedLegend(viz)) {
+        legend.removeLegend(viz);
+      }
     },
     onScrollDownToStep: (stepIndex) => {
       if (vizSteps[stepIndex] && vizSteps[stepIndex].onScrollDownToStep) {

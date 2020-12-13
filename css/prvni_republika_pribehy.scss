@@ -13,16 +13,24 @@
 }
 
 svg.prvni-republika-pribehy-viz {
-  .g-axes-labels text {
+  .g-x-axis-label text {
     font-family: Asap, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     fill: #000000;
   }
 
-  .g-xaxis-annotations text {
+  .g-x-axis-annotations text {
     font-family: Asap, sans-serif;
     font-size: 14px;
     fill: #888888;
+  }
+
+  .g-x-axis-annotations .second-ww-band {
+    fill: #f5f5f5;
+  }
+
+  .g-x-axis-annotations .communist-coup-line {
+    stroke: #cccccc;
   }
 
   .g-line-labels text {
@@ -32,10 +40,114 @@ svg.prvni-republika-pribehy-viz {
   }
 
   @media (max-width: 767.9px) {
-    .g-axes-labels text,
-    .g-xaxis-annotations text,
+    .g-x-axis-annotations text,
     .g-line-labels text {
       font-size: 11px;
+    }
+
+    .g-x-axis-label text {
+      font-size: 10px;
+    }
+  }
+}
+
+.prvni-republika-pribehy-legend {
+  position: absolute;
+  top: 18px;
+  right: 30px;
+  width: 210px;
+  border: 1px solid #E6E6E6;
+  padding: 12px 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  transition: opacity 700ms ease;
+
+  &.legend-show {
+    opacity: 1;
+  }
+
+  .legend-title {
+    font-family: Asap, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .legend-scroll-container {
+    overflow-y: auto;
+    padding-right: 15px;
+    margin-top: 12px;
+  }
+
+  .legend-item {
+    display: block;
+    margin-bottom: 7px;
+    flex-direction: row;
+    position: relative;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .custom-checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      background-color: #eee;
+
+      // Check mark in CSS only
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 5px;
+        top: 2px;
+        width: 5px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    .label-text {
+      display: block;
+      font-family: Asap, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 0 20px;
+      padding: 1px 0 0 0;
+      color: #888;
+    }
+
+    &:hover .label-text {
+      text-decoration: underline;
+    }
+
+    &:hover input ~ .custom-checkbox {
+      background-color: #ccc;
+    }
+
+    input:checked ~ .custom-checkbox {
+      // Takes color from color style prop, which is set in JS
+      background-color: currentcolor;
+    }
+
+    input:checked ~ .custom-checkbox:after {
+      display: block;
+    }
+
+    input:checked ~ .label-text {
+      color: #000;
     }
   }
 }

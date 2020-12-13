@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 
 import * as lines from './lines';
 
-const vizStep6 = {
+export default {
   onScrollDownToStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
     lines.changeActiveNonTotalCategoryLines({
       svg,
@@ -24,5 +24,3 @@ const vizStep6 = {
     });
   },
 };
-
-export default vizStep6;

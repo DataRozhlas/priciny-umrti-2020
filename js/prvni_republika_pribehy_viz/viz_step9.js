@@ -1,25 +1,30 @@
 import * as d3 from 'd3';
 
+import * as axes from './axes';
 import * as colors from './colors';
+import * as legend from './legend';
 import * as lines from './lines';
+import * as xAxisAnnotations from './x_axis_annotations';
 
-const vizStep9 = {
-  onScrollDownToStep: ({
-    svg,
-    data1919MzStd,
-    x,
-    xExplore,
-    yCategories,
-    yExplore,
-    xAxisExplore,
-    yAxisExplore,
-    lineCategories,
-    lineExplore,
-    showLegendOnSide,
-    margin,
-    width,
-    height,
-  }) => {
+export default {
+  onScrollDownToStep: (viz) => {
+    const {
+      svg,
+      data1919MzStd,
+      x,
+      xExplore,
+      yCategories,
+      yExplore,
+      xAxisExplore,
+      yAxisExplore,
+      lineCategories,
+      lineExplore,
+      showLegendOnSide,
+      margin,
+      width,
+      height,
+    } = viz;
+
     const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
     const data1919MzStdCategoryWar = data1919MzStd.find(
       (category) => category.skupina === 'Válečné akce a soudní poprava'
@@ -75,12 +80,13 @@ const vizStep9 = {
     lines.removeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava - muži', delay: 700 });
     lines.removeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava - ženy', delay: 700 });
 
-    lines.addCategoryLine({
+    lines.changeCategoryLine({
       svg,
       categoryName: 'Válečné akce a soudní poprava',
       d: lineCategories(data1919MzStdCategoryWar.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava'],
+      opacity: 1,
       delay: 700,
     });
 
@@ -101,40 +107,62 @@ const vizStep9 = {
 
     // 4.
 
-    // data1919MzStdWithoutTotal.forEach(category => {
-    //   changeCategoryLine({
-    //     svg,
-    //     categoryName: category.skupina,
-    //     d: lineExplore(category.data),
-    //     style: 'active',
-    //     activeColor: categoryColorsActive[category.skupina],
-    //     delay: 700,
-    //     duration: 700
-    //   })
-    // })
+    data1919MzStdWithoutTotal.forEach((category) => {
+      lines.changeCategoryLine({
+        svg,
+        categoryName: category.skupina,
+        d: lineExplore(category.data),
+        style: 'active',
+        activeColor: colors.categoryColorsActive[category.skupina],
+        delay: 700,
+        duration: 700,
+      });
+    });
 
-    // svg.select('.g-axis-y')
-    //   .transition()
-    //   .duration(700)
-    //   .delay(700)
-    //   .call(yAxisExplore);
+    axes.updateXAxis(viz, { x: viz.xExplore, margin: viz.marginExplore, delay: 700, duration: 700 });
+    axes.updateYAxis(viz, { y: viz.yExplore, margin: viz.marginExplore, delay: 700, duration: 700 });
 
-    // svg.select('.g-axis-x')
-    //   .transition()
-    //   .duration(700)
-    //   .delay(700)
-    //   .call(xAxisExplore);
+    xAxisAnnotations.updateFirstRepublicLabel(viz, {
+      xPos: viz.xExplore(d3.timeParse('%Y')(1929)),
+      margin: viz.marginExplore,
+      delay: 700,
+      duration: 700,
+    });
 
-    // const svgXAxisAnnotationsG = d3.select('.g-xaxis-annotations')
+    xAxisAnnotations.updateSecondWWBand(viz, {
+      xPos: viz.xExplore(d3.timeParse('%Y')(1939)),
+      bandWidth: viz.xExplore(d3.timeParse('%Y')(1945)) - viz.xExplore(d3.timeParse('%Y')(1939)),
+      margin: viz.marginExplore,
+      delay: 700,
+      duration: 700,
+    });
 
-    // svgXAxisAnnotationsG.select('.first-republic-label')
-    //   .transition()
-    //   .duration(700)
-    //   .delay(700)
-    //   .attr('x', xExplore(d3.timeParse('%Y')(1929)))
-    //   .attr('y', yExplore(0) + (width < 768 ? 32 : 40))
+    xAxisAnnotations.updateSecondWWLabel(viz, {
+      xPos: viz.xExplore(d3.timeParse('%Y')(1942)),
+      margin: viz.marginExplore,
+      delay: 700,
+      duration: 700,
+    });
+
+    xAxisAnnotations.updateCommunistCoupLine(viz, {
+      xPos: viz.xExplore(d3.timeParse('%Y')(1948)),
+      margin: viz.marginExplore,
+      delay: 700,
+      duration: 700,
+    });
+
+    xAxisAnnotations.updateCommunistCoupLabel(viz, {
+      xPos: viz.xExplore(d3.timeParse('%Y')(1948)),
+      margin: viz.marginExplore,
+      delay: 700,
+      duration: 700,
+    });
+
+    legend.fadeInLegend(viz);
   },
-  onScrollUpFromStep: ({ svg, data1919MzStd, data1919MStd, data1919ZStd, x, yCategories, lineCategories }) => {
+  onScrollUpFromStep: (viz) => {
+    const { svg, data1919MzStd, data1919MStd, data1919ZStd, x, yCategories, lineCategories } = viz;
+
     const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
 
     const categoryWarName = 'Válečné akce a soudní poprava';
@@ -143,15 +171,26 @@ const vizStep9 = {
     const data1919ZStdCategoryWar = data1919ZStd.find((category) => category.skupina === categoryWarName);
 
     data1919MzStdWithoutTotal.forEach((category) => {
-      lines.changeCategoryLine({
-        svg,
-        categoryName: category.skupina,
-        d: lineCategories(category.data),
-        style: 'context',
-      });
+      const categoryName = category.skupina;
+
+      if (!lines.isAddedCategoryLine(viz, { categoryName })) {
+        lines.addCategoryLine({
+          svg,
+          categoryName,
+          d: lineCategories(category.data),
+          style: 'context',
+        });
+      } else {
+        lines.changeCategoryLine({
+          svg,
+          categoryName,
+          d: lineCategories(category.data),
+          style: 'context',
+        });
+      }
     });
 
-    lines.removeCategoryLine({ svg, categoryName: categoryWarName });
+    lines.changeCategoryLine({ svg, categoryName: categoryWarName, style: 'active', opacity: 0 });
 
     lines.addCategoryLine({
       svg,
@@ -186,7 +225,41 @@ const vizStep9 = {
         textAnchor: lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].textAnchor,
       },
     });
+
+    axes.updateXAxis(viz, { x: viz.x, margin: viz.margin, duration: 700 });
+    axes.updateYAxis(viz, { y: viz.yCategories, margin: viz.margin, duration: 700 });
+
+    xAxisAnnotations.updateFirstRepublicLabel(viz, {
+      xPos: viz.x(d3.timeParse('%Y')(1929)),
+      margin: viz.margin,
+      duration: 700,
+    });
+
+    xAxisAnnotations.updateSecondWWBand(viz, {
+      xPos: viz.x(d3.timeParse('%Y')(1939)),
+      bandWidth: viz.x(d3.timeParse('%Y')(1945)) - viz.x(d3.timeParse('%Y')(1939)),
+      margin: viz.margin,
+      duration: 700,
+    });
+
+    xAxisAnnotations.updateSecondWWLabel(viz, {
+      xPos: viz.x(d3.timeParse('%Y')(1942)),
+      margin: viz.margin,
+      duration: 700,
+    });
+
+    xAxisAnnotations.updateCommunistCoupLine(viz, {
+      xPos: viz.x(d3.timeParse('%Y')(1948)),
+      margin: viz.margin,
+      duration: 700,
+    });
+
+    xAxisAnnotations.updateCommunistCoupLabel(viz, {
+      xPos: viz.x(d3.timeParse('%Y')(1948)),
+      margin: viz.margin,
+      duration: 700,
+    });
+
+    legend.fadeOutLegend(viz);
   },
 };
-
-export default vizStep9;

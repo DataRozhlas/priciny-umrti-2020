@@ -1,7 +1,16 @@
 import * as d3 from 'd3';
 import kebabCase from 'lodash/kebabCase';
 
-import { categoryColorsActive } from './colors';
+import * as colors from './colors';
+import * as texts from './texts';
+
+export const createLinesGroup = (viz) => {
+  viz.svg.append('g').attr('class', 'g-lines');
+};
+
+export const createLineLabelsGroup = (viz) => {
+  viz.svg.append('g').attr('class', 'g-line-labels');
+};
 
 export const changeCategoryLine = ({ svg, categoryName, d, style, activeColor, duration = 0, delay = 0 }) => {
   let stroke;
@@ -19,12 +28,13 @@ export const changeCategoryLine = ({ svg, categoryName, d, style, activeColor, d
     throw new Error(`Unknown category line style: ${style}`);
   }
 
-  svg
-    .select(`.g-lines .${kebabCase(categoryName)}`)
+  const line = svg.select(`.g-lines .${kebabCase(categoryName)}`);
+
+  line
     .transition()
     .duration(duration)
     .delay(delay)
-    .attr('d', d)
+    .attr('d', d !== undefined ? d : line.attr('d'))
     .attr('stroke', stroke)
     .attr('stroke-width', strokeWidth)
     .attr('stroke-linejoin', 'round')
@@ -59,8 +69,14 @@ export const removeCategoryLine = ({ svg, categoryName, delay = 0 }) => {
     .remove();
 };
 
+export const isAddedCategoryLine = (viz, { categoryName }) => {
+  return !viz.svg.select(`.g-lines .${kebabCase(categoryName)}`).empty();
+};
+
 export const changeCategoryLineLabel = ({ svg, categoryName, position, opacity = 1, duration = 0, delay = 0 }) => {
-  const textToDisplay = categoryLineLabelTexts[categoryName] ? categoryLineLabelTexts[categoryName] : categoryName;
+  const textToDisplay = categoryLineLabelTexts[categoryName]
+    ? categoryLineLabelTexts[categoryName]
+    : texts.categoriesShortLabels[categoryName];
 
   svg
     .select(`.g-line-labels .${kebabCase(categoryName)}`)
@@ -71,7 +87,7 @@ export const changeCategoryLineLabel = ({ svg, categoryName, position, opacity =
     .attr('x', position.x)
     .attr('y', position.y)
     .attr('text-anchor', position.textAnchor)
-    .attr('fill', categoryColorsActive[categoryName])
+    .attr('fill', colors.categoryColorsActive[categoryName])
     .attr('opacity', opacity);
 };
 
@@ -102,7 +118,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
     let activeColor;
     if (activeCategoryNames.includes(category.skupina)) {
       style = 'active';
-      activeColor = categoryColorsActive[category.skupina];
+      activeColor = colors.categoryColorsActive[category.skupina];
     }
 
     changeCategoryLine({

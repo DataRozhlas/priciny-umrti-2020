@@ -3,7 +3,7 @@ import * as d3 from 'd3';
 import * as colors from './colors';
 import * as lines from './lines';
 
-const vizStep8 = {
+export default {
   onScrollDownToStep: ({ svg, data1919MzStd, data1919MStd, data1919ZStd, x, yCategories, lineCategories }) => {
     const categoryWarName = 'Válečné akce a soudní poprava';
 
@@ -11,9 +11,9 @@ const vizStep8 = {
     const data1919MStdCategoryWar = data1919MStd.find((category) => category.skupina === categoryWarName);
     const data1919ZStdCategoryWar = data1919ZStd.find((category) => category.skupina === categoryWarName);
 
-    // 1. Instantly remove the men+women category war line and the label
+    // 1. Instantly hide the men+women category war line and the label
 
-    lines.removeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava' });
+    lines.changeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava', style: 'active', opacity: 0 });
 
     lines.changeCategoryLineLabel({
       svg,
@@ -126,7 +126,7 @@ const vizStep8 = {
     const categoryWarName = 'Válečné akce a soudní poprava';
     const data1919MzStdCategoryWar = data1919MzStd.find((category) => category.skupina === categoryWarName);
 
-    lines.addCategoryLine({
+    lines.changeCategoryLine({
       svg,
       categoryName: 'Válečné akce a soudní poprava',
       d: lineCategories(data1919MzStdCategoryWar.data),
@@ -170,5 +170,3 @@ const vizStep8 = {
       .attr('opacity', 1);
   },
 };
-
-export default vizStep8;
