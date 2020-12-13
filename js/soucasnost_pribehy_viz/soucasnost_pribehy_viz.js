@@ -7,23 +7,9 @@ import * as lines from './lines';
 import * as xAxisAnnotations from './x_axis_annotations';
 
 import vizStep1 from './viz_step1';
-import vizStep2 from './viz_step2';
-import vizStep3 from './viz_step3';
-import vizStep4 from './viz_step4';
-import vizStep5 from './viz_step5';
-import vizStep6 from './viz_step6';
-import vizStep7 from './viz_step7';
-import vizStep8 from './viz_step8';
 
 const vizSteps = {
   1: vizStep1,
-  2: vizStep2,
-  3: vizStep3,
-  4: vizStep4,
-  5: vizStep5,
-  6: vizStep6,
-  7: vizStep7,
-  8: vizStep8,
 };
 
 export const initViz = (svgSelector, data) => {
@@ -41,12 +27,12 @@ export const initViz = (svgSelector, data) => {
 
   svg.attr('viewBox', [0, 0, width, height]);
 
-  const { data1919MzStd, data1919MStd, data1919ZStd } = data;
-  const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+  const { data1990MzStd, data1990MStd, data1990ZStd } = data;
+  const data1990MzStdWithoutTotal = data1990MzStd.filter((category) => category.skupina !== 'Celkem');
 
   // Prepare data functions
 
-  const years = data1919MzStd[0].data.map((d) => d3.timeParse('%Y')(d.rok));
+  const years = data1990MzStd[0].data.map((d) => d3.timeParse('%Y')(d.rok));
 
   const x = d3
     .scaleUtc()
@@ -60,19 +46,19 @@ export const initViz = (svgSelector, data) => {
 
   const yTotal = d3
     .scaleLinear()
-    .domain([0, d3.max(data1919MzStd.map((category) => d3.max(category.data.map((d) => d.value))))])
+    .domain([0, d3.max(data1990MzStd.map((category) => d3.max(category.data.map((d) => d.value))))])
     .nice()
     .range([height - margin.bottom, margin.top]);
 
   const yCategories = d3
     .scaleLinear()
-    .domain([0, d3.max(data1919MzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
+    .domain([0, d3.max(data1990MzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
     .nice()
     .range([height - margin.bottom, margin.top]);
 
   const yExplore = d3
     .scaleLinear()
-    .domain([0, d3.max(data1919MzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
+    .domain([0, d3.max(data1990MzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
     .nice()
     .range([height - marginExplore.bottom, marginExplore.top]);
 
@@ -98,9 +84,9 @@ export const initViz = (svgSelector, data) => {
   const viz = {
     svg,
 
-    data1919MzStd,
-    data1919MStd,
-    data1919ZStd,
+    data1990MzStd,
+    data1990MStd,
+    data1990ZStd,
 
     x,
     xExplore,
@@ -129,7 +115,7 @@ export const initViz = (svgSelector, data) => {
 
   lines.createLinesGroup(viz);
 
-  const totalCategory = data1919MzStd.find((category) => category.skupina === 'Celkem');
+  const totalCategory = data1990MzStd.find((category) => category.skupina === 'Celkem');
 
   lines.addCategoryLine({
     svg,
@@ -157,19 +143,13 @@ export const initViz = (svgSelector, data) => {
 
   xAxisAnnotations.createXAxisAnnotationsGroup(viz);
 
-  xAxisAnnotations.fadeInFirstRepublicLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1929)), margin: viz.margin });
+  // xAxisAnnotations.fadeInPragueSpringLine(viz, { xPos: viz.x(d3.timeParse('%Y')(1968)), margin: viz.margin });
 
-  xAxisAnnotations.fadeInSecondWWBand(viz, {
-    xPos: viz.x(d3.timeParse('%Y')(1939)),
-    bandWidth: viz.x(d3.timeParse('%Y')(1945)) - viz.x(d3.timeParse('%Y')(1939)),
-    margin: viz.margin,
-  });
+  // xAxisAnnotations.fadeInPragueSpringLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1968)), margin: viz.margin });
 
-  xAxisAnnotations.fadeInSecondWWLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1942)), margin: viz.margin });
+  // xAxisAnnotations.fadeInVelvetRevolutionLine(viz, { xPos: viz.x(d3.timeParse('%Y')(1989)), margin: viz.margin });
 
-  xAxisAnnotations.fadeInCommunistCoupLine(viz, { xPos: viz.x(d3.timeParse('%Y')(1948)), margin: viz.margin });
-
-  xAxisAnnotations.fadeInCommunistCoupLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1948)), margin: viz.margin });
+  // xAxisAnnotations.fadeInVelvetRevolutionLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1989)), margin: viz.margin });
 
   return {
     destroy: () => {

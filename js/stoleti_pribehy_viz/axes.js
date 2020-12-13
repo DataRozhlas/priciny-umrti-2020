@@ -8,11 +8,11 @@ export const updateXAxis = (viz, { x, margin, delay = 0, duration = 700 }) => {
 
   const axisWidth = viz.width - margin.left - margin.right;
 
-  let ticksEvery = 1;
+  let ticksEvery = 5;
   if (axisWidth < 700 && axisWidth >= 400) {
-    ticksEvery = 2;
+    ticksEvery = 10;
   } else if (axisWidth < 400) {
-    ticksEvery = 5;
+    ticksEvery = 20;
   }
 
   xAxisG
@@ -66,5 +66,5 @@ export const createYAxisLabel = (viz) => {
 
   xAxisLabel.append('tspan').text('Úmrtí na').attr('x', xPos);
   xAxisLabel.append('tspan').text('100 tisíc').attr('dy', dy).attr('x', xPos);
-  xAxisLabel.append('tspan').text('(std. 1948)').attr('dy', dy).attr('x', xPos);
+  xAxisLabel.append('tspan').text('(std. 2018)').attr('dy', dy).attr('x', xPos);
 };

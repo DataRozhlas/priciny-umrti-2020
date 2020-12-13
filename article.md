@@ -170,12 +170,6 @@ Prvnímu období, kdy jsou pro české území dostupná podrobná data o pří�
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Od první republiky, přes 2. světovou válku</h3>
-      <p>
-        <em>Kratky komentar k zobrazovanemu obdobi.</em>
-      </p>
-    </div>
-    <div class="datarozhlas-scrolly-step">
       <h3>22 skupin příčin úmrtí</h3>
       <p>
         Příčiny úmrtí se v tomto období seskupují do 16 skupin přirozených úmrtí: nemocí, vrozených vad, novorozenecké úmrtnosti i stáří. Vedle nich statistika ukazuje externí příčiny úmrtí jako vraždy, sebevraždy, dopravní nehody nebo náhodné úrazy.
@@ -225,7 +219,6 @@ Prvnímu období, kdy jsou pro české území dostupná podrobná data o pří�
     </div>
     <div class="datarozhlas-scrolly-sticky">
       <svg class="prvni-republika-pribehy-viz"></svg>
-      <div class="prvni-republika-pribehy-dots"></div>
     </div>
   </div>
 </wide>
@@ -330,11 +323,31 @@ Kritický pohled na příčiny úmrtí ale připomíná, že problém se neomezu
 
 Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za měkká data – jako je profesor Holčík – nic nenamítají proti hlavním obrysům, které z dat vystupují. V době vlády jedné strany je to stagnace délky života a dominance civilizačních nemocí spojených s hrůzostrašným životním stylem.
 
-<div class="mock-content">
-Tady přibude scrollytelling
-
-příběhy komunismu
-</div>
+<wide>
+  <div class="datarozhlas-scrolly priciny-umrti-scrolly komunismus-pribehy-scrolly">
+    <div class="datarozhlas-scrolly-step">
+      <h3>Vývoj úmrtí 1949-1989</h3>
+      <p>
+        <em>Doplnit</em>
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>24 skupin příčin úmrtí</h3>
+      <p>
+        <em>Doplnit</em>
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>Proklikejte si</h3>
+      <p>
+        Nyní si sami můžete prohlédnout kompletní data.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-sticky">
+      <svg class="komunismus-pribehy-viz"></svg>
+    </div>
+  </div>
+</wide>
 
 <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4">
   <img src="assets/4_ilustrace_kapitoly/001.jpg" alt="" class="active">
@@ -393,21 +406,61 @@ Oproti klasickým civilizačním nemocem navíc infekční nemoci zabíjejí v n
 
 Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revoluce optimistický.
 
-<div class="mock-content">
-Tady přibude scrollytelling
-
-Příběhy 1990-2018
-</div>
+<wide>
+  <div class="datarozhlas-scrolly priciny-umrti-scrolly soucasnost-pribehy-scrolly">
+    <div class="datarozhlas-scrolly-step">
+      <h3>Vývoj úmrtí 1990-2018</h3>
+      <p>
+        <em>Doplnit</em>
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>24 skupin příčin úmrtí</h3>
+      <p>
+        <em>Doplnit</em>
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>Proklikejte si</h3>
+      <p>
+        Nyní si sami můžete prohlédnout kompletní data.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-sticky">
+      <svg class="soucasnost-pribehy-viz"></svg>
+    </div>
+  </div>
+</wide>
 
 „Nyní již máte dostatek informací, abyste mohli vydedukovat, jak to bylo doopravdy,“ zněla ikonická věta ve špatném, ale legendárním detektivním seriálu Hříchy pro pátera Knoxe z devadesátých let.
 
 Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi umírali od založení republiky do dneška. Časová řada je standardizovaná podle současné české populace – ukazuje tedy, jak by vypadaly příčiny úmrtí, kdyby byla v každém roce stejná věková struktura, jako je ta dnešní.
 
-<div class="mock-content">
-Tady přibude scrollytelling
-
-Příběhy 1919-2018
-</div>
+<wide>
+  <div class="datarozhlas-scrolly priciny-umrti-scrolly stoleti-pribehy-scrolly">
+    <div class="datarozhlas-scrolly-step">
+      <h3>Vývoj úmrtí 1919-2018</h3>
+      <p>
+        <em>Doplnit</em>
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>24 skupin příčin úmrtí</h3>
+      <p>
+        <em>Doplnit</em>
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>Proklikejte si</h3>
+      <p>
+        Nyní si sami můžete prohlédnout kompletní data.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-sticky">
+      <svg class="stoleti-pribehy-viz"></svg>
+    </div>
+  </div>
+</wide>
 
 <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
   <img src="assets/5_ilustrace_kapitoly/001.jpg" alt="" class="active">

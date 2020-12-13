@@ -1,15 +1,15 @@
 import debounce from 'lodash/debounce';
 
 import { default as datarozhlasScrolly, initDots } from './datarozhlas_scrolly';
-import { initViz } from './prvni_republika_pribehy_viz';
+import { initViz } from './komunismus_pribehy_viz';
 
-const prvniRepublikaPribehy = async () => {
+const komunismusPribehy = async () => {
   const data = await fetchData();
 
-  const dots = initDots('.prvni-republika-pribehy-scrolly');
+  const dots = initDots('.komunismus-pribehy-scrolly');
 
-  let viz = initViz('.prvni-republika-pribehy-scrolly .prvni-republika-pribehy-viz', data);
-  let scrolly = datarozhlasScrolly('.prvni-republika-pribehy-scrolly', {
+  let viz = initViz('.komunismus-pribehy-scrolly .komunismus-pribehy-viz', data);
+  let scrolly = datarozhlasScrolly('.komunismus-pribehy-scrolly', {
     onScrollDownToStep: (index) => {
       viz.onScrollDownToStep(index);
       dots.onScrollDownToStep(index);
@@ -28,8 +28,8 @@ const prvniRepublikaPribehy = async () => {
       viz.destroy();
       scrolly.destroy();
 
-      viz = initViz('.prvni-republika-pribehy-scrolly .prvni-republika-pribehy-viz', data);
-      scrolly = datarozhlasScrolly('.prvni-republika-pribehy-scrolly', {
+      viz = initViz('.komunismus-pribehy-scrolly .komunismus-pribehy-viz', data);
+      scrolly = datarozhlasScrolly('.komunismus-pribehy-scrolly', {
         onScrollDownToStep: (index) => {
           viz.onScrollDownToStep(index);
           dots.onScrollDownToStep(index);
@@ -50,18 +50,31 @@ const prvniRepublikaPribehy = async () => {
 
 const fetchData = () => {
   return Promise.all([
-    fetch('data/1919_mz_std.json').then((response) => {
+    fetch('data/1949_mz_std.json').then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1919_m_std.json').then((response) => {
+    fetch('data/1949_m_std.json').then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1919_z_std.json').then((response) => {
+    fetch('data/1949_z_std.json').then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-  ]).then(([data1919MzStd, data1919MStd, data1919ZStd]) => {
-    return { data1919MzStd, data1919MStd, data1919ZStd };
+  ]).then(([data1949MzStd, data1949MStd, data1949ZStd]) => {
+    return {
+      data1949MzStd: filterDataToNeededYears(data1949MzStd),
+      data1949MStd: filterDataToNeededYears(data1949MStd),
+      data1949ZStd: filterDataToNeededYears(data1949ZStd),
+    };
   });
 };
 
-document.addEventListener('DOMContentLoaded', prvniRepublikaPribehy);
+const filterDataToNeededYears = (data) => {
+  return data.map((category) => {
+    return {
+      ...category,
+      data: category.data.filter((d) => d.rok <= 1989),
+    };
+  });
+};
+
+document.addEventListener('DOMContentLoaded', komunismusPribehy);

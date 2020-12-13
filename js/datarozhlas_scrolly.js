@@ -113,3 +113,52 @@ export default function datarozhlasScrolly(containerSelector, { onScrollDownToSt
     },
   };
 }
+
+export const initDots = (scrollySelector) => {
+  const scrollyEl = document.querySelector(scrollySelector);
+  const stickyEl = scrollyEl.querySelector('.datarozhlas-scrolly-sticky');
+
+  const dotsElement = document.createElement('div');
+  dotsElement.classList.add('datarozhlas-scrolly-dots');
+  stickyEl.append(dotsElement);
+
+  scrollyEl.querySelectorAll('.datarozhlas-scrolly-step').forEach((stepElement, stepIndex) => {
+    const dotButton = document.createElement('button');
+    dotButton.classList.add('dot');
+    dotButton.classList.add(`dot-step-${stepIndex}`);
+    if (stepIndex === 0) {
+      dotButton.classList.add('is-active');
+    }
+
+    dotButton.addEventListener('click', () => {
+      window.scroll({
+        top: window.scrollY + stepElement.getBoundingClientRect().top,
+        left: 0,
+        behavior: 'smooth',
+      });
+    });
+
+    dotsElement.append(dotButton);
+  });
+
+  return {
+    onScrollDownToStep: (index) => {
+      dotsElement.querySelectorAll('.dot').forEach((dotElement) => {
+        dotElement.classList.remove('is-active');
+
+        if (dotElement.classList.contains(`dot-step-${index}`)) {
+          dotElement.classList.add('is-active');
+        }
+      });
+    },
+    onScrollUpFromStep: (index) => {
+      dotsElement.querySelectorAll('.dot').forEach((dotElement) => {
+        dotElement.classList.remove('is-active');
+
+        if (dotElement.classList.contains(`dot-step-${index - 1}`)) {
+          dotElement.classList.add('is-active');
+        }
+      });
+    },
+  };
+};
