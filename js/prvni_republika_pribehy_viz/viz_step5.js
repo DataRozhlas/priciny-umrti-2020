@@ -10,7 +10,7 @@ export default {
       x,
       y: yCategories,
       data1919MzStd,
-      activeCategoryNames: ['Nemoci nakažlivé a cizopasné', 'Nemoci ústrojí oběhu krevního'],
+      activeCategoryNames: ['Rakovina a jiné nádory', 'Nemoci ústrojí oběhu krevního'],
     });
   },
   onScrollUpFromStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
@@ -20,7 +20,7 @@ export default {
       x,
       y: yCategories,
       data1919MzStd,
-      activeCategoryNames: ['Nemoci nakažlivé a cizopasné'],
+      activeCategoryNames: ['Nemoci nakažlivé a cizopasné', 'Nemoci ústrojí oběhu krevního'],
     });
   },
 };

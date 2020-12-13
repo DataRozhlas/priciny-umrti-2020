@@ -66,5 +66,5 @@ export const createYAxisLabel = (viz) => {
 
   xAxisLabel.append('tspan').text('Úmrtí na').attr('x', xPos);
   xAxisLabel.append('tspan').text('100 tisíc').attr('dy', dy).attr('x', xPos);
-  xAxisLabel.append('tspan').text('(std. 1948)').attr('dy', dy).attr('x', xPos);
+  xAxisLabel.append('tspan').text('(std. 2018)').attr('dy', dy).attr('x', xPos);
 };

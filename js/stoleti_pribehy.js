@@ -1,15 +1,15 @@
 import debounce from 'lodash/debounce';
 
 import { default as datarozhlasScrolly, initDots } from './datarozhlas_scrolly';
-import { initViz } from './prvni_republika_pribehy_viz';
+import { initViz } from './stoleti_pribehy_viz';
 
-const prvniRepublikaPribehy = async () => {
+const stoletiPribehy = async () => {
   const data = await fetchData();
 
-  const dots = initDots('.prvni-republika-pribehy-scrolly');
+  const dots = initDots('.stoleti-pribehy-scrolly');
 
-  let viz = initViz('.prvni-republika-pribehy-scrolly .prvni-republika-pribehy-viz', data);
-  let scrolly = datarozhlasScrolly('.prvni-republika-pribehy-scrolly', {
+  let viz = initViz('.stoleti-pribehy-scrolly .stoleti-pribehy-viz', data);
+  let scrolly = datarozhlasScrolly('.stoleti-pribehy-scrolly', {
     onScrollDownToStep: (index) => {
       viz.onScrollDownToStep(index);
       dots.onScrollDownToStep(index);
@@ -28,8 +28,8 @@ const prvniRepublikaPribehy = async () => {
       viz.destroy();
       scrolly.destroy();
 
-      viz = initViz('.prvni-republika-pribehy-scrolly .prvni-republika-pribehy-viz', data);
-      scrolly = datarozhlasScrolly('.prvni-republika-pribehy-scrolly', {
+      viz = initViz('.stoleti-pribehy-scrolly .stoleti-pribehy-viz', data);
+      scrolly = datarozhlasScrolly('.stoleti-pribehy-scrolly', {
         onScrollDownToStep: (index) => {
           viz.onScrollDownToStep(index);
           dots.onScrollDownToStep(index);
@@ -50,18 +50,14 @@ const prvniRepublikaPribehy = async () => {
 
 const fetchData = () => {
   return Promise.all([
-    fetch('data/1919_mz_std.json').then((response) => {
+    fetch('data/long_mz_std.json').then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1919_m_std.json').then((response) => {
-      return !response.error ? response.json() : Promise.reject();
-    }),
-    fetch('data/1919_z_std.json').then((response) => {
-      return !response.error ? response.json() : Promise.reject();
-    }),
-  ]).then(([data1919MzStd, data1919MStd, data1919ZStd]) => {
-    return { data1919MzStd, data1919MStd, data1919ZStd };
+  ]).then(([dataLongMzStd]) => {
+    return {
+      dataLongMzStd,
+    };
   });
 };
 
-document.addEventListener('DOMContentLoaded', prvniRepublikaPribehy);
+document.addEventListener('DOMContentLoaded', stoletiPribehy);

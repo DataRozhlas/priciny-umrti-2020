@@ -1,4 +1,4 @@
-.prvni-republika-pribehy-scrolly {
+.soucasnost-pribehy-scrolly {
   .datarozhlas-scrolly-sticky {
     &:before {
       content: '';
@@ -12,7 +12,7 @@
   }
 }
 
-svg.prvni-republika-pribehy-viz {
+svg.soucasnost-pribehy-viz {
   .g-x-axis-label text {
     font-family: Asap, sans-serif;
     font-size: 11px;
@@ -29,7 +29,8 @@ svg.prvni-republika-pribehy-viz {
     fill: #f5f5f5;
   }
 
-  .g-x-axis-annotations .communist-coup-line {
+  .g-x-axis-annotations .prague-spring-line,
+  .g-x-axis-annotations .velvet-revolution-line {
     stroke: #cccccc;
   }
 
@@ -51,7 +52,7 @@ svg.prvni-republika-pribehy-viz {
   }
 }
 
-.prvni-republika-pribehy-legend {
+.soucasnost-pribehy-legend {
   position: absolute;
   top: 18px;
   right: 30px;
