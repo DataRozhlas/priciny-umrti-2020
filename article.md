@@ -2,7 +2,7 @@ title: "Od moru ke covidu: unikátní data, jak se měnily příčiny úmrtí Č
 perex: "<i>S covidem</i>, nebo <i>na covid</i>? Na otázku, která na jaře zamotala hlavu celé civilizaci – tedy co považovat za příčinu úmrtí – hledá medicína odpověď přes sto let."
 coverimg: assets/0_uvodni_ilustrace.jpg
 coverimg_note: ""
-styles: [https://fonts.googleapis.com/css2?family=Asap]
+styles: [https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600]
 libraries: [] #jquery, d3, highcharts, datatables
 options: [] #wide, noheader (, nopic)
 ---
@@ -218,7 +218,7 @@ Prvnímu období, kdy jsou pro české území dostupná podrobná data o pří�
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
-      <svg class="prvni-republika-pribehy-viz"></svg>
+      <svg class="priciny-umrti-pribehy-viz prvni-republika-pribehy-viz"></svg>
     </div>
   </div>
 </wide>
@@ -344,7 +344,7 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
-      <svg class="komunismus-pribehy-viz"></svg>
+      <svg class="priciny-umrti-pribehy-viz komunismus-pribehy-viz"></svg>
     </div>
   </div>
 </wide>
@@ -427,7 +427,7 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
-      <svg class="soucasnost-pribehy-viz"></svg>
+      <svg class="priciny-umrti-pribehy-viz soucasnost-pribehy-viz"></svg>
     </div>
   </div>
 </wide>
@@ -457,7 +457,7 @@ Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi um�
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
-      <svg class="stoleti-pribehy-viz"></svg>
+      <svg class="priciny-umrti-pribehy-viz stoleti-pribehy-viz"></svg>
     </div>
   </div>
 </wide>

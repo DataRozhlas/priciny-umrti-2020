@@ -58,7 +58,7 @@ export const updateSecondWWBand = (viz, { xPos, bandWidth, margin, opacity = 1, 
   let secondWWBand = xAxisAnnotationsG.select('.second-ww-band');
 
   if (secondWWBand.empty()) {
-    secondWWBand = xAxisAnnotationsG.append('rect').attr('class', 'second-ww-band');
+    secondWWBand = xAxisAnnotationsG.append('rect').attr('class', 'second-ww-band annotation-band');
   }
 
   secondWWBand
@@ -138,7 +138,7 @@ export const updateCommunistCoupLine = (viz, { xPos, margin, opacity = 1, durati
   let communistCoupLine = xAxisAnnotationsG.select('.communist-coup-line');
 
   if (communistCoupLine.empty()) {
-    communistCoupLine = xAxisAnnotationsG.append('line').attr('class', 'communist-coup-line');
+    communistCoupLine = xAxisAnnotationsG.append('line').attr('class', 'communist-coup-line annotation-line');
   }
 
   communistCoupLine

@@ -21,6 +21,16 @@
     max-width: 620px;
     margin: 0 auto;
   }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(rgba(255, 255, 255, 0), white);
+  }
 }
 
 .priciny-umrti-ilustrace-kapitoly {
@@ -65,6 +75,66 @@
 
   @media (max-width: 767.9px) {
     width: 75%;
+  }
+}
+
+.priciny-umrti-pribehy-viz {
+  .g-x-axis-label text {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 12px;
+    fill: #000000;
+  }
+
+  .g-x-axis-annotations text {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    fill: #9f9f9f;
+  }
+
+  .g-x-axis-annotations .annotation-band {
+    fill: #f5f5f5;
+  }
+
+  .g-x-axis-annotations .annotation-line {
+    stroke: #cccccc;
+  }
+
+  .g-line-labels text {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .g-x-axis .tick {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+
+    line {
+      stroke-width: .5px;
+    }
+  }
+
+  .g-y-axis .tick {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+
+    line {
+      stroke-width: .5px;
+    }
+  }
+
+  @media (max-width: 767.9px) {
+    .g-x-axis-annotations text,
+    .g-line-labels text {
+      font-size: 11px;
+    }
+
+    .g-x-axis-label text {
+      font-size: 10px;
+    }
   }
 }
 

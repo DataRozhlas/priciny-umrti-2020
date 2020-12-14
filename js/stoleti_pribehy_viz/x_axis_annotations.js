@@ -19,7 +19,7 @@ export const updatePragueSpringLine = (viz, { xPos, margin, opacity = 1, duratio
   let pragueSpringLine = xAxisAnnotationsG.select('.prague-spring-line');
 
   if (pragueSpringLine.empty()) {
-    pragueSpringLine = xAxisAnnotationsG.append('line').attr('class', 'prague-spring-line');
+    pragueSpringLine = xAxisAnnotationsG.append('line').attr('class', 'prague-spring-line annotation-line');
   }
 
   pragueSpringLine
@@ -96,7 +96,7 @@ export const updateVelvetRevolutionLine = (viz, { xPos, margin, opacity = 1, dur
   let velvetRevolutionLine = xAxisAnnotationsG.select('.velvet-revolution-line');
 
   if (velvetRevolutionLine.empty()) {
-    velvetRevolutionLine = xAxisAnnotationsG.append('line').attr('class', 'velvet-revolution-line');
+    velvetRevolutionLine = xAxisAnnotationsG.append('line').attr('class', 'velvet-revolution-line annotation-line');
   }
 
   velvetRevolutionLine

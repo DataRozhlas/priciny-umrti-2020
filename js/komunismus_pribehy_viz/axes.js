@@ -46,13 +46,13 @@ export const updateYAxis = (viz, { y, margin, delay = 0, duration = 700 }) => {
 export const createYAxisLabel = (viz) => {
   const xAxisLabelG = viz.svg.append('g').attr('class', 'g-x-axis-label');
 
-  let xPos = viz.margin.left - 6;
-  let yPos = viz.margin.top - 45;
-  let dy = 14;
+  let xPos = 10;
+  let yPos = 12;
+  let dy = 15;
 
   if (window.innerWidth < 768) {
-    xPos = 48;
-    yPos = viz.margin.top - 38;
+    xPos = 0;
+    yPos = 12;
     dy = 12;
   }
 
@@ -60,9 +60,8 @@ export const createYAxisLabel = (viz) => {
     .append('text')
     .attr('class', 'x-axis-label')
     .attr('y', yPos)
-    .attr('text-anchor', 'end');
+    .attr('text-anchor', 'start');
 
-  xAxisLabel.append('tspan').text('Úmrtí na').attr('x', xPos);
-  xAxisLabel.append('tspan').text('100 tisíc').attr('dy', dy).attr('x', xPos);
-  xAxisLabel.append('tspan').text('(std. 1989)').attr('dy', dy).attr('x', xPos);
+  xAxisLabel.append('tspan').text('Úmrtí na 100 tisíc').attr('x', xPos);
+  xAxisLabel.append('tspan').text('(std. k 1989)').attr('dy', dy).attr('x', xPos);
 };
