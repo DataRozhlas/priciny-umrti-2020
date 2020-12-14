@@ -15,6 +15,8 @@ Pod svícnem pandemie se zdá jasné, že koronavirus. Jenže bez souběžných 
 <img src="https://lh4.googleusercontent.com/i8Jt491a38H5tRfa0877e4SgwXWgzJbzBaZ05M5nOjAVF5kuhoqmfmdp4QQCwJeOMH3ULYWYKy9pizDDgBYtiq-6YSo7AfS-gNW5PTbhhzpdCkiwVa5cDpxgdu-ajha1wyjPiHGl" style="width:600px">
 </div>
 
+<div class="data-source">Zdroj: <a href="https://koronavirus.mzcr.cz/wp-content/uploads/2020/11/Data-o-celkov%C3%A9-mortalit%C4%9B-a-o-p%C5%99%C3%AD%C4%8Din%C3%A1ch-%C3%BAmrt%C3%AD-pacient%C5%AF-s-covid-19.pdf">prezentace MZ ČR</a></div>
+
 Opačný případ, kdy by statistika upřednostnila diabetes, zase povede k tomu, že pacient bude chybět mezi oběťmi covidu. Přitom je evidentní, že virus mu život zkrátil, často výrazně. Podle lékařů není výjimka, když virus zkrátí život o deset až dvacet let.
 
 Statistika příčin úmrtí předpokládá, že příčina úmrtí je jen jedna, musí tedy některou zvolit. Má ale upřednostnit dlouhodobé zdravotní potíže, nebo krátkodobou intenzivní nemoc? Ať už si vybere jedno nebo druhé – což musí dělat systematicky, pokud nemají být data nahodilá – pak nutně přichází o část informace.
@@ -45,12 +47,14 @@ Když na úvod článku trochu předběhneme, během necelých dvou století se 
 https://lh5.googleusercontent.com/dyoSj7KoIxhVPPP8Ex-GOoF9WZ1Vty_NxbgJZ8a3OsJE6UDNm7cQw40nC1b2xcwKxKCWfBo0LgwFZqYb7fSpJar4an3epK9sP5Vaf9qeGp_nkHMG8uiHXRX5PPTB8oBAU7Z-JtfL" style="width:600px">
 </div>
 
-S délkou života úzce souvisí méně příjemný ukazatel: počet zemřelých. Nejde přímo o převrácenou hodnotu, ale s trochou zjednodušení můžeme říct, že délka dožití roste, když klesá úmrtnost. V každém historickém období se přitom příčiny úmrtí mění. Za císaře, během první republiky obklíčené válkami, za komunistické totality i po sametové revoluci rozhodovaly o délce a kvalitě života jiné nemoci, nehody nebo násilná úmrtí.
+<div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
 
 <div id="box-ukazatele" class="mock-content">
 <h3>Ukazatele délky života</h3>
 <p><i>Naděje dožití</i>, <i>střední délka života</i>, <i>očekávaná délka dožití při narození</i>. Všechny tři termíny označují totéž: jak dlouho průměrně žili ti, kteří v daném roce zemřeli. Navzdory názvu tedy neříkají nic o tom, jak dlouho budou žít ti, kteří se teprve narodili – pro takovou predikci logicky chybí data.</p>
 </div>
+
+S délkou života úzce souvisí méně příjemný ukazatel: počet zemřelých. Nejde přímo o převrácenou hodnotu, ale s trochou zjednodušení můžeme říct, že délka dožití roste, když klesá úmrtnost. V každém historickém období se přitom příčiny úmrtí mění. Za císaře, během první republiky obklíčené válkami, za komunistické totality i po sametové revoluci rozhodovaly o délce a kvalitě života jiné nemoci, nehody nebo násilná úmrtí.
 
 Důvod, proč začali panovníci hlídat, kolik a jak starých poddaných mají, byly války. Důvod, proč začali sledovat, na co umírají, epidemie.
 
@@ -70,7 +74,7 @@ Patent předpokládal také vznik evidence příčin úmrtí. Primárním cílem
 
 <div id="fotka-nejstarsi-umrti" class="mock-content">
 <img src="https://lh5.googleusercontent.com/xoQhcroCvaUzJhdkGSzCG-7PzuNtz3a6uwJM7j-b9TgyQV9tVb-IaMyFeeRO8oj-1tbF8VP78Vxt_Oz1MsturmOl5tiKQdrt41wCC0D8_xm6RP7Rt0jmNO5bzUo8FU1vNYLOknc4" style="width:600px">
-Nejstarší dochované příčiny úmrtí (1828)
+Nejstarší dochovaný dokument s příčinami úmrtí, rok 1828
 </div>
 
 Až do první světové války přesnější rozlišení příčin úmrtí chybí. Poměrně spolehlivá jsou ale data o počtu narozených a zemřelých. Z výkyvů umíme poměrně dobře odhadnout, které události život zkracovaly. O největší zuby v lince úmrtnosti se v 19. století postaraly napoleonské války, epidemie neštovic a záškrtu, a také revoluční rok 1848. Více narozených dětí po válce zase naznačuje, jak jsou v této době obě linky provázané: zemřelé bylo třeba „nahradit“ dětmi. Vysoká kojenecká a dětská úmrtnost znamenala vysokou porodnost.
@@ -80,6 +84,8 @@ Snížení úmrtnosti na konci století pak znamenalo také méně dětí – [s
 <div id="graf-stredni-delka" class="mock-content">
 <img src="https://lh6.googleusercontent.com/rcWkMMcO375XQQyYULlakPikvCwYGWNVzz4eBnULuO1IwboYhT9uQ8ldufzNIzOoRAB-Rg2krXeMC1k2LbLII4lS69YUSQS7Cs0EauSCXoFvTVLN6iQUkIWPyqW7dJSfEoo1t03n" style="width:600px">
 </div>
+
+<div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
 
 Jedním z nejúspěšnějších období, co se týče prodloužení délky života, je přelom 19. a 20. století. Během jedné generace se – navzdory válce – život v českých zemích prodloužil o 40 procent.
 
@@ -135,6 +141,8 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, např�
 <img src="https://lh3.googleusercontent.com/KeNrQBp9eTvAsQKBopstHdTN0IH9SVS4neGL0a0OiErxwgbQZJlADAUXaHCmbq31x8o3WL06UHrFacQIs3VbxyNIcDZx0WENCBG391lN" style="width:600px">
 GRAF: Top diagnózy a skupiny podle MKN
 </div>
+
+<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
 <div id="box-hruba-umrtnost" class="mock-content">
 <h3>Hrubá míra úmrtnosti</h3>
@@ -222,11 +230,13 @@ Prvnímu období, kdy jsou pro české území dostupná podrobná data o pří�
   </div>
 </wide>
 
-Data mluví také o věku zemřelých. Podrobnější pohled prozradí, že válečné oběti měly nejčastěji mezi dvaceti a třiceti lety, nebo v čem je zákeřná tuberkulóza.
+Podrobnější pohled prozradí věk válečných obětí, nebo v čem je zákeřná tuberkulóza.
 
 <div id="graf-heatmap" class="mock-content">
 <img src="https://lh4.googleusercontent.com/7mc0jjBLZIguFkMlsA1UktJadhLFKbX3WgAn5ZvVZ8gjtKG7ezOw1lxZ6axejcyMYaIYtzAql3_pRKQbFd1XhcmdATZ9TqtnAzzUMb95" style="width:600px">
 </div>
+
+<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
 <div id="box-nemci" class="mock-content">
 <h3>Dopočítávání německé populace</h3>
@@ -265,8 +275,9 @@ Jenže na rozdíl od západu Evropy Československu optimismus dlouho nevydržel
 
 <div id="graf-nadeje-doziti-komunismus" class="mock-content">
 <img src="https://lh5.googleusercontent.com/LQQpJUG9q2406Fd0mrXxqcdcqYKCy7F9hTjV6cCJVEaKuwDUNbrIXbep83-3Tu8nkrd7btaw6FBu8YiW1ZXVQUOXqLKvMIYsxerwFgDfuwokUMaN_rKOCaON-qWhfVE9we9chGNj" style="width:600px">
-Naděje dožití, 1949-1989
 </div>
+
+<div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
 
 Optikou příčin úmrtí se 20. století dělí na období do roku 1948 a období po něm. V tomto roce, na švu mezi pátou a šestou revizí, proběhl radikální řez: výrazně se proměnilo uspořádání diagnóz do skupin, změnila se také logika sledování vnějších příčin úmrtí – kromě otázky, _jak_ k němu došlo, přibyl anatomický pohled, _jaká část těla_ byla poraněna. Fakt, že zároveň s touto revolucí rozdělil 20. století také komunistický puč, je sympatická náhoda; umožňuje odděleně sledovat vývoj úmrtnosti ve starém a novém politickém režimu.
 
@@ -278,6 +289,7 @@ A právě způsob, jakým položku vybere, se v roce 1948 změnil. První revize
 
 <div id="fotka-lpz-old" class="mock-content">
 <img src="https://lh4.googleusercontent.com/mpMV55NdVAU0ZncEiu63YK8_PKO-XTuQYAO4iqhyjqph1fIw0arUPKEia1MvRAm2gDr8hPzTlMbYN6fdZ_MoFfgbMOWspLEZiC67f3o4OmU1rOpbDac41j-Tznox81C4ICPU0e6q" style="width:600px">
+List o prohlídce mrtvého z poloviny 20. století
 </div>
 
 V Československu se nová pravidla začala uplatňovat po roce 1954 a projevila se zřejmě až postupně – v žádné skupině příčin se úmrtnost nezměnila skokově.
@@ -286,8 +298,9 @@ Podobné změny se ale mohou objevit na každém švu mezi dvěma revizemi. Nejv
 
 <div id="graf-zlom" class="mock-content">
 <img src="https://lh4.googleusercontent.com/fS-L63YUwYZ71wbPAsAjxDhKYO9SvRBPJRoh-6E0WtyhQ2qKhj_f1nIRmCrEkZfJIbcSBdSBF9J5EEHY3UlmjeoC0IRMvArXGjaBwL8iOoz4ZxhWe_fgCPckNhta-qUOvF2z4lRP" style="width:600px">
-Výřez grafu příčin úmrtí, zoom na zlom 1967 × 1968
 </div>
+
+<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
 Ještě jeden faktor hraje při výkladu dat podstatnou roli: podíl _nepřesně určených příčin úmrtí_. Ukazují to data z prvních let po vzniku Československa, kdy byla nejčastější příčinou úmrtí _stařecká sešlost_. V roce 1919 jí statistika připisuje 28 tisíc, tedy asi 16 procent všech úmrtí.
 
@@ -300,6 +313,8 @@ Pohledem současné medicíny jde o chybný údaj – lékaři by měli být sch
 <div id="graf-nepresne-urcene-priciny" class="mock-content">
 <img src="https://lh4.googleusercontent.com/-BjLQOqcF-Wy9OzMyHv70nQs_2BPRHLCt12ntR5fMn5wdzFp5bQ4XeZkmTbhQxnUAfYeLd1KAgNHGDidQG8A8eRQ11wbrrW4SFFV5Bc1RgLl6hGgO892e5-yr93zzG_HFaXW7Pr8" style="width:600px">
 </div>
+
+<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
 V některých částech země se ale dařilo méně. Zatímco v české části federace bylo v padesátých letech nepřesně určených úmrtí kolem pěti procent, na Slovensku čtyřikrát tolik. Jednou z příčin byla existence takzvaných laických ohledačů: ti s určením příčiny úmrtí zastoupili lékaře, pokud se nemohl dostavit. Na Slovensku přitom třetinu úmrtí ještě v padesátých letech stanovili právě laici.
 
@@ -343,8 +358,9 @@ Pivo a párek ostatně stále patří k obrazu spokojeného Čecha a <a href="ht
 
 <div id="fotka-nadeje-doziti-soucasnost" class="mock-content">
 <img src="https://lh4.googleusercontent.com/-BjLQOqcF-Wy9OzMyHv70nQs_2BPRHLCt12ntR5fMn5wdzFp5bQ4XeZkmTbhQxnUAfYeLd1KAgNHGDidQG8A8eRQ11wbrrW4SFFV5Bc1RgLl6hGgO892e5-yr93zzG_HFaXW7Pr8" style="width:600px">
-Naděje dožití, 1990-2018
 </div>
+
+<div class="data-source">Zdroj: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
 Do devadesátých let Češi naňahňali <a href="https://cs.wikipedia.org/wiki/Druh%C3%BD_demografick%C3%BD_p%C5%99echod" target="_blank">hodnotovou revoluci</a>, která na Západě probíhá od let šedesátých.  V zemi tak během několika roků po pádu režimu stoupl věk, kdy žena povine první dítě, o pět let; první svatba se posunula o sedm let. Polovina manželství v té době končila rozvodem. Poměr dětí a seniorů se v tomto období [změnil ve prospěch seniorů](https://www.irozhlas.cz/zpravy-domov/-v-roce-1989-bylo-v-cesku-deti-skoro-dvakrat-vic-nez-senioru-pomer-se-otaci_201411100044_vkourimsky). Rychlost i rozsah změn ukazujeme v [interaktivní kalkulačce](https://www.irozhlas.cz/zpravy-domov/kalkulacka-spocitejte-si-kdy-vas-ceka-svatba-dite-rozvod-nebo-umrti_1704241238_sam).
 
@@ -356,8 +372,9 @@ Přesto je i dnes v datech o délce dožití patrné, <a href="https://interakti
 
 <div id="graf-zelezna-opona" class="mock-content">
 <img src="https://lh5.googleusercontent.com/jpbHzCV1UKvclLmR9DJkhW4tC5NXT61hb_iWwLedQ8ZrNzJ4asH3fXK4DgGpAvHGhWQ4shN0jzGxOfwfc6_8IgmP31xDPPB2sobjW1Yo" style="width:600px">
-Železná opona: naděje dožití podle regionu NUTS2
 </div>
+
+<div class="data-source">Zdroj: <a href="https://ec.europa.eu/eurostat/databrowser/view/tgs00101/default/table?lang=en">Life expectancy at birth by sex and NUTS 2 region, Eurostat</a></div>
 
 V čem jsou dnes hlavní rozdíly mezi zeměmi na západ a na východ od železné opony? Ve kterých příčinách úmrtí zaostáváme? Můžeme se poučit, jak se s nimi před léty vypořádaly země, které se v epidemiologických ukazatelích pokoušíme dohnat?
 
