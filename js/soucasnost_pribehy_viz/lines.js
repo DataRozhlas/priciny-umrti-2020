@@ -185,7 +185,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
 };
 
 export const categoryLineLabelTexts = {
-  Celkem: 'Celkové počty úmrtí',
+  Celkem: 'Úmrtí celkem',
   'Válečné akce a soudní poprava - muži': 'Muži',
   'Válečné akce a soudní poprava - ženy': 'Ženy',
 };
