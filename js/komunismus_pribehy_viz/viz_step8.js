@@ -11,15 +11,24 @@ export default {
     lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Některé stavy vzniklé v perinatálním období' });
     lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Těhotenství, porod a šestinedělí' });
 
+    const exploreCategoryNames = ['Některé infekční a parazitární nemoci', 'Nemoci oběhové soustavy', 'Novotvary'];
+
     viz.dataMzStd.forEach((category) => {
-      lines.changeCategoryLine({
-        svg: viz.svg,
-        categoryName: category.skupina,
-        d: viz.lineExplore(category.data),
-        style: 'active',
-        activeColor: colors.categoryColorsActive[category.skupina],
-        duration: 700,
-      });
+      if (exploreCategoryNames.includes(category.skupina)) {
+        lines.changeCategoryLine({
+          svg: viz.svg,
+          categoryName: category.skupina,
+          d: viz.lineExplore(category.data),
+          style: 'active',
+          activeColor: colors.categoryColorsActive[category.skupina],
+          duration: 700,
+        });
+      } else {
+        lines.removeCategoryLine({
+          svg: viz.svg,
+          categoryName: category.skupina,
+        });
+      }
     });
 
     axes.updateXAxis(viz, { x: viz.xExplore, margin: viz.marginExplore, duration: 700 });
@@ -49,7 +58,7 @@ export default {
       duration: 700,
     });
 
-    legend.fadeInLegend(viz);
+    legend.fadeInLegend(viz, { exploreCategoryNames });
   },
   onScrollUpFromStep: (viz) => {
     lines.changeActiveNonTotalCategoryLines({
@@ -59,6 +68,26 @@ export default {
       y: viz.yCategories,
       dataMzStd: viz.dataMzStd,
       activeCategoryNames: ['Některé stavy vzniklé v perinatálním období', 'Těhotenství, porod a šestinedělí'],
+    });
+
+    viz.dataMzStd.forEach((category) => {
+      const categoryName = category.skupina;
+
+      if (!lines.isAddedCategoryLine(viz, { categoryName })) {
+        lines.addCategoryLine({
+          svg: viz.svg,
+          categoryName,
+          d: viz.lineCategories(category.data),
+          style: 'context',
+        });
+      } else {
+        lines.changeCategoryLine({
+          svg: viz.svg,
+          categoryName,
+          d: viz.lineCategories(category.data),
+          style: 'context',
+        });
+      }
     });
 
     axes.updateXAxis(viz, { x: viz.x, margin: viz.margin, duration: 700 });

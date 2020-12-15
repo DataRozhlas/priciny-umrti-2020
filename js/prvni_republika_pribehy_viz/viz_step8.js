@@ -37,6 +37,7 @@ export default {
       d: lineCategories(data1919MzStdCategoryWar.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava'],
+      opacity: 0,
       duration: 700,
     });
     lines.changeCategoryLine({
@@ -45,6 +46,7 @@ export default {
       d: lineCategories(data1919MzStdCategoryWar.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava'],
+      opacity: 0,
       duration: 700,
     });
 
@@ -79,20 +81,16 @@ export default {
     lines.removeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava - muži', delay: 700 });
     lines.removeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava - ženy', delay: 700 });
 
-    lines.changeCategoryLine({
-      svg,
-      categoryName: 'Válečné akce a soudní poprava',
-      d: lineCategories(data1919MzStdCategoryWar.data),
-      style: 'active',
-      activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava'],
-      opacity: 1,
-      delay: 700,
-    });
-
     // 3. And activate all the other lines
 
+    const exploreCategoryNames = [
+      'Nemoci nakažlivé a cizopasné',
+      'Nemoci ústrojí oběhu krevního',
+      'Rakovina a jiné nádory',
+    ];
+
     data1919MzStdWithoutTotal.forEach((category) => {
-      if (category.skupina !== 'Válečné akce a soudní poprava') {
+      if (exploreCategoryNames.includes(category.skupina)) {
         lines.changeCategoryLine({
           svg,
           categoryName: category.skupina,
@@ -101,21 +99,29 @@ export default {
           activeColor: colors.categoryColorsActive[category.skupina],
           duration: 700,
         });
+      } else {
+        lines.removeCategoryLine({
+          svg,
+          categoryName: category.skupina,
+          delay: 700,
+        });
       }
     });
 
     // 4.
 
     data1919MzStdWithoutTotal.forEach((category) => {
-      lines.changeCategoryLine({
-        svg,
-        categoryName: category.skupina,
-        d: lineExplore(category.data),
-        style: 'active',
-        activeColor: colors.categoryColorsActive[category.skupina],
-        delay: 700,
-        duration: 700,
-      });
+      if (exploreCategoryNames.includes(category.skupina)) {
+        lines.changeCategoryLine({
+          svg,
+          categoryName: category.skupina,
+          d: lineExplore(category.data),
+          style: 'active',
+          activeColor: colors.categoryColorsActive[category.skupina],
+          delay: 700,
+          duration: 700,
+        });
+      }
     });
 
     axes.updateXAxis(viz, { x: viz.xExplore, margin: viz.marginExplore, delay: 700, duration: 700 });
@@ -157,7 +163,7 @@ export default {
       duration: 700,
     });
 
-    legend.fadeInLegend(viz);
+    legend.fadeInLegend(viz, { exploreCategoryNames });
   },
   onScrollUpFromStep: (viz) => {
     const { svg, data1919MzStd, data1919MStd, data1919ZStd, x, yCategories, lineCategories } = viz;

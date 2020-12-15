@@ -12,7 +12,16 @@ export const createLineLabelsGroup = (viz) => {
   viz.svg.append('g').attr('class', 'g-line-labels');
 };
 
-export const changeCategoryLine = ({ svg, categoryName, d, style, activeColor, duration = 0, delay = 0 }) => {
+export const changeCategoryLine = ({
+  svg,
+  categoryName,
+  d,
+  style,
+  activeColor,
+  duration = 0,
+  delay = 0,
+  opacity = 1,
+}) => {
   let stroke;
   let strokeWidth;
   if (style === 'context') {
@@ -39,7 +48,8 @@ export const changeCategoryLine = ({ svg, categoryName, d, style, activeColor, d
     .attr('stroke-width', strokeWidth)
     .attr('stroke-linejoin', 'round')
     .attr('stroke-linecap', 'round')
-    .attr('fill', 'none');
+    .attr('fill', 'none')
+    .attr('opacity', opacity);
 };
 
 export const bringCategoryLineToFront = ({ svg, categoryName }) => {

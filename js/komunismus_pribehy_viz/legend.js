@@ -9,15 +9,15 @@ export const showLegendOnSide = (viz) => {
   return viz.width >= 738;
 };
 
-export const fadeInLegend = (viz) => {
+export const fadeInLegend = (viz, { exploreCategoryNames }) => {
   if (showLegendOnSide(viz)) {
-    fadeInLegendOnSide(viz);
+    fadeInLegendOnSide(viz, { exploreCategoryNames });
   } else {
     // TODO
   }
 };
 
-export const fadeInLegendOnSide = (viz) => {
+export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
   const vizContainerEl = viz.svg.node().parentNode;
 
   const legendContainerEl = document.createElement('div');
@@ -223,7 +223,6 @@ export const fadeInLegendOnSide = (viz) => {
     const groupUncheckEl = document.createElement('button');
     groupUncheckEl.type = 'button';
     groupUncheckEl.classList.add('uncheck-all');
-    groupUncheckEl.classList.add('group-action-show');
     groupUncheckEl.textContent = 'odškrtnout vše';
     groupUncheckEl.addEventListener('click', () => handleGroupActionClick(groupName, 'uncheck-all'));
     groupActionsEl.append(groupUncheckEl);
@@ -244,7 +243,7 @@ export const fadeInLegendOnSide = (viz) => {
 
       const checkboxEl = document.createElement('input');
       checkboxEl.setAttribute('type', 'checkbox');
-      checkboxEl.checked = true;
+      checkboxEl.checked = exploreCategoryNames.includes(categoryName);
       checkboxEl.dataset.categoryName = categoryName;
       checkboxEl.addEventListener('change', () => handleLegendItemCheckboxChange());
       labelEl.append(checkboxEl);
@@ -263,6 +262,7 @@ export const fadeInLegendOnSide = (viz) => {
 
   window.setTimeout(() => {
     legendContainerEl.classList.add('legend-show');
+    handleLegendItemCheckboxChange();
   }, 700);
 };
 
