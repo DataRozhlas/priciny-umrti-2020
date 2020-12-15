@@ -7,9 +7,23 @@ import * as lines from './lines';
 import * as xAxisAnnotations from './x_axis_annotations';
 
 import vizStep1 from './viz_step1';
+import vizStep2 from './viz_step2';
+import vizStep3 from './viz_step3';
+import vizStep4 from './viz_step4';
+import vizStep5 from './viz_step5';
+import vizStep6 from './viz_step6';
+import vizStep7 from './viz_step7';
+import vizStep8 from './viz_step8';
 
 const vizSteps = {
   1: vizStep1,
+  2: vizStep2,
+  3: vizStep3,
+  4: vizStep4,
+  5: vizStep5,
+  6: vizStep6,
+  7: vizStep7,
+  8: vizStep8,
 };
 
 export const initViz = (svgSelector, data) => {
@@ -19,7 +33,7 @@ export const initViz = (svgSelector, data) => {
 
   // Prepare the margins
   let margin = { top: 50, right: 30, bottom: 100, left: 50 };
-  let marginExplore = { ...margin, right: margin.right + 235 }; // legend on the right
+  let marginExplore = { ...margin, right: margin.right + 255 }; // legend on the right
   if (!legend.showLegendOnSide({ width })) {
     margin = { top: 40, right: 20, bottom: 70, left: 40 };
     marginExplore = margin; // legend in dropdown in top right
@@ -87,6 +101,10 @@ export const initViz = (svgSelector, data) => {
     data1949MzStd,
     data1949MStd,
     data1949ZStd,
+
+    dataMzStd: data1949MzStd,
+    dataMStd: data1949MStd,
+    dataZStd: data1949ZStd,
 
     x,
     xExplore,

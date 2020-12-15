@@ -317,13 +317,49 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
     <div class="datarozhlas-scrolly-step">
       <h3>Vývoj úmrtí 1949-1989</h3>
       <p>
-        <em>Doplnit</em>
+        XXX
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
       <h3>24 skupin příčin úmrtí</h3>
       <p>
-        <em>Doplnit</em>
+        XXX
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Komunistický teror 50. let se do dat propsal nárůstem obětí poprav a nejrůznějších nehod. Oficiální data ovšem neukazují nárůst sebevražednosti. Až do roku 1967 také čeští statistici pracovali s příčinou úmrtí _Úraz v dole nebo lomu_, ačkoliv jiné země ji dávno vyřadily.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Díky antibiotikům a později také očkování se podařilo vymýtit dětskou tuberkulózu, radikálně snížit počty obětí tuberkulózy ve vyšším věku, spály, záškrtu, spalniček i dávivého kašle. V roce 1949 na infekce zemřelo víc než 10 tisíc lidí, o 40 let později měly čtyři stovky obětí.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Statistiky sebevražednosti se v celém období, alespoň oficiálně, pohybovaly pod čísly první republiky. Maxima dosáhly na konci 60. let, zřejmě i v souvislosti s vpádem vojsk Varšavské dohody. Během normalizace číslo vytrvale klesalo.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Statistika obětí dopravy má překvapivý vývoj: nejprve jich přibývá, v roce 1969 nastane zlom a počty obětí klesnou na čísla z 50. let. Příčinou může být vyšší bezpečnost, ale také nedostupnost automobilů na konci období. Nejčastější obětí jsou v celém období chodci.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Se stárnoucí populací mezi příčinami úmrtí přibývalo nemocí srdce a cév. Maxima tahle linka dosáhla v 80. letech, kdy právě sem spadalo víc než 55 procent všech úmrtí. Může za to hlavně životní styl, který za normalizace převládl: pivo, bůček a cigarety.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        V 19. století tvořili třetinu mezi všemi úmrtími v českých zemích kojenci. V padesátých letech to byla desetina, v roce sametové revoluce jen půl procenta. Podobně radikálně se zlepšila mateřská úmrtnost. Jednou z příčin je přesun většiny porodů do nemocnic a zlepšení poporodní péče.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">

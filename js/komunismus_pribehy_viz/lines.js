@@ -110,10 +110,10 @@ export const isAddedCategoryLineLabel = ({ svg, categoryName }) => {
   return !svg.select(`.g-line-labels .${kebabCase(categoryName)}`).empty();
 };
 
-export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x, y, activeCategoryNames }) => {
-  const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+export const changeActiveNonTotalCategoryLines = ({ svg, dataMzStd, line, x, y, activeCategoryNames }) => {
+  const dataMzStdWithoutTotal = dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
-  data1919MzStdWithoutTotal.forEach((category) => {
+  dataMzStdWithoutTotal.forEach((category) => {
     let style = 'context';
     let activeColor;
     if (activeCategoryNames.includes(category.skupina)) {
@@ -186,46 +186,48 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
 
 export const categoryLineLabelTexts = {
   Celkem: 'Úmrtí celkem',
-  'Válečné akce a soudní poprava - muži': 'Muži',
-  'Válečné akce a soudní poprava - ženy': 'Ženy',
 };
 
 export const categoryLineLabelPositions = {
-  Celkem: { x: d3.timeParse('%Y')(1956), y: 1350, textAnchor: 'start' },
-  'Stařecká sešlost': {
-    x: d3.timeParse('%Y')(1925),
-    y: 400,
+  Celkem: { x: d3.timeParse('%Y')(1956), y: 1400, textAnchor: 'start' },
+  'Zákonný zákrok a válečné operace': {
+    x: d3.timeParse('%Y')(1956),
+    y: 15,
     textAnchor: 'start',
   },
-  'Nemoci nakažlivé a cizopasné': {
-    x: d3.timeParse('%Y')(1928),
-    y: 270,
+  'Ostatní vnější příčiny poranění a otrav': {
+    x: d3.timeParse('%Y')(1954),
+    y: 62,
     textAnchor: 'start',
   },
-  'Nemoci ústrojí oběhu krevního': {
-    x: d3.timeParse('%Y')(1929),
-    y: 380,
+  'Některé infekční a parazitární nemoci': {
+    x: d3.timeParse('%Y')(1955),
+    y: 90,
     textAnchor: 'start',
   },
-  'Rakovina a jiné nádory': {
-    x: d3.timeParse('%Y')(1933),
-    y: 220,
+  'Úmyslné sebepoškození': {
+    x: d3.timeParse('%Y')(1955),
+    y: 50,
     textAnchor: 'start',
   },
-  'Válečné akce a soudní poprava': {
-    x: d3.timeParse('%Y')(1940),
+  'Dopravní nehody': {
+    x: d3.timeParse('%Y')(1970),
+    y: 50,
+    textAnchor: 'start',
+  },
+  'Nemoci oběhové soustavy': {
+    x: d3.timeParse('%Y')(1972),
+    y: 730,
+    textAnchor: 'start',
+  },
+  'Některé stavy vzniklé v perinatálním období': {
+    x: d3.timeParse('%Y')(1952),
     y: 40,
-    textAnchor: 'end',
+    textAnchor: 'start',
   },
-
-  'Válečné akce a soudní poprava - muži': {
-    x: d3.timeParse('%Y')(1945),
-    y: 260,
-    textAnchor: 'end',
-  },
-  'Válečné akce a soudní poprava - ženy': {
-    x: d3.timeParse('%Y')(1944),
-    y: 70,
-    textAnchor: 'end',
+  'Těhotenství, porod a šestinedělí': {
+    x: d3.timeParse('%Y')(1960),
+    y: 20,
+    textAnchor: 'start',
   },
 };

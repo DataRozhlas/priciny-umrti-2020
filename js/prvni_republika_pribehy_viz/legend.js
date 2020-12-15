@@ -261,36 +261,6 @@ export const fadeInLegendOnSide = (viz) => {
     });
   });
 
-  // legendItems.forEach((legendItem) => {
-  //   const labelEl = document.createElement('label');
-  //   labelEl.classList.add('legend-item');
-
-  //   // Add mouseover/out with delay so they do not screw up the animation
-  //   window.setTimeout(() => {
-  //     labelEl.addEventListener('mouseover', () => handleLegendItemMouseover(legendItem));
-  //     labelEl.addEventListener('mouseout', () => handleLegendItemMouseout());
-  //   }, 1400);
-
-  //   scrollContainerEl.append(labelEl);
-
-  //   const checkboxEl = document.createElement('input');
-  //   checkboxEl.setAttribute('type', 'checkbox');
-  //   checkboxEl.checked = true;
-  //   checkboxEl.dataset.categoryName = legendItem.categoryName;
-  //   checkboxEl.addEventListener('change', () => handleLegendItemCheckboxChange(legendItem));
-  //   labelEl.append(checkboxEl);
-
-  //   const customCheckboxEl = document.createElement('span');
-  //   customCheckboxEl.classList.add('custom-checkbox');
-  //   customCheckboxEl.setAttribute('style', `color: ${colors.categoryColorsActive[legendItem.categoryName]}`);
-  //   labelEl.append(customCheckboxEl);
-
-  //   const labelTextEl = document.createElement('span');
-  //   labelTextEl.classList.add('label-text');
-  //   labelTextEl.textContent = legendItem.label;
-  //   labelEl.append(labelTextEl);
-  // });
-
   window.setTimeout(() => {
     legendContainerEl.classList.add('legend-show');
   }, 700);
