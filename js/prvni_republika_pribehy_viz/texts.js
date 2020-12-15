@@ -1,3 +1,5 @@
+import invert from 'lodash/invert';
+
 export const categoriesShortLabels = {
   'Nemoci nakažlivé a cizopasné': 'Infekční nemoci',
   'Rakovina a jiné nádory': 'Novotvary',
@@ -22,3 +24,5 @@ export const categoriesShortLabels = {
   'Nemoci soustavy nervové a smyslových ústrojů': 'Nemoci soustavy nervové a smyslových ústrojů',
   'Otravy vleklé': 'Otravy vleklé',
 };
+
+export const categoriesShortLabelsInverted = invert(categoriesShortLabels);

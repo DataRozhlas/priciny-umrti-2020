@@ -33,7 +33,7 @@ export const initViz = (svgSelector, data) => {
 
   // Prepare the margins
   let margin = { top: 50, right: 30, bottom: 100, left: 50 };
-  let marginExplore = { ...margin, right: margin.right + 235 }; // legend on the right
+  let marginExplore = { ...margin, right: margin.right + 255 }; // legend on the right
   if (!legend.showLegendOnSide({ width })) {
     margin = { top: 40, right: 20, bottom: 70, left: 40 };
     marginExplore = margin; // legend in dropdown in top right
