@@ -21,7 +21,7 @@ export const fadeInLegendOnSide = (viz) => {
   const vizContainerEl = viz.svg.node().parentNode;
 
   const legendContainerEl = document.createElement('div');
-  legendContainerEl.classList.add('prvni-republika-pribehy-legend');
+  legendContainerEl.classList.add('priciny-umrti-pribehy-viz-legend');
   legendContainerEl.style.maxHeight = `${viz.height - 50}px`;
   vizContainerEl.append(legendContainerEl);
 
@@ -192,7 +192,7 @@ export const fadeOutLegend = (viz) => {
 export const fadeOutLegendOnSide = (viz) => {
   const vizContainerEl = viz.svg.node().parentNode;
 
-  const legendContainerEl = vizContainerEl.querySelector('.prvni-republika-pribehy-legend');
+  const legendContainerEl = vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
   legendContainerEl.classList.remove('legend-show');
 
   window.setTimeout(() => {
@@ -203,12 +203,12 @@ export const fadeOutLegendOnSide = (viz) => {
 export const isAddedLegend = (viz) => {
   const vizContainerEl = viz.svg.node().parentNode;
 
-  return !!vizContainerEl.querySelector('.prvni-republika-pribehy-legend');
+  return !!vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
 };
 
 export const removeLegend = (viz) => {
   const vizContainerEl = viz.svg.node().parentNode;
 
-  const legendContainerEl = vizContainerEl.querySelector('.prvni-republika-pribehy-legend');
+  const legendContainerEl = vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
   legendContainerEl.remove();
 };

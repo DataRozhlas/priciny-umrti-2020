@@ -61,7 +61,7 @@ const fetchData = () => {
     }),
   ]).then(([data1949MzStd, data1949MStd, data1949ZStd]) => {
     return {
-      data1949MzStd: filterDataToNeededYears(data1949MzStd),
+      data1949MzStd,
       data1949MStd: filterDataToNeededYears(data1949MStd),
       data1949ZStd: filterDataToNeededYears(data1949ZStd),
     };
