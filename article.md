@@ -10,8 +10,8 @@ options: [] #wide, noheader (, nopic)
 Představte si situaci: pacient, který se celoživotně léčí s cukrovkou, se nakazí koronavirem covid-19 a jeho následkem zemře. Jaká je příčina smrti? Diabetes, nebo covid?
 
 Pod svícnem pandemie se zdá jasné, že koronavirus. Jenže bez souběžných zdravotních problémů – komorbidit – nemoc zabíjí málokdy. „Příčina úmrtí: covid-19“ je neúplná informace, která skrývá, že jde o pacienta s dlouhodobými potížemi.
-
-<div id="graf-komorbidity"><img src="assets/svg/0.1_komorbidity_des.svg" style="width:600px"></div>
+ 
+<div id="graf-komorbidity" class="vis-static"><img src="assets/svg/0.1_komorbidity_des.svg"></div>
 
 <div class="data-source">Zdroj: <a href="https://koronavirus.mzcr.cz/wp-content/uploads/2020/11/Data-o-celkov%C3%A9-mortalit%C4%9B-a-o-p%C5%99%C3%AD%C4%8Din%C3%A1ch-%C3%BAmrt%C3%AD-pacient%C5%AF-s-covid-19.pdf">prezentace MZ ČR</a></div>
 
@@ -40,7 +40,8 @@ Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předc
 
 Když na úvod článku trochu předběhneme, během necelých dvou století se délka života protáhla z 28 na bezmála 80 let. Nešlo o plynulou změnu: jsou období jako přelom 19. a 20. století, kdy se během jedné generace život prodloužil o 40 procent, světové válce navzdory. V jiných dobách se růst délky života zpomalil nebo zastavil. V komunistických 60. letech minulého století se dokonce na celé desetiletí obrátil.
 
-<div id="graf-nadeje-doziti-celek"><img src="assets/svg/1.1_nadeje_doziti_des.svg" style="width:600px"></div>
+<div id="graf-nadeje-doziti-celek" class="vis-static"><img src="assets/svg/1.1_nadeje_doziti_des.svg"></div>
+<div id="graf-nadeje-doziti-celek"><img src="assets/svg/1.1_nadeje_doziti_mob.svg"></div>
 
 <div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
 
@@ -76,7 +77,7 @@ Až do první světové války přesnější rozlišení příčin úmrtí chyb�
 
 Snížení úmrtnosti na konci století pak znamenalo také méně dětí – [stejný trend](https://www.irozhlas.cz/zivotni-styl/spolecnost/datova-zurnalistika-faktomluva-hans-rosling_1811270630_zlo), který v knize Faktomluva popisuje demograf Hans Rösling v souvislosti se zeměmi třetího světa.
 
-<div id="graf-narozeni-zemreli"><img src="assets/svg/1.2_narozeni_zemreli_des.svg" style="width:600px"></div>
+<div id="graf-narozeni-zemreli" class="vis-static"><img src="assets/svg/1.2_narozeni_zemreli_des.svg"></div>
 
 <div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
 
@@ -218,7 +219,7 @@ Prvnímu období, kdy jsou pro české území dostupná podrobná data o pří�
 
 Podrobnější pohled prozradí věk válečných obětí, nebo v čem je zákeřná tuberkulóza.
 
-<div id="graf-heatmap"><img src="assets/svg/2.5_heatmapa_des.svg" style="width:600px"></div>
+<div id="graf-heatmap" class="vis-static"><img src="assets/svg/2.5_heatmapa_des.svg"></div>
 
 <div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
@@ -257,7 +258,7 @@ Jenže na rozdíl od západu Evropy Československu optimismus dlouho nevydržel
 
 „Rostla úmrtnost na civilizační choroby, jako jsou nemoci oběhové soustavy a novotvary, protože vývoj léků kardiovaskulárních nemocí a vývoj cytostatik (_léků na ničení nádorových buněk, pozn. red._) nepřinášel předpokládané rychlé pozitivní účinky,“ pokračuje. „Úmrtnost v českých zemích neodpovídala vysoké úrovni českého zdravotnictví. Jeho efekty byly nižší než prostředky do něho vynakládané. Nelze pochybovat, že se na tom podílela i situace ekonomická a psychosociální.“
 
-<div id="graf-nadeje-doziti-komunismus"><img src="assets/svg/3.1_nadeje_doziti_des.svg" style="width:600px"></div>
+<div id="graf-nadeje-doziti-komunismus" class="vis-static"><img src="assets/svg/3.1_nadeje_doziti_des.svg"></div>
 
 <div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
 
@@ -278,8 +279,9 @@ V Československu se nová pravidla začala uplatňovat po roce 1954 a projevila
 
 Podobné změny se ale mohou objevit na každém švu mezi dvěma revizemi. Nejviditelnější je změna mezi sedmou a osmou revizí mezi lety 1967 a 1968. Z roku na rok přibude víc než dvacet tisíc obětí oběhových nemocí, naopak u nemocí nervové soustavy spadne úmrtnost téměř na nulu. Je to tím, že _mozkovou mrtvici_ nová klasifikace považuje za problém cév, nikoli nervů, jak tomu bylo dříve.
 
-<div id="graf-zlom" class="mock-content">
-<img src="https://lh4.googleusercontent.com/fS-L63YUwYZ71wbPAsAjxDhKYO9SvRBPJRoh-6E0WtyhQ2qKhj_f1nIRmCrEkZfJIbcSBdSBF9J5EEHY3UlmjeoC0IRMvArXGjaBwL8iOoz4ZxhWe_fgCPckNhta-qUOvF2z4lRP" style="width:600px">
+<div id="graf-zlom" class="vis-static">
+<img src="assets/svg/zlom_des.svg">
+<!-- <img src="https://lh4.googleusercontent.com/fS-L63YUwYZ71wbPAsAjxDhKYO9SvRBPJRoh-6E0WtyhQ2qKhj_f1nIRmCrEkZfJIbcSBdSBF9J5EEHY3UlmjeoC0IRMvArXGjaBwL8iOoz4ZxhWe_fgCPckNhta-qUOvF2z4lRP" style="width:600px"> -->
 </div>
 
 <div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
@@ -292,8 +294,9 @@ Pohledem současné medicíny jde o chybný údaj – lékaři by měli být sch
 
 Československá statistika úmrtí jako celek je na tom v tomto ohledu slušně – podíl nepřesných příčin brzy spadl pod deset procent a už tam zůstal.
 
-<div id="graf-nepresne-urcene-priciny" class="mock-content">
-<img src="https://lh4.googleusercontent.com/-BjLQOqcF-Wy9OzMyHv70nQs_2BPRHLCt12ntR5fMn5wdzFp5bQ4XeZkmTbhQxnUAfYeLd1KAgNHGDidQG8A8eRQ11wbrrW4SFFV5Bc1RgLl6hGgO892e5-yr93zzG_HFaXW7Pr8" style="width:600px">
+<div id="graf-nepresne-urcene-priciny" class="vis-static"> 
+<img src="assets/svg/4.5_nepresne_des.svg">
+<!-- <img src="https://lh4.googleusercontent.com/-BjLQOqcF-Wy9OzMyHv70nQs_2BPRHLCt12ntR5fMn5wdzFp5bQ4XeZkmTbhQxnUAfYeLd1KAgNHGDidQG8A8eRQ11wbrrW4SFFV5Bc1RgLl6hGgO892e5-yr93zzG_HFaXW7Pr8" style="width:600px"> -->
 </div>
 
 <div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
@@ -394,7 +397,7 @@ Pivo a párek ostatně stále patří k obrazu spokojeného Čecha a <a href="ht
 
 „I v polovině 90. let zaostává Česká republika za ostatními vyspělými zeměmi Evropy _(v naději dožití, pozn. red.)_ zhruba o sedm až deset kalendářních let,“ píše v publikaci _Tisíc let obyvatelstva českých zemí_ demograf Vladimír Srb.
 
-<div id="fotka-nadeje-doziti-soucasnost"><img src="assets/svg/4.1_nadeje_doziti_des.svg" style="width:600px"></div>
+<div id="fotka-nadeje-doziti-soucasnost" class="vis-static"><img src="assets/svg/4.1_nadeje_doziti_des.svg"></div>
 
 <div class="data-source">Zdroj: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
@@ -406,7 +409,7 @@ S nástupem individualismu se zvýšila také životní úroveň a s ní délka 
 
 Přesto je i dnes v datech o délce dožití patrné, <a href="https://interaktivni.rozhlas.cz/umrti-srdce/" target="_blank">kudy vedla železná opona</a> mezi Západem a Východem. Třicet let po pádu Berlínské zdi se rozdíl v délce dožití sice snížil na tři až pět let, ale úplnému vymazání vytrvale odolává.
 
-<div id="graf-zelezna-opona"><img src="assets/svg/4.5_mapa_doziti_des-01.svg" style="width:600px"></div>
+<div id="graf-zelezna-opona" class="vis-static"><img src="assets/svg/4.5_mapa_des.svg" ></div>
 
 <div class="data-source">Zdroj: <a href="https://ec.europa.eu/eurostat/databrowser/view/tgs00101/default/table?lang=en">Life expectancy at birth by sex and NUTS 2 region, Eurostat</a></div>
 
@@ -565,7 +568,7 @@ Při prioritě infekčních nemocí obecně a covidu zvlášť by tedy měl být
 
 Čerstvější, ale méně přesná veřejná data mluví o XXX úmrtích s hlavní příčinou úmrtí covid-19, tedy _na covid_. Zbylá část nadměrné úmrtnosti jsou úmrtí _s covidem_, který zde ale nebyl hlavní příčinou, nebo z jiných důvodů. Souvisí zřejmě s tím, že se lékaři nemohli naplno věnovat necovidovým pacientům, vyšší sebevražedností, osamocení v sociálních zařízeních, a podobně. Z epidemiologického pohledu ale o přímé oběti covidu nejde.
 
-<div id="graf-excess-mortality" class="mock-content"><img src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" style="width:600px"></div>
+<div id="graf-excess-mortality" class="vis-static"><img src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg"></div>
 
 <div class="data-source">Zdroj: <a href="https://www.irozhlas.cz/zpravy-domov/celkova-umrti-listopad_2012070635_pek">Eurostat/ČSÚ, MV ČR – informativní výpis z evidence obyvatel</a></div>
 
