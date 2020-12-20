@@ -430,7 +430,7 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
     <div class="datarozhlas-scrolly-step">
       <h3>Vývoj úmrtí 1990-2018</h3>
       <p>
-        <em>Doplnit</em>
+        XXX
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
