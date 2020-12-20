@@ -112,7 +112,7 @@ Víme to díky tomu, že Československo – v rámci loučení se se vším rak
 <div class="b-inline">
   <div class="b-inline__wrap">
     <div class="b-inline__content">
-      <img src="assets/2_1_vesele_diagnozy.jpg" alt="" class="priciny-umrti-vesele-diagnozy-img">
+      <img src="assets/2_ilustrace_podivne_diagnozy.jpg" alt="" class="priciny-umrti-ilustrace-podivne-diagnozy-img">
       <p class="text-sm text-bold text-uppercase">Podivné diagnózy</p>
       <p class="text-sm">
         <em>Sešlost stařecká se zblbělostí</em>, <em>zrůdnost vrozená</em>, <em>vrozený nesprávný tvar srdce</em>… Jakkoliv je téma vážné, některé diagnózy z minulosti dnes působí poněkud poeticky až humorně. Dodnes ovšem najdeme <a href="https://mkn10.uzis.cz/">na seznamu oficiálních diagnóz</a> <em>kousnutí nebo úder psem</em>, <em>uhození se o jinou osobu</em> i <em>nehodu vesmírné lodi</em>.
