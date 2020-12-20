@@ -6,8 +6,8 @@ import * as lines from './lines';
 
 export default {
   onScrollDownToStep: (viz) => {
-    const data1990MzStdWithoutTotal = viz.data1990MzStd.filter((category) => category.skupina !== 'Celkem');
-    const data1990MzStdCategoryTotal = viz.data1990MzStd.find((category) => category.skupina === 'Celkem');
+    const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdCategoryTotal = viz.dataMzStd.find((category) => category.skupina === 'Celkem');
 
     // 1. Instantly remove the original total line
 
@@ -15,13 +15,13 @@ export default {
 
     // 2. Instantly add all the category lines with the data of total
 
-    data1990MzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.addCategoryLine({
         svg: viz.svg,
         categoryName: category.skupina,
         // We start by rendering all the lines using the category total data
         // so we can then "break" that line using animation into the category-lines
-        d: viz.lineTotal(data1990MzStdCategoryTotal.data),
+        d: viz.lineTotal(dataMzStdCategoryTotal.data),
         style: 'active',
         activeColor: colors.categoryColorsActive['Celkem'],
       });
@@ -30,7 +30,7 @@ export default {
     // 3. Animation part 1: "Break" the total line into category lines and fade away
     // the total line label
 
-    data1990MzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.changeCategoryLine({
         svg: viz.svg,
         categoryName: category.skupina,
@@ -57,7 +57,7 @@ export default {
 
     axes.updateYAxis(viz, { y: viz.yCategories, margin: viz.margin, delay: 700 });
 
-    data1990MzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.changeCategoryLine({
         svg: viz.svg,
         categoryName: category.skupina,
@@ -68,15 +68,27 @@ export default {
         style: 'anonymous',
       });
     });
+
+    // 5. Highlight category
+
+    lines.changeActiveNonTotalCategoryLines({
+      svg: viz.svg,
+      line: viz.lineCategories,
+      x: viz.x,
+      y: viz.yCategories,
+      dataMzStd: viz.dataMzStd,
+      activeCategoryNames: ['Nemoci oběhové soustavy'],
+      delay: 1400,
+    });
   },
   onScrollUpFromStep: (viz) => {
-    const data1990MzStdWithoutTotal = viz.data1990MzStd.filter((category) => category.skupina !== 'Celkem');
-    const data1990MzStdCategoryTotal = viz.data1990MzStd.find((category) => category.skupina === 'Celkem');
+    const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdCategoryTotal = viz.dataMzStd.find((category) => category.skupina === 'Celkem');
 
     lines.addCategoryLine({
       svg: viz.svg,
       categoryName: 'Celkem',
-      d: viz.lineTotal(data1990MzStdCategoryTotal.data),
+      d: viz.lineTotal(dataMzStdCategoryTotal.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Celkem'],
     });
@@ -92,7 +104,9 @@ export default {
       opacity: 1,
     });
 
-    data1990MzStdWithoutTotal.forEach((category) => {
+    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Nemoci oběhové soustavy' });
+
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.removeCategoryLine({ svg: viz.svg, categoryName: category.skupina });
     });
 

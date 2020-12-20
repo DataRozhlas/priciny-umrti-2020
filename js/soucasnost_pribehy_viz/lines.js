@@ -110,10 +110,10 @@ export const isAddedCategoryLineLabel = ({ svg, categoryName }) => {
   return !svg.select(`.g-line-labels .${kebabCase(categoryName)}`).empty();
 };
 
-export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x, y, activeCategoryNames }) => {
-  const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+export const changeActiveNonTotalCategoryLines = ({ svg, dataMzStd, line, x, y, activeCategoryNames, delay = 0 }) => {
+  const dataMzStdWithoutTotal = dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
-  data1919MzStdWithoutTotal.forEach((category) => {
+  dataMzStdWithoutTotal.forEach((category) => {
     let style = 'context';
     let activeColor;
     if (activeCategoryNames.includes(category.skupina)) {
@@ -128,6 +128,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
       style,
       activeColor,
       duration: 700,
+      delay,
     });
 
     const labelExists = isAddedCategoryLineLabel({
@@ -145,6 +146,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
           textAnchor: categoryLineLabelPositions[category.skupina].textAnchor,
         },
         opacity: 0,
+        delay,
       });
 
       changeCategoryLineLabel({
@@ -157,6 +159,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
         },
         opacity: 1,
         duration: 700,
+        delay,
       });
     } else if (!activeCategoryNames.includes(category.skupina) && labelExists) {
       changeCategoryLineLabel({
@@ -169,12 +172,13 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
         },
         opacity: 0,
         duration: 700,
+        delay,
       });
 
       removeCategoryLineLabel({
         svg,
         categoryName: category.skupina,
-        delay: 700,
+        delay: delay + 700,
       });
     }
   });
@@ -186,46 +190,44 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
 
 export const categoryLineLabelTexts = {
   Celkem: 'Úmrtí celkem',
-  'Válečné akce a soudní poprava - muži': 'Muži',
-  'Válečné akce a soudní poprava - ženy': 'Ženy',
 };
 
 export const categoryLineLabelPositions = {
-  Celkem: { x: d3.timeParse('%Y')(1996), y: 1020, textAnchor: 'start' },
-  'Stařecká sešlost': {
-    x: d3.timeParse('%Y')(1925),
-    y: 400,
+  Celkem: { x: d3.timeParse('%Y')(1996), y: 1640, textAnchor: 'start' },
+
+  'Nemoci oběhové soustavy': {
+    x: d3.timeParse('%Y')(2000),
+    y: 870,
     textAnchor: 'start',
-  },
-  'Nemoci nakažlivé a cizopasné': {
-    x: d3.timeParse('%Y')(1928),
-    y: 270,
-    textAnchor: 'start',
-  },
-  'Nemoci ústrojí oběhu krevního': {
-    x: d3.timeParse('%Y')(1929),
-    y: 380,
-    textAnchor: 'start',
-  },
-  'Rakovina a jiné nádory': {
-    x: d3.timeParse('%Y')(1933),
-    y: 220,
-    textAnchor: 'start',
-  },
-  'Válečné akce a soudní poprava': {
-    x: d3.timeParse('%Y')(1940),
-    y: 40,
-    textAnchor: 'end',
   },
 
-  'Válečné akce a soudní poprava - muži': {
-    x: d3.timeParse('%Y')(1945),
-    y: 260,
-    textAnchor: 'end',
+  Novotvary: {
+    x: d3.timeParse('%Y')(2000),
+    y: 410,
+    textAnchor: 'start',
   },
-  'Válečné akce a soudní poprava - ženy': {
-    x: d3.timeParse('%Y')(1944),
-    y: 70,
-    textAnchor: 'end',
+
+  'Některé infekční a parazitární nemoci': {
+    x: d3.timeParse('%Y')(2000),
+    y: 8,
+    textAnchor: 'start',
+  },
+
+  'Úmyslné sebepoškození': {
+    x: d3.timeParse('%Y')(2000),
+    y: 21,
+    textAnchor: 'start',
+  },
+
+  'Dopravní nehody': {
+    x: d3.timeParse('%Y')(2000),
+    y: 18,
+    textAnchor: 'start',
+  },
+
+  'Napadení (útok)': {
+    x: d3.timeParse('%Y')(2000),
+    y: 5,
+    textAnchor: 'start',
   },
 };

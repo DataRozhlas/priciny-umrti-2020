@@ -9,7 +9,7 @@ export const updateXAxis = (viz, { x, margin, delay = 0, duration = 700 }) => {
   const axisWidth = viz.width - margin.left - margin.right;
 
   let ticksEvery = 1;
-  if (axisWidth < 700 && axisWidth >= 400) {
+  if (axisWidth < 800 && axisWidth >= 400) {
     ticksEvery = 2;
   } else if (axisWidth < 400) {
     ticksEvery = 5;

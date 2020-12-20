@@ -53,17 +53,9 @@ const fetchData = () => {
     fetch('data/1990_mz_std.json').then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1949_m_std.json').then((response) => {
-      return !response.error ? response.json() : Promise.reject();
-    }),
-    fetch('data/1949_z_std.json').then((response) => {
-      return !response.error ? response.json() : Promise.reject();
-    }),
-  ]).then(([data1990MzStd, data1949MStd, data1949ZStd]) => {
+  ]).then(([data1990MzStd]) => {
     return {
-      data1990MzStd: data1990MzStd,
-      data1990MStd: filterDataToNeededYears(data1949MStd),
-      data1990ZStd: filterDataToNeededYears(data1949ZStd),
+      dataMzStd: data1990MzStd,
     };
   });
 };

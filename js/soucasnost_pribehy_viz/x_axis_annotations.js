@@ -11,25 +11,27 @@ export const createXAxisAnnotationsGroup = (viz) => {
 
 export const getXAxisAnnotationsGroup = ({ svg }) => svg.select('.g-x-axis-annotations');
 
-// Prague spring line
+// Czechoslovakia split line
 
-export const updatePragueSpringLine = (viz, { xPos, margin, opacity = 1, duration = 0, delay = 0 }) => {
+export const updateCzechoslovakiaSplitLine = (viz, { xPos, margin, opacity = 1, duration = 0, delay = 0 }) => {
   const xAxisAnnotationsG = getXAxisAnnotationsGroup(viz);
 
-  let pragueSpringLine = xAxisAnnotationsG.select('.prague-spring-line');
+  let czechoslovakiaSplitLine = xAxisAnnotationsG.select('.czechoslovakia-split-line');
 
-  if (pragueSpringLine.empty()) {
-    pragueSpringLine = xAxisAnnotationsG.append('line').attr('class', 'prague-spring-line annotation-line');
+  if (czechoslovakiaSplitLine.empty()) {
+    czechoslovakiaSplitLine = xAxisAnnotationsG
+      .append('line')
+      .attr('class', 'czechoslovakia-split-line annotation-line');
   }
 
-  pragueSpringLine
+  czechoslovakiaSplitLine
     .transition()
     .delay(delay)
     .duration(duration)
-    .attr('x1', xPos !== undefined ? xPos : pragueSpringLine.attr('x1'))
-    .attr('y1', margin !== undefined ? margin.top : pragueSpringLine.attr('y1'))
-    .attr('x2', xPos !== undefined ? xPos : pragueSpringLine.attr('x2'))
-    .attr('y2', margin !== undefined ? viz.height - margin.bottom + 45 : pragueSpringLine.attr('y2'))
+    .attr('x1', xPos !== undefined ? xPos : czechoslovakiaSplitLine.attr('x1'))
+    .attr('y1', margin !== undefined ? margin.top : czechoslovakiaSplitLine.attr('y1'))
+    .attr('x2', xPos !== undefined ? xPos : czechoslovakiaSplitLine.attr('x2'))
+    .attr('y2', margin !== undefined ? viz.height - margin.bottom + 45 : czechoslovakiaSplitLine.attr('y2'))
     .attr('stroke-width', 1)
     .attr('stroke-dasharray', '4,4')
     .attr('stroke-linejoin', 'round')
@@ -38,75 +40,75 @@ export const updatePragueSpringLine = (viz, { xPos, margin, opacity = 1, duratio
     .attr('opacity', opacity);
 };
 
-export const removePragueSpringLine = (viz, { delay = 0 }) => {
-  getXAxisAnnotationsGroup(viz).select('.prague-spring-line').transition().duration(0).delay(delay).remove();
+export const removeCzechoslovakiaSplitLine = (viz, { delay = 0 }) => {
+  getXAxisAnnotationsGroup(viz).select('.czechoslovakia-split-line').transition().duration(0).delay(delay).remove();
 };
 
-export const fadeInPragueSpringLine = (viz, { xPos, margin }) => {
-  updatePragueSpringLine(viz, { xPos, margin, opacity: 0 });
-  updatePragueSpringLine(viz, { xPos, margin, opacity: 1, duration: 700 });
+export const fadeInCzechoslovakiaSplitLine = (viz, { xPos, margin }) => {
+  updateCzechoslovakiaSplitLine(viz, { xPos, margin, opacity: 0 });
+  updateCzechoslovakiaSplitLine(viz, { xPos, margin, opacity: 1, duration: 700 });
 };
 
-export const fadeOutPragueSpringLine = (viz) => {
-  updatePragueSpringLine(viz, { opacity: 0, duration: 700 });
-  removePragueSpringLine(viz, { delay: 700 });
+export const fadeOutCzechoslovakiaSplitLine = (viz) => {
+  updateCzechoslovakiaSplitLine(viz, { opacity: 0, duration: 700 });
+  removeCzechoslovakiaSplitLine(viz, { delay: 700 });
 };
 
-// Prague spring label
+// Czechoslovakia split label
 
-export const updatePragueSpringLabel = (viz, { xPos, margin, opacity = 1, duration = 0, delay = 0 } = {}) => {
+export const updateCzechoslovakiaSplitLabel = (viz, { xPos, margin, opacity = 1, duration = 0, delay = 0 } = {}) => {
   const xAxisAnnotationsG = getXAxisAnnotationsGroup(viz);
 
-  let pragueSpringLabel = xAxisAnnotationsG.select('.prague-spring-label');
+  let czechoslovakiaSplitLabel = xAxisAnnotationsG.select('.czechoslovakia-split-label');
 
-  if (pragueSpringLabel.empty()) {
-    pragueSpringLabel = xAxisAnnotationsG.append('text').attr('class', 'prague-spring-label');
+  if (czechoslovakiaSplitLabel.empty()) {
+    czechoslovakiaSplitLabel = xAxisAnnotationsG.append('text').attr('class', 'czechoslovakia-split-label');
   }
 
-  pragueSpringLabel
+  czechoslovakiaSplitLabel
     .transition()
     .delay(delay)
     .duration(duration)
-    .text('Pražské jaro')
-    .attr('x', xPos !== undefined ? xPos - 8 : pragueSpringLabel.attr('x'))
-    .attr('y', margin !== undefined ? viz.height - margin.bottom + 40 : pragueSpringLabel.attr('y'))
-    .attr('text-anchor', 'end')
+    .text('Rozdělení Československa')
+    .attr('x', xPos !== undefined ? xPos + 8 : czechoslovakiaSplitLabel.attr('x'))
+    .attr('y', margin !== undefined ? viz.height - margin.bottom + 40 : czechoslovakiaSplitLabel.attr('y'))
+    .attr('text-anchor', 'start')
     .attr('opacity', opacity);
 };
 
-export const removePragueSpringLabel = (viz, { delay = 0 }) => {
-  getXAxisAnnotationsGroup(viz).select('.prague-spring-label').transition().duration(0).delay(delay).remove();
+export const removeCzechoslovakiaSplitLabel = (viz, { delay = 0 }) => {
+  getXAxisAnnotationsGroup(viz).select('.czechoslovakia-split-label').transition().duration(0).delay(delay).remove();
 };
 
-export const fadeInPragueSpringLabel = (viz, { xPos, margin } = {}) => {
-  updatePragueSpringLabel(viz, { xPos, margin, opacity: 0 });
-  updatePragueSpringLabel(viz, { xPos, margin, opacity: 1, duration: 700 });
+export const fadeInCzechoslovakiaSplitLabel = (viz, { xPos, margin } = {}) => {
+  updateCzechoslovakiaSplitLabel(viz, { xPos, margin, opacity: 0 });
+  updateCzechoslovakiaSplitLabel(viz, { xPos, margin, opacity: 1, duration: 700 });
 };
 
-export const fadeOutPragueSpringLabel = (viz) => {
-  updatePragueSpringLabel(viz, { opacity: 0, duration: 700 });
-  removePragueSpringLabel(viz, { delay: 700 });
+export const fadeOutCzechoslovakiaSplitLabel = (viz) => {
+  updateCzechoslovakiaSplitLabel(viz, { opacity: 0, duration: 700 });
+  removeCzechoslovakiaSplitLabel(viz, { delay: 700 });
 };
 
-// Velvet revolution line
+// EU joined line
 
-export const updateVelvetRevolutionLine = (viz, { xPos, margin, opacity = 1, duration = 0, delay = 0 }) => {
+export const updateEuJoinedLine = (viz, { xPos, margin, opacity = 1, duration = 0, delay = 0 }) => {
   const xAxisAnnotationsG = getXAxisAnnotationsGroup(viz);
 
-  let velvetRevolutionLine = xAxisAnnotationsG.select('.velvet-revolution-line');
+  let euJoinedLine = xAxisAnnotationsG.select('.eu-joined-line');
 
-  if (velvetRevolutionLine.empty()) {
-    velvetRevolutionLine = xAxisAnnotationsG.append('line').attr('class', 'velvet-revolution-line annotation-line');
+  if (euJoinedLine.empty()) {
+    euJoinedLine = xAxisAnnotationsG.append('line').attr('class', 'eu-joined-line annotation-line');
   }
 
-  velvetRevolutionLine
+  euJoinedLine
     .transition()
     .delay(delay)
     .duration(duration)
-    .attr('x1', xPos !== undefined ? xPos : velvetRevolutionLine.attr('x1'))
-    .attr('y1', margin !== undefined ? margin.top : velvetRevolutionLine.attr('y1'))
-    .attr('x2', xPos !== undefined ? xPos : velvetRevolutionLine.attr('x2'))
-    .attr('y2', margin !== undefined ? viz.height - margin.bottom + 45 : velvetRevolutionLine.attr('y2'))
+    .attr('x1', xPos !== undefined ? xPos : euJoinedLine.attr('x1'))
+    .attr('y1', margin !== undefined ? margin.top : euJoinedLine.attr('y1'))
+    .attr('x2', xPos !== undefined ? xPos : euJoinedLine.attr('x2'))
+    .attr('y2', margin !== undefined ? viz.height - margin.bottom + 45 : euJoinedLine.attr('y2'))
     .attr('stroke-width', 1)
     .attr('stroke-dasharray', '4,4')
     .attr('stroke-linejoin', 'round')
@@ -115,52 +117,52 @@ export const updateVelvetRevolutionLine = (viz, { xPos, margin, opacity = 1, dur
     .attr('opacity', opacity);
 };
 
-export const removeVelvetRevolutionLine = (viz, { delay = 0 }) => {
-  getXAxisAnnotationsGroup(viz).select('.velvet-revolution-line').transition().duration(0).delay(delay).remove();
+export const removeEuJoinedLine = (viz, { delay = 0 }) => {
+  getXAxisAnnotationsGroup(viz).select('.eu-joined-line').transition().duration(0).delay(delay).remove();
 };
 
-export const fadeInVelvetRevolutionLine = (viz, { xPos, margin }) => {
-  updateVelvetRevolutionLine(viz, { xPos, margin, opacity: 0 });
-  updateVelvetRevolutionLine(viz, { xPos, margin, opacity: 1, duration: 700 });
+export const fadeInEuJoinedLine = (viz, { xPos, margin }) => {
+  updateEuJoinedLine(viz, { xPos, margin, opacity: 0 });
+  updateEuJoinedLine(viz, { xPos, margin, opacity: 1, duration: 700 });
 };
 
-export const fadeOutVelvetRevolutionLine = (viz) => {
-  updateVelvetRevolutionLine(viz, { opacity: 0, duration: 700 });
-  removeVelvetRevolutionLine(viz, { delay: 700 });
+export const fadeOutEuJoinedLine = (viz) => {
+  updateEuJoinedLine(viz, { opacity: 0, duration: 700 });
+  removeEuJoinedLine(viz, { delay: 700 });
 };
 
-// Velvet revolution label
+// EU joined label
 
-export const updateVelvetRevolutionLabel = (viz, { xPos, margin, opacity = 1, duration = 0, delay = 0 } = {}) => {
+export const updateEuJoinedLabel = (viz, { xPos, margin, opacity = 1, duration = 0, delay = 0 } = {}) => {
   const xAxisAnnotationsG = getXAxisAnnotationsGroup(viz);
 
-  let velvetRevolutionLabel = xAxisAnnotationsG.select('.velvet-revolution-label');
+  let euJoinedLabel = xAxisAnnotationsG.select('.eu-joined-label');
 
-  if (velvetRevolutionLabel.empty()) {
-    velvetRevolutionLabel = xAxisAnnotationsG.append('text').attr('class', 'velvet-revolution-label');
+  if (euJoinedLabel.empty()) {
+    euJoinedLabel = xAxisAnnotationsG.append('text').attr('class', 'eu-joined-label');
   }
 
-  velvetRevolutionLabel
+  euJoinedLabel
     .transition()
     .delay(delay)
     .duration(duration)
-    .text('Sametová revoluce')
-    .attr('x', xPos !== undefined ? xPos - 8 : velvetRevolutionLabel.attr('x'))
-    .attr('y', margin !== undefined ? viz.height - margin.bottom + 40 : velvetRevolutionLabel.attr('y'))
-    .attr('text-anchor', 'end')
+    .text('Vstup ČR do Evropské unie')
+    .attr('x', xPos !== undefined ? xPos + 8 : euJoinedLabel.attr('x'))
+    .attr('y', margin !== undefined ? viz.height - margin.bottom + 40 : euJoinedLabel.attr('y'))
+    .attr('text-anchor', 'start')
     .attr('opacity', opacity);
 };
 
-export const removeVelvetRevolutionLabel = (viz, { delay = 0 }) => {
-  getXAxisAnnotationsGroup(viz).select('.velvet-revolution-label').transition().duration(0).delay(delay).remove();
+export const removeEuJoinedLabel = (viz, { delay = 0 }) => {
+  getXAxisAnnotationsGroup(viz).select('.eu-joined-label').transition().duration(0).delay(delay).remove();
 };
 
-export const fadeInVelvetRevolutionLabel = (viz, { xPos, margin } = {}) => {
-  updateVelvetRevolutionLabel(viz, { xPos, margin, opacity: 0 });
-  updateVelvetRevolutionLabel(viz, { xPos, margin, opacity: 1, duration: 700 });
+export const fadeInEuJoinedLabel = (viz, { xPos, margin } = {}) => {
+  updateEuJoinedLabel(viz, { xPos, margin, opacity: 0 });
+  updateEuJoinedLabel(viz, { xPos, margin, opacity: 1, duration: 700 });
 };
 
-export const fadeOutVelvetRevolutionLabel = (viz) => {
-  updateVelvetRevolutionLabel(viz, { opacity: 0, duration: 700 });
-  removeVelvetRevolutionLabel(viz, { delay: 700 });
+export const fadeOutEuJoinedLabel = (viz) => {
+  updateEuJoinedLabel(viz, { opacity: 0, duration: 700 });
+  removeEuJoinedLabel(viz, { delay: 700 });
 };

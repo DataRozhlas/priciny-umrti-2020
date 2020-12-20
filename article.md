@@ -434,9 +434,39 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>24 skupin příčin úmrtí</h3>
+      <h3>XXX</h3>
       <p>
-        <em>Doplnit</em>
+        Nejdůležitější zpráva posledních třiceti let zní: radikálně ubylo obětí nemocí srdce a cév, jasně dominantní příčiny úmrtí. V absolutních číslech o třetinu. Ve standardizované úmrtnosti – tedy jak by se změnil počet obětí, kdyby byla věková struktura populace v celém období stejná jako v roce 2018 – spadla dokonce na 40 procent.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Obětí novotvarů jsou asi o čtvrtinu častěji muži než ženy. V posledních třiceti letech standardizovaná úmrtnost klesá u obou pohlaví, u mužů ale rychleji, proto se také délka života mírně srovnává. Nejčastější příčinou úmrtí ve skupině je dlouhodobě rakovina průdušky a plíce.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Od začátku století v datech přibývá diagnózy <em>jiná sepse</em>: bakteriální infekce, které se typicky objeví po operaci. Sepse často doprovází jinou nemoc, zřejmě tak jde o častější příčinu úmrtí, než ukazují data.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Sebevražednost po sametové revoluci dál klesala. Výjimkou je období po globální ekonomické krizi – v letech 2009 až 2013 se počty sebevražd na čas zvýšily.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Do roku 1994 pokračoval trend z minulého období: obětí dopravních nehod přibývalo. V tomto roce se na trhu objevila Škoda Fabia, v následujících letech obětí ubylo. Nejčastějšími obětmi dopravních nehod jsou nicméně stále chodci.
+      </p>
+    </div>
+    <div class="datarozhlas-scrolly-step">
+      <h3>XXX</h3>
+      <p>
+        Těsně po revoluci přibývalo obětí trestných činů, po pěti letech číslo začalo klesat. Nejčastější příčinou úmrtí ve skupině je <em>napadení ostrým předmětem</em>, obětí střelných zbraní je dnes minimum.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
