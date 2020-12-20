@@ -68,6 +68,18 @@ export default {
         style: 'anonymous',
       });
     });
+
+    // 5. Highlight the first story
+
+    lines.changeActiveNonTotalCategoryLines({
+      svg: viz.svg,
+      line: viz.lineCategories,
+      x: viz.x,
+      y: viz.yCategories,
+      dataMzStd: viz.data1949MzStd,
+      activeCategoryNames: ['Nemoci oběhové soustavy'],
+      delay: 1400,
+    });
   },
   onScrollUpFromStep: (viz) => {
     const data1949MzStdWithoutTotal = viz.data1949MzStd.filter((category) => category.skupina !== 'Celkem');
@@ -91,6 +103,8 @@ export default {
       },
       opacity: 1,
     });
+
+    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Nemoci oběhové soustavy' });
 
     data1949MzStdWithoutTotal.forEach((category) => {
       lines.removeCategoryLine({ svg: viz.svg, categoryName: category.skupina });

@@ -13,7 +13,6 @@ import vizStep4 from './viz_step4';
 import vizStep5 from './viz_step5';
 import vizStep6 from './viz_step6';
 import vizStep7 from './viz_step7';
-import vizStep8 from './viz_step8';
 
 const vizSteps = {
   1: vizStep1,
@@ -23,7 +22,6 @@ const vizSteps = {
   5: vizStep5,
   6: vizStep6,
   7: vizStep7,
-  8: vizStep8,
 };
 
 export const initViz = (svgSelector, data) => {
@@ -43,6 +41,9 @@ export const initViz = (svgSelector, data) => {
 
   const { data1949MzStd, data1949MStd, data1949ZStd } = data;
   const data1949MzStdWithoutTotal = data1949MzStd.filter((category) => category.skupina !== 'Celkem');
+  const data1949MzStdCategoriesLower = data1949MzStdWithoutTotal.filter(
+    (category) => category.skupina !== 'Nemoci oběhové soustavy'
+  );
 
   // Prepare data functions
 
@@ -70,6 +71,12 @@ export const initViz = (svgSelector, data) => {
     .nice()
     .range([height - margin.bottom, margin.top]);
 
+  const yCategoriesLower = d3
+    .scaleLinear()
+    .domain([0, d3.max(data1949MzStdCategoriesLower.map((category) => d3.max(category.data.map((d) => d.value))))])
+    .nice()
+    .range([height - margin.bottom, margin.top]);
+
   const yExplore = d3
     .scaleLinear()
     .domain([0, d3.max(data1949MzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
@@ -87,6 +94,11 @@ export const initViz = (svgSelector, data) => {
     .line()
     .x((d) => x(d3.timeParse('%Y')(d.rok)))
     .y((d) => yCategories(d.value ? d.value : 0));
+
+  const lineCategoriesLower = d3
+    .line()
+    .x((d) => x(d3.timeParse('%Y')(d.rok)))
+    .y((d) => yCategoriesLower(d.value ? d.value : 0));
 
   const lineExplore = d3
     .line()
@@ -106,15 +118,19 @@ export const initViz = (svgSelector, data) => {
     dataMStd: data1949MStd,
     dataZStd: data1949ZStd,
 
+    dataMzStdCategoriesLower: data1949MzStdCategoriesLower,
+
     x,
     xExplore,
 
     yTotal,
     yCategories,
+    yCategoriesLower,
     yExplore,
 
     lineTotal,
     lineCategories,
+    lineCategoriesLower,
     lineExplore,
 
     width,

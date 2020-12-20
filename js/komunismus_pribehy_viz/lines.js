@@ -110,7 +110,7 @@ export const isAddedCategoryLineLabel = ({ svg, categoryName }) => {
   return !svg.select(`.g-line-labels .${kebabCase(categoryName)}`).empty();
 };
 
-export const changeActiveNonTotalCategoryLines = ({ svg, dataMzStd, line, x, y, activeCategoryNames }) => {
+export const changeActiveNonTotalCategoryLines = ({ svg, dataMzStd, line, x, y, activeCategoryNames, delay = 0 }) => {
   const dataMzStdWithoutTotal = dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
   dataMzStdWithoutTotal.forEach((category) => {
@@ -127,6 +127,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, dataMzStd, line, x, y, 
       d: line(category.data),
       style,
       activeColor,
+      delay,
       duration: 700,
     });
 
@@ -145,6 +146,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, dataMzStd, line, x, y, 
           textAnchor: categoryLineLabelPositions[category.skupina].textAnchor,
         },
         opacity: 0,
+        delay,
       });
 
       changeCategoryLineLabel({
@@ -156,6 +158,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, dataMzStd, line, x, y, 
           textAnchor: categoryLineLabelPositions[category.skupina].textAnchor,
         },
         opacity: 1,
+        delay,
         duration: 700,
       });
     } else if (!activeCategoryNames.includes(category.skupina) && labelExists) {
@@ -168,13 +171,14 @@ export const changeActiveNonTotalCategoryLines = ({ svg, dataMzStd, line, x, y, 
           textAnchor: categoryLineLabelPositions[category.skupina].textAnchor,
         },
         opacity: 0,
+        delay,
         duration: 700,
       });
 
       removeCategoryLineLabel({
         svg,
         categoryName: category.skupina,
-        delay: 700,
+        delay: delay + 700,
       });
     }
   });
@@ -190,44 +194,49 @@ export const categoryLineLabelTexts = {
 
 export const categoryLineLabelPositions = {
   Celkem: { x: d3.timeParse('%Y')(1956), y: 1400, textAnchor: 'start' },
+
+  'Nemoci oběhové soustavy': {
+    x: d3.timeParse('%Y')(1970),
+    y: 740,
+    textAnchor: 'start',
+  },
+
   'Zákonný zákrok a válečné operace': {
     x: d3.timeParse('%Y')(1956),
-    y: 15,
+    y: 5,
     textAnchor: 'start',
   },
   'Ostatní vnější příčiny poranění a otrav': {
     x: d3.timeParse('%Y')(1954),
-    y: 62,
-    textAnchor: 'start',
-  },
-  'Některé infekční a parazitární nemoci': {
-    x: d3.timeParse('%Y')(1955),
-    y: 90,
+    y: 50,
     textAnchor: 'start',
   },
   'Úmyslné sebepoškození': {
     x: d3.timeParse('%Y')(1955),
-    y: 50,
+    y: 30,
     textAnchor: 'start',
   },
+
+  'Některé infekční a parazitární nemoci': {
+    x: d3.timeParse('%Y')(1953),
+    y: 88,
+    textAnchor: 'start',
+  },
+
   'Dopravní nehody': {
     x: d3.timeParse('%Y')(1970),
-    y: 50,
+    y: 30,
     textAnchor: 'start',
   },
-  'Nemoci oběhové soustavy': {
-    x: d3.timeParse('%Y')(1972),
-    y: 730,
-    textAnchor: 'start',
-  },
+
   'Některé stavy vzniklé v perinatálním období': {
     x: d3.timeParse('%Y')(1952),
-    y: 40,
+    y: 32,
     textAnchor: 'start',
   },
   'Těhotenství, porod a šestinedělí': {
-    x: d3.timeParse('%Y')(1960),
-    y: 20,
+    x: d3.timeParse('%Y')(1954),
+    y: 5,
     textAnchor: 'start',
   },
 };

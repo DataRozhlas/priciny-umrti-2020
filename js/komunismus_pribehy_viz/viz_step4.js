@@ -1,24 +1,24 @@
 import * as lines from './lines';
 
 export default {
-  onScrollDownToStep: ({ svg, x, yCategories, lineCategories, dataMzStd }) => {
+  onScrollDownToStep: (viz) => {
     lines.changeActiveNonTotalCategoryLines({
-      svg,
-      line: lineCategories,
-      x,
-      y: yCategories,
-      dataMzStd,
-      activeCategoryNames: ['Úmyslné sebepoškození'],
+      svg: viz.svg,
+      line: viz.lineCategoriesLower,
+      x: viz.x,
+      y: viz.yCategoriesLower,
+      dataMzStd: viz.dataMzStdCategoriesLower,
+      activeCategoryNames: ['Některé infekční a parazitární nemoci'],
     });
   },
-  onScrollUpFromStep: ({ svg, x, yCategories, lineCategories, dataMzStd }) => {
+  onScrollUpFromStep: (viz) => {
     lines.changeActiveNonTotalCategoryLines({
-      svg,
-      line: lineCategories,
-      x,
-      y: yCategories,
-      dataMzStd,
-      activeCategoryNames: ['Některé infekční a parazitární nemoci'],
+      svg: viz.svg,
+      line: viz.lineCategoriesLower,
+      x: viz.x,
+      y: viz.yCategoriesLower,
+      dataMzStd: viz.dataMzStdCategoriesLower,
+      activeCategoryNames: ['Úmyslné sebepoškození'],
     });
   },
 };
