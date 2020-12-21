@@ -1,4 +1,5 @@
 import * as d3 from 'd3';
+import orderBy from 'lodash/orderBy';
 
 import * as axes from './axes';
 import * as colors from './colors';
@@ -29,52 +30,43 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
   scrollContainerEl.classList.add('legend-scroll-container');
   legendContainerEl.append(scrollContainerEl);
 
-  const legendCategories = viz.data1919MzStd
-    .filter((category) => category.skupina !== 'Celkem')
-    .map((category) => ({ categoryName: category.skupina, shortLabel: texts.categoriesShortLabels[category.skupina] }));
-
-  // TODO: sort by last value in graph
-  legendCategories.sort((a, b) => {
-    return new Intl.Collator('cs').compare(a.shortLabel, b.shortLabel);
-  });
+  const categoriesGroups = getCategoriesGroupsSortedByRightmostValueInGraph(viz.dataMzStd);
 
   const handleLegendItemMouseover = (mouseoverCategoryName) => {
     if (!lines.isAddedCategoryLine(viz, { categoryName: mouseoverCategoryName })) {
       return;
     }
 
-    const data1919MzStdWithoutTotal = viz.data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdDisplayed = viz.dataMzStd.filter(
+      (category) => category.skupina !== 'Celkem' && lines.isAddedCategoryLine(viz, { categoryName: category.skupina })
+    );
 
-    data1919MzStdWithoutTotal.forEach((category) => {
+    dataMzStdDisplayed.forEach((category) => {
       const categoryName = category.skupina;
 
-      if (lines.isAddedCategoryLine(viz, { categoryName })) {
-        lines.changeCategoryLine({
-          svg: viz.svg,
-          categoryName,
-          style: categoryName === mouseoverCategoryName ? 'active' : 'context',
-          activeColor: colors.categoryColorsActive[categoryName],
-        });
-      }
+      lines.changeCategoryLineStyle(viz, {
+        categoryName,
+        style: categoryName === mouseoverCategoryName ? 'active' : 'context',
+        activeColor: colors.categoryColorsActive[categoryName],
+      });
     });
 
     lines.bringCategoryLineToFront({ svg: viz.svg, categoryName: mouseoverCategoryName });
   };
 
   const handleLegendItemMouseout = () => {
-    const data1919MzStdWithoutTotal = viz.data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdDisplayed = viz.dataMzStd.filter(
+      (category) => category.skupina !== 'Celkem' && lines.isAddedCategoryLine(viz, { categoryName: category.skupina })
+    );
 
-    data1919MzStdWithoutTotal.forEach((category) => {
+    dataMzStdDisplayed.forEach((category) => {
       const categoryName = category.skupina;
 
-      if (lines.isAddedCategoryLine(viz, { categoryName })) {
-        lines.changeCategoryLine({
-          svg: viz.svg,
-          categoryName,
-          style: 'active',
-          activeColor: colors.categoryColorsActive[categoryName],
-        });
-      }
+      lines.changeCategoryLineStyle(viz, {
+        categoryName,
+        style: 'active',
+        activeColor: colors.categoryColorsActive[categoryName],
+      });
     });
   };
 
@@ -90,11 +82,11 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
 
     // Prep custom scale and line function
 
-    const data1919MzStdShow = viz.data1919MzStd.filter((category) => showCategoryNames.includes(category.skupina));
+    const dataMzStdShow = viz.dataMzStd.filter((category) => showCategoryNames.includes(category.skupina));
 
     const yCustom = d3
       .scaleLinear()
-      .domain([0, d3.max(data1919MzStdShow.map((category) => d3.max(category.data.map((d) => d.value))))])
+      .domain([0, d3.max(dataMzStdShow.map((category) => d3.max(category.data.map((d) => d.value))))])
       .nice()
       .range([viz.height - viz.marginExplore.bottom, viz.marginExplore.top]);
 
@@ -109,9 +101,9 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
 
     // Add or remove respective lines
 
-    const data1919MzStdWithoutTotal = viz.data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
-    data1919MzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       const categoryName = category.skupina;
       const show = showCategoryNames.includes(categoryName);
       const isAdded = lines.isAddedCategoryLine(viz, { categoryName });
@@ -298,7 +290,7 @@ export const removeLegend = (viz) => {
   legendContainerEl.remove();
 };
 
-const categoriesGroups = {
+const categoriesGroupsUnsorted = {
   'Nejčastější přirozené příčiny': ['Infekční nemoci', 'Novotvary', 'Nemoci oběhové soustavy'],
   'Méně časté přirozené příčiny': [
     'Nemoci žláz a výživy',
@@ -317,4 +309,30 @@ const categoriesGroups = {
     'Otravy vleklé',
   ],
   'Nepřirozené příčiny': ['Sebevraždy', 'Napadení', 'Dopravní nehody', 'Úrazy mimo dopravu', 'Popravy a války'],
+};
+
+const getCategoriesGroupsSortedByRightmostValueInGraph = (dataMzStd) => {
+  const categoriesRightmostValues = dataMzStd.map((category) => {
+    return {
+      categoryName: category.skupina,
+      categoryShortLabel: texts.categoriesShortLabels[category.skupina],
+      rightmostValue: category.data[category.data.length - 1].value,
+    };
+  });
+
+  const categoryShortLabelsSortedByRightmostValues = orderBy(
+    categoriesRightmostValues,
+    ['rightmostValue'],
+    ['desc']
+  ).map((category) => category.categoryShortLabel);
+
+  let sorted = {};
+
+  Object.keys(categoriesGroupsUnsorted).forEach((groupName) => {
+    sorted[groupName] = categoryShortLabelsSortedByRightmostValues.filter((shortLabel) =>
+      categoriesGroupsUnsorted[groupName].includes(shortLabel)
+    );
+  });
+
+  return sorted;
 };

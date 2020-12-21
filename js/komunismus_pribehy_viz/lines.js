@@ -42,6 +42,27 @@ export const changeCategoryLine = ({ svg, categoryName, d, style, activeColor, d
     .attr('fill', 'none');
 };
 
+export const changeCategoryLineStyle = (viz, { categoryName, style, activeColor }) => {
+  let stroke;
+  let strokeWidth;
+  if (style === 'context') {
+    stroke = '#E1E2DF';
+    strokeWidth = 1;
+  } else if (style === 'anonymous') {
+    stroke = '#aaaaaa';
+    strokeWidth = 2;
+  } else if (style === 'active') {
+    stroke = activeColor;
+    strokeWidth = 2;
+  } else {
+    throw new Error(`Unknown category line style: ${style}`);
+  }
+
+  const line = viz.svg.select(`.g-lines .${kebabCase(categoryName)}`);
+
+  line.attr('stroke', stroke).attr('stroke-width', strokeWidth);
+};
+
 export const bringCategoryLineToFront = ({ svg, categoryName }) => {
   svg.select(`.g-lines .${kebabCase(categoryName)}`).raise();
 };

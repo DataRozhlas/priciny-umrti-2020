@@ -5,12 +5,3 @@ import './prvni_republika_pribehy';
 import './komunismus_pribehy';
 import './soucasnost_pribehy';
 import './stoleti_pribehy';
-
-/*
-// snadné načtení souboru pro každého!
-fetch("https://blabla.cz/blabla.json")
-  .then(response => response.json()) // nebo .text(), když to není json
-  .then(data => {
-    // tady jde provést s daty cokoliv
-  });
-*/

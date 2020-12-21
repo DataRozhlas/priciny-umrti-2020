@@ -81,7 +81,7 @@
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0;
-    margin: 22px 0 5px 0;
+    margin: 14px 0 5px 0;
 
     &.group-title-first {
       margin-top: 0;
@@ -125,7 +125,7 @@
 
   .legend-item {
     display: block;
-    margin-bottom: 7px;
+    padding-bottom: 7px;
     flex-direction: row;
     position: relative;
     cursor: pointer;

@@ -1,4 +1,5 @@
 import * as d3 from 'd3';
+import orderBy from 'lodash/orderBy';
 
 import * as axes from './axes';
 import * as colors from './colors';
@@ -9,15 +10,15 @@ export const showLegendOnSide = (viz) => {
   return viz.width >= 738;
 };
 
-export const fadeInLegend = (viz) => {
+export const fadeInLegend = (viz, { exploreCategoryNames }) => {
   if (showLegendOnSide(viz)) {
-    fadeInLegendOnSide(viz);
+    fadeInLegendOnSide(viz, { exploreCategoryNames });
   } else {
     // TODO
   }
 };
 
-export const fadeInLegendOnSide = (viz) => {
+export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
   const vizContainerEl = viz.svg.node().parentNode;
 
   const legendContainerEl = document.createElement('div');
@@ -25,64 +26,51 @@ export const fadeInLegendOnSide = (viz) => {
   legendContainerEl.style.maxHeight = `${viz.height - 50}px`;
   vizContainerEl.append(legendContainerEl);
 
-  const titleEl = document.createElement('span');
-  titleEl.classList.add('legend-title');
-  titleEl.textContent = '22 skupin příčin úmrtí';
-  legendContainerEl.append(titleEl);
-
   const scrollContainerEl = document.createElement('div');
   scrollContainerEl.classList.add('legend-scroll-container');
   legendContainerEl.append(scrollContainerEl);
 
-  const legendItems = viz.data1919MzStd
-    .filter((category) => category.skupina !== 'Celkem')
-    .map((category) => ({ categoryName: category.skupina, label: texts.categoriesShortLabels[category.skupina] }));
+  const categoriesGroups = getCategoriesGroupsSortedByRightmostValueInGraph(viz.dataMzStd);
 
-  legendItems.sort((a, b) => {
-    return new Intl.Collator('cs').compare(a.label, b.label);
-  });
-
-  const handleLegendItemMouseover = (legendItem) => {
-    if (!lines.isAddedCategoryLine(viz, { categoryName: legendItem.categoryName })) {
+  const handleLegendItemMouseover = (mouseoverCategoryName) => {
+    if (!lines.isAddedCategoryLine(viz, { categoryName: mouseoverCategoryName })) {
       return;
     }
 
-    const data1919MzStdWithoutTotal = viz.data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdDisplayed = viz.dataMzStd.filter(
+      (category) => category.skupina !== 'Celkem' && lines.isAddedCategoryLine(viz, { categoryName: category.skupina })
+    );
 
-    data1919MzStdWithoutTotal.forEach((category) => {
+    dataMzStdDisplayed.forEach((category) => {
       const categoryName = category.skupina;
 
-      if (lines.isAddedCategoryLine(viz, { categoryName })) {
-        lines.changeCategoryLine({
-          svg: viz.svg,
-          categoryName,
-          style: categoryName === legendItem.categoryName ? 'active' : 'context',
-          activeColor: colors.categoryColorsActive[categoryName],
-        });
-      }
+      lines.changeCategoryLineStyle(viz, {
+        categoryName,
+        style: categoryName === mouseoverCategoryName ? 'active' : 'context',
+        activeColor: colors.categoryColorsActive[categoryName],
+      });
     });
 
-    lines.bringCategoryLineToFront({ svg: viz.svg, categoryName: legendItem.categoryName });
+    lines.bringCategoryLineToFront({ svg: viz.svg, categoryName: mouseoverCategoryName });
   };
 
   const handleLegendItemMouseout = () => {
-    const data1919MzStdWithoutTotal = viz.data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdDisplayed = viz.dataMzStd.filter(
+      (category) => category.skupina !== 'Celkem' && lines.isAddedCategoryLine(viz, { categoryName: category.skupina })
+    );
 
-    data1919MzStdWithoutTotal.forEach((category) => {
+    dataMzStdDisplayed.forEach((category) => {
       const categoryName = category.skupina;
 
-      if (lines.isAddedCategoryLine(viz, { categoryName })) {
-        lines.changeCategoryLine({
-          svg: viz.svg,
-          categoryName,
-          style: 'active',
-          activeColor: colors.categoryColorsActive[categoryName],
-        });
-      }
+      lines.changeCategoryLineStyle(viz, {
+        categoryName,
+        style: 'active',
+        activeColor: colors.categoryColorsActive[categoryName],
+      });
     });
   };
 
-  const handleLegendItemCheckboxChange = (legendItem) => {
+  const handleLegendItemCheckboxChange = () => {
     const checkboxEls = scrollContainerEl.querySelectorAll('input[type=checkbox]');
 
     const showCategoryNames = [];
@@ -94,11 +82,11 @@ export const fadeInLegendOnSide = (viz) => {
 
     // Prep custom scale and line function
 
-    const data1919MzStdShow = viz.data1919MzStd.filter((category) => showCategoryNames.includes(category.skupina));
+    const dataMzStdShow = viz.dataMzStd.filter((category) => showCategoryNames.includes(category.skupina));
 
     const yCustom = d3
       .scaleLinear()
-      .domain([0, d3.max(data1919MzStdShow.map((category) => d3.max(category.data.map((d) => d.value))))])
+      .domain([0, d3.max(dataMzStdShow.map((category) => d3.max(category.data.map((d) => d.value))))])
       .nice()
       .range([viz.height - viz.marginExplore.bottom, viz.marginExplore.top]);
 
@@ -113,9 +101,9 @@ export const fadeInLegendOnSide = (viz) => {
 
     // Add or remove respective lines
 
-    const data1919MzStdWithoutTotal = viz.data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
-    data1919MzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       const categoryName = category.skupina;
       const show = showCategoryNames.includes(categoryName);
       const isAdded = lines.isAddedCategoryLine(viz, { categoryName });
@@ -144,40 +132,129 @@ export const fadeInLegendOnSide = (viz) => {
         });
       }
     });
+
+    Object.keys(categoriesGroups).forEach((groupName, index) => {
+      const categoryShortLabels = categoriesGroups[groupName];
+      const categoryNames = categoryShortLabels.map(
+        (categoryShortLabel) => texts.categoriesShortLabelsInverted[categoryShortLabel]
+      );
+
+      let allChecked = true;
+      let allUnchecked = true;
+
+      const inputEls = scrollContainerEl.querySelectorAll('input[type=checkbox]');
+      inputEls.forEach((inputEl) => {
+        if (categoryNames.includes(inputEl.dataset.categoryName)) {
+          if (inputEl.checked) {
+            allUnchecked = false;
+          } else {
+            allChecked = false;
+          }
+        }
+      });
+
+      let groupContainerEl = null;
+      scrollContainerEl.querySelectorAll('.group-container').forEach((el) => {
+        if (el.dataset.groupName === groupName) {
+          groupContainerEl = el;
+        }
+      });
+
+      const groupCheckEl = groupContainerEl.querySelector('.check-all');
+      const groupUncheckEl = groupContainerEl.querySelector('.uncheck-all');
+
+      groupCheckEl.classList.add('group-action-show');
+      groupUncheckEl.classList.add('group-action-show');
+
+      allChecked && groupCheckEl.classList.remove('group-action-show');
+      allUnchecked && groupUncheckEl.classList.remove('group-action-show');
+    });
   };
 
-  legendItems.forEach((legendItem) => {
-    const labelEl = document.createElement('label');
-    labelEl.classList.add('legend-item');
+  const handleGroupActionClick = (groupName, action) => {
+    const categoryShortLabels = categoriesGroups[groupName];
+    const categoryNames = categoryShortLabels.map(
+      (categoryShortLabel) => texts.categoriesShortLabelsInverted[categoryShortLabel]
+    );
 
-    // Add mouseover/out with delay so they do not screw up the animation
-    window.setTimeout(() => {
-      labelEl.addEventListener('mouseover', () => handleLegendItemMouseover(legendItem));
-      labelEl.addEventListener('mouseout', () => handleLegendItemMouseout());
-    }, 1400);
+    const inputEls = scrollContainerEl.querySelectorAll('input[type=checkbox]');
+    inputEls.forEach((inputEl) => {
+      if (categoryNames.includes(inputEl.dataset.categoryName)) {
+        inputEl.checked = action === 'check-all' ? true : false;
+      }
+    });
 
-    scrollContainerEl.append(labelEl);
+    handleLegendItemCheckboxChange();
+  };
 
-    const checkboxEl = document.createElement('input');
-    checkboxEl.setAttribute('type', 'checkbox');
-    checkboxEl.checked = true;
-    checkboxEl.dataset.categoryName = legendItem.categoryName;
-    checkboxEl.addEventListener('change', () => handleLegendItemCheckboxChange(legendItem));
-    labelEl.append(checkboxEl);
+  Object.keys(categoriesGroups).forEach((groupName, index) => {
+    const categoryShortLabels = categoriesGroups[groupName];
 
-    const customCheckboxEl = document.createElement('span');
-    customCheckboxEl.classList.add('custom-checkbox');
-    customCheckboxEl.setAttribute('style', `color: ${colors.categoryColorsActive[legendItem.categoryName]}`);
-    labelEl.append(customCheckboxEl);
+    const groupContainerEl = document.createElement('div');
+    groupContainerEl.classList.add('group-container');
+    groupContainerEl.dataset.groupName = groupName;
+    scrollContainerEl.append(groupContainerEl);
 
-    const labelTextEl = document.createElement('span');
-    labelTextEl.classList.add('label-text');
-    labelTextEl.textContent = legendItem.label;
-    labelEl.append(labelTextEl);
+    const groupTitleEl = document.createElement('div');
+    groupTitleEl.classList.add('group-title');
+    index === 0 && groupTitleEl.classList.add('group-title-first');
+    groupTitleEl.textContent = groupName;
+    groupContainerEl.append(groupTitleEl);
+
+    const groupActionsEl = document.createElement('div');
+    groupActionsEl.classList.add('group-actions');
+    groupContainerEl.append(groupActionsEl);
+
+    const groupCheckEl = document.createElement('button');
+    groupCheckEl.type = 'button';
+    groupCheckEl.classList.add('check-all');
+    groupCheckEl.textContent = 'zaškrtnout vše';
+    groupCheckEl.addEventListener('click', () => handleGroupActionClick(groupName, 'check-all'));
+    groupActionsEl.append(groupCheckEl);
+
+    const groupUncheckEl = document.createElement('button');
+    groupUncheckEl.type = 'button';
+    groupUncheckEl.classList.add('uncheck-all');
+    groupUncheckEl.textContent = 'odškrtnout vše';
+    groupUncheckEl.addEventListener('click', () => handleGroupActionClick(groupName, 'uncheck-all'));
+    groupActionsEl.append(groupUncheckEl);
+
+    categoryShortLabels.forEach((categoryShortLabel) => {
+      const categoryName = texts.categoriesShortLabelsInverted[categoryShortLabel];
+
+      const labelEl = document.createElement('label');
+      labelEl.classList.add('legend-item');
+
+      // Add mouseover/out with delay so they do not screw up the animation
+      window.setTimeout(() => {
+        labelEl.addEventListener('mouseover', () => handleLegendItemMouseover(categoryName));
+        labelEl.addEventListener('mouseout', () => handleLegendItemMouseout());
+      }, 1400);
+
+      groupContainerEl.append(labelEl);
+
+      const checkboxEl = document.createElement('input');
+      checkboxEl.setAttribute('type', 'checkbox');
+      checkboxEl.checked = exploreCategoryNames.includes(categoryName);
+      checkboxEl.dataset.categoryName = categoryName;
+      checkboxEl.addEventListener('change', () => handleLegendItemCheckboxChange());
+      labelEl.append(checkboxEl);
+
+      const customCheckboxEl = document.createElement('span');
+      customCheckboxEl.classList.add('custom-checkbox');
+      customCheckboxEl.setAttribute('style', `color: ${colors.categoryColorsActive[categoryName]}`);
+      labelEl.append(customCheckboxEl);
+
+      const labelTextEl = document.createElement('span');
+      labelTextEl.classList.add('label-text');
+      labelTextEl.textContent = categoryShortLabel;
+      labelEl.append(labelTextEl);
+    });
   });
 
   window.setTimeout(() => {
     legendContainerEl.classList.add('legend-show');
+    handleLegendItemCheckboxChange();
   }, 700);
 };
 
@@ -211,4 +288,53 @@ export const removeLegend = (viz) => {
 
   const legendContainerEl = vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
   legendContainerEl.remove();
+};
+
+const categoriesGroupsUnsorted = {
+  'Nejčastější přirozené příčiny': ['Infekční nemoci', 'Novotvary', 'Nemoci oběhové soustavy'],
+  'Méně časté přirozené příčiny': [
+    'Nemoci žláz a výživy',
+    'Nemoci krve',
+    'Nemoci dýchací soustavy',
+    'Nemoci trávicí soustavy',
+    'Nemoci močopohlavní soustavy',
+    'Těhotenství a porod',
+    'Nemoci kůže',
+    'Nemoci kostí a svalů',
+    'Vývojové vady',
+    'Novorozenecké nemoci',
+    'Neurčité příčiny smrti',
+    'Nemoci nervové soustavy',
+    'Duševní nemoci',
+    'Nemoci oka',
+    'Nemoci ucha',
+    'Komplikace zdravotní péče',
+  ],
+  'Nepřirozené příčiny': ['Sebevraždy', 'Napadení', 'Dopravní nehody', 'Úrazy mimo dopravu', 'Popravy a války'],
+};
+
+const getCategoriesGroupsSortedByRightmostValueInGraph = (dataMzStd) => {
+  const categoriesRightmostValues = dataMzStd.map((category) => {
+    return {
+      categoryName: category.skupina,
+      categoryShortLabel: texts.categoriesShortLabels[category.skupina],
+      rightmostValue: category.data[category.data.length - 1].value,
+    };
+  });
+
+  const categoryShortLabelsSortedByRightmostValues = orderBy(
+    categoriesRightmostValues,
+    ['rightmostValue'],
+    ['desc']
+  ).map((category) => category.categoryShortLabel);
+
+  let sorted = {};
+
+  Object.keys(categoriesGroupsUnsorted).forEach((groupName) => {
+    sorted[groupName] = categoryShortLabelsSortedByRightmostValues.filter((shortLabel) =>
+      categoriesGroupsUnsorted[groupName].includes(shortLabel)
+    );
+  });
+
+  return sorted;
 };

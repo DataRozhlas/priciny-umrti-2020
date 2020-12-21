@@ -102,6 +102,10 @@ export const initViz = (svgSelector, data) => {
     data1919MStd,
     data1919ZStd,
 
+    dataMzStd: data1919MzStd,
+    dataMStd: data1919MStd,
+    dataZStd: data1919ZStd,
+
     x,
     xExplore,
 
