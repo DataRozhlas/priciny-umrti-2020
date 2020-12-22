@@ -23,6 +23,7 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
 
   const legendContainerEl = document.createElement('div');
   legendContainerEl.classList.add('priciny-umrti-pribehy-viz-legend');
+  legendContainerEl.classList.add('stoleti-explorace-viz-legend');
   legendContainerEl.style.maxHeight = `${viz.height - 50}px`;
   vizContainerEl.append(legendContainerEl);
 
@@ -255,7 +256,7 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
   window.setTimeout(() => {
     legendContainerEl.classList.add('legend-show');
     handleLegendItemCheckboxChange();
-  }, 700);
+  }, 1400);
 };
 
 export const fadeOutLegend = (viz) => {

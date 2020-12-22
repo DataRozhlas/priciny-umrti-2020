@@ -49,7 +49,7 @@ export const createYAxisLabel = (viz) => {
   const xAxisLabelG = viz.svg.append('g').attr('class', 'g-x-axis-label');
 
   let xPos = 10;
-  let yPos = 12;
+  let yPos = 92;
   let dy = 15;
 
   if (window.innerWidth < 768) {

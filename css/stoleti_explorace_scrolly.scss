@@ -1,0 +1,34 @@
+@import "./datarozhlas_scrolly_fullscreen_mixins";
+
+.stoleti-explorace-scrolly {
+  @include datarozhlas-scrolly-fullscreen-height(300px);
+
+  @media (max-width: 767.9px) {
+    @include datarozhlas-scrolly-fullscreen-height(250px);
+  }
+
+  // For tiny mobile landscape when rozhlas navbar is not displayed
+  @media (max-height: 549.9px) and (max-width: 767.9px) {
+    @include datarozhlas-scrolly-fullscreen-height(120px);
+  }
+
+  // For bigger mobile landscape when rozhlas navbar is displayed
+  @media (max-height: 549.9px) and (min-width: 768px) {
+    @include datarozhlas-scrolly-fullscreen-height(160px);
+  }
+
+  .datarozhlas-scrolly-fullscreen-step {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .datarozhlas-scrolly-fullscreen-sticky:before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(rgba(255, 255, 255, 0), white);
+  }
+}

@@ -1,0 +1,71 @@
+.datarozhlas-scrolly-fullscreen {
+  position: relative;
+  margin-bottom: 50px;
+
+  // Using the ::after element at the end of the scrolly container
+  // as a placeholder for the sticky element
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+  }
+}
+
+.datarozhlas-scrolly-fullscreen-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.datarozhlas-scrolly-fullscreen-sticky {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+}
+
+.datarozhlas-scrolly-fullscreen-dots {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .dot {
+    margin: 4px 0;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    background: #d7d7d7;
+    border-radius: 50%;
+
+    transition: background-color 100ms ease 0s;
+    transition: border-color 100ms ease 0s;
+
+    &:hover, &:active {
+      background: #888;
+    }
+
+    &.is-active {
+      background: black;
+      border-color: black;
+    }
+  }
+
+  @media (max-height: 549.9px), (max-width: 767.9px) {
+    width: 10px;
+    bottom: 30px;
+    right: -10px;
+
+    .dot {
+      width: 5px;
+      height: 6px;
+      border-width: 1px;
+    }
+  }
+}

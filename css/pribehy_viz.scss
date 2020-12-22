@@ -71,6 +71,10 @@
   opacity: 0;
   transition: opacity 700ms ease;
 
+  &.stoleti-explorace-viz-legend {
+    top: 85px;
+  }
+
   &.legend-show {
     opacity: 1;
   }

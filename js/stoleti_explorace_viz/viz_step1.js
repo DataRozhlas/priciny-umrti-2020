@@ -2,12 +2,13 @@ import * as d3 from 'd3';
 
 import * as axes from './axes';
 import * as colors from './colors';
+import * as legend from './legend';
 import * as lines from './lines';
 
 export default {
   onScrollDownToStep: (viz) => {
-    const dataLongMzStdWithoutTotal = viz.dataLongMzStd.filter((category) => category.skupina !== 'Celkem');
-    const dataLongMzStdCategoryTotal = viz.dataLongMzStd.find((category) => category.skupina === 'Celkem');
+    const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdCategoryTotal = viz.dataMzStd.find((category) => category.skupina === 'Celkem');
 
     // 1. Instantly remove the original total line
 
@@ -15,13 +16,13 @@ export default {
 
     // 2. Instantly add all the category lines with the data of total
 
-    dataLongMzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.addCategoryLine({
         svg: viz.svg,
         categoryName: category.skupina,
         // We start by rendering all the lines using the category total data
         // so we can then "break" that line using animation into the category-lines
-        d: viz.lineTotal(dataLongMzStdCategoryTotal.data),
+        d: viz.lineTotal(dataMzStdCategoryTotal.data),
         style: 'active',
         activeColor: colors.categoryColorsActive['Celkem'],
       });
@@ -30,7 +31,7 @@ export default {
     // 3. Animation part 1: "Break" the total line into category lines and fade away
     // the total line label
 
-    dataLongMzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.changeCategoryLine({
         svg: viz.svg,
         categoryName: category.skupina,
@@ -57,7 +58,7 @@ export default {
 
     axes.updateYAxis(viz, { y: viz.yCategories, margin: viz.margin, delay: 700 });
 
-    dataLongMzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.changeCategoryLine({
         svg: viz.svg,
         categoryName: category.skupina,
@@ -68,15 +69,39 @@ export default {
         style: 'anonymous',
       });
     });
+
+    // 5. Animation part 3: Add the legend and make lines active
+
+    axes.updateXAxis(viz, { x: viz.xExplore, margin: viz.marginExplore, delay: 1400 });
+    axes.updateYAxis(viz, { y: viz.yExplore, margin: viz.marginExplore, delay: 1400 });
+
+    dataMzStdWithoutTotal.forEach((category) => {
+      lines.changeCategoryLine({
+        svg: viz.svg,
+        categoryName: category.skupina,
+        // We animate to the category data using the categories scale
+        d: viz.lineExplore(category.data),
+        duration: 700,
+        delay: 1400,
+        style: 'active',
+        activeColor: colors.categoryColorsActive[category.skupina],
+      });
+    });
+
+    const exploreCategoryNames = viz.dataMzStd.map((category) => category.skupina);
+
+    legend.fadeInLegend(viz, { exploreCategoryNames });
   },
   onScrollUpFromStep: (viz) => {
-    const dataLongMzStdWithoutTotal = viz.dataLongMzStd.filter((category) => category.skupina !== 'Celkem');
-    const dataLongMzStdCategoryTotal = viz.dataLongMzStd.find((category) => category.skupina === 'Celkem');
+    legend.fadeOutLegend(viz);
+
+    const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
+    const dataMzStdCategoryTotal = viz.dataMzStd.find((category) => category.skupina === 'Celkem');
 
     lines.addCategoryLine({
       svg: viz.svg,
       categoryName: 'Celkem',
-      d: viz.lineTotal(dataLongMzStdCategoryTotal.data),
+      d: viz.lineTotal(dataMzStdCategoryTotal.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Celkem'],
     });
@@ -92,10 +117,11 @@ export default {
       opacity: 1,
     });
 
-    dataLongMzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.removeCategoryLine({ svg: viz.svg, categoryName: category.skupina });
     });
 
+    axes.updateXAxis(viz, { x: viz.x, margin: viz.margin });
     axes.updateYAxis(viz, { y: viz.yTotal, margin: viz.margin });
   },
 };

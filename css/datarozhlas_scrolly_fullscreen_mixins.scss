@@ -1,0 +1,5 @@
+@mixin datarozhlas-scrolly-fullscreen-height($height) {
+  .datarozhlas-scrolly-fullscreen-step { min-height: #{$height}; }
+  .datarozhlas-scrolly-fullscreen-sticky { height: 100vh; }
+  &.datarozhlas-scrolly-fullscreen::after { height: calc(100vh - #{$height}); }
+}

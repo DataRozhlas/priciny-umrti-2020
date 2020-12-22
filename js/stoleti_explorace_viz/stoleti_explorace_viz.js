@@ -4,7 +4,6 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as legend from './legend';
 import * as lines from './lines';
-import * as xAxisAnnotations from './x_axis_annotations';
 
 import vizStep1 from './viz_step1';
 
@@ -18,21 +17,21 @@ export const initViz = (svgSelector, data) => {
   const { width, height } = svg.node().parentNode.getBoundingClientRect();
 
   // Prepare the margins
-  let margin = { top: 50, right: 30, bottom: 100, left: 50 };
-  let marginExplore = { ...margin, right: margin.right + 235 }; // legend on the right
+  let margin = { top: 130, right: 30, bottom: 80, left: 50 };
+  let marginExplore = { ...margin, right: margin.right + 255 }; // legend on the right
   if (!legend.showLegendOnSide({ width })) {
-    margin = { top: 40, right: 20, bottom: 70, left: 40 };
+    margin = { top: 120, right: 20, bottom: 50, left: 40 };
     marginExplore = margin; // legend in dropdown in top right
   }
 
   svg.attr('viewBox', [0, 0, width, height]);
 
-  const { dataLongMzStd } = data;
-  const dataLongMzStdWithoutTotal = dataLongMzStd.filter((category) => category.skupina !== 'Celkem');
+  const { dataMzStd } = data;
+  const dataMzStdWithoutTotal = dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
   // Prepare data functions
 
-  const years = dataLongMzStd[0].data.map((d) => d3.timeParse('%Y')(d.rok));
+  const years = dataMzStd[0].data.map((d) => d3.timeParse('%Y')(d.rok));
 
   const x = d3
     .scaleUtc()
@@ -46,19 +45,19 @@ export const initViz = (svgSelector, data) => {
 
   const yTotal = d3
     .scaleLinear()
-    .domain([0, d3.max(dataLongMzStd.map((category) => d3.max(category.data.map((d) => d.value))))])
+    .domain([0, d3.max(dataMzStd.map((category) => d3.max(category.data.map((d) => d.value))))])
     .nice()
     .range([height - margin.bottom, margin.top]);
 
   const yCategories = d3
     .scaleLinear()
-    .domain([0, d3.max(dataLongMzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
+    .domain([0, d3.max(dataMzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
     .nice()
     .range([height - margin.bottom, margin.top]);
 
   const yExplore = d3
     .scaleLinear()
-    .domain([0, d3.max(dataLongMzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
+    .domain([0, d3.max(dataMzStdWithoutTotal.map((category) => d3.max(category.data.map((d) => d.value))))])
     .nice()
     .range([height - marginExplore.bottom, marginExplore.top]);
 
@@ -84,7 +83,7 @@ export const initViz = (svgSelector, data) => {
   const viz = {
     svg,
 
-    dataLongMzStd,
+    dataMzStd,
 
     x,
     xExplore,
@@ -113,7 +112,7 @@ export const initViz = (svgSelector, data) => {
 
   lines.createLinesGroup(viz);
 
-  const totalCategory = dataLongMzStd.find((category) => category.skupina === 'Celkem');
+  const totalCategory = dataMzStd.find((category) => category.skupina === 'Celkem');
 
   lines.addCategoryLine({
     svg,
@@ -136,18 +135,6 @@ export const initViz = (svgSelector, data) => {
       textAnchor: lines.categoryLineLabelPositions['Celkem'].textAnchor,
     },
   });
-
-  // X axis annotations
-
-  xAxisAnnotations.createXAxisAnnotationsGroup(viz);
-
-  // xAxisAnnotations.fadeInPragueSpringLine(viz, { xPos: viz.x(d3.timeParse('%Y')(1968)), margin: viz.margin });
-
-  // xAxisAnnotations.fadeInPragueSpringLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1968)), margin: viz.margin });
-
-  // xAxisAnnotations.fadeInVelvetRevolutionLine(viz, { xPos: viz.x(d3.timeParse('%Y')(1989)), margin: viz.margin });
-
-  // xAxisAnnotations.fadeInVelvetRevolutionLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1989)), margin: viz.margin });
 
   return {
     destroy: () => {

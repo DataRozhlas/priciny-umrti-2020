@@ -1,15 +1,15 @@
 import debounce from 'lodash/debounce';
 
-import { default as datarozhlasScrolly, initDots } from './datarozhlas_scrolly';
-import { initViz } from './stoleti_pribehy_viz';
+import { default as datarozhlasScrolly, initDots } from './datarozhlas_scrolly_fullscreen';
+import { initViz } from './stoleti_explorace_viz';
 
-const stoletiPribehy = async () => {
+const stoletiExplorace = async () => {
   const data = await fetchData();
 
-  const dots = initDots('.stoleti-pribehy-scrolly');
+  const dots = initDots('.stoleti-explorace-scrolly');
 
-  let viz = initViz('.stoleti-pribehy-scrolly .stoleti-pribehy-viz', data);
-  let scrolly = datarozhlasScrolly('.stoleti-pribehy-scrolly', {
+  let viz = initViz('.stoleti-explorace-scrolly .stoleti-explorace-viz', data);
+  let scrolly = datarozhlasScrolly('.stoleti-explorace-scrolly', {
     onScrollDownToStep: (index) => {
       viz.onScrollDownToStep(index);
       dots.onScrollDownToStep(index);
@@ -28,8 +28,8 @@ const stoletiPribehy = async () => {
       viz.destroy();
       scrolly.destroy();
 
-      viz = initViz('.stoleti-pribehy-scrolly .stoleti-pribehy-viz', data);
-      scrolly = datarozhlasScrolly('.stoleti-pribehy-scrolly', {
+      viz = initViz('.stoleti-explorace-scrolly .stoleti-explorace-viz', data);
+      scrolly = datarozhlasScrolly('.stoleti-explorace-scrolly', {
         onScrollDownToStep: (index) => {
           viz.onScrollDownToStep(index);
           dots.onScrollDownToStep(index);
@@ -55,9 +55,9 @@ const fetchData = () => {
     }),
   ]).then(([dataLongMzStd]) => {
     return {
-      dataLongMzStd,
+      dataMzStd: dataLongMzStd,
     };
   });
 };
 
-document.addEventListener('DOMContentLoaded', stoletiPribehy);
+document.addEventListener('DOMContentLoaded', stoletiExplorace);

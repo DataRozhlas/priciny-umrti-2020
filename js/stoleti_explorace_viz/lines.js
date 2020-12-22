@@ -207,46 +207,8 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
 
 export const categoryLineLabelTexts = {
   Celkem: 'Úmrtí celkem',
-  'Válečné akce a soudní poprava - muži': 'Muži',
-  'Válečné akce a soudní poprava - ženy': 'Ženy',
 };
 
 export const categoryLineLabelPositions = {
-  Celkem: { x: d3.timeParse('%Y')(1955), y: 1400, textAnchor: 'start' },
-  'Stařecká sešlost': {
-    x: d3.timeParse('%Y')(1925),
-    y: 400,
-    textAnchor: 'start',
-  },
-  'Nemoci nakažlivé a cizopasné': {
-    x: d3.timeParse('%Y')(1928),
-    y: 270,
-    textAnchor: 'start',
-  },
-  'Nemoci ústrojí oběhu krevního': {
-    x: d3.timeParse('%Y')(1929),
-    y: 380,
-    textAnchor: 'start',
-  },
-  'Rakovina a jiné nádory': {
-    x: d3.timeParse('%Y')(1933),
-    y: 220,
-    textAnchor: 'start',
-  },
-  'Válečné akce a soudní poprava': {
-    x: d3.timeParse('%Y')(1940),
-    y: 40,
-    textAnchor: 'end',
-  },
-
-  'Válečné akce a soudní poprava - muži': {
-    x: d3.timeParse('%Y')(1945),
-    y: 260,
-    textAnchor: 'end',
-  },
-  'Válečné akce a soudní poprava - ženy': {
-    x: d3.timeParse('%Y')(1944),
-    y: 70,
-    textAnchor: 'end',
-  },
+  Celkem: { x: d3.timeParse('%Y')(1955), y: 2300, textAnchor: 'start' },
 };

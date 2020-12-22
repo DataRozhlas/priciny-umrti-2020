@@ -486,27 +486,11 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
 Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi umírali od založení republiky do dneška. Časová řada je standardizovaná podle současné české populace – ukazuje tedy, jak by vypadaly příčiny úmrtí, kdyby byla v každém roce stejná věková struktura, jako je ta dnešní.
 
 <wide>
-  <div class="datarozhlas-scrolly priciny-umrti-scrolly stoleti-pribehy-scrolly">
-    <div class="datarozhlas-scrolly-step">
-      <h3>Vývoj úmrtí 1919-2018</h3>
-      <p>
-        <em>Doplnit</em>
-      </p>
-    </div>
-    <div class="datarozhlas-scrolly-step">
-      <h3>24 skupin příčin úmrtí</h3>
-      <p>
-        <em>Doplnit</em>
-      </p>
-    </div>
-    <div class="datarozhlas-scrolly-step">
-      <h3>Proklikejte si</h3>
-      <p>
-        Nyní si sami můžete prohlédnout kompletní data.
-      </p>
-    </div>
-    <div class="datarozhlas-scrolly-sticky">
-      <svg class="priciny-umrti-pribehy-viz stoleti-pribehy-viz"></svg>
+  <div class="datarozhlas-scrolly-fullscreen stoleti-explorace-scrolly">
+    <div class="datarozhlas-scrolly-fullscreen-step"></div>
+    <div class="datarozhlas-scrolly-fullscreen-step"></div>
+    <div class="datarozhlas-scrolly-fullscreen-sticky">
+      <svg class="priciny-umrti-pribehy-viz stoleti-explorace-viz"></svg>
     </div>
   </div>
 </wide>
