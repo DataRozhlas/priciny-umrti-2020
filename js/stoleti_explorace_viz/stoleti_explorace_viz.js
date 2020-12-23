@@ -4,6 +4,7 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as legend from './legend';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 
 import vizStep1 from './viz_step1';
 
@@ -26,7 +27,7 @@ export const initViz = (svgSelector, data) => {
 
   svg.attr('viewBox', [0, 0, width, height]);
 
-  const { dataMzStd } = data;
+  const { dataMzStd, dataMzAbs, dataTooltip } = data;
   const dataMzStdWithoutTotal = dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
   // Prepare data functions
@@ -85,6 +86,8 @@ export const initViz = (svgSelector, data) => {
 
     dataMzStd,
 
+    tooltipData: tooltip.prepareTooltipData({ dataMzAbs, dataTooltip }),
+
     x,
     xExplore,
 
@@ -135,6 +138,10 @@ export const initViz = (svgSelector, data) => {
       textAnchor: lines.categoryLineLabelPositions['Celkem'].textAnchor,
     },
   });
+
+  // Tooltip
+
+  tooltip.createTooltipTriggersGroup(viz);
 
   return {
     destroy: () => {

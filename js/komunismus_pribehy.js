@@ -59,11 +59,19 @@ const fetchData = () => {
     fetch('data/1949_z_std.json').then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-  ]).then(([data1949MzStd, data1949MStd, data1949ZStd]) => {
+    fetch('data/1949_mz_abs.json').then((response) => {
+      return !response.error ? response.json() : Promise.reject();
+    }),
+    fetch('data/tooltip_1989.json').then((response) => {
+      return !response.error ? response.json() : Promise.reject();
+    }),
+  ]).then(([data1949MzStd, data1949MStd, data1949ZStd, data1949MzAbs, dataTooltip1989]) => {
     return {
       data1949MzStd,
       data1949MStd: filterDataToNeededYears(data1949MStd),
       data1949ZStd: filterDataToNeededYears(data1949ZStd),
+      data1949MzAbs,
+      dataTooltip1989,
     };
   });
 };

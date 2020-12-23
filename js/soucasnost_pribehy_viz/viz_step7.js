@@ -4,6 +4,7 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as legend from './legend';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 import * as xAxisAnnotations from './x_axis_annotations';
 
 export default {
@@ -21,6 +22,13 @@ export default {
           style: 'active',
           activeColor: colors.categoryColorsActive[category.skupina],
           duration: 700,
+        });
+
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName: category.skupina,
+          x: viz.xExplore,
+          y: viz.yExplore,
+          activeColor: colors.categoryColorsActive[category.skupina],
         });
       } else {
         lines.removeCategoryLine({
@@ -78,6 +86,8 @@ export default {
           style: 'context',
         });
       }
+
+      tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
     });
 
     lines.changeActiveNonTotalCategoryLines({

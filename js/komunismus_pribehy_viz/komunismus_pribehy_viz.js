@@ -4,6 +4,7 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as legend from './legend';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 import * as xAxisAnnotations from './x_axis_annotations';
 
 import vizStep1 from './viz_step1';
@@ -39,7 +40,7 @@ export const initViz = (svgSelector, data) => {
 
   svg.attr('viewBox', [0, 0, width, height]);
 
-  const { data1949MzStd, data1949MStd, data1949ZStd } = data;
+  const { data1949MzStd, data1949MStd, data1949ZStd, data1949MzAbs, dataTooltip1989 } = data;
   const data1949MzStdWithoutTotal = data1949MzStd.filter((category) => category.skupina !== 'Celkem');
   const data1949MzStdCategoriesLower = data1949MzStdWithoutTotal.filter(
     (category) => category.skupina !== 'Nemoci oběhové soustavy'
@@ -120,6 +121,8 @@ export const initViz = (svgSelector, data) => {
 
     dataMzStdCategoriesLower: data1949MzStdCategoriesLower,
 
+    tooltipData: tooltip.prepareTooltipData({ dataMzAbs: data1949MzAbs, dataTooltip: dataTooltip1989 }),
+
     x,
     xExplore,
 
@@ -184,6 +187,10 @@ export const initViz = (svgSelector, data) => {
   xAxisAnnotations.fadeInVelvetRevolutionLine(viz, { xPos: viz.x(d3.timeParse('%Y')(1989)), margin: viz.margin });
 
   xAxisAnnotations.fadeInVelvetRevolutionLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1989)), margin: viz.margin });
+
+  // Tooltip
+
+  tooltip.createTooltipTriggersGroup(viz);
 
   return {
     destroy: () => {

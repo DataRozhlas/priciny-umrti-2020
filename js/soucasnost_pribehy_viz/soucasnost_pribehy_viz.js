@@ -4,6 +4,7 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as legend from './legend';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 import * as xAxisAnnotations from './x_axis_annotations';
 
 import vizStep1 from './viz_step1';
@@ -39,7 +40,7 @@ export const initViz = (svgSelector, data) => {
 
   svg.attr('viewBox', [0, 0, width, height]);
 
-  const { dataMzStd } = data;
+  const { dataMzStd, dataMzAbs, dataTooltip } = data;
   const dataMzStdWithoutTotal = dataMzStd.filter((category) => category.skupina !== 'Celkem');
   const dataMzStdCategoriesLower = dataMzStdWithoutTotal.filter(
     (category) => !['Nemoci oběhové soustavy', 'Novotvary'].includes(category.skupina)
@@ -113,6 +114,8 @@ export const initViz = (svgSelector, data) => {
     dataMzStd,
     dataMzStdCategoriesLower,
 
+    tooltipData: tooltip.prepareTooltipData({ dataMzAbs, dataTooltip }),
+
     x,
     xExplore,
 
@@ -177,6 +180,10 @@ export const initViz = (svgSelector, data) => {
   xAxisAnnotations.fadeInEuJoinedLine(viz, { xPos: viz.x(d3.timeParse('%Y')(2004)), margin: viz.margin });
 
   xAxisAnnotations.fadeInEuJoinedLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(2004)), margin: viz.margin });
+
+  // Tooltip
+
+  tooltip.createTooltipTriggersGroup(viz);
 
   return {
     destroy: () => {

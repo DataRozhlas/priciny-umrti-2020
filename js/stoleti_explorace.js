@@ -53,9 +53,17 @@ const fetchData = () => {
     fetch('data/long_mz_std.json').then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-  ]).then(([dataLongMzStd]) => {
+    fetch('data/long_mz_abs.json').then((response) => {
+      return !response.error ? response.json() : Promise.reject();
+    }),
+    fetch('data/tooltip_long.json').then((response) => {
+      return !response.error ? response.json() : Promise.reject();
+    }),
+  ]).then(([dataLongMzStd, dataLongMzAbs, dataTooltipLong]) => {
     return {
       dataMzStd: dataLongMzStd,
+      dataMzAbs: dataLongMzAbs,
+      dataTooltip: dataTooltipLong,
     };
   });
 };

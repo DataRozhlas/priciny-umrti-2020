@@ -4,6 +4,7 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as legend from './legend';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 
 export default {
   onScrollDownToStep: (viz) => {
@@ -86,6 +87,13 @@ export default {
         style: 'active',
         activeColor: colors.categoryColorsActive[category.skupina],
       });
+
+      tooltip.updateCategoryLineTooltipTriggers(viz, {
+        categoryName: category.skupina,
+        x: viz.xExplore,
+        y: viz.yExplore,
+        activeColor: colors.categoryColorsActive[category.skupina],
+      });
     });
 
     const exploreCategoryNames = viz.dataMzStd.map((category) => category.skupina);
@@ -119,6 +127,7 @@ export default {
 
     dataMzStdWithoutTotal.forEach((category) => {
       lines.removeCategoryLine({ svg: viz.svg, categoryName: category.skupina });
+      tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName: category.skupina });
     });
 
     axes.updateXAxis(viz, { x: viz.x, margin: viz.margin });

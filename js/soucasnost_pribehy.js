@@ -53,9 +53,17 @@ const fetchData = () => {
     fetch('data/1990_mz_std.json').then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-  ]).then(([data1990MzStd]) => {
+    fetch('data/1990_mz_abs.json').then((response) => {
+      return !response.error ? response.json() : Promise.reject();
+    }),
+    fetch('data/tooltip_2018.json').then((response) => {
+      return !response.error ? response.json() : Promise.reject();
+    }),
+  ]).then(([data1990MzStd, data1990MzAbs, dataTooltip2018]) => {
     return {
       dataMzStd: data1990MzStd,
+      dataMzAbs: data1990MzAbs,
+      dataTooltip: dataTooltip2018,
     };
   });
 };
