@@ -4,6 +4,7 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as legend from './legend';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 import * as xAxisAnnotations from './x_axis_annotations';
 
 import vizStep1 from './viz_step1';
@@ -41,7 +42,7 @@ export const initViz = (svgSelector, data) => {
 
   svg.attr('viewBox', [0, 0, width, height]);
 
-  const { data1919MzStd, data1919MStd, data1919ZStd } = data;
+  const { data1919MzStd, data1919MStd, data1919ZStd, data1919MzAbs, dataTooltip1948 } = data;
   const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
 
   // Prepare data functions
@@ -105,6 +106,8 @@ export const initViz = (svgSelector, data) => {
     dataMzStd: data1919MzStd,
     dataMStd: data1919MStd,
     dataZStd: data1919ZStd,
+
+    tooltipData: tooltip.prepareTooltipData({ dataMzAbs: data1919MzAbs, dataTooltip: dataTooltip1948 }),
 
     x,
     xExplore,
@@ -174,6 +177,10 @@ export const initViz = (svgSelector, data) => {
   xAxisAnnotations.fadeInCommunistCoupLine(viz, { xPos: viz.x(d3.timeParse('%Y')(1948)), margin: viz.margin });
 
   xAxisAnnotations.fadeInCommunistCoupLabel(viz, { xPos: viz.x(d3.timeParse('%Y')(1948)), margin: viz.margin });
+
+  // Tooltip
+
+  tooltip.createTooltipTriggersGroup(viz);
 
   return {
     destroy: () => {

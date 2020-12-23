@@ -5,6 +5,7 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as lines from './lines';
 import * as texts from './texts';
+import * as tooltip from './tooltip';
 
 export const showLegendOnSide = (viz) => {
   return viz.width >= 738;
@@ -105,6 +106,7 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
 
     dataMzStdWithoutTotal.forEach((category) => {
       const categoryName = category.skupina;
+      const activeColor = colors.categoryColorsActive[categoryName];
       const show = showCategoryNames.includes(categoryName);
       const isAdded = lines.isAddedCategoryLine(viz, { categoryName });
 
@@ -114,22 +116,28 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
           categoryName,
           d: lineCustom(category.data),
           style: 'active',
-          activeColor: colors.categoryColorsActive[categoryName],
+          activeColor,
         });
+
+        tooltip.updateCategoryLineTooltipTriggers(viz, { categoryName, x: viz.xExplore, y: yCustom, activeColor });
       } else if (show && isAdded) {
         lines.changeCategoryLine({
           svg: viz.svg,
           categoryName,
           d: lineCustom(category.data),
           style: 'active',
-          activeColor: colors.categoryColorsActive[categoryName],
+          activeColor,
           duration: 700,
         });
+
+        tooltip.updateCategoryLineTooltipTriggers(viz, { categoryName, x: viz.xExplore, y: yCustom, activeColor });
       } else if (!show && isAdded) {
         lines.removeCategoryLine({
           svg: viz.svg,
           categoryName,
         });
+
+        tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
       }
     });
 

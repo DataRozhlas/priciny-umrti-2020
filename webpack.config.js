@@ -1,14 +1,14 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  entry: "./js/script.js",
+  entry: './js/script.js',
   output: {
     path: path.resolve(__dirname),
-    filename: "output.js",
+    filename: 'output.js',
   },
 
   node: {
-    fs: "empty",
+    fs: 'empty',
   },
 
   module: {
@@ -17,12 +17,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: [
-              ["@babel/preset-env", { "useBuiltIns": "usage", "corejs": 3 }],
-              "@babel/preset-react"
-            ],
+            presets: [['@babel/preset-env', { useBuiltIns: 'usage', corejs: 3 }], '@babel/preset-react'],
           },
         },
       },

@@ -46,6 +46,18 @@
     }
   }
 
+  .g-tooltip-triggers {
+    circle {
+      fill: transparent;
+      stroke: transparent;
+      stroke-width: 10px;
+
+      &.active {
+        fill: currentColor;
+      }
+    }
+  }
+
   @media (max-width: 767.9px) {
     .g-x-axis-annotations text,
     .g-line-labels text {
@@ -197,6 +209,124 @@
 
     input:checked ~ .label-text {
       color: #000;
+    }
+  }
+}
+
+.priciny-umrti-pribehy-viz-tooltip {
+  position: absolute;
+  width: 240px;
+  background-color: rgba(255,255,255,0.96);
+  border: 1px solid #D5D5D5;
+  box-shadow: 0 2px 4px 0 rgba(169,169,169,0.50);  
+  font-family: 'Fira Sans', sans-serif;
+
+  .tooltip-arrow,
+  .tooltip-arrow::before {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    z-index: -1;
+  }
+
+  .tooltip-arrow::before {
+    content: '';
+    transform: rotate(45deg);
+    background: rgba(255,255,255,0.96);
+    border-left: 1px solid #D5D5D5;
+    border-bottom: 1px solid #D5D5D5;
+  }
+
+  &[data-popper-placement^='top'] > .tooltip-arrow {
+    bottom: -6px;
+  }
+  
+  &[data-popper-placement^='bottom'] > .tooltip-arrow {
+    top: -6px;
+  }
+  
+  &[data-popper-placement^='left'] > .tooltip-arrow {
+    right: -6px;
+  }
+  
+  &[data-popper-placement^='right'] > .tooltip-arrow {
+    left: -6px;
+  }
+
+  .tooltip-title {
+    margin: 10px 10px 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.25;
+
+    .tooltip-title-category {
+      font-weight: 500;
+    }
+
+    .tooltip-title-year {
+      font-weight: 500;
+    }
+  }
+
+  .tooltip-numbers {
+    margin: 15px 10px 0 10px;
+    display: flex;
+    flex-direction: row;
+
+    .tooltip-numbers-abs {
+      flex: 0 0 65px;
+    }
+
+    .tooltip-numbers-std {
+      flex: 1 0 0px;
+    }
+
+    .tooltip-numbers-abs-value,
+    .tooltip-numbers-std-value {
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 500;
+    }
+
+    .tooltip-numbers-desc {
+      margin-top: 2px;
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 300;
+    }
+  }
+
+  .tooltip-diagnoses {
+    margin: 10px 0;
+    border-top: 1px solid #D5D5D5;
+    padding: 10px 10px 0 10px;
+    
+    .tooltip-diagnoses-header {
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 500;
+    }
+
+    ol.tooltip-diagnoses-list {
+      margin: 0;
+      padding: 0;
+
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 400;
+
+      li {
+        margin: 9px 0 0 0;
+        padding: 0;
+
+        &:before {
+          content: none;
+        }
+
+        .tooltip-diagnosis-abs-value {
+          font-weight: 300;
+        }
+      }
     }
   }
 }

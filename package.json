@@ -1,8 +1,7 @@
 {
-  "name": "samizdat-snodefall",
+  "name": "priciny-umrti-2020",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "watch": "node builder.js watch",
     "build": "node builder.js build",
@@ -10,22 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DataRozhlas/snodefall-builder.git"
+    "url": "git+https://github.com/DataRozhlas/priciny-umrti-2020.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DataRozhlas/snodefall-builder/issues"
-  },
-  "homepage": "https://github.com/DataRozhlas/snodefall-builder#readme",
   "dependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.5",
-    "babel-loader": "^8.1.0",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@popperjs/core": "^2.6.0",
+    "babel-loader": "^8.2.2",
     "clean-css": "^4.2.3",
-    "core-js": "^3.7.0",
-    "d3": "^6.2.0",
+    "core-js": "^3.8.1",
+    "d3": "^6.3.1",
     "d3-fetch": "^2.0.0",
     "d3-transition": "^2.0.0",
     "intersection-observer": "^0.11.0",

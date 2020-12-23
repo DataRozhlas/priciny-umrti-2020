@@ -4,6 +4,7 @@ import * as axes from './axes';
 import * as colors from './colors';
 import * as legend from './legend';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 import * as xAxisAnnotations from './x_axis_annotations';
 
 export default {
@@ -121,6 +122,13 @@ export default {
           delay: 700,
           duration: 700,
         });
+
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName: category.skupina,
+          x: viz.xExplore,
+          y: viz.yExplore,
+          activeColor: colors.categoryColorsActive[category.skupina],
+        });
       }
     });
 
@@ -193,6 +201,8 @@ export default {
           style: 'context',
         });
       }
+
+      tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
     });
 
     lines.changeCategoryLine({ svg, categoryName: categoryWarName, style: 'active', opacity: 0 });
