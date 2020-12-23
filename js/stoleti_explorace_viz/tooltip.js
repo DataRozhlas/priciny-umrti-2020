@@ -77,7 +77,7 @@ const showTooltip = (viz, { categoryName, datum, tooltipTriggerEl }) => {
       </div>
       <div class="tooltip-numbers-std">
         <div class="tooltip-numbers-std-value">${formatNumber(stdValue)}</div>
-        <div class="tooltip-numbers-desc">na 100 tisíc (std. k 1948)</div>
+        <div class="tooltip-numbers-desc">na 100 tisíc (std. k 2018)</div>
       </div>
     </div>
     <div class="tooltip-diagnoses">
