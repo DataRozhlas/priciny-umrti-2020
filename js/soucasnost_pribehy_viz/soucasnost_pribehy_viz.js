@@ -192,6 +192,8 @@ export const initViz = (svgSelector, data) => {
       if (legend.isAddedLegend(viz)) {
         legend.removeLegend(viz);
       }
+
+      tooltip.hideTooltip();
     },
     onScrollDownToStep: (stepIndex) => {
       if (vizSteps[stepIndex] && vizSteps[stepIndex].onScrollDownToStep) {

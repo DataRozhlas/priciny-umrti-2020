@@ -15,7 +15,7 @@ export const fadeInLegend = (viz, { exploreCategoryNames }) => {
   if (showLegendOnSide(viz)) {
     fadeInLegendOnSide(viz, { exploreCategoryNames });
   } else {
-    // TODO
+    // fadeInLegendDropdown(viz, { exploreCategoryNames });
   }
 };
 
@@ -283,6 +283,19 @@ export const fadeOutLegendOnSide = (viz) => {
   window.setTimeout(() => {
     legendContainerEl.remove();
   }, 700);
+};
+
+// TODO
+const fadeInLegendDropdown = (viz, { exploreCategoryNames }) => {
+  const vizContainerEl = viz.svg.node().parentNode;
+
+  const legendContainerEl = document.createElement('div');
+  legendContainerEl.classList.add('priciny-umrti-pribehy-viz-legend');
+  vizContainerEl.append(legendContainerEl);
+
+  const scrollContainerEl = document.createElement('div');
+  scrollContainerEl.classList.add('legend-scroll-container');
+  legendContainerEl.append(scrollContainerEl);
 };
 
 export const isAddedLegend = (viz) => {

@@ -224,8 +224,8 @@
   .tooltip-arrow,
   .tooltip-arrow::before {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     z-index: -1;
   }
 
@@ -233,24 +233,25 @@
     content: '';
     transform: rotate(45deg);
     background: rgba(255,255,255,0.96);
-    border-left: 1px solid #D5D5D5;
-    border-bottom: 1px solid #D5D5D5;
-  }
-
-  &[data-popper-placement^='top'] > .tooltip-arrow {
-    bottom: -6px;
-  }
-  
-  &[data-popper-placement^='bottom'] > .tooltip-arrow {
-    top: -6px;
+    border: 0px solid #D5D5D5;
   }
   
   &[data-popper-placement^='left'] > .tooltip-arrow {
     right: -6px;
+
+    &:before {
+      border-right-width: 1px;
+      border-top-width: 1px;
+    }
   }
   
   &[data-popper-placement^='right'] > .tooltip-arrow {
     left: -6px;
+
+    &:before {
+      border-left-width: 1px;
+      border-bottom-width: 1px;
+    }
   }
 
   .tooltip-title {
@@ -316,7 +317,7 @@
       font-weight: 400;
 
       li {
-        margin: 9px 0 0 0;
+        margin: 8px 0 0 0;
         padding: 0;
 
         &:before {
@@ -326,6 +327,38 @@
         .tooltip-diagnosis-abs-value {
           font-weight: 300;
         }
+      }
+    }
+  }
+
+  @media (max-width: 767.9px) {
+    width: 180px;
+
+    .tooltip-title {
+      font-size: 12px;
+    }
+
+    .tooltip-numbers {
+      margin-top: 9px;
+
+      .tooltip-numbers-abs-value,
+      .tooltip-numbers-std-value {
+        font-size: 12px;
+      }
+  
+      .tooltip-numbers-desc {
+        margin-top: 1px;
+        font-size: 11px;
+      }
+    }
+
+    .tooltip-diagnoses {
+      .tooltip-diagnoses-header {
+        font-size: 11px;
+      }
+
+      ol.tooltip-diagnoses-list {
+        font-size: 11px;
       }
     }
   }

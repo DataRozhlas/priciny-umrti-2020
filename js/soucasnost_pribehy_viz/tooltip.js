@@ -77,7 +77,7 @@ const showTooltip = (viz, { categoryName, datum, tooltipTriggerEl }) => {
       </div>
       <div class="tooltip-numbers-std">
         <div class="tooltip-numbers-std-value">${formatNumber(stdValue)}</div>
-        <div class="tooltip-numbers-desc">na 100 tisíc (std. k 2018)</div>
+        <div class="tooltip-numbers-desc">na 100&nbsp;tisíc (std.&nbsp;k&nbsp;2018)</div>
       </div>
     </div>
     <div class="tooltip-diagnoses">
@@ -101,12 +101,10 @@ const showTooltip = (viz, { categoryName, datum, tooltipTriggerEl }) => {
         name: 'offset',
         options: {
           offset: ({ placement }) => {
-            if (placement === 'right-start') {
+            if (placement === 'right-start' || placement === 'left-start') {
               return [-48, 15];
-            } else if (placement === 'right-end') {
-              return [15, 15];
             } else {
-              return [0, 15];
+              return [15, 15];
             }
           },
         },
@@ -121,7 +119,7 @@ const showTooltip = (viz, { categoryName, datum, tooltipTriggerEl }) => {
   });
 };
 
-const hideTooltip = () => {
+export const hideTooltip = () => {
   const tooltipEl = document.querySelector('.priciny-umrti-pribehy-viz-tooltip');
   if (tooltipEl) {
     tooltipEl.remove();
