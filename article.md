@@ -573,6 +573,15 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
   </div>
 </wide>
 
+<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
+  <img src="assets/5_ilustrace_kapitoly/001.jpg" alt="" class="active">
+  <img src="assets/5_ilustrace_kapitoly/002.jpg" alt="">
+  <img src="assets/5_ilustrace_kapitoly/003.jpg" alt="">
+  <img src="assets/5_ilustrace_kapitoly/004.jpg" alt="">
+  <img src="assets/5_ilustrace_kapitoly/005.jpg" alt="">
+  <img src="assets/5_ilustrace_kapitoly/006.jpg" alt="">
+</div>
+
 <h2>Do střev</h2>
 <h2 class="time-span">2020 a dál</h2>
 
@@ -664,15 +673,6 @@ Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi um�
     </div>
   </div>
 </wide>
-
-<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
-  <img src="assets/5_ilustrace_kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/5_ilustrace_kapitoly/002.jpg" alt="">
-  <img src="assets/5_ilustrace_kapitoly/003.jpg" alt="">
-  <img src="assets/5_ilustrace_kapitoly/004.jpg" alt="">
-  <img src="assets/5_ilustrace_kapitoly/005.jpg" alt="">
-  <img src="assets/5_ilustrace_kapitoly/006.jpg" alt="">
-</div>
 
 <h2>Covidová poprvé</h2>
 
