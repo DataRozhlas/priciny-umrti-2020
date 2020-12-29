@@ -113,6 +113,18 @@
 }
 
 .vis-static {
-  width: 820px;
-  margin-left: -100px;
+  .desktop {
+    width: 820px;
+    margin-left: -100px;
+
+    @media (max-width: 767.9px) {
+      display: none;
+    }
+  }
+
+  .mobile {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
 }
