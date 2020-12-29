@@ -280,7 +280,10 @@ Jenže na rozdíl od západu Evropy Československu optimismus dlouho nevydržel
 
 „Rostla úmrtnost na civilizační choroby, jako jsou nemoci oběhové soustavy a novotvary, protože vývoj léků kardiovaskulárních nemocí a vývoj cytostatik (_léků na ničení nádorových buněk, pozn. red._) nepřinášel předpokládané rychlé pozitivní účinky,“ pokračuje. „Úmrtnost v českých zemích neodpovídala vysoké úrovni českého zdravotnictví. Jeho efekty byly nižší než prostředky do něho vynakládané. Nelze pochybovat, že se na tom podílela i situace ekonomická a psychosociální.“
 
-<div id="graf-nadeje-doziti-komunismus" class="vis-static"><img src="assets/svg/3.1_nadeje_doziti_des.svg"></div>
+<div id="graf-nadeje-doziti-komunismus" class="vis-static">
+  <img src="assets/svg/3.1_nadeje_doziti_des.svg" alt="" class="desktop">
+  <img src="assets/svg/3.1_nadeje_doziti_mob.svg" alt="" class="mobile">
+</div>
 
 <div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
 
@@ -410,7 +413,10 @@ Pivo a párek ostatně stále patří k obrazu spokojeného Čecha a <a href="ht
 
 „I v polovině 90. let zaostává Česká republika za ostatními vyspělými zeměmi Evropy _(v naději dožití, pozn. red.)_ zhruba o sedm až deset kalendářních let,“ píše v publikaci _Tisíc let obyvatelstva českých zemí_ demograf Vladimír Srb.
 
-<div id="fotka-nadeje-doziti-soucasnost" class="vis-static"><img src="assets/svg/4.1_nadeje_doziti_des.svg"></div>
+<div id="fotka-nadeje-doziti-soucasnost" class="vis-static">
+  <img src="assets/svg/4.1_nadeje_doziti_des.svg" alt="" class="desktop">
+  <img src="assets/svg/4.1_nadeje_doziti_mob.svg" alt="" class="mobile">
+</div>
 
 <div class="data-source">Zdroj: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Demografická příručka ČSÚ</a></div>
 
