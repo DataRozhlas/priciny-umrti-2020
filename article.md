@@ -146,14 +146,74 @@ Autoři MKN navíc počítali s tím, že s rozvojem medicíny bude třeba klasi
 
 Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, například _infekční nemoci_ nebo _úrazy_. Přesné názvy konkrétních příčin se mezi revizemi často mění, zanikají a vznikají nebo přesunují mezi skupinami – například _stáří_ jako příčina úmrtí se během celého století přes _stařeckou sešlost_ (_s_ nebo _bez zblbělosti starobní_) a řadu dalších variant obloukem vrátilo k názvu diagnózy _stáří – senilita_. Oproti tomu nadřazené třídy příčin většinou zůstávají stabilní. Umožňují tak srovnávat úmrtnost od roku 1919 dodnes.
 
-<div id="graf-top-diagnozy-osa" class="mock-content">
+<wide>
+  <div class="priciny-umrti-top-mkn-diagnozy">
+    <div class="priciny-umrti-top-mkn-diagnozy-osa">
+      <button type="button" data-mkn="mkn-2" data-mkn-active>
+        MKN-2
+        <span class="mkn-rok-od">1919</span>
+        <span class="mkn-rok-do">1925</span>
+      </button>
+      <button type="button" data-mkn="mkn-3">
+        MKN-3
+        <span class="mkn-rok-do">1931</span>
+      </button>
+      <button type="button" data-mkn="mkn-4">
+        MKN-4
+        <span class="mkn-rok-do">1941</span>
+      </button>
+      <button type="button" data-mkn="mkn-5">
+        MKN-5
+        <span class="mkn-rok-do">1949</span>
+      </button>
+      <button type="button" data-mkn="mkn-6">
+        MKN-6
+        <span class="mkn-rok-do">1958</span>
+      </button>
+      <button type="button" data-mkn="mkn-7">
+        MKN-7
+        <span class="mkn-rok-do">1968</span>
+      </button>
+      <button type="button" data-mkn="mkn-8">
+        MKN-8
+        <span class="mkn-rok-do">1979</span>
+      </button>
+      <button type="button" data-mkn="mkn-9">
+        MKN-9
+        <span class="mkn-rok-do">1994</span>
+      </button>
+      <button type="button" data-mkn="mkn-10-i">
+        MKN-10-I
+        <span class="mkn-rok-do">2007</span>
+      </button>
+      <button type="button" data-mkn="mkn-10-ii">
+        MKN-10-II
+        <span class="mkn-rok-do">2019</span>
+      </button>
+    </div>
+    <div class="priciny-umrti-top-mkn-diagnozy-obsah">
+      <div data-mkn="mkn-2" data-mkn-active><em>top MKN-2 diagnozy</em></div>
+      <div data-mkn="mkn-3"><em>top MKN-3 diagnozy</em></div>
+      <div data-mkn="mkn-4"><em>top MKN-4 diagnozy</em></div>
+      <div data-mkn="mkn-5"><em>top MKN-5 diagnozy</em></div>
+      <div data-mkn="mkn-6"><em>top MKN-6 diagnozy</em></div>
+      <div data-mkn="mkn-7"><em>top MKN-7 diagnozy</em></div>
+      <div data-mkn="mkn-8"><em>top MKN-8 diagnozy</em></div>
+      <div data-mkn="mkn-9"><em>top MKN-9 diagnozy</em></div>
+      <div data-mkn="mkn-10-i"><em>top MKN-10-I diagnozy</em></div>
+      <div data-mkn="mkn-10-ii"><em>top MKN-10-II diagnozy</em></div>
+    </div>
+  </div>
+</wide>
+
+<!-- <div id="graf-top-diagnozy-osa" class="mock-content">
 <img src="https://lh6.googleusercontent.com/41WoY86gSIqL7zGXCZsU0cp2oocUIEuffukFemgSDidKX0P7zF99wTQFzsby2DzrIIxSxMtGJ-G9Dot4C3upD4-cuTCTqLQLenlhdMsd" style="width:600px">
 </div>
 
 <div id="graf-top-diagnozy-obsah" class="mock-content">
 <img src="https://lh3.googleusercontent.com/KeNrQBp9eTvAsQKBopstHdTN0IH9SVS4neGL0a0OiErxwgbQZJlADAUXaHCmbq31x8o3WL06UHrFacQIs3VbxyNIcDZx0WENCBG391lN" style="width:600px">
 GRAF: Top diagnózy a skupiny podle MKN
-</div>
+</div> -->
 
 <div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 

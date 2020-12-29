@@ -1,0 +1,124 @@
+.priciny-umrti-top-mkn-diagnozy {
+  max-width: 820px;
+  margin: 0 auto;
+
+  .priciny-umrti-top-mkn-diagnozy-osa {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -15px;
+    padding: 0 15px 30px 15px;
+    overflow-x: auto;
+
+    > button {
+      margin: 0 3px 0 0;
+      padding: 0;
+      border: 1px solid #D9D9D9;
+      background: none;
+      height: 36px;
+      flex: 0 0 0px;
+      position: relative;
+
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: #5A5A5A;
+
+      &:hover, &:active {
+        background-color: #f9f9f9;
+        border-color: #989898;
+      }
+
+      &[data-mkn-active] {
+        background-color: transparent;
+        border-color: #000000;
+
+        font-weight: 500;
+        color: #000000;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 50%;
+          margin-left: -4px;
+          width: 6px;
+          height: 6px;
+          
+          transform: rotate(45deg);
+          background: white;
+          border-right: 1px solid black;
+          border-bottom: 1px solid black;
+        }
+      }
+
+      .mkn-rok-od, .mkn-rok-do {
+        position: absolute;
+        bottom: -20px;
+        width: 30px;
+
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #3A3A3A;
+        text-align: center;
+      }
+
+      .mkn-rok-od {
+        left: -16.5px;
+      }
+
+      .mkn-rok-do {
+        right: -16.5px;
+      }
+
+      &[data-mkn=mkn-2] {
+        flex-basis: calc(7.5px * 6);
+      }
+      &[data-mkn=mkn-3] {
+        flex-basis: calc(7.5px * 6);
+      }
+      &[data-mkn=mkn-4] {
+        flex-basis: calc(7.5px * 10);
+      }
+      &[data-mkn=mkn-5] {
+        flex-basis: calc(7.5px * 8);
+      }
+      &[data-mkn=mkn-6] {
+        flex-basis: calc(7.5px * 9);
+      }
+      &[data-mkn=mkn-7] {
+        flex-basis: calc(7.5px * 10);
+      }
+      &[data-mkn=mkn-8] {
+        flex-basis: calc(7.5px * 11);
+      }
+      &[data-mkn=mkn-9] {
+        flex-basis: calc(7.5px * 15);
+      }
+      &[data-mkn=mkn-10-i] {
+        flex-basis: calc(7.5px * 13);
+      }
+      &[data-mkn=mkn-10-ii] {
+        flex-basis: calc(7.5px * 12);
+      }
+    }
+
+    @media (min-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  .priciny-umrti-top-mkn-diagnozy-obsah {
+    margin-top: 15px;
+
+    > * {
+      display: none;
+
+      &[data-mkn-active] {
+        display: block;
+      }
+    }
+  }
+}
