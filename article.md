@@ -162,6 +162,10 @@ GRAF: Top diagnózy a skupiny podle MKN
 <p><a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zdrojová data o příčinách úmrtí</a> ukazují, kolik na jakou příčinu zemřelo lidí. Pokud bychom je pouze spojili do časové řady, abychom ukázali trendy v příčinách úmrtí, narazíme na problém: po roce 1938 přišlo Československo o pohraničí a s ním o část obyvatel. Ze statistik tak zmizely Sudety, s nástupem protektorátu pak i Němci ve vnitrozemí. V absolutních počtech úmrtí je proto po roce 1938 schodek.</p>
 <p>Proto se počet úmrtí obvykle srovnává s počtem obyvatel území: výsledný ukazatel se nazývá <i>hrubá míra úmrtnosti</i>, ukazuje počet úmrtí na tisíc obyvatel a schodek odstraňuje.</p>
 <p>GIF: absolutní počty úmrtí - hrubá míra úmrtnosti</p>
+<div id="gif-hruba-mira" class="vis-static">
+  <img src="assets/gif/abs-rel.gif" width="400px">
+</div>
+
 </div>
 
 <div id="box-standardizovana-umrtnost" class="our-box">
