@@ -658,8 +658,9 @@ Tabulky _ACME_ demografky využívají od roku 2007, celý IRIS od 2011. Právě
 
 Na nečekaně masivní změně některých diagnóz, třeba právě diabetu, se podepsal také nenápadný detail: v roce 2012 na první část listu o prohlídce zemřelého statistici přidali čtvrtý řádek.
 
-<div id="graf-ateroskleroza" class="mock-content">
-<img src="https://lh6.googleusercontent.com/VMu3xqP_k2dcMb0mlmisZ1rKigeNTdor91AXclkx0pppdzdnNuWRx5dF0NfBm3p1wCfHKGX1Z4nyHXqh7WQdUcayg1bgO7EglLhYocimR4B5saHhUpSJMFnDhSGs3hREygwOQy8z" style="width:600px">
+<div id="graf-ateroskleroza" class="vis-static">
+  <img src="assets/svg/5.2_tlak_na_statistiku_des.svg" class="desktop">
+  <img src="assets/svg/5.2_tlak_na_statistiku_mob.svg" class="mobile">
 </div>
 
 <div class="data-source">Zdroj: <a href="http://www.demografie.info/?cz_detail_clanku&artclID=840">Demografie.info</a></div>
