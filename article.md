@@ -67,9 +67,15 @@ Když na úvod článku trochu předběhneme, během necelých dvou století se 
   </figure>
 </wide>
 
-<div id="box-ukazatele" class="our-box">
-<h3>Ukazatele délky života</h3>
-<p><i>Naděje dožití</i>, <i>střední délka života</i>, <i>očekávaná délka dožití při narození</i>. Všechny tři termíny označují totéž, obvykle se interpretují jako očekávaná délka života za předpokladu, že by se nezměnily podmínky úmrtnosti. Ve skutečnosti se ale mění, každá další generace se dožívá vyššího věku než ta předchozí. Zmíněné ukazatele tedy mluví spíš o těch, kteří svět opouští, než o nově příchozích.</p>
+<div class="b-inline b-inline--right">
+  <div class="b-inline__wrap">
+    <div class="b-inline__content">
+      <p class="text-sm text-bold text-uppercase">Ukazatele délky života</p>
+      <p class="text-sm">
+        <em>Naděje dožití</em>, <em>střední délka života</em>, <em>očekávaná délka dožití při narození</em>. Všechny tři termíny označují totéž, obvykle se interpretují jako očekávaná délka života za předpokladu, že by se nezměnily podmínky úmrtnosti. Ve skutečnosti se ale mění, každá další generace se dožívá vyššího věku než ta předchozí. Zmíněné ukazatele tedy mluví spíš o těch, kteří svět opouští, než o nově příchozích.
+      </p>
+    </div>
+  </div>
 </div>
 
 S délkou života úzce souvisí méně příjemný ukazatel: míra úmrtnosti. Nejde přímo o převrácenou hodnotu, ale s trochou zjednodušení můžeme říct, že délka dožití roste, když míra úmrtnosti klesá. V každém historickém období se přitom příčiny úmrtí mění. Za císaře, během první republiky obklíčené válkami, za komunistické totality i po sametové revoluci rozhodovaly o délce a kvalitě života jiné nemoci, nehody nebo násilná úmrtí.
@@ -238,24 +244,43 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, např�
   </figure>
 </wide>
 
-<div id="box-hruba-umrtnost" class="our-box">
-<h3>Hrubá míra úmrtnosti</h3>
-<p><a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zdrojová data o příčinách úmrtí</a> ukazují, kolik na jakou příčinu zemřelo lidí. Pokud bychom je pouze spojili do časové řady, abychom ukázali trendy v příčinách úmrtí, narazíme na problém: po roce 1938 přišlo Československo o pohraničí a s ním o část obyvatel. Ze statistik tak zmizely Sudety, s nástupem protektorátu pak i Němci ve vnitrozemí. V absolutních počtech úmrtí je proto po roce 1938 schodek.</p>
-<p>Proto se počet úmrtí obvykle srovnává s počtem obyvatel území: výsledný ukazatel se nazývá <i>hrubá míra úmrtnosti</i>, ukazuje počet úmrtí na tisíc obyvatel a schodek odstraňuje.</p>
-<p>GIF: absolutní počty úmrtí - hrubá míra úmrtnosti</p>
-<div id="gif-hruba-mira" class="vis-static">
-  <img src="assets/gif/abs-rel.gif" width="400px">
-</div>
-
-</div>
-
-<div id="box-standardizovana-umrtnost" class="our-box">
-<h3>Standardizovaná míra úmrtnosti</h3>
-<p>Zároveň se v první polovině 19. století rychle měnila věková struktura: v roce 1920 měli navrch mladí, téměř polovina Čechoslováků měla do 25 let. Během dalších třiceti let ale populace zestárla: o čtvrtinu přibylo seniorů.</p>
-<p>To má logicky vliv i na statistiku úmrtí. V mladší populaci jsou častěji příčinou úmrtí dětské nemoci, násilná úmrtí nebo nehody, ve starší populaci nemoci srdce a rakovina.</p>
-<p>Data mají ukazovat změny v úmrtnosti, ne ve věkové struktuře. Proto se u časových řad nebo srovnání více území ještě <i>věkově standardizují</i>: příčiny úmrtí se sledují optikou neměnného věkového rozložení, v našem případě posledního roku časové řady. Grafy tedy budou ukazovat příčiny úmrtí, <i>jako by v celém období platila věková struktura posledního roku řady</i>.</p>
-<p>GIF: hrubá míra úmrtnosti - standardizovaná míra úmrtnosti</p>
-</div>
+<wide>
+  <div class="b-inline priciny-umrti-hrb-std-box">
+    <div class="b-inline__wrap priciny-umrti-hrb-std-box-hrb">
+      <div class="b-inline__content">
+        <p class="text-sm text-bold text-uppercase">Hrubá míra úmrtnosti</p>
+        <p class="text-sm">
+          <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zdrojová data o příčinách úmrtí</a> ukazují, kolik na jakou příčinu zemřelo lidí. Pokud bychom je pouze spojili do časové řady, abychom ukázali trendy v příčinách úmrtí, narazíme na problém: po roce 1938 přišlo Československo o pohraničí a s ním o část obyvatel. Ze statistik tak zmizely Sudety, s nástupem protektorátu pak i Němci ve vnitrozemí. V absolutních počtech úmrtí je proto po roce 1938 schodek.
+        </p>
+        <p class="text-sm">
+          Proto se počet úmrtí obvykle srovnává s počtem obyvatel území: výsledný ukazatel se nazývá <em>hrubá míra úmrtnosti</em>, ukazuje počet úmrtí na tisíc obyvatel a schodek odstraňuje.
+        </p>
+      </div>
+      <div class="b-inline__img">
+        <!-- TODO: alt text -->
+        <img src="assets/gif/abs-rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
+      </div>
+    </div>
+    <div class="b-inline__wrap priciny-umrti-hrb-std-box-std">
+      <div class="b-inline__content">
+        <p class="text-sm text-bold text-uppercase">Standardizovaná míra úmrtnosti</p>
+        <p class="text-sm">
+          Zároveň se v první polovině 19. století rychle měnila věková struktura: v roce 1920 měli navrch mladí, téměř polovina Čechoslováků měla do 25 let. Během dalších třiceti let ale populace zestárla: o čtvrtinu přibylo seniorů.
+        </p>
+        <p class="text-sm">
+          To má logicky vliv i na statistiku úmrtí. V mladší populaci jsou častěji příčinou úmrtí dětské nemoci, násilná úmrtí nebo nehody, ve starší populaci nemoci srdce a rakovina.
+        </p>
+        <p class="text-sm">
+          Data mají ukazovat změny v úmrtnosti, ne ve věkové struktuře. Proto se u časových řad nebo srovnání více území ještě <em>věkově standardizují</em>: příčiny úmrtí se sledují optikou neměnného věkového rozložení, v našem případě posledního roku časové řady. Grafy tedy budou ukazovat příčiny úmrtí, <em>jako by v celém období platila věková struktura posledního roku řady</em>.
+        </p>
+      </div>
+      <div class="b-inline__img">
+        <!-- TODO: alt text -->
+        <img src="assets/gif/abs-rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
+      </div>
+    </div>
+  </div>
+</wide>
 
 Prvnímu období, kdy jsou pro české území dostupná podrobná data o příčinách úmrtí, dominují světové války. Období jsme ohraničili zlomovým rokem 1948 – i když v našem případě jde o trochu jiný mezník, než o kterém se obvykle v souvislosti s tímto rokem mluví. Víc prozradíme v další části textu.
 
@@ -333,11 +358,21 @@ Podrobnější pohled prozradí věk válečných obětí nebo v čem je zákeř
   </figure>
 </wide>
 
-<div id="box-nemci" class="our-box">
-<h3>Dopočítávání německé populace</h3>
-<p>Téměř celá časová řada mezi lety 1919 a 2018 ukazuje příčiny úmrtí v českých zemích: tedy za Čechy, Moravu a Slezsko. Výjimkou jsou válečné roky 1938 až 1944, kdy jsou k dispozici pouze data za Protektorát Čechy a Morava, navíc bez německých státních příslušníků. V roce 1945 se do dat vrací pohraničí, ale ne Němci.</p>
-</p>Podobně děravá jsou válečná data o počtu obyvatel podle věku, která potřebujeme pro výpočet úmrtnosti. K dispozici jsou pouze do roku 1938 a znovu od roku 1945. Tento údaj proto ve válečných letech pouze odhadujeme, mezi oběma hraničními roky předpokládáme lineární změnu počtu obyvatel v každé pětileté věkové skupině.</p>
-<p>Úmrtnost během války je tedy pouze odhad. Trendy nicméně navazují na okolní roky a zlomy jsou jen u skupiny <i>válečné akce a soudní poprava</i>, kde odrážejí skutečnost.</p>
+<div class="b-inline">
+  <div class="b-inline__wrap">
+    <div class="b-inline__content">
+      <p class="text-sm text-bold text-uppercase">Dopočítávání německé populace</p>
+      <p class="text-sm">
+        Téměř celá časová řada mezi lety 1919 a 2018 ukazuje příčiny úmrtí v českých zemích: tedy za Čechy, Moravu a Slezsko. Výjimkou jsou válečné roky 1938 až 1944, kdy jsou k dispozici pouze data za Protektorát Čechy a Morava, navíc bez německých státních příslušníků. V roce 1945 se do dat vrací pohraničí, ale ne Němci.
+      </p>
+      <p class="text-sm">
+        Podobně děravá jsou válečná data o počtu obyvatel podle věku, která potřebujeme pro výpočet úmrtnosti. K dispozici jsou pouze do roku 1938 a znovu od roku 1945. Tento údaj proto ve válečných letech pouze odhadujeme, mezi oběma hraničními roky předpokládáme lineární změnu počtu obyvatel v každé pětileté věkové skupině.
+      </p>
+      <p class="text-sm">
+        Úmrtnost během války je tedy pouze odhad. Trendy nicméně navazují na okolní roky a zlomy jsou jen u skupiny <em>válečné akce a soudní poprava</em>, kde odrážejí skutečnost.
+      </p>
+    </div>
+  </div>
 </div>
 
 Podobně jako za první světové války chyběli ve statistice vojáci, během druhé světové války v ní nejsou oni ani deportovaní. Opět se musíme spolehnout na archivy.
