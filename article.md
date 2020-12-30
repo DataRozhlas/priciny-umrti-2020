@@ -54,12 +54,15 @@ Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předc
 
 Když na úvod článku trochu předběhneme, během necelých dvou století se délka života protáhla z 28 na bezmála 80 let. Nešlo o plynulou změnu: jsou období jako přelom 19. a 20. století, kdy se během jedné generace život prodloužil o 40 procent, světové válce navzdory. V jiných dobách se růst délky života zpomalil nebo zastavil. V komunistických 60. letech minulého století se dokonce na celé desetiletí obrátil, hlavně u mužů.
 
-<div id="graf-nadeje-doziti-celek" class="vis-static">
-<img src="assets/svg/1.1_nadeje_doziti_des.svg" class="desktop">
-<img src="assets/svg/1.1_nadeje_doziti_mob.svg" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
+<wide>
+  <figure id="graf-nadeje-doziti-celek" class="priciny-umrti-vis-static">
+    <img src="assets/svg/1.1_nadeje_doziti_des.svg" class="desktop">
+    <img src="assets/svg/1.1_nadeje_doziti_mob.svg" class="mobile">
+    <div class="source-reference">
+      Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a>
+    </div>
+  </figure>
+</wide>
 
 <div id="box-ukazatele" class="our-box">
 <h3>Ukazatele délky života</h3>
@@ -150,7 +153,7 @@ Autoři MKN navíc počítali s tím, že s rozvojem medicíny bude třeba klasi
 Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, například _infekční nemoci_ nebo _úrazy_. Přesné názvy konkrétních příčin se mezi revizemi často mění, zanikají a vznikají nebo přesunují mezi skupinami – například _stáří_ jako příčina úmrtí se během celého století přes _stařeckou sešlost_ (_s_ nebo _bez zblbělosti starobní_) a řadu dalších variant obloukem vrátilo k názvu diagnózy _stáří – senilita_. Oproti tomu nadřazené třídy příčin většinou zůstávají stabilní. Umožňují tak srovnávat úmrtnost od roku 1919 dodnes.
 
 <wide>
-  <div class="priciny-umrti-top-mkn-diagnozy">
+  <figure class="priciny-umrti-vis-static priciny-umrti-top-mkn-diagnozy">
     <div class="priciny-umrti-top-mkn-diagnozy-osa">
       <button type="button" data-mkn="mkn-2" data-mkn-active>
         MKN-2
@@ -226,10 +229,11 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, např�
         <img src="assets/svg/3.1_mkn_10_II.svg" class="desktop">
       </div>
     </div>
-  </div>
+    <div class="source-reference">
+      Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
+    </div>
+  </figure>
 </wide>
-
-<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
 <div id="box-hruba-umrtnost" class="our-box">
 <h3>Hrubá míra úmrtnosti</h3>
@@ -316,12 +320,15 @@ Prvnímu období, kdy jsou pro české území dostupná podrobná data o pří�
 
 Podrobnější pohled prozradí věk válečných obětí nebo v čem je zákeřná tuberkulóza.
 
-<div id="graf-heatmap" class="vis-static">
-<img src="assets/svg/2.5_heatmapa_des.svg" class="desktop">
-<img src="assets/svg/2.5_heatmapa_v3_mob.svg" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
+<wide>
+  <figure id="graf-heatmap" class="priciny-umrti-vis-static">
+    <img src="assets/svg/2.5_heatmapa_des.svg" class="desktop">
+    <img src="assets/svg/2.5_heatmapa_v3_mob.svg" class="mobile">
+    <div class="source-reference">
+      Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
+    </div>
+  </figure>
+</wide>
 
 <div id="box-nemci" class="our-box">
 <h3>Dopočítávání německé populace</h3>
