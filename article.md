@@ -344,7 +344,7 @@ Na rozdíl od první světové války ovšem nedošlo k většímu propadu porod
   <img src="assets/3_ilustrace_kapitoly/006.jpg" alt="">
 </div>
 
-<h2>Pivo, bůček, cigarety: temná éra pro srdce</h2>
+<h2>Pivo, bůček, cigára: temná éra pro srdce</h2>
 <h2 class="time-span">1949 až 1989</h2>
 
 I po druhé světové válce následovala éra, kdy úmrtnost padala a věk se prodlužoval: díky antibiotikům – a později také očkování – se povedlo vymýtit strašidlo dětské tuberkulózy, spály nebo záškrtu. Podobný průběh se odehrál v celé Evropě a většině industrializovaných zemí.
@@ -415,51 +415,51 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
 <wide>
   <div class="datarozhlas-scrolly priciny-umrti-scrolly komunismus-pribehy-scrolly">
     <div class="datarozhlas-scrolly-step">
-      <h3>Vývoj úmrtí 1949-1989</h3>
+      <h3>Od šedesátých let úmrtnost stagnovala</h3>
       <p>
-        XXX
+        Podobně jako po první, i po druhé světové válce se úmrtnost snižovala: mezi lety 1949 a 1959 klesla standardizovaná míra úmrtnosti z 1584 na 1294 úmrtí na 100 tisíc obyvatel. Jenže od té doby se téměř nezměnila, za dalších třicet let klesla jen minimálně z 1294 na 1233 úmrtí.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Normalizační životní styl</h3>
       <p>
-        Se stárnoucí populací mezi příčinami úmrtí přibývalo nemocí srdce a cév. Maxima tahle linka dosáhla v 80. letech, kdy právě sem spadalo víc než 55 procent všech úmrtí. Může za to hlavně životní styl, který za normalizace převládl: pivo, bůček a cigarety.
+        Se stárnoucí populací mezi příčinami úmrtí přibývalo nemocí srdce a cév. Maxima tahle linka dosáhla v osmdesátých letech, kdy právě sem spadalo víc než 55 procent všech úmrtí. Může za to hlavně životní styl, který za normalizace zvítězil: pivo, bůček a cigarety.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Komunistický teror</h3>
       <p>
-        Komunistický teror 50. let se do dat propsal nárůstem obětí poprav a nejrůznějších nehod. Oficiální data ovšem neukazují nárůst sebevražednosti. Až do roku 1967 také čeští statistici pracovali s příčinou úmrtí <em>Úraz v dole nebo lomu</em>, ačkoliv jiné země ji dávno vyřadily.
+        Konec čtyřicátých a začátek padesátých let se do dat propsal nárůstem obětí poprav, a také nehod, do kterých se zřejmě skryla řada násilných úmrtí. Nárůst se ale podle oficiálních čísel vyhnul sebevražednosti. Až do roku 1967 čeští statistici pracovali s příčinou úmrtí <em>Úraz v dole nebo lomu</em>, ačkoliv jiné země ji dávno vyřadily.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Nejvíc sebevražd: 1970</h3>
       <p>
-        Statistiky sebevražednosti se v celém období, alespoň oficiálně, pohybovaly pod čísly první republiky. Maxima dosáhly na konci 60. let, zřejmě i v souvislosti s vpádem vojsk Varšavské dohody. Během normalizace číslo vytrvale klesalo.
+        Statistiky sebevražednosti se v celém období, alespoň oficiálně, pohybovaly pod čísly první republiky. Maxima dosáhly na konci šedesátých let, snad i v souvislosti s vpádem vojsk Varšavské dohody. Později, během normalizace, už číslo vytrvale klesalo.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Eradikace nakažlivých nemocí</h3>
       <p>
-        Díky antibiotikům a později také očkování se podařilo vymýtit dětskou tuberkulózu, radikálně snížit počty obětí tuberkulózy ve vyšším věku, spály, záškrtu, spalniček i dávivého kašle. V roce 1949 na infekce zemřelo víc než 10 tisíc lidí, o 40 let později měly čtyři stovky obětí.
+        Díky antibiotikům a později také očkování se podařilo vymýtit dětskou tuberkulózu, radikálně snížit počty obětí tuberkulózy ve vyšším věku, spály, záškrtu, spalniček i dávivého kašle. V roce 1949 na infekce zemřelo víc než 10 tisíc lidí, o čtyřicet let později měly jen čtyři stovky obětí.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Srážka s tankem?</h3>
       <p>
-        Statistika obětí dopravy má překvapivý vývoj: nejprve jich přibývá, v roce 1969 nastane zlom a počty obětí klesnou na čísla z 50. let. Příčinou může být vyšší bezpečnost, ale také nedostupnost automobilů na konci období. Nejčastější obětí jsou v celém období chodci.
+        Linka obětí dopravních nehod má možná překvapivý vývoj: nejprve jich přibývá, v letech 1968 a 1969 přijde maximum, pak se trend zlomí a mrtvých je méně. Vedle bezpečnějších aut může trend vysvětlovat také jejich nedostupnost v posledním desetiletí vyčerpaného režimu. Ale jen částečně: víc než obětí za volantem bylo mrtvých chodců.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Radikální propad novorozenecké úmrtnosti</h3>
       <p>
-        V 19. století tvořili třetinu mezi všemi úmrtími v českých zemích kojenci. V padesátých letech to byla desetina, v roce sametové revoluce jen půl procenta. Podobně radikálně se zlepšila mateřská úmrtnost. Jednou z příčin je přesun většiny porodů do nemocnic a zlepšení poporodní péče.
+        V devatenáctém století tvořili třetinu mezi všemi úmrtími v českých zemích kojenci. V padesátých letech to byla desetina, v roce sametové revoluce jen půl procenta. Ruku v ruce s tímto se rychle snižovala i mateřská úmrtnost.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Proklikejte si</h3>
+      <h3>Najděte další příběhy sami</h3>
       <p>
-        Nyní si sami můžete prohlédnout kompletní data.
+        Nyní jsou data opět jen vaše.
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
