@@ -86,7 +86,7 @@ Patent předpokládal také vznik evidence příčin úmrtí. Primárním cílem
 
 <div id="fotka-nejstarsi-umrti" class="mock-content">
 <img src="https://keep.google.com/u/0/media/v2/1ZVe8qh2QdyjKGYTaIh6XVR83BLNogj7tE_o6DwgEC5F7YpkW567ATRyfOzdOX9c/1eDlLp_EC4_zptzZXkUyTjSqSFRiJJj0bnfmMn4oeETEA7p0MIB8oOegmD3DP" style="width:600px">
-Nejstarší dochovaný dokument s příčinami úmrtí, rok 1828
+Nejstarší dochovaná data o příčinách úmrtí, rok 1828
 </div>
 
 Až do první světové války přesnější rozlišení příčin úmrtí chybí. Poměrně spolehlivá jsou ale data o počtu narozených a zemřelých. Z výkyvů umíme poměrně dobře odhadnout, které události život zkracovaly. O největší zuby v lince úmrtnosti se v 19. století postaraly napoleonské války, epidemie neštovic a záškrtu, a také revoluční rok 1848. Více narozených dětí po válce zase naznačuje, jak jsou v této době obě linky provázané: zemřelé bylo třeba „nahradit“ dětmi. Vysoká kojenecká a dětská úmrtnost znamenala vysokou porodnost.
@@ -226,15 +226,6 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, např�
   </div>
 </wide>
 
-<!-- <div id="graf-top-diagnozy-osa" class="mock-content">
-<img src="https://lh6.googleusercontent.com/41WoY86gSIqL7zGXCZsU0cp2oocUIEuffukFemgSDidKX0P7zF99wTQFzsby2DzrIIxSxMtGJ-G9Dot4C3upD4-cuTCTqLQLenlhdMsd" style="width:600px">
-</div>
-
-<div id="graf-top-diagnozy-obsah" class="mock-content">
-<img src="https://lh3.googleusercontent.com/KeNrQBp9eTvAsQKBopstHdTN0IH9SVS4neGL0a0OiErxwgbQZJlADAUXaHCmbq31x8o3WL06UHrFacQIs3VbxyNIcDZx0WENCBG391lN" style="width:600px">
-GRAF: Top diagnózy a skupiny podle MKN
-</div> -->
-
 <div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
 
 <div id="box-hruba-umrtnost" class="our-box">
@@ -261,57 +252,57 @@ Prvnímu období, kdy jsou pro české území dostupná podrobná data o pří�
 <wide>
   <div class="datarozhlas-scrolly priciny-umrti-scrolly prvni-republika-pribehy-scrolly">
     <div class="datarozhlas-scrolly-step">
-      <h3>Vývoj úmrtí 1919-1948</h3>
+      <h3>Propad úmrtnosti za první republiky</h3>
       <p>
-        Od konce první světové války do únorového převratu klesla standardizovaná míra úmrtnosti téměř na polovinu: z 2048 na 1141 úmrtí na 100 000 obyvatel.
+        Od konce první světové války do únorového převratu klesla standardizovaná míra úmrtnosti téměř na polovinu: z 2048 na 1141 úmrtí na 100 tisíc obyvatel. Je to i tím, že v prvních letech řádila španělská chřipka.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>22 skupin příčin úmrtí</h3>
+      <h3>Co za propadem stojí?</h3>
       <p>
-        Příčiny úmrtí se v tomto období seskupují do 16 skupin přirozených úmrtí: nemocí, vrozených vad, novorozenecké úmrtnosti i stáří. Vedle nich statistika ukazuje externí příčiny úmrtí jako vraždy, sebevraždy, dopravní nehody nebo náhodné úrazy.
+        Za první republiky se ustálilo šestnáct skupin přirozených úmrtí – nemocí, vrozených vad, novorozenecké úmrtnosti nebo stařecké sešlosti – a pět skupin vnějších příčin smrti. Těmi jsou vraždy, sebevraždy, válka a popravy, dopravní nehody a úrazy. Ukážou, kde se úmrtnost snižovala a kde naopak rostla.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Stařecká sešlost</h3>
+      <h3>Méně sešlých starců?</h3>
       <p>
-        V roce 1919 zemřelo s diagnózou <em>stařecká sešlost</em> 28 487 lidí (XXX stand.), o třicet let později 5&nbsp;185 lidí (XXX stand.). Neznamená to, že by v českých zemích ubylo sešlých starců – jen tolik, že během první republiky se zpřesnila statistika. Stáří jako příčinu úmrtí lékaři obvykle uváděli, pokud neznali přesný důvod.
+        V roce 1919 zemřelo s diagnózou <em>stařecká sešlost</em> 28 tisíc lidí, v roce 1948 jen pět tisíc. Neznamená to, že by v českých zemích ubylo kmetů – jen to, že během první republiky se zpřesnila statistika. Stáří jako příčinu úmrtí lékaři obvykle uváděli, pokud neznali přesný důvod.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
       <h3>Posun v léčbě tuberkulózy</h3>
       <p>
-        V poválečných letech byly největší hrozbou infekční nemoci. Nejobávanější byla tuberkulóza – mezi infekcemi měla na svědomí 60 až 70 procent úmrtí a zabíjela v každém věku, včetně dětského. Během první republiky se podařilo úmrtnost na infekce díky lepší zdravotní péči a lepší výživě snížit na třetinu.
+        Ještě dlouho po první světové válce byly největším zabijákem nakažlivé nemoci. Kromě krátké epizody se španělskou chřipkou byla zvlášť obávaná tuberkulóza – mezi infekcemi měla na svědomí 60 až 70 procent úmrtí. Během první republiky spadl počet obětí infekcí, hlavně díky zdravotní péči a lepší výživě, ze 44 tisíc na jedenáct tisíc.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Šiřící se obezita</h3>
+      <h3>Být tlustý přestává být výhoda</h3>
       <p>
-        Okamžik, kdy nemoci srdce přebraly prvenství v úmrtnosti od infekčních nemocí, je pro medicínu důležitý. U tuberkulózy je ochranným faktorem obezita; u nemocí srdce je naopak riziková. V následujících letech proto ubylo například inzerátů na bonbóny, po kterých spolehlivě ztloustnete.
+        Okamžik, kdy nemoci srdce v úmrtnosti přebraly prvenství od infekcí, je pro medicínu důležitý. U tuberkulózy je obezita ochranným faktorem, u nemocí srdce je riziková. Z denního tisku tak ve třicátých letech zmizely populární inzeráty na bonbóny, po kterých spolehlivě ztloustnete.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Civilizační choroby</h3>
+      <h3>Éra civilizačních chorob</h3>
       <p>
-        Rapidní prodloužení života znamenalo vyšší úmrtnost na civlizační choroby; typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce se mezi příčinami úmrtí objevily poprvé v roce 1895, ve dvacátých letech už šlo o nejčastější příčinu.
+        Rapidní prodloužení života vedlo k vyšší úmrtnosti na takzvané civilizační choroby, typicky nemoci oběhové soustavy a rakovinu. Nemoci srdce dostaly svou kolonku mezi příčinami úmrtí poprvé v roce 1895, na konci dvacátých let už šlo o nejčastější příčinu smrti.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Oběti 2. světové války</h3>
+      <h3>Oběti druhé světové války</h3>
       <p>
-        Během válečných let dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1 790 popravených. Ještě kritičtější byl konec války, kdy při vojenských akcích zemřelo asi 14 tisíc civilních osob. Přibylo také obětí úrazů, dopravních nehod, vražd a sebevražd. V datech chybí ti, které evidovaly německé úřady: deportované osoby i německá část populace.
+        Za války v protektorátu dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1 790 popravených, při vojenských akcích na konci války mluví o 14 tisících civilních obětí. V datech chybí deportovaní a ti, které evidovaly říšské úřady: Němci a obyvatelé pohraničí.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Ženy vs. muži</h3>
+      <h3>Muži × ženy</h3>
       <p>
-        Typickými civilními oběťmi války byli chlapci a muži mezi desíti a třiceti lety. U heydrichiády je poměr mužských a ženských obětí asi 8:1, u osvobozovacích bojů 3:1.
+        Většina civilních obětí války byli chlapci a muži. U heydrichiády je poměr mužských a ženských obětí asi 8:1, u osvobozovacích bojů 3:1.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Proklikejte si</h3>
+      <h3>Najděte další příběhy sami</h3>
       <p>
-        Nyní si sami můžete prohlédnout kompletní data.
+        Nyní je graf interaktivní, můžete sledovat kteroukoliv skupinu příčin nebo je srovnávat mezi sebou, měřítko se přizpůsobí. Pro lepší orientaci jsme je rozdělili do tří sekcí. Při kliknutí na skupinu a rok uvidíte několik nejčastějších diagnóz v dobovém pojmenování. Linky ukazují standardizovanou míru úmrtnosti podle věkové struktury populace z roku 1948.
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
