@@ -70,7 +70,7 @@ S délkou života úzce souvisí méně příjemný ukazatel: míra úmrtnosti. 
 
 Důvod, proč začali panovníci hlídat, kolik a jak starých poddaných mají, byly války. Důvod, proč začali sledovat, na co umírají, epidemie.
 
-V sedmnáctém století Evropu děsil mor. Z té doby pocházejí [první ručně kreslené úmrtnostní tabulky](https://en.wikisource.org/wiki/Natural_and_Political_Observations_Made_upon_the_Bills_of_Mortality_(Graunt_1676) a pokusy odhadnout dětskou úmrtnost. Jejich autor, Londýňan John Graunt, je považován za zakladatele demografie i moderní epidemiologie jako vědy o zdraví populace.
+V sedmnáctém století Evropu děsil mor. Z té doby pocházejí [první ručně kreslené úmrtnostní tabulky](https://en.wikisource.org/wiki/Natural_and_Political_Observations_Made_upon_the_Bills_of_Mortality_(Graunt_1676)) a pokusy odhadnout dětskou úmrtnost. Jejich autor, Londýňan John Graunt, je považován za zakladatele demografie i moderní epidemiologie jako vědy o zdraví populace.
 
 Na konci osmnáctého století, kdy vědecká novinka dorazila do Vídně, centra Svaté říše Římské, už morové rány odezněly. Místo moru teď křižovaly Evropu vlny pravých neštovic, cholery a záškrtu.
 
@@ -84,21 +84,24 @@ Patent předpokládal také vznik evidence příčin úmrtí. Primárním cílem
 
 „Pokud jde o epidemické nemoci, byl největší zájem věnován neštovicím a choleře,“ píše Srb. „V roce 1808 vyšel dvorský dekret, který předpisoval lékařům hlášení hromadného výskytu úmrtí v obci na stejnou, ale kteroukoliv nemoc nadřízeným úřadům. Byla to jakási primitivní epidemiologická ohlašovací služba.“
 
-<div id="fotka-nejstarsi-umrti" class="mock-content">
-<img src="https://keep.google.com/u/0/media/v2/1ZVe8qh2QdyjKGYTaIh6XVR83BLNogj7tE_o6DwgEC5F7YpkW567ATRyfOzdOX9c/1eDlLp_EC4_zptzZXkUyTjSqSFRiJJj0bnfmMn4oeETEA7p0MIB8oOegmD3DP" style="width:600px">
-Nejstarší dochovaná data o příčinách úmrtí, rok 1828
-</div>
+<figure>
+  <img src="assets/1_priciny_1828.jpg" alt="Nejstarší dochovaná data o příčinách úmrtí, rok 1828" style="width: 100%">
+  <figcaption>Nejstarší dochovaná data o příčinách úmrtí, rok 1828</figcaption>
+</figure>
 
 Až do první světové války přesnější rozlišení příčin úmrtí chybí. Poměrně spolehlivá jsou ale data o počtu narozených a zemřelých. Z výkyvů umíme poměrně dobře odhadnout, které události život zkracovaly. O největší zuby v lince úmrtnosti se v 19. století postaraly napoleonské války, epidemie neštovic a záškrtu, a také revoluční rok 1848. Více narozených dětí po válce zase naznačuje, jak jsou v této době obě linky provázané: zemřelé bylo třeba „nahradit“ dětmi. Vysoká kojenecká a dětská úmrtnost znamenala vysokou porodnost.
 
 Snížení úmrtnosti na konci století pak znamenalo také méně dětí – [stejný trend](https://www.irozhlas.cz/zivotni-styl/spolecnost/datova-zurnalistika-faktomluva-hans-rosling_1811270630_zlo), který v knize Faktomluva popisuje demograf Hans Rösling v souvislosti se zeměmi třetího světa.
 
-<div id="graf-narozeni-zemreli" class="vis-static">
-<img src="assets/svg/1.2_narozeni_zemreli_des.svg" class="desktop">
-<img src="assets/svg/1.2_narozeni_zemreli_mob.svg" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
+<wide>
+  <figure id="graf-narozeni-zemreli" class="priciny-umrti-vis-static">
+    <img src="assets/svg/1.2_narozeni_zemreli_des.svg" class="desktop">
+    <img src="assets/svg/1.2_narozeni_zemreli_mob.svg" class="mobile">
+    <div class="source-reference">
+      Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a>
+    </div>
+  </figure>
+</wide>
 
 Jedním z nejúspěšnějších období, co se týče prodloužení délky života, je přelom 19. a 20. století. Během jedné generace se – navzdory válce – život v českých zemích prodloužil o 40 procent.
 
