@@ -616,10 +616,10 @@ První krok při určování příčiny úmrtí má na starosti ohledávající 
 
 „V zásadě by ohledávající lékař měl vyslovit návrh k pitvě vždy při pochybnosti o příčině smrti u osob zemřelých náhle, u osob žijících osaměle, zemřelých mimo zdravotnická zařízení a v případě, že je nucen uvést diagnózu _příčina smrti neznámá_,“ popisuje [manuál pro lékaře](https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf).
 
-<div id="fotka-lpz" class="mock-content">
-<img src="https://lh5.googleusercontent.com/RXe285-pAh9z3Qiy_27VXRqlp1uDM05BS5rIqNI-oJ-sJWjii-Ns9lVtTDESfd_DkxGoJgwTnF9uIsfkoyaw55TjNi8diAS5cZEjHumr" style="width:600px">
-Současná verze listu o prohlídce zemřelého
-</div>
+<figure>
+  <img src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%">
+  <figcaption>Současná verze listu o prohlídce zemřelého</figcaption>
+</figure>
 
 Samotný _list o prohlídce zemřelého_ má dvě části, klíčová je první: v nejvyšším řádku lékař uvede _bezprostřední příčinu smrti_, tedy stav, který úmrtí přímo způsobil. Od něj se postupně odvíjí řetězec zdravotních příčin, které ke kritickému stavu vedly; až k nemoci nebo zranění, které vše vyvolaly. Ty se označí za _základní příčinu smrti_. U každého stavu pak lékař doplní, jak dlouho před smrtí nastal.
 
@@ -631,11 +631,19 @@ List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. 
 
 „Některé triviální příčiny, jako je například padání vlasů, by neměly vést ke smrti,“ upozorňuje [na webu, věnovanému demografii](http://www.demografie.info/?cz_detail_clanku&artclID=840) na nejbizarnější chyby.
 
-<div id="posloupnosti" class="mock-content">
-<img src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:600px">
-</div>
+<figure>
+  <img src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%">
+  <figcaption>Současná verze listu o prohlídce zemřelého</figcaption>
+</figure>
 
-<div class="data-source">Zdroj: <a href="https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf">Jak správně postupovat při vyplňování Listu o prohlídce mrtvého, ÚZIS</a></div>
+<wide>
+  <figure id="posloupnosti" class="priciny-umrti-vis-static">
+    <img src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;">
+    <div class="source-reference">
+      Zdroj: <a href="https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf">Jak správně postupovat při vyplňování Listu o prohlídce mrtvého, ÚZIS</a>
+    </div>
+  </figure>
+</wide>
 
 Demografky s vyplněným listem o prohlídce zemřelého postupují opačně, zdola nahoru. Do statistiky příčin úmrtí obvykle uvedou stav, od kterého se začala posloupnost odvíjet, v ideálním případě _základní příčinu smrti_. Pokud na listu chybí, hledají začátek řetězce výš.
 
@@ -659,12 +667,15 @@ Tabulky _ACME_ demografky využívají od roku 2007, celý IRIS od 2011. Právě
 
 Na nečekaně masivní změně některých diagnóz, třeba právě diabetu, se podepsal také nenápadný detail: v roce 2012 na první část listu o prohlídce zemřelého statistici přidali čtvrtý řádek.
 
-<div id="graf-ateroskleroza" class="vis-static">
-  <img src="assets/svg/5.2_tlak_na_statistiku_des.svg" class="desktop">
-  <img src="assets/svg/5.2_tlak_na_statistiku_mob.svg" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: <a href="http://www.demografie.info/?cz_detail_clanku&artclID=840">Demografie.info</a></div>
+<wide>
+  <figure id="graf-ateroskleroza" class="priciny-umrti-vis-static">
+    <img src="assets/svg/5.2_tlak_na_statistiku_des.svg" class="desktop">
+    <img src="assets/svg/5.2_tlak_na_statistiku_mob.svg" class="mobile">
+    <div class="source-reference">
+      Zdroj: <a href="http://www.demografie.info/?cz_detail_clanku&artclID=840">Demografie.info</a>
+    </div>
+  </figure>
+</wide>
 
 Algoritmické určování příčin úmrtí má z pohledu statistiky zásadní výhodu: odstraňuje nahodilost. To je také hlavní důvod, proč národní statistické úřady tlačí k využívání podobných nástrojů Eurostat. Mezinárodní srovnatelnost byla v minulosti poměrně špatná a jednotné nástroje ji mají zlepšit. Jak ale ukázala pandemie covidu, zatím se to spíš nedaří.
 
@@ -722,12 +733,16 @@ Na stejné tiskové konferenci ředitel ÚZIS Ladislav Dušek ústy ministra Bla
 
 Musíme si vystačit s prozatímními čísly, podle kterých v roce 2020 na covid zemřelo XXX lidí. Novináři si proto loni našli berličku a naučili se nové slovo: _nadúmrtí_, tedy počet zemřelých nad dlouhodobým průměrem. I ten má proti skutečnému stavu zpoždění, ale jen několikatýdenní. Data o nadúmrtnosti ukazují na XXX mrtvých nad průměrem.
 
-<div id="graf-excess-mortality" class="vis-static">
-  <img src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" class="desktop">
-  <img src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: <a href="https://www.irozhlas.cz/zpravy-domov/celkova-umrti-listopad_2012070635_pek">Eurostat/ČSÚ, MV ČR – informativní výpis z evidence obyvatel</a></div>
+<wide>
+  <figure id="graf-excess-mortality" class="priciny-umrti-vis-static">
+    <!-- TODO: presunout do naseho repa -->
+    <img src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" class="desktop">
+    <img src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" class="mobile">
+    <div class="source-reference">
+      Zdroj: <a href="https://www.irozhlas.cz/zpravy-domov/celkova-umrti-listopad_2012070635_pek">Eurostat/ČSÚ, MV ČR – informativní výpis z evidence obyvatel</a>
+    </div>
+  </figure>
+</wide>
 
 Rozdíl mezi oběma čísly můžou být ukryté oběti covidu, ale z větší části jde o úmrtí spojená s tím, že se lékaři nemohli naplno věnovat pacientům s jinými diagnózami, s vyšší sebevražedností, dopady osamocení v sociálních zařízeních, a podobně.
 
