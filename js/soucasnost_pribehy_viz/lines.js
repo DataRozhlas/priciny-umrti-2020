@@ -228,6 +228,12 @@ export const categoryLineLabelPositions = {
     textAnchor: 'start',
   },
 
+  'Nemoci endokrinní, výživy a přeměny látek': {
+    x: d3.timeParse('%Y')(1998),
+    y: 25,
+    textAnchor: 'start',
+  },
+
   'Některé infekční a parazitární nemoci': {
     x: d3.timeParse('%Y')(2000),
     y: 8,
@@ -243,12 +249,6 @@ export const categoryLineLabelPositions = {
   'Dopravní nehody': {
     x: d3.timeParse('%Y')(2000),
     y: 18,
-    textAnchor: 'start',
-  },
-
-  'Napadení (útok)': {
-    x: d3.timeParse('%Y')(2000),
-    y: 5,
     textAnchor: 'start',
   },
 };

@@ -9,7 +9,7 @@ import * as xAxisAnnotations from './x_axis_annotations';
 
 export default {
   onScrollDownToStep: (viz) => {
-    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Napadení (útok)' });
+    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Dopravní nehody' });
 
     const exploreCategoryNames = ['Některé infekční a parazitární nemoci', 'Nemoci oběhové soustavy', 'Novotvary'];
 
@@ -96,7 +96,7 @@ export default {
       x: viz.x,
       y: viz.yCategoriesLower,
       dataMzStd: viz.dataMzStd,
-      activeCategoryNames: ['Napadení (útok)'],
+      activeCategoryNames: ['Dopravní nehody'],
     });
 
     axes.updateXAxis(viz, { x: viz.x, margin: viz.margin, duration: 700 });

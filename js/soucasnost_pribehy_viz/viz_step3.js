@@ -38,7 +38,7 @@ export default {
       x: viz.x,
       y: viz.yCategoriesLower,
       dataMzStd: viz.dataMzStdCategoriesLower,
-      activeCategoryNames: ['Některé infekční a parazitární nemoci'],
+      activeCategoryNames: ['Nemoci endokrinní, výživy a přeměny látek'],
       delay: 1400,
     });
   },

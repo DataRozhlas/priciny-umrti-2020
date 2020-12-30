@@ -8,7 +8,7 @@ export default {
       x: viz.x,
       y: viz.yCategoriesLower,
       dataMzStd: viz.dataMzStdCategoriesLower,
-      activeCategoryNames: ['Úmyslné sebepoškození'],
+      activeCategoryNames: ['Některé infekční a parazitární nemoci'],
     });
   },
   onScrollUpFromStep: (viz) => {
@@ -18,7 +18,7 @@ export default {
       x: viz.x,
       y: viz.yCategoriesLower,
       dataMzStd: viz.dataMzStdCategoriesLower,
-      activeCategoryNames: ['Některé infekční a parazitární nemoci'],
+      activeCategoryNames: ['Nemoci endokrinní, výživy a přeměny látek'],
     });
   },
 };
