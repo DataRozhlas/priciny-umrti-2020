@@ -329,7 +329,7 @@ const categoriesGroupsUnsorted = {
     'Nemoci soustavy nervové a smyslových ústrojů',
     'Otravy vleklé',
   ],
-  'Nepřirozené příčiny': ['Sebevraždy', 'Napadení', 'Dopravní nehody', 'Úrazy mimo dopravu', 'Popravy a války'],
+  'Násilí a nehody': ['Sebevraždy', 'Napadení', 'Dopravní nehody', 'Úrazy mimo dopravu', 'Popravy a války'],
 };
 
 const getCategoriesGroupsSortedByRightmostValueInGraph = (dataMzStd) => {

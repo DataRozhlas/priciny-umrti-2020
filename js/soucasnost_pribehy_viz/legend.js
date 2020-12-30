@@ -318,7 +318,7 @@ const categoriesGroupsUnsorted = {
     'Nemoci ucha',
     'Komplikace zdravotní péče',
   ],
-  'Nepřirozené příčiny': ['Sebevraždy', 'Napadení', 'Dopravní nehody', 'Úrazy mimo dopravu', 'Popravy a války'],
+  'Násilí a nehody': ['Sebevraždy', 'Napadení', 'Dopravní nehody', 'Úrazy mimo dopravu', 'Popravy a války'],
 };
 
 const getCategoriesGroupsSortedByRightmostValueInGraph = (dataMzStd) => {
