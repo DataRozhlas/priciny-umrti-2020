@@ -15,7 +15,7 @@ export const fadeInLegend = (viz, { exploreCategoryNames }) => {
   if (showLegendOnSide(viz)) {
     fadeInLegendOnSide(viz, { exploreCategoryNames });
   } else {
-    // fadeInLegendDropdown(viz, { exploreCategoryNames });
+    fadeInLegendDropdown(viz, { exploreCategoryNames });
   }
 };
 
@@ -24,6 +24,7 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
 
   const legendContainerEl = document.createElement('div');
   legendContainerEl.classList.add('priciny-umrti-pribehy-viz-legend');
+  legendContainerEl.classList.add('legend-on-side');
   legendContainerEl.style.maxHeight = `${viz.height - 50}px`;
   vizContainerEl.append(legendContainerEl);
 
@@ -31,6 +32,130 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
   scrollContainerEl.classList.add('legend-scroll-container');
   legendContainerEl.append(scrollContainerEl);
 
+  const { handleLegendItemCheckboxChange } = renderInsidesOfScrollContainer(viz, {
+    exploreCategoryNames,
+    scrollContainerEl,
+  });
+
+  window.setTimeout(() => {
+    legendContainerEl.classList.add('legend-show');
+    handleLegendItemCheckboxChange();
+  }, 700);
+};
+
+export const fadeOutLegend = (viz) => {
+  if (showLegendOnSide(viz)) {
+    fadeOutLegendOnSide(viz);
+  } else {
+    fadeOutLegendDropdown(viz);
+  }
+};
+
+export const fadeOutLegendOnSide = (viz) => {
+  const vizContainerEl = viz.svg.node().parentNode;
+
+  const legendContainerEl = vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
+  legendContainerEl.classList.remove('legend-show');
+
+  window.setTimeout(() => {
+    legendContainerEl.remove();
+  }, 700);
+};
+
+const fadeInLegendDropdown = (viz, { exploreCategoryNames }) => {
+  const vizContainerEl = viz.svg.node().parentNode;
+
+  const legendContainerEl = document.createElement('div');
+  legendContainerEl.classList.add('priciny-umrti-pribehy-viz-legend');
+  legendContainerEl.classList.add('legend-dropdown');
+  vizContainerEl.append(legendContainerEl);
+
+  legendContainerEl.innerHTML = `
+    <button type="button" class="legend-dropdown-button">
+      <div class="legend-dropdown-button-count"></div>
+      <div class="legend-dropdown-button-categories"></div>
+    </button>
+    <div class="legend-dropdown-menu">
+      <div class="legend-scroll-container"></div>
+    </div>
+  `;
+
+  const dropdownButtonEl = legendContainerEl.querySelector('.legend-dropdown-button');
+
+  dropdownButtonEl.addEventListener('click', () => {
+    if (legendContainerEl.classList.contains('open')) {
+      legendContainerEl.classList.remove('open');
+    } else {
+      legendContainerEl.classList.add('open');
+    }
+  });
+
+  const buttonCountEl = legendContainerEl.querySelector('.legend-dropdown-button-count');
+  const buttonCategoriesEl = legendContainerEl.querySelector('.legend-dropdown-button-categories');
+
+  const onShowCategoriesChange = (showCategoryNames) => {
+    if (showCategoryNames.length === 0) {
+      buttonCountEl.textContent = `Aktivních 0 z 22 skupin`;
+    } else if (showCategoryNames.length > 0 && showCategoryNames.length < 5) {
+      buttonCountEl.textContent = `Aktivní ${showCategoryNames.length} z 22 skupin`;
+    } else if (showCategoryNames.length >= 5) {
+      buttonCountEl.textContent = `Aktivních ${showCategoryNames.length} z 22 skupin`;
+    }
+
+    buttonCategoriesEl.innerHTML = '';
+
+    showCategoryNames.map((categoryName) => {
+      buttonCategoriesEl.innerHTML += `
+        <span class="legend-dropdown-button-category">
+          ${texts.categoriesShortLabels[categoryName]}
+          <span class="legend-dropdown-button-category-color" style="background-color: ${colors.categoryColorsActive[categoryName]};"></span>
+        </span>
+      `;
+    });
+  };
+
+  const scrollContainerEl = legendContainerEl.querySelector('.legend-scroll-container');
+
+  const { handleLegendItemCheckboxChange } = renderInsidesOfScrollContainer(viz, {
+    exploreCategoryNames,
+    scrollContainerEl,
+    onShowCategoriesChange,
+  });
+
+  window.setTimeout(() => {
+    legendContainerEl.classList.add('legend-show');
+    handleLegendItemCheckboxChange();
+  }, 0);
+};
+
+export const fadeOutLegendDropdown = (viz) => {
+  const vizContainerEl = viz.svg.node().parentNode;
+
+  const legendContainerEl = vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
+  legendContainerEl.classList.remove('legend-show');
+
+  window.setTimeout(() => {
+    legendContainerEl.remove();
+  }, 700);
+};
+
+export const isAddedLegend = (viz) => {
+  const vizContainerEl = viz.svg.node().parentNode;
+
+  return !!vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
+};
+
+export const removeLegend = (viz) => {
+  const vizContainerEl = viz.svg.node().parentNode;
+
+  const legendContainerEl = vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
+  legendContainerEl.remove();
+};
+
+const renderInsidesOfScrollContainer = (
+  viz,
+  { exploreCategoryNames, scrollContainerEl, onShowCategoriesChange = () => {} }
+) => {
   const categoriesGroups = getCategoriesGroupsSortedByRightmostValueInGraph(viz.dataMzStd);
 
   const handleLegendItemMouseover = (mouseoverCategoryName) => {
@@ -177,6 +302,8 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
       allChecked && groupCheckEl.classList.remove('group-action-show');
       allUnchecked && groupUncheckEl.classList.remove('group-action-show');
     });
+
+    onShowCategoriesChange(showCategoryNames);
   };
 
   const handleGroupActionClick = (groupName, action) => {
@@ -260,55 +387,9 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
     });
   });
 
-  window.setTimeout(() => {
-    legendContainerEl.classList.add('legend-show');
-    handleLegendItemCheckboxChange();
-  }, 700);
-};
-
-export const fadeOutLegend = (viz) => {
-  if (showLegendOnSide(viz)) {
-    fadeOutLegendOnSide(viz);
-  } else {
-    // TODO
-  }
-};
-
-export const fadeOutLegendOnSide = (viz) => {
-  const vizContainerEl = viz.svg.node().parentNode;
-
-  const legendContainerEl = vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
-  legendContainerEl.classList.remove('legend-show');
-
-  window.setTimeout(() => {
-    legendContainerEl.remove();
-  }, 700);
-};
-
-// TODO
-const fadeInLegendDropdown = (viz, { exploreCategoryNames }) => {
-  const vizContainerEl = viz.svg.node().parentNode;
-
-  const legendContainerEl = document.createElement('div');
-  legendContainerEl.classList.add('priciny-umrti-pribehy-viz-legend');
-  vizContainerEl.append(legendContainerEl);
-
-  const scrollContainerEl = document.createElement('div');
-  scrollContainerEl.classList.add('legend-scroll-container');
-  legendContainerEl.append(scrollContainerEl);
-};
-
-export const isAddedLegend = (viz) => {
-  const vizContainerEl = viz.svg.node().parentNode;
-
-  return !!vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
-};
-
-export const removeLegend = (viz) => {
-  const vizContainerEl = viz.svg.node().parentNode;
-
-  const legendContainerEl = vizContainerEl.querySelector('.priciny-umrti-pribehy-viz-legend');
-  legendContainerEl.remove();
+  return {
+    handleLegendItemCheckboxChange,
+  };
 };
 
 const categoriesGroupsUnsorted = {

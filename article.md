@@ -262,7 +262,7 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
       </div>
       <div class="b-inline__img">
         <!-- TODO: alt text -->
-        <img src="assets/gif/abs-rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
+        <img src="assets/gif/abs_rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
       </div>
     </div>
     <div class="b-inline__wrap priciny-umrti-hrb-std-box-std">
@@ -280,7 +280,7 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
       </div>
       <div class="b-inline__img">
         <!-- TODO: alt text -->
-        <img src="assets/gif/abs-rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
+        <img src="assets/gif/rel_std.gif" alt="" class="priciny-umrti-hrb-std-box-img">
       </div>
     </div>
   </div>
@@ -354,8 +354,8 @@ Podrobnější pohled prozradí věk válečných obětí nebo v čem je zákeř
 
 <wide>
   <figure id="graf-heatmap" class="priciny-umrti-vis-static">
-    <img src="assets/svg/2.5_heatmapa_des.svg" class="desktop">
-    <img src="assets/svg/2.5_heatmapa_v3_mob.svg" class="mobile">
+    <img src="assets/svg/2.4_heatmapa_des.svg" class="desktop">
+    <img src="assets/svg/2.4_heatmapa_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
     </div>
@@ -435,8 +435,8 @@ Podobné změny se ale mohou objevit na každém švu mezi dvěma revizemi. Nejv
 <wide>
   <figure id="graf-zlom" class="priciny-umrti-vis-static">
     <!-- TODO: alt texty -->
-    <img src="assets/svg/3.2_zlom_umrtnosti_des.svg" alt="" class="desktop">
-    <img src="assets/svg/3.2_zlom_umrtnosti_mob.svg" alt="" class="mobile">
+    <img src="assets/svg/3.2_zlom_umrti_des.svg" alt="" class="desktop">
+    <img src="assets/svg/3.2_zlom_umrti_mob.svg" alt="" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
     </div>
@@ -578,8 +578,8 @@ Přesto je i dnes v datech o délce dožití patrné, <a href="https://interakti
 <wide>
   <figure id="graf-zelezna-opona" class="priciny-umrti-vis-static">
     <!-- TODO: alt texty -->
-    <img src="assets/svg/4.5_mapa_des.svg" class="desktop">
-    <img src="assets/svg/4.5_mapa_mob.svg" class="mobile">
+    <img src="assets/svg/4.2_mapa_des.svg" class="desktop">
+    <img src="assets/svg/4.2_mapa_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://ec.europa.eu/eurostat/databrowser/view/tgs00101/default/table?lang=en">Life expectancy at birth by sex and NUTS 2 region, Eurostat</a>
     </div>
@@ -724,9 +724,9 @@ Na nečekaně masivní změně některých diagnóz, třeba právě diabetu, se 
 
 <wide>
   <figure id="graf-ateroskleroza" class="priciny-umrti-vis-static">
-    <img src="assets/svg/5.2_tlak_na_statistiku_des.svg" class="desktop">
-    <img src="assets/svg/5.2_tlak_na_statistiku_mob.svg" class="mobile">
-    <div class="source-reference">
+    <img src="assets/svg/5.2_strojove_kodovani_des.svg" class="desktop">
+    <img src="assets/svg/5.2_strojove_kodovani_mob.svg" class="mobile">
+    <div class="source-reference"> 
       Zdroj: <a href="http://www.demografie.info/?cz_detail_clanku&artclID=840">Demografie.info</a>
     </div>
   </figure>

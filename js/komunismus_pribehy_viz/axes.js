@@ -52,7 +52,7 @@ export const createYAxisLabel = (viz) => {
 
   if (window.innerWidth < 768) {
     xPos = 0;
-    yPos = 12;
+    yPos = 22;
     dy = 12;
   }
 
