@@ -181,6 +181,16 @@
       }
     }
 
+    &.stoleti-explorace-viz-legend {
+      .legend-dropdown-button {
+        top: 77px;
+      }
+
+      .legend-dropdown-menu {
+        top: 119px;
+      }
+    }
+
     &.open {
       .legend-dropdown-button::after {
         content: '▴';
