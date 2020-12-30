@@ -631,11 +631,6 @@ List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. 
 
 „Některé triviální příčiny, jako je například padání vlasů, by neměly vést ke smrti,“ upozorňuje [na webu, věnovanému demografii](http://www.demografie.info/?cz_detail_clanku&artclID=840) na nejbizarnější chyby.
 
-<figure>
-  <img src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%">
-  <figcaption>Současná verze listu o prohlídce zemřelého</figcaption>
-</figure>
-
 <wide>
   <figure id="posloupnosti" class="priciny-umrti-vis-static">
     <img src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;">
