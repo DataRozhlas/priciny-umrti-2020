@@ -276,5 +276,6 @@ export default {
     });
 
     legend.fadeOutLegend(viz);
+    tooltip.hideTooltip();
   },
 };

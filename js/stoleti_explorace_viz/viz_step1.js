@@ -102,6 +102,7 @@ export default {
   },
   onScrollUpFromStep: (viz) => {
     legend.fadeOutLegend(viz);
+    tooltip.hideTooltip();
 
     const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
     const dataMzStdCategoryTotal = viz.dataMzStd.find((category) => category.skupina === 'Celkem');
