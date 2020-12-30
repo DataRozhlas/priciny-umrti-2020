@@ -750,9 +750,6 @@ Musíme si vystačit s prozatímními čísly, podle kterých v roce 2020 na cov
     <!-- TODO: presunout do naseho repa -->
     <img src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" class="desktop">
     <img src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" class="mobile">
-    <div class="source-reference">
-      Zdroj: <a href="https://www.irozhlas.cz/zpravy-domov/celkova-umrti-listopad_2012070635_pek">Eurostat/ČSÚ, MV ČR – informativní výpis z evidence obyvatel</a>
-    </div>
   </figure>
 </wide>
 
