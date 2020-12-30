@@ -3,14 +3,14 @@ import scrollama from 'scrollama';
 import debounce from 'lodash/debounce';
 
 const ilustraceKapitol = () => {
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-1', 771 / 1800);
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-2', 771 / 1800);
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-3', 771 / 1800);
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-4', 771 / 1800);
-  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-5', 771 / 1800);
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-1');
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-2');
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-3');
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-4');
+  initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-5');
 };
 
-const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => {
+const initIlustraceKapitolyScrolly = (containerSelector) => {
   const containerEl = document.querySelector(containerSelector);
   if (!containerEl) {
     console.error(`Could not find scrolly container by selector "${containerSelector}"`);
@@ -20,10 +20,6 @@ const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => 
   const stepsContainerElement = document.createElement('div');
   stepsContainerElement.classList.add('priciny-umrti-ilustrace-kapitoly-steps-container');
   containerEl.append(stepsContainerElement);
-
-  const { width } = containerEl.getBoundingClientRect();
-  const height = width * heightToWidthRatio;
-  containerEl.style.height = `${height}px`;
 
   containerEl.querySelectorAll('img').forEach(() => {
     const stepElement = document.createElement('div');
