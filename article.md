@@ -16,12 +16,15 @@ Přesvědčivě to dokládají data o 407 zemřelých během první poloviny rok
 - 9 procent podlehlo jiné příčině, například úrazu
 - 64 procent zabil covid ve spojení s jinou nemocí, obvykle srdeční poruchou, diabetem nebo zhoubným nádorem
 
-<div id="graf-komorbidity" class="vis-static">
-<img src="assets/svg/0.1_komorbidity_des.svg" class="desktop">
-<img src="assets/svg/0.1_komorbidity_mob.svg" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: <a href="https://koronavirus.mzcr.cz/wp-content/uploads/2020/11/Data-o-celkov%C3%A9-mortalit%C4%9B-a-o-p%C5%99%C3%AD%C4%8Din%C3%A1ch-%C3%BAmrt%C3%AD-pacient%C5%AF-s-covid-19.pdf">prezentace MZ ČR</a></div>
+<wide>
+  <figure id="graf-komorbidity" class="priciny-umrti-vis-static">
+    <img src="assets/svg/0.1_komorbidity_des.svg" class="desktop">
+    <img src="assets/svg/0.1_komorbidity_mob.svg" class="mobile">
+    <div class="source-reference">
+      Zdroj: <a href="https://koronavirus.mzcr.cz/wp-content/uploads/2020/11/Data-o-celkov%C3%A9-mortalit%C4%9B-a-o-p%C5%99%C3%AD%C4%8Din%C3%A1ch-%C3%BAmrt%C3%AD-pacient%C5%AF-s-covid-19.pdf">Data o celkové mortalitě a o příčinách úmrtí pacientů s COVID-19, prezentace MZ ČR</a>
+    </div>
+  </figure>
+</wide>
 
 U prvních dvou skupin má otázka po příčině úmrtí jednoznačnou odpověď. Jenže u poslední – a největší – skupiny taková odpověď prostě neexistuje. Medicína se proto nejméně od první světové války snaží na základě dobových vědeckých poznatků rozhodnout, které z nemocí smrt spíše připsat.
 
@@ -365,12 +368,16 @@ Jenže na rozdíl od západu Evropy Československu optimismus dlouho nevydržel
 
 „Rostla úmrtnost na civilizační choroby, jako jsou nemoci oběhové soustavy a novotvary, protože vývoj léků kardiovaskulárních nemocí a vývoj cytostatik (_léků na ničení nádorových buněk, pozn. red._) nepřinášel předpokládané rychlé pozitivní účinky,“ pokračuje. „Úmrtnost v českých zemích neodpovídala vysoké úrovni českého zdravotnictví. Jeho efekty byly nižší než prostředky do něho vynakládané. Nelze pochybovat, že se na tom podílela i situace ekonomická a psychosociální.“
 
-<div id="graf-nadeje-doziti-komunismus" class="vis-static">
-  <img src="assets/svg/3.1_nadeje_doziti_des.svg" alt="" class="desktop">
-  <img src="assets/svg/3.1_nadeje_doziti_mob.svg" alt="" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a></div>
+<wide>
+  <figure id="graf-nadeje-doziti-komunismus" class="priciny-umrti-vis-static">
+    <!-- TODO: alt texty -->
+    <img src="assets/svg/3.1_nadeje_doziti_des.svg" alt="" class="desktop">
+    <img src="assets/svg/3.1_nadeje_doziti_mob.svg" alt="" class="mobile">
+    <div class="source-reference">
+      Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a>
+    </div>
+  </figure>
+</wide>
 
 Optikou příčin úmrtí se 20. století dělí na období do roku 1948 a období po něm. V tomto roce, na švu mezi pátou a šestou revizí, proběhl radikální řez: výrazně se proměnilo uspořádání diagnóz do skupin, změnila se také logika sledování vnějších příčin úmrtí – kromě otázky, _jak_ k němu došlo, přibyl anatomický pohled, _jaká část těla_ byla poraněna. Fakt, že zároveň s touto revolucí rozdělil 20. století také komunistický puč, je sympatická náhoda; umožňuje odděleně sledovat vývoj úmrtnosti ve starém a novém politickém režimu.
 
@@ -384,12 +391,16 @@ V Československu se nová pravidla začala uplatňovat po roce 1954 a projevila
 
 Podobné změny se ale mohou objevit na každém švu mezi dvěma revizemi. Nejviditelnější je ta mezi sedmou a osmou revizí na přelomu let 1967 a 1968. Z roku na rok přibylo víc než dvacet tisíc obětí oběhových nemocí, naopak u nemocí nervové soustavy spadla úmrtnost téměř na nulu. Nejde o zamlčený důsledek sovětské okupace – je to tím, že _mozkovou mrtvici_ nová klasifikace považuje za problém cév, nikoli nervů, jak tomu bylo dříve.
 
-<div id="graf-zlom" class="vis-static">
-<img src="assets/svg/3.2_zlom_umrtnosti_des.svg" class="desktop">
-<img src="assets/svg/3.2_zlom_umrtnosti_mob.svg" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
+<wide>
+  <figure id="graf-zlom" class="priciny-umrti-vis-static">
+    <!-- TODO: alt texty -->
+    <img src="assets/svg/3.2_zlom_umrtnosti_des.svg" alt="" class="desktop">
+    <img src="assets/svg/3.2_zlom_umrtnosti_mob.svg" alt="" class="mobile">
+    <div class="source-reference">
+      Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
+    </div>
+  </figure>
+</wide>
 
 Ještě jeden faktor hraje při výkladu dat podstatnou roli: podíl _nepřesně určených příčin úmrtí_. Ukazují to data z prvních let po vzniku Československa, kdy byla nejčastější příčinou úmrtí _stařecká sešlost_. V roce 1919 jí statistika připisuje 28 tisíc, tedy asi 16 procent všech úmrtí.
 
@@ -399,12 +410,16 @@ Pohledem současné medicíny jde o chybný údaj – lékaři by měli být sch
 
 Československá statistika úmrtí jako celek je na tom v tomto ohledu slušně – podíl nepřesných příčin brzy spadl pod deset procent a už tam zůstal.
 
-<div id="graf-nepresne-urcene-priciny" class="vis-static">
-  <img src="assets/svg/3.3_nepresne_priciny_des.svg" alt="" class="desktop">
-  <img src="assets/svg/3.3_nepresne_priciny_mob.svg" alt="" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
+<wide>
+  <figure id="graf-nepresne-urcene-priciny" class="priciny-umrti-vis-static">
+    <!-- TODO: alt texty -->
+    <img src="assets/svg/3.3_nepresne_priciny_des.svg" alt="" class="desktop">
+    <img src="assets/svg/3.3_nepresne_priciny_mob.svg" alt="" class="mobile">
+    <div class="source-reference">
+      Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
+    </div>
+  </figure>
+</wide>
 
 V některých částech země se ale dařilo méně. Zatímco v české části federace bylo v padesátých letech nepřesně určených úmrtí kolem pěti procent, na Slovensku čtyřikrát tolik. Jednou z příčin byla existence takzvaných laických ohledačů: ti s určením příčiny úmrtí zastoupili lékaře, pokud se nemohl dostavit. Na Slovensku přitom třetinu úmrtí ještě v padesátých letech stanovili právě laici.
 
@@ -498,12 +513,16 @@ Pivo a párek ostatně stále patří k obrazu spokojeného Čecha a <a href="ht
 
 „I v polovině 90. let zaostává Česká republika za ostatními vyspělými zeměmi Evropy _(v naději dožití, pozn. red.)_ zhruba o sedm až deset kalendářních let,“ píše v publikaci _Tisíc let obyvatelstva českých zemí_ demograf Vladimír Srb.
 
-<div id="fotka-nadeje-doziti-soucasnost" class="vis-static">
-  <img src="assets/svg/4.1_nadeje_doziti_des.svg" alt="" class="desktop">
-  <img src="assets/svg/4.1_nadeje_doziti_mob.svg" alt="" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Demografická příručka ČSÚ</a></div>
+<wide>
+  <figure id="graf-nadeje-doziti-soucasnost" class="priciny-umrti-vis-static">
+    <!-- TODO: alt texty -->
+    <img src="assets/svg/4.1_nadeje_doziti_des.svg" alt="" class="desktop">
+    <img src="assets/svg/4.1_nadeje_doziti_mob.svg" alt="" class="mobile">
+    <div class="source-reference">
+      Zdroj: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Demografická příručka ČSÚ</a>
+    </div>
+  </figure>
+</wide>
 
 Do devadesátých let Češi naňahňali <a href="https://cs.wikipedia.org/wiki/Druh%C3%BD_demografick%C3%BD_p%C5%99echod" target="_blank">hodnotovou revoluci</a>, která na Západě probíhá od let šedesátých.  V zemi tak během několika roků po pádu režimu stoupl věk, kdy žena povine první dítě, o pět let; první svatba se posunula o sedm let. Polovina manželství v té době končila rozvodem. Poměr dětí a seniorů se v tomto období [změnil ve prospěch seniorů](https://www.irozhlas.cz/zpravy-domov/-v-roce-1989-bylo-v-cesku-deti-skoro-dvakrat-vic-nez-senioru-pomer-se-otaci_201411100044_vkourimsky). Rychlost i rozsah změn ukazujeme v [interaktivní kalkulačce](https://www.irozhlas.cz/zpravy-domov/kalkulacka-spocitejte-si-kdy-vas-ceka-svatba-dite-rozvod-nebo-umrti_1704241238_sam).
 
@@ -513,12 +532,16 @@ S nástupem individualismu se zvýšila také životní úroveň a s ní délka 
 
 Přesto je i dnes v datech o délce dožití patrné, <a href="https://interaktivni.rozhlas.cz/umrti-srdce/" target="_blank">kudy vedla železná opona</a> mezi Západem a Východem. Třicet let po pádu Berlínské zdi se rozdíl v délce dožití sice snížil na tři až pět let, ale úplnému vymazání vytrvale odolává.
 
-<div id="graf-zelezna-opona" class="vis-static">
-  <img src="assets/svg/4.5_mapa_des.svg" class="desktop">
-  <img src="assets/svg/4.5_mapa_mob.svg" class="mobile">
-</div>
-
-<div class="data-source">Zdroj: <a href="https://ec.europa.eu/eurostat/databrowser/view/tgs00101/default/table?lang=en">Life expectancy at birth by sex and NUTS 2 region, Eurostat</a></div>
+<wide>
+  <figure id="graf-zelezna-opona" class="priciny-umrti-vis-static">
+    <!-- TODO: alt texty -->
+    <img src="assets/svg/4.5_mapa_des.svg" class="desktop">
+    <img src="assets/svg/4.5_mapa_mob.svg" class="mobile">
+    <div class="source-reference">
+      Zdroj: <a href="https://ec.europa.eu/eurostat/databrowser/view/tgs00101/default/table?lang=en">Life expectancy at birth by sex and NUTS 2 region, Eurostat</a>
+    </div>
+  </figure>
+</wide>
 
 V čem jsou dnes hlavní rozdíly mezi zeměmi na západ a na východ od železné opony? Ve kterých příčinách úmrtí zaostáváme? Můžeme se poučit, jak se s nimi před léty vypořádaly země, které se v epidemiologických ukazatelích pokoušíme dohnat?
 
