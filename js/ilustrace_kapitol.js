@@ -38,7 +38,7 @@ const initIlustraceKapitolyScrolly = (containerSelector, heightToWidthRatio) => 
 
   scroller
     .setup({
-      offset: 0.5,
+      offset: 0.4,
       step: `${containerSelector} .priciny-umrti-ilustrace-kapitoly-steps-container .priciny-umrti-ilustrace-kapitoly-step`,
     })
     .onStepEnter(({ element, direction, index }) => {

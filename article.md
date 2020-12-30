@@ -40,18 +40,20 @@ Dnešní medicína má tendenci preferovat chřipku – nakažlivé nemoci pova�
 
 Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl srovnávat počty obětí mezi zeměmi a co vlastně spojení _příčina úmrtí_ znamená, musíme se vrátit ještě do doby, kdy byly české země součástí Svaté říše Římské a ve stínu morových ran se moderní epidemiologie teprve rodila.
 
-<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
-  <img src="assets/1_ilustrace_kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/1_ilustrace_kapitoly/002.jpg" alt="">
-  <img src="assets/1_ilustrace_kapitoly/003.jpg" alt="">
-  <img src="assets/1_ilustrace_kapitoly/004.jpg" alt="">
-  <img src="assets/1_ilustrace_kapitoly/005.jpg" alt="">
-  <img src="assets/1_ilustrace_kapitoly/006.jpg" alt="">
-  <img src="assets/1_ilustrace_kapitoly/007.jpg" alt="">
-</div>
+<wide>
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
+    <img src="assets/1_ilustrace_kapitoly/001.jpg" alt="" class="active">
+    <img src="assets/1_ilustrace_kapitoly/002.jpg" alt="">
+    <img src="assets/1_ilustrace_kapitoly/003.jpg" alt="">
+    <img src="assets/1_ilustrace_kapitoly/004.jpg" alt="">
+    <img src="assets/1_ilustrace_kapitoly/005.jpg" alt="">
+    <img src="assets/1_ilustrace_kapitoly/006.jpg" alt="">
+    <img src="assets/1_ilustrace_kapitoly/007.jpg" alt="">
+  </div>
+</wide>
 
-<h2>Od faráře k demografovi: jak se umíralo za císaře pána</h2>
-<h2 class="time-span">1785 až 1918</h2>
+<h2 class="priciny-umrti-nadpis-kapitoly">Od faráře k demografovi: jak se umíralo za císaře pána</h2>
+<h2 class="priciny-umrti-podnadpis-kapitoly">1785 až 1918</h2>
 
 Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předci dožívali podobného věku jako ve středověku – průměrně méně než třiceti let. Na základě kosterních nálezů odhadují historici naději dožití v osmém století u kmenů, které žily na dnešním českém území, na 27,5 roku. O tisíc let později to bylo podle císařských dat 28,2 roku.
 
@@ -125,17 +127,19 @@ Podle Srba jsou ovšem pro české země demograficky podstatnější nepřímé
 
 Slabé válečné ročníky se zařezávají do statistiky dodnes: trend, kdy jsou české školky několik let poloprázdné a vzápětí přeplněné, spustilo právě rozkolísání dlouhodobě stabilní porodnosti za první světové války. Později se k nim přidala husákovská propopulační opatření a odklad plodnosti po sametové revoluci. Problém s nenarozenými válečnými dětmi řeší většina evropských zemí; u některých se ještě prohloubil za druhé války, nejpalčivěji chybějící generaci [vnímá Rusko](https://www.irozhlas.cz/zpravy-svet/rusove-proti-rusum-zeme-v-nevyhlasene-obcanske-valce_1504291200_zlo).
 
-<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-2">
-  <img src="assets/2_ilustrace_kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/2_ilustrace_kapitoly/002.jpg" alt="">
-  <img src="assets/2_ilustrace_kapitoly/003.jpg" alt="">
-  <img src="assets/2_ilustrace_kapitoly/004.jpg" alt="">
-  <img src="assets/2_ilustrace_kapitoly/005.jpg" alt="">
-  <img src="assets/2_ilustrace_kapitoly/006.jpg" alt="">
-</div>
+<wide>
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-2">
+    <img src="assets/2_ilustrace_kapitoly/001.jpg" alt="" class="active">
+    <img src="assets/2_ilustrace_kapitoly/002.jpg" alt="">
+    <img src="assets/2_ilustrace_kapitoly/003.jpg" alt="">
+    <img src="assets/2_ilustrace_kapitoly/004.jpg" alt="">
+    <img src="assets/2_ilustrace_kapitoly/005.jpg" alt="">
+    <img src="assets/2_ilustrace_kapitoly/006.jpg" alt="">
+  </div>
+</wide>
 
-<h2>Od španělské chřipky k německému exodu</h2>
-<h2 class="time-span">1919 až 1948</h2>
+<h2 class="priciny-umrti-nadpis-kapitoly">Od španělské chřipky k německému exodu</h2>
+<h2 class="priciny-umrti-podnadpis-kapitoly">1919 až 1948</h2>
 
 V posledním válečném roce zasáhla Evropu pandemie španělské chřipky s [násobně vyšším počtem obětí](https://www.czso.cz/documents/10180/123310412/13005320q3_salfellner.pdf/cdb4e701-2f63-4182-be7d-e8c998a9a830?version=1.1) než samotná válka. Vzápětí se úmrtnost zásadně snížila: ještě v roce 1919 zemřelo v české kotlině téměř 180 tisíc lidí, o čtyři roky později 142 tisíc. Na nižší hladině úmrtnost zůstala po většinu první republiky.
 
@@ -383,17 +387,19 @@ Na frontě podle demografa zahynulo také 190 tisíc československých Němců 
 
 Na rozdíl od první světové války ovšem nedošlo k většímu propadu porodnosti ani nárůstu úmrtnosti – u české populace se v době protektorátu obě čísla rozkolísala, ale dlouhodobé trendy se nezměnily.
 
-<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-3">
-  <img src="assets/3_ilustrace_kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/3_ilustrace_kapitoly/002.jpg" alt="">
-  <img src="assets/3_ilustrace_kapitoly/003.jpg" alt="">
-  <img src="assets/3_ilustrace_kapitoly/004.jpg" alt="">
-  <img src="assets/3_ilustrace_kapitoly/005.jpg" alt="">
-  <img src="assets/3_ilustrace_kapitoly/006.jpg" alt="">
-</div>
+<wide>
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-3">
+    <img src="assets/3_ilustrace_kapitoly/001.jpg" alt="" class="active">
+    <img src="assets/3_ilustrace_kapitoly/002.jpg" alt="">
+    <img src="assets/3_ilustrace_kapitoly/003.jpg" alt="">
+    <img src="assets/3_ilustrace_kapitoly/004.jpg" alt="">
+    <img src="assets/3_ilustrace_kapitoly/005.jpg" alt="">
+    <img src="assets/3_ilustrace_kapitoly/006.jpg" alt="">
+  </div>
+</wide>
 
-<h2>Pivo, bůček, cigára: temná éra pro srdce</h2>
-<h2 class="time-span">1949 až 1989</h2>
+<h2 class="priciny-umrti-nadpis-kapitoly">Pivo, bůček, cigára: temná éra pro srdce</h2>
+<h2 class="priciny-umrti-podnadpis-kapitoly">1949 až 1989</h2>
 
 I po druhé světové válce následovala éra, kdy úmrtnost padala a věk se prodlužoval: díky antibiotikům – a později také očkování – se povedlo vymýtit strašidlo dětské tuberkulózy, spály nebo záškrtu. Podobný průběh se odehrál v celé Evropě a většině industrializovaných zemí.
 
@@ -528,17 +534,19 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
   </div>
 </wide>
 
-<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4">
-  <img src="assets/4_ilustrace_kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/4_ilustrace_kapitoly/002.jpg" alt="">
-  <img src="assets/4_ilustrace_kapitoly/003.jpg" alt="">
-  <img src="assets/4_ilustrace_kapitoly/004.jpg" alt="">
-  <img src="assets/4_ilustrace_kapitoly/005.jpg" alt="">
-  <img src="assets/4_ilustrace_kapitoly/006.jpg" alt="">
-</div>
+<wide>
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4">
+    <img src="assets/4_ilustrace_kapitoly/001.jpg" alt="" class="active">
+    <img src="assets/4_ilustrace_kapitoly/002.jpg" alt="">
+    <img src="assets/4_ilustrace_kapitoly/003.jpg" alt="">
+    <img src="assets/4_ilustrace_kapitoly/004.jpg" alt="">
+    <img src="assets/4_ilustrace_kapitoly/005.jpg" alt="">
+    <img src="assets/4_ilustrace_kapitoly/006.jpg" alt="">
+  </div>
+</wide>
 
-<h2>Stín po železné oponě</h2>
-<h2 class="time-span">1990 až 2018</h2>
+<h2 class="priciny-umrti-nadpis-kapitoly">Stín po železné oponě</h2>
+<h2 class="priciny-umrti-podnadpis-kapitoly">1990 až 2018</h2>
 
 Sametová revoluce ze dne na den změnila politický režim. Proměnit tak setrvačný obor jako zdravotnictví je ovšem záležitost na desítky let. Zvlášť ukazatele jako délka dožití se mění zvolna, jelikož starší generace se většinou drží svých životních návyků a zlozvyků, k nim se přidává zdravotní zátěž z minulých let.
 
@@ -646,17 +654,19 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
   </div>
 </wide>
 
-<div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
-  <img src="assets/5_ilustrace_kapitoly/001.jpg" alt="" class="active">
-  <img src="assets/5_ilustrace_kapitoly/002.jpg" alt="">
-  <img src="assets/5_ilustrace_kapitoly/003.jpg" alt="">
-  <img src="assets/5_ilustrace_kapitoly/004.jpg" alt="">
-  <img src="assets/5_ilustrace_kapitoly/005.jpg" alt="">
-  <img src="assets/5_ilustrace_kapitoly/006.jpg" alt="">
-</div>
+<wide>
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
+    <img src="assets/5_ilustrace_kapitoly/001.jpg" alt="" class="active">
+    <img src="assets/5_ilustrace_kapitoly/002.jpg" alt="">
+    <img src="assets/5_ilustrace_kapitoly/003.jpg" alt="">
+    <img src="assets/5_ilustrace_kapitoly/004.jpg" alt="">
+    <img src="assets/5_ilustrace_kapitoly/005.jpg" alt="">
+    <img src="assets/5_ilustrace_kapitoly/006.jpg" alt="">
+  </div>
+</wide>
 
-<h2>Do střev</h2>
-<h2 class="time-span">2020 a dál</h2>
+<h2 class="priciny-umrti-nadpis-kapitoly">Do střev</h2>
+<h2 class="priciny-umrti-podnadpis-kapitoly">2020 a dál</h2>
 
 Poslední krok k pochopení úvodní otázky – co znamená _na covid_ a co _s covidem_ – je pohled pod ruce těch, kteří příčiny úmrtí zapisují dnes.
 
@@ -754,7 +764,7 @@ Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi um�
   </div>
 </wide>
 
-<h2>Covidová poprvé</h2>
+<h2 class="priciny-umrti-nadpis-posledni-kapitoly">Covidová poprvé</h2>
 
 „Značná část zemřelých vykazovala řadu komorbidit, která průběh nemoci komplikovala,“ vysvětloval ministr zdravotnictví Jan Blatný v tiskové konferenci, kterou jsme článek otevírali. Na stejném místě ho i uzavřeme.
 

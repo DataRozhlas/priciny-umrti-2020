@@ -52,8 +52,8 @@
 
   .priciny-umrti-ilustrace-kapitoly-steps-container {
     position: absolute;
-    top: -15vh;
-    bottom: -5vh;
+    top: -10vh;
+    bottom: 0;
     left: 0;
     right: 0;
     display: flex;
@@ -67,6 +67,36 @@
   @media (max-width: 767.9px) {
     margin-top: 100px;
   }
+}
+
+.priciny-umrti-nadpis-kapitoly {
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+}
+
+.priciny-umrti-podnadpis-kapitoly {
+  margin-top: .3em;
+  margin-bottom: 1em;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+@media (max-width: 767.9px) {
+  .priciny-umrti-nadpis-kapitoly {
+    margin-top: .75em;
+    font-size: 2rem;
+  }
+
+  .priciny-umrti-podnadpis-kapitoly {
+    font-size: 1.5rem;
+  }
+}
+
+.priciny-umrti-nadpis-posledni-kapitoly {
+  margin-top: 150px;
+  margin-bottom: .75em;
+  font-size: 2.5rem;
 }
 
 .priciny-umrti-ilustrace-podivne-diagnozy-img {
