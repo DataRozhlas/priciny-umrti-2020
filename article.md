@@ -530,12 +530,6 @@ S novými infekcemi jsou spojena nová rizika. Problémy nemocí přenesených z
 
 Oproti klasickým civilizačním nemocem navíc nákazy často zabíjejí v nižším věku, některé výrazně – například AIDS. Pokud bychom se tedy ptali, o kolik roků nemoc zkrátila život, infekční nemoci budou hrát větší roli než aktuální dvě procenta v celkové úmrtnosti.
 
-<div id="graf-umrtnost-podle-veku" class="mock-content">
-<img src="https://lh4.googleusercontent.com/_1atMMuoqgM5BTodfE9ZnHVICs4tnYNFlt4kEiLae-I02OZv5EhWkAGId-DwPUYciUZTfgcACfOlmDv05mjzZZkX1wI3LcKwGMs2DQED_YFbPoQb3--JC6MY2zkG8iCT4plMA7EW" style="width:600px">
-</div>
-
-<div class="data-source">Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a></div>
-
 Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revoluce optimistický.
 
 <wide>
