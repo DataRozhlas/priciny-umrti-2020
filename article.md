@@ -11,10 +11,10 @@ Představte si situaci: pacient, který se celoživotně léčí s cukrovkou, se
 
 Pod svícnem pandemie se zdá jasné, že koronavirus. Jenže bez souběžných zdravotních problémů – _komorbidit_ – nemoc zabíjí málokdy.
 
-Přesvědčivě to dokládají data o 407 zemřelých během první poloviny roku 2020 s pozitivním testem na covid. Ministr zdravotnictví Jan Blatný při [prezentaci závěrů](https://www.facebook.com/watch/?v=411624583222188) jinak neveřejné studie rozdělil oběti do tří skupin:
+Přesvědčivě to dokládají data o 407 zemřelých během první poloviny roku 2020 s pozitivním testem na covid. Ministr zdravotnictví Jan Blatný při [prezentaci závěrů](https://www.facebook.com/watch/?v=411624583222188) dosud nezveřejněné studie rozdělil oběti do tří skupin:
 - 27 procent zemřelo na covid
-- 9 procent podlehlo jiné příčině, například úrazu
-- 64 procent zabil covid ve spojení s jinou nemocí, obvykle srdeční poruchou, diabetem nebo zhoubným nádorem
+- 9 procent podlehlo spíš akutní příčině, například infarktu nebo úrazu
+- 64 procent mělo kromě covidu jinou chronickou nemoc, obvykle srdeční poruchu, diabetes nebo zhoubný nádor
 
 <wide>
   <figure id="graf-komorbidity" class="priciny-umrti-vis-static">
@@ -30,15 +30,15 @@ U prvních dvou skupin má otázka po příčině úmrtí jednoznačnou odpově�
 
 Nejde vůbec o akademický spor: odpověď často ovlivní rozvoj medicíny na desítky let dopředu. Nemoci, které se mezi příčinami úmrtí objevují nejčastěji, mají také největší pozornost odborné komunity. Ta se zase často přeleje do rozpočtů.
 
-Lékařská statistika většinou předpokládá, že příčina úmrtí je jen jedna. Mají lékaři při rozhodování, zda zabíjel diabetes či covid, upřednostnit dlouhodobé zdravotní potíže, nebo krátkou intenzivní nemoc? Ať už zvolí jedno nebo druhé – což musí dělat systematicky, pokud nemají být data nahodilá – pak nutně zmizí část informace.
+Lékařská statistika většinou předpokládá, že příčina úmrtí je jen jedna. Mají lékaři při rozhodování, zda zabíjel diabetes či covid, upřednostnit dlouhodobé zdravotní potíže, nebo krátkou intenzivní nemoc? Ať už zvolí jedno nebo druhé, pak nutně zmizí část informace.
 
 _Příčina úmrtí: covid-19_ skrývá, že jde o pacienta s dlouhodobými potížemi. Opačný případ, kdy by statistika upřednostnila diabetes, zase opomíjí fakt, že bez covidu by žil podstatně déle. Podle lékařů není výjimka, když virus zkrátí život o deset i dvacet let.
 
 Nahraďte koronavirus v příkladu chřipkou a máte představu o dilematu, se kterým se zdravotnictví musí vypořádat. Zabíjela cukrovka, nebo chřipka?
 
-Dnešní medicína má tendenci preferovat chřipku – nakažlivé nemoci považuje za celospolečenské riziko, stejně jako v dobách, kdy řádila cholera nebo pravé neštovice. Poslední rok možná překvapivě ukázal, že oprávněně: dnešní společnost je vůči epidemiím podobně křehká jako před dvěma sty lety.
+Dnešní medicína nastavuje pravidla pro rozhodování, ale odpověď nechává na lékaři. U chřipky bude opatrnější – nakažlivé nemoci považuje za celospolečenské riziko, stejně jako v dobách, kdy řádila cholera nebo pravé neštovice. Poslední rok možná překvapivě ukázal, že oprávněně: dnešní společnost je vůči epidemiím podobně křehká jako před dvěma sty lety.
 
-Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl srovnávat počty obětí mezi zeměmi a co vlastně spojení _příčina úmrtí_ znamená, musíme se vrátit ještě do doby, kdy byly české země součástí Svaté říše Římské a ve stínu morových ran se moderní epidemiologie teprve rodila.
+Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl srovnávat počty obětí mezi zeměmi a co vlastně spojení _příčina úmrtí_ doopravdy znamená, musíme se vrátit ještě do doby, kdy byly české země součástí Svaté říše Římské a ve stínu morových ran se moderní epidemiologie teprve rodila.
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
@@ -163,7 +163,7 @@ MKN vznikla roku 1893 a po úspěchu ve Spojených státech se počátkem 20. st
 
 Autoři MKN navíc počítali s tím, že s rozvojem medicíny bude třeba klasifikaci aktualizovat – každých deset let proto chtěli zavést novou revizi s upraveným seznamem nemocí. V roce 1919, kdy statistiku zavádělo Československo, platila druhá revize, označovaná MKN-2.
 
-Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, například _infekční nemoci_ nebo _úrazy_. Přesné názvy konkrétních příčin se mezi revizemi často mění, zanikají a vznikají nebo přesunují mezi skupinami – například _stáří_ jako příčina úmrtí se během celého století přes _stařeckou sešlost_ (_s_ nebo _bez zblbělosti starobní_) a řadu dalších variant obloukem vrátilo k názvu diagnózy _stáří – senilita_. Oproti tomu nadřazené třídy příčin většinou zůstávají stabilní. Umožňují tak srovnávat úmrtnost od roku 1919 dodnes.
+Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, například _infekční nemoci_ nebo _úrazy_. Přesné názvy konkrétních příčin se mezi revizemi často mění, zanikají a vznikají nebo přesunují mezi kapitolami – například _stáří_ jako příčina úmrtí se během celého století přes _stařeckou sešlost_ (_s_ nebo _bez zblbělosti starobní_) a řadu dalších variant obloukem vrátilo k názvu diagnózy _stáří – senilita_. Oproti tomu právě kapitoly většinou zůstávají stabilní. Umožňují tak srovnávat úmrtnost od roku 1919 dodnes.
 
 <wide>
   <figure class="priciny-umrti-vis-static priciny-umrti-top-mkn-diagnozy">
@@ -601,51 +601,51 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
 <wide>
   <div class="datarozhlas-scrolly priciny-umrti-scrolly soucasnost-pribehy-scrolly">
     <div class="datarozhlas-scrolly-step">
-      <h3>Vývoj úmrtí 1990-2018</h3>
+      <h3>Devadesátkový optimismus</h3>
       <p>
-        XXX
+        Sametová revoluce po desetiletích stagnace vrátila pozitivní vývoj. Naděje na lepší zítřky i rychle rostoucí životní úroveň devadesátých let pomohly snížit standardizovanou míru úmrtnosti z 1102 úmrtí na 100 tisíc obyvatel v roce 1990 na 807 v roce 2000. Až v posledních letech trend zpomalil.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Zlom v nemocech srdce</h3>
       <p>
-        Nejdůležitější zpráva posledních třiceti let zní: radikálně ubylo obětí nemocí srdce a cév, jasně dominantní příčiny úmrtí. V absolutních číslech o třetinu. Ve standardizované úmrtnosti – tedy jak by se změnil počet obětí, kdyby byla věková struktura populace v celém období stejná jako v roce 2018 – spadla dokonce na 40 procent.
+        Nejdůležitější lékařská zpráva posledních třiceti let zní: ubylo obětí nemocí srdce a cév. Ze 72 tisíc v roce 1990 na současných 48 tisíc obětí, neboli z 56 procent všech úmrtí na 43 procent. Změnil se životní styl, mohutně se rozšířily možnosti akutní medicíny i spektrum léků pro kardiaky.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Delší život, vyšší podíl rakoviny</h3>
       <p>
-        Obětí novotvarů jsou asi o čtvrtinu častěji muži než ženy. V posledních třiceti letech standardizovaná úmrtnost klesá u obou pohlaví, u mužů ale rychleji, proto se také délka života mírně srovnává. Nejčastější příčinou úmrtí ve skupině je dlouhodobě rakovina průdušky a plíce.
+        Rakovina patří k nemocem, které obvykle nastupují ve vyšším věku. S rostoucí nadějí dožití se proto také zvyšuje podíl rakoviny na všech úmrtích. Dnes má na svědomí asi 25 procent všech úmrtí, u mužů o procento více, u žen méně. Nejvíc obětí mezi nádory má dlouhodobě rakovina průdušky a plíce.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Diabetes v datech</h3>
       <p>
-        Od začátku století v datech přibývá diagnózy <em>jiná sepse</em>: bakteriální infekce, které se typicky objeví po operaci. Sepse často doprovází jinou nemoc, zřejmě tak jde o častější příčinu úmrtí, než ukazují data.
+        V roce 2013 náhle o třetinu vyletěl počet obětí nemocí žláz a výživy. Na vyšší hladině už zůstal. Není to tím, že by Čechy překvapil hlad; jde o důsledek subtilní změny na listu o prohlídce zemřelého. Doplnění jednoho řádku do řetězce příčin úmrtí nečekaně výrazně zvýšilo podíl diabetiků ve statistice.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Sepse a rezistentní bakterie</h3>
       <p>
-        Sebevražednost po sametové revoluci dál klesala. Výjimkou je období po globální ekonomické krizi – v letech 2009 až 2013 se počty sebevražd na čas zvýšily.
+        Od začátku 21. století opět roste zastoupení infekčních nemocí. Stále jde o minoritní příčiny, celá kapitola může za cca dvě procenta úmrtí. Za nárůstem stojí hlavně diagnóza <em>jiná sepse</em>: bakteriální infekce, která se typicky objeví po operaci. Do budoucna jsou rizikem bakterie rezistentní vůči antibiotikům.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Ekonomická krize a sebevraždy</h3>
       <p>
-        Do roku 1994 pokračoval trend z minulého období: obětí dopravních nehod přibývalo. V tomto roce se na trhu objevila Škoda Fabia, v následujících letech obětí ubylo. Nejčastějšími obětmi dopravních nehod jsou nicméně stále chodci.
+        Od šedesátých let pokračuje trend snižování počtu sebevražd. Výjimkou je období po globální ekonomické krizi – v letech 2009 až 2013 se statistika sebevražednosti načas zhoršila, podobně jako ve třicátých letech minulého století. Přesto dnes vlastní rukou zemře dvojnásobek lidí, než kolik jich zemře na silnicích.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>XXX</h3>
+      <h3>Favorit → Fabia</h3>
       <p>
-        Těsně po revoluci přibývalo obětí trestných činů, po pěti letech číslo začalo klesat. Nejčastější příčinou úmrtí ve skupině je <em>napadení ostrým předmětem</em>, obětí střelných zbraní je dnes minimum.
+        U dopravních nehod přinesl začátek devadesátých let nárůst počtu obětí – až do roku 1994, kdy chatrnou Škodu Favorit začala nahrazovat bezpečnější Fabia. Podle dopravních expertů je skutečně mezi poklesem úmrtnosti na silnicích a novým modelem škodovky souvislost.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Proklikejte si</h3>
+      <h3>Najděte další příběhy sami</h3>
       <p>
-        Nyní si sami můžete prohlédnout kompletní data.
+        Možná jsou vám tato data bližší než data z minulých období. Ponořte se do nich.
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
@@ -674,24 +674,24 @@ Představa, kde hledat skutečnou příčinu úmrtí, je dnes stejná jako v roc
 
 Postupy, jak ji hledat, se ale neustále mění. Na jednu stranu dnes většina zemí na planetě využívá _MKN-10_, která je k dispozici přes 25 let; to je nejdelší období se stejnými pravidly. Jenže od roku 1994, kdy vstoupila v platnost, je minimálně stejně důležitý způsob, _jak_ lékař a po něm statistci příčinu smrti vybírají. Přestože je lidský faktor při rozhodování nezbytný, některá rozhodnutí usnadňuje a zpřesňuje strojové zpracování. Na výsledné statistice se projeví velmi výrazně – v letech, kdy se nástroje zaváděly, se v časových řadách u některých diagnóz objevují výrazné zlomy.
 
-První krok při určování příčiny úmrtí má na starosti ohledávající lékař, který vyplní _list o prohlídce zemřelého_. K většině úmrtí v současnosti dochází v nemocicích, kde má lékař k dispozici detailní anamnézu mrtvého. Pokud si příčinou není jistý, může nařídit pitvu. V některých situacích to přímo nařizuje zákon.
+První krok při určování příčiny úmrtí má na starosti ohledávající lékař, který vyplní _list o prohlídce zemřelého_. K [necelým dvěma třetinám úmrtí dochází v nemocicích](https://www.uzis.cz/res/f/008309/demozem2018.pdf), kde má lékař k dispozici detailní anamnézu mrtvého. Pokud si příčinou není jistý, může nařídit pitvu. V některých situacích to přímo nařizuje [zákon o zdravotních službách](https://www.zakonyprolidi.cz/cs/2011-372#cast7).
 
-„V zásadě by ohledávající lékař měl vyslovit návrh k pitvě vždy při pochybnosti o příčině smrti u osob zemřelých náhle, u osob žijících osaměle, zemřelých mimo zdravotnická zařízení a v případě, že je nucen uvést diagnózu _příčina smrti neznámá_,“ popisuje [manuál pro lékaře](https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf).
+„V zásadě by ohledávající lékař měl vyslovit návrh k pitvě vždy při pochybnosti o příčině smrti u osob zemřelých náhle, u osob žijících osaměle, zemřelých mimo zdravotnická zařízení a v případě, že je nucen uvést diagnózu _příčina smrti neznámá_,“ popisuje manuál pro lékaře.
 
 <figure>
   <img src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%">
   <figcaption>Současná verze listu o prohlídce zemřelého</figcaption>
 </figure>
 
-Samotný _list o prohlídce zemřelého_ má dvě části, klíčová je první: v nejvyšším řádku lékař uvede _bezprostřední příčinu smrti_, tedy stav, který úmrtí přímo způsobil. Od něj se postupně odvíjí řetězec zdravotních příčin, které ke kritickému stavu vedly; až k nemoci nebo zranění, které vše vyvolaly. Ty se označí za _základní příčinu smrti_. U každého stavu pak lékař doplní, jak dlouho před smrtí nastal.
+Lékařská část _listu o prohlídce zemřelého_ má dva oddíly, klíčový je první: v jeho nejvyšším řádku lékař uvede _bezprostřední příčinu smrti_, tedy stav, který úmrtí přímo způsobil. Od něj se postupně odvíjí řetězec zdravotních příčin, které ke kritickému stavu vedly; až k nemoci nebo zranění, které vše vyvolaly. Ty se označí za _základní příčinu smrti_. U každého stavu pak lékař doplní, jak dlouho před smrtí nastal.
 
-V druhé části listu lékař doplní ještě zdravotní problémy zemřelého, které ale podle jeho názoru na fatální řetězec nemají vliv.
+V druhé části listu lékař doplní ještě zdravotní problémy zemřelého, které ale podle jeho názoru na fatální vyústění nemají vliv.
 
-List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. Vzniká u demografek ČSÚ, ale metodicky ji hlídá a koordinuje jediná žena: Šárka Dušková na ÚZIS. Ta také spravuje registr, kde se listy shromažďují, školí lékaře nebo hlídá, aby se česká metodika shodovala s [obsáhlými pravidly WHO](https://www.uzis.cz/res/f/008277/mkn-10-instrukcni-prirucka-20200101.pdf). Loni měla navíc specifickou pracovní náplň: u covidových úmrtí po lékařích kontrolovala, zda řetězec diagnóz dává smysl.
+List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. Data vznikají na ČSÚ, ale metodiku hlídá ÚZIS. Ten také spravuje registr, kde se listy shromažďují, školí lékaře nebo hlídá, aby se česká metodika shodovala s obsáhlými pravidly WHO.
 
-„Na rozdíl od lékařů už nemáme přístup ke zdravotní dokumentaci, proto jsme závislí na tom, jak kvalitně list o prohlídce zemřelého vyplní,“ popisuje roli demografek z obou úřadů Daňková. „Nerada bych, aby to vyznělo špatně, ale právě chybně vyplněný list je častý problém.“
+„Na rozdíl od lékařů už nemáme přístup ke zdravotní dokumentaci, proto jsme závislí na tom, jak kvalitně list o prohlídce zemřelého vyplní,“ vysvětluje Šárka Daňková z ÚZIS, která je garantkou zmíněných činností. „Nerada bych, aby to vyznělo špatně, ale právě chybně vyplněný list je častý problém.“
 
-„Některé triviální příčiny, jako je například padání vlasů, by neměly vést ke smrti,“ upozorňuje [na webu, věnovanému demografii](http://www.demografie.info/?cz_detail_clanku&artclID=840) na nejbizarnější chyby.
+„Některé triviální příčiny, jako je například padání vlasů, by neměly vést ke smrti,“ připomíná [na webu, věnovanému demografii](http://www.demografie.info/?cz_detail_clanku&artclID=840) na nejbizarnější chyby.
 
 <wide>
   <figure id="posloupnosti" class="priciny-umrti-vis-static">
@@ -702,21 +702,19 @@ List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. 
   </figure>
 </wide>
 
-Demografky s vyplněným listem o prohlídce zemřelého postupují opačně, zdola nahoru. Do statistiky příčin úmrtí obvykle uvedou stav, od kterého se začala posloupnost odvíjet, v ideálním případě _základní příčinu smrti_. Pokud na listu chybí, hledají začátek řetězce výš.
+Statistici s vyplněným listem o prohlídce zemřelého postupují opačně, zdola nahoru. Do dat o příčinách úmrtí obvykle uvedou stav, od kterého se podle lékaře začala posloupnost odvíjet, a označí jej za _základní příčinu smrti_.
 
-Právě tady do procesu zasáhla automatizace asi nejvýrazněji: od roku 2011 mají demografky k ruce IRIS, algoritmus, který na bezproblémových listech o prohlídce zemřelého najde příčinu automaticky. Takových je asi devadesát procent případů.
+Právě tady do procesu zasáhla automatizace asi nejvýrazněji: od roku 2011 mají statistici k ruce IRIS, algoritmus, který na listech o prohlídce zemřelého najde příčinu podle pravidel WHO automaticky. Jejich principy naznačuje zjednodušený [manuál pro lékaře](https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf), ale [plné znění](https://www.uzis.cz/res/f/008277/mkn-10-instrukcni-prirucka-20200101.pdf) je příliš složité, aby je nosily v hlavě lidské bytosti. Asi devadesát procent případů, které IRIS projde, je bezproblémových.
 
-Jenže ne všechny. Zbylých deset procent, tedy asi deset tisíc listů ročně, algoritmus kvůli chybám vrátí. U nich demografky hledají příčinu manuálně: při hledání správného řetězce mohou přeházet nebo obrátit posloupnost stavů, vedoucích ke smrti, nebo si „vypůjčit“ příčinu z druhé části listu o prohlídce zemřelého. Tam, kde nemají řešení ani pak, se často obrátí na lékaře, který list vyplňoval.
+Jenže ne všechny. Se zbylými deseti procenty, tedy asi deseti tisíci listů ročně, si algoritmus kvůli chybám neví rady. U nich statistici hledají příčinu manuálně: při hledání správného řetězce pomáhají IRIS najít někde na listu uvedenou příčinu, například si ji „vypůjčit“ z druhé části listu o prohlídce zemřelého.
 
-IRIS při kontrole listů aplikuje pravidla WHO, která jsou příliš složitá, aby všechna najednou nosily v hlavě lidské bytosti. Když riskneme rychlý pohled do střev algoritmu, narazíme ovšem na záhyb, který je pro kódování covidu klíčový – tabulky _ACME_.
+„Někdy se ozveme lékaři, který list vyplňoval. Ale to jen ve vzácných případech, kdy je jako příčina úmrtí uvedená cholera, vypadané vlasy nebo podobná diagnóza,“ popisuje Daňková.
 
-Tabulky říkají jen to, jaké mohou být vztahy mezi diagnózami, uvedenými na listu. Za prvé určují, zda na sebe mohou navazovat. Je _pád ze žebříku_ a následná _zlomenina stehenní kosti_ platná posloupnost? Pravděpodobně ano. Zatímco _pád ze žebříku_ a následný _pásový opar_ není. Pokud posloupnost nesedí, IRIS se nazlobí a list demografkám vrátí.
+Když riskneme rychlý pohled do střev algoritmu, narazíme na signifikantní záhyb – tabulky, které určují, jak na sebe diagnózy mohou navazovat. Je _pád ze žebříku_ a následná _zlomenina stehenní kosti_ platná posloupnost? Pravděpodobně ano. Zatímco _pád ze žebříku_ a následný _pásový opar_ není.
 
-Za druhé popisují, které diagnózy jsou důležitější než jiné. Může se totiž stát, že lékař uvede více platných řetězců příčin, které mohly vést k úmrtí. Představme si pacienta s _rakovinou plic_ a současnou diagnózou _covid-19_. Ani jedna nemoc není následkem druhé, k bezprostřední příčině smrti – _zástavě dechu_ – mohou vést obě. (Blbej příklad, já vím, chtělo by to lepší.) Je třeba arbitrárně rozhodnout, co dostane přednost. To skrz zmíněné tabulky dělá WHO. U přirozených příčin úmrtí mají obvykle vyšší prioritu příčiny závažnější z pohledu veřejného zdraví, typicky právě epidemické nemoci. Covid má tedy při srovnání s jiným řetězcem privilegovanou pozici.
+To je důležité i pro statistiku covidových úmrtí. U něj pravidlo říká, že nemůže být následkem žádné jiné nemoci. Pokud se tedy objeví v řetězci, který vedl ke smrti, je pro statistiky příčinou úmrtí právě covid.
 
-Také první pravidlo upřednostňuje covid: u srovnání příčina-následek říká, že covid nemůže být následkem žádné jiné nemoci. Pokud se tedy objeví v řetězci, který vedl ke smrti, je pro statistiky příčinou úmrtí právě on.
-
-Tabulky _ACME_ demografky využívají od roku 2007, celý IRIS od 2011. Právě v těchto letech se u některých příčin časová řada láme.
+Zmíněné tabulky povolených příčin a následků se v Česku využívají od roku 2007, předtím statistici řetězce kódovali ručně. Celý IRIS běží od roku 2011. Právě v těchto letech se u některých příčin časová řada láme.
 
 „Z vývoje úmrtnosti na některé příčiny je zřejmé, že dochází ke zpřesnění a zkvalitnění statistiky,“ vysvětluje Daňková. „Lze to dokumentovat klesajícím podílem zemřelých na aterosklerózu _(kornatění tepen, pozn. red.)_, která není doporučena ke kódování základní příčiny smrti vzhledem k tomu, že se jedná o velice generalizované, málo specifické onemocnění.“
 
@@ -734,11 +732,11 @@ Na nečekaně masivní změně některých diagnóz, třeba právě diabetu, se 
   </figure>
 </wide>
 
-Algoritmické určování příčin úmrtí má z pohledu statistiky zásadní výhodu: odstraňuje nahodilost. To je také hlavní důvod, proč národní statistické úřady tlačí k využívání podobných nástrojů Eurostat. Mezinárodní srovnatelnost byla v minulosti poměrně špatná a jednotné nástroje ji mají zlepšit. Jak ale ukázala pandemie covidu, zatím se to spíš nedaří.
+Algoritmické určování příčin úmrtí má z pohledu statistiky zásadní výhodu: odstraňuje nahodilost. To je také hlavní důvod, proč Eurostat tlačí národní statistické úřady k využívání podobných nástrojů. Konzistentní kódování umožňuje lepší srovnání úmrtnosti mezi zeměmi. Taková srovnání byla v minulosti poměrně nespolehlivá, dnes je i díky podobným nástrojům nesrovnatelně vyšší.
 
 Integraci nástrojů má završit dlouho očekávaná jedenáctá revize MKN, která má v Evropě začít platit za rok. Hlavní novinkou mají být právě [jednotné online nástroje](https://www.who.int/classifications/classification-of-diseases).
 
-„Ona sice začne platit, ale reálně se pravděpodobně jestě pár let používat nebude,“ upozorňuje Daňková. (Doplnit citaci?)
+„Ona sice začne platit, ale reálně se pravděpodobně jestě pár let používat nebude,“ upozorňuje Daňková. „Aktuálně pracujeme na překladu, což chvíli potrvá. Pak se musí připravit systémy poskytovatelů zdravotní péče. Jsou země, které už na novou revizi přechází, jako Malta nebo Rwanda, ale WHO ještě pět let umožní posílat data v MKN-10.“
 
 <div id="box-mezinarodni" class="our-box">
 <h3>Mezinárodní srovnání</h3>
@@ -770,25 +768,23 @@ Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi um�
 
 „U této skupiny je vyhodnocení základních příčin smrti velmi obtížné, a proto budou záznamy podrobeny další analýze klinickým expertním týmem a bude provedena kontrola zdravotnické dokumentace,“ řekl Blatný.
 
-Patnáctičlenná komise bude v českých dějinách unikát.
+Patnáctičlenná komise odborníků pro posouzení příčin úmrtí bude v českých dějinách unikát.
 
-„Poprvé v historii u některé diagnózy prohlížím každý list, to se nikdy dřív nedělalo,“ vysvětluje Šárka Daňková z ÚZIS. (Všechny citace parafrázuji, feel free to upravovat.)
+„Vůbec poprvé v se zabýváme úmrtností na některou konkrétní příčinu tak podrobně,“ vysvětluje Šárka Daňková z ÚZIS. „Dříve probíhaly validace, například propojením dvou datových zdrojů, či kontroly listu o prohlídce zemřelého u jednotlivých úmrtí, nikdy však v takovém rozsahu jako nyní.“
 
-„Může za to hlavně mediální tlak,“ dodává. „Ale je také pravda, že kódy pro covid jsme od WHO [dostali až v dubnu](https://www.uzis.cz/res/file/registry/lpz/lpz-metodika-covid-19.pdf) a lékaři tak covidová úmrtí mohli zapisovat různě.“
+„Jedním z důvodů je mediální tlak,“ dodává. „Jsme neustále oslovováni, abychom rozlišili úmrtí _na covid_ od úmrtí _s covidem_. Přitom to vůbec není tak snadné, jak se může zdát.“
 
-Detailní zkoumání covidových úmrtí vyústilo ve studii, jaké jsou u nich nejčastější komorbidity – té, kterou ministr cituje. Její autorkou je právě Šárka Daňková.
+Problematických míst je podle ní několik.
 
-Další dávku diagnóz pro kódování nemocí, tentokrát pro stavy po covidu, doručilo WHO v prosinci. Pravidla se tak lékařům mění pod rukama.
+„Pokyny pro vykazování úmrtí za covid uveřejnilo WHO až v dubnu 2020, lékaři proto neměli přesné instrukce a postupovali různě,“ pokračuje. „Kromě toho se vyvíjí také onemocnění jako takové a jeho poznání. V prosinci 2020 WHO zavedlo další kódy pro stavy následující po onemocnění covid-19. Pravidla se tak lékařům mění pod rukama.“
 
-„Já ale nevím, jak moc smím do statistiky zasahovat,“ dodává. „Pokud není list o prohlídce zemřelého evidentně nesmyslný, ale třeba jen neúplný, musím to respektovat. Navíc s rostoucími počty úmrtí na covid by ani nebylo možné ptát se každého lékaře na detaily.“
+„Snažili jsme se reagovat, ne vždy se však požadovaná informace k lékařům dostala včas. Sledovali jsem, co se v praxi děje, procházeli jsme listy o prohlídce zemřelého a snažili se jeden po druhém vyhodnotit. Bohužel, reálné listy nevypadají jako modelové příklady.“
 
-Další oči, které mají podle ministra covidová úmrtí prohlédnout, zřejmě doplní hlavně medicínský pohled. Podle Daňkové bude taková komise, pokud skutečně vznikne, unikátní nejen v Česku.
+Detailní zkoumání covidových úmrtí vyústilo ve studii, jaké další zdravotní problémy se u zemřelých na covid objevují nejčastěji – té, kterou ministr cituje na tiskové konferenci.
 
-„Nic takového jsem za patnáct let své praxe u nás ani jinde na světě neviděla,“ tvrdí.
+Ministerská komise slibuje detailní data o covidových úmrtích, ale až s časovým odstupem. Ministr upozorňuje, že shromáždit stoprocentní data k příčinám úmrtí potrvá měsíce. Slibuje sice, že část bude k dispozici na konci února, finální data ale zřejmě mnohem později.
 
-Na stejné tiskové konferenci ředitel ÚZIS Ladislav Dušek ústy ministra Blatného upozorňuje, že shromáždit stoprocentní data k příčinám úmrtí potrvá měsíce. Slibuje, že část bude k dispozici na konci února, zřejmě ale spíš náhled než finální data.
-
-Musíme si vystačit s prozatímními čísly, podle kterých v roce 2020 na covid zemřelo XXX lidí. Novináři si proto loni našli berličku a naučili se nové slovo: _nadúmrtí_, tedy počet zemřelých nad dlouhodobým průměrem. I ten má proti skutečnému stavu zpoždění, ale jen několikatýdenní. Data o nadúmrtnosti ukazují na XXX mrtvých nad průměrem.
+A tak nejlepší evidence, kterou k počtu obětí covidu aktuálně máme, je _nadúmrtnost_, tedy počet zemřelých nad dlouhodobým průměrem. I tato data mají proti skutečnému stavu zpoždění, ale jen několikatýdenní. Srovnání oficiálních a poměrně nepřesných covidových úmrtí a dat o nadúmrtnosti ukazují na rozdíl: covidových obětí bylo od ledna do listopadu XXX, nadúmrtnost XXX lidí.
 
 <wide>
   <figure id="graf-excess-mortality" class="priciny-umrti-vis-static">
@@ -798,9 +794,9 @@ Musíme si vystačit s prozatímními čísly, podle kterých v roce 2020 na cov
   </figure>
 </wide>
 
-Rozdíl mezi oběma čísly můžou být ukryté oběti covidu, ale z větší části jde o úmrtí spojená s tím, že se lékaři nemohli naplno věnovat pacientům s jinými diagnózami, s vyšší sebevražedností, dopady osamocení v sociálních zařízeních, a podobně.
+Rozdíl můžou být ukryté oběti covidu, ale z větší části jde zřejmě o úmrtí spojená s vyšší sebevražedností, dopady osamocení v sociálních zařízeních, s tím, že se lékaři nemohli naplno věnovat pacientům s jinými diagnózami, a podobně.
 
-S takovou odpovědí bychom se měli spokojit. Přesnější rozdělení obětí _na covid_ a _s covidem_ je totiž zatíženo tolika možnými chybami, že nedává příliš smysl. Přišel vám popis určování příčin úmrtí složitý? Nejspíš proto, že složitý je. Interpretace dat může být náročná i pro ty, kteří se mortalitním číslům věnují denně.
+Není podstatné, zda budou úmrtí ve výsledku vyhodnocena jako _s covidem_ a _na covid_. Důležité je, že k nim dochází, nadúmrtnost to potvrzuje. Přesnější rozdělení příčin je totiž zatíženo tolika možnými chybami, že nedává příliš smysl.
 
 Problematická je už základní úvaha, že umíráme na jednu příčinu. Reálně většinou umíráme na řetězec příčin, které se nabalují delší část života, jak naznačuje i podoba listu o prohlídce zemřelého.
 
@@ -812,6 +808,8 @@ Mimochodem, nejde o novinku.
 
 „Také u nás jsme třídili a v letech 1925 až 1937 publikovali tabulky s kombinovanými příčinami smrti,“ píše demograf Vladimír Srb. „Avšak později pro nákladnost třídění a poměrně malé využití dat bylo od třídění upuštěno.“
 
-O téměř sto let později se vynořují nápady sdružené příčiny úmrtí rehabilitovat. Mohlo by jít o elegantní odpověď na otázku, zda _na covid_, nebo _s covidem_. Obojí.
+Podle Daňkové je ovšem i tady klíčové mít přesná data – a to se ani po sto letech od vzniku systému neděje.
+
+Nápad rehabilitovat sdružené příčiny úmrtí by nicméně mohl být elegantní odpovědí na otázku, zda _na covid_, nebo _s covidem_. Obojí.
 
 _Za spolupráci děkujeme demografkám Šárce Daňkové z ÚZIS, Kláře Hulíkové Tesárkové z Katedry demografie a geodemografie Přírodovědecké fakulty UK a Markétě Pechholdové z Katedry demografie VŠE._
