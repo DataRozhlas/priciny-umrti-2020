@@ -262,7 +262,7 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, např�
       </div>
       <div class="b-inline__img">
         <!-- TODO: alt text -->
-        <img src="assets/gif/abs-rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
+        <img src="assets/gif/abs_rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
       </div>
     </div>
     <div class="b-inline__wrap priciny-umrti-hrb-std-box-std">
@@ -280,7 +280,7 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených skupin, např�
       </div>
       <div class="b-inline__img">
         <!-- TODO: alt text -->
-        <img src="assets/gif/abs-rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
+        <img src="assets/gif/rel_std.gif" alt="" class="priciny-umrti-hrb-std-box-img">
       </div>
     </div>
   </div>
