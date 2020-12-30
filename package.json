@@ -27,7 +27,7 @@
     "intersection-observer": "^0.11.0",
     "js-yaml": "^3.14.0",
     "lodash": "^4.17.20",
-    "marked": "^0.7.0",
+    "marked": "^1.2.7",
     "sass": "^1.29.0",
     "scrollama": "^2.2.1",
     "webpack": "^4.44.2"
