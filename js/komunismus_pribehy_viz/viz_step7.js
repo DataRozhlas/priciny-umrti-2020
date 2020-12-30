@@ -72,19 +72,28 @@ export default {
     viz.dataMzStd.forEach((category) => {
       const categoryName = category.skupina;
 
+      let style = 'context';
+      let activeColor = undefined;
+      if (['Nemoci oběhové soustavy', 'Novotvary'].includes(categoryName)) {
+        style = 'active';
+        activeColor = 'transparent';
+      }
+
       if (!lines.isAddedCategoryLine(viz, { categoryName })) {
         lines.addCategoryLine({
           svg: viz.svg,
           categoryName,
           d: viz.lineCategoriesLower(category.data),
-          style: 'context',
+          style,
+          activeColor,
         });
       } else {
         lines.changeCategoryLine({
           svg: viz.svg,
           categoryName,
           d: viz.lineCategoriesLower(category.data),
-          style: 'context',
+          style,
+          activeColor,
         });
       }
 
@@ -96,7 +105,7 @@ export default {
       line: viz.lineCategoriesLower,
       x: viz.x,
       y: viz.yCategoriesLower,
-      dataMzStd: viz.dataMzStd,
+      dataMzStd: viz.dataMzStdCategoriesLower,
       activeCategoryNames: ['Některé stavy vzniklé v perinatálním období', 'Těhotenství, porod a šestinedělí'],
     });
 

@@ -4,16 +4,18 @@ import * as lines from './lines';
 
 export default {
   onScrollDownToStep: (viz) => {
-    // First remove the line for heart diseases category
+    // First remove the top two lines
 
-    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Nemoci oběhové soustavy' });
+    ['Nemoci oběhové soustavy', 'Novotvary'].forEach((categoryName) => {
+      lines.removeCategoryLineLabel({ svg: viz.svg, categoryName });
 
-    lines.changeCategoryLine({
-      svg: viz.svg,
-      style: 'active',
-      activeColor: 'transparent',
-      categoryName: 'Nemoci oběhové soustavy',
-      duration: 700,
+      lines.changeCategoryLine({
+        svg: viz.svg,
+        style: 'active',
+        activeColor: 'transparent',
+        categoryName,
+        duration: 700,
+      });
     });
 
     // Then update the Y axis together with all lines
@@ -56,23 +58,25 @@ export default {
       activeCategoryNames: [],
     });
 
-    lines.changeCategoryLine({
-      svg: viz.svg,
-      d: viz.lineCategories(viz.dataMzStd.find((category) => category.skupina === 'Nemoci oběhové soustavy').data),
-      style: 'active',
-      activeColor: 'transparent',
-      categoryName: 'Nemoci oběhové soustavy',
-      delay: 700,
-    });
+    ['Nemoci oběhové soustavy', 'Novotvary'].forEach((categoryName) => {
+      lines.changeCategoryLine({
+        svg: viz.svg,
+        d: viz.lineCategories(viz.dataMzStd.find((category) => category.skupina === categoryName).data),
+        style: 'active',
+        activeColor: 'transparent',
+        categoryName,
+        delay: 700,
+      });
 
-    lines.changeCategoryLine({
-      svg: viz.svg,
-      d: viz.lineCategories(viz.dataMzStd.find((category) => category.skupina === 'Nemoci oběhové soustavy').data),
-      style: 'active',
-      activeColor: colors.categoryColorsActive['Nemoci oběhové soustavy'],
-      categoryName: 'Nemoci oběhové soustavy',
-      duration: 700,
-      delay: 700,
+      lines.changeCategoryLine({
+        svg: viz.svg,
+        d: viz.lineCategories(viz.dataMzStd.find((category) => category.skupina === categoryName).data),
+        style: categoryName === 'Nemoci oběhové soustavy' ? 'active' : 'context',
+        activeColor: colors.categoryColorsActive[categoryName],
+        categoryName,
+        duration: 700,
+        delay: 700,
+      });
     });
 
     lines.addCategoryLineLabel({

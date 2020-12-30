@@ -43,7 +43,7 @@ export const initViz = (svgSelector, data) => {
   const { data1949MzStd, data1949MStd, data1949ZStd, data1949MzAbs, dataTooltip1989 } = data;
   const data1949MzStdWithoutTotal = data1949MzStd.filter((category) => category.skupina !== 'Celkem');
   const data1949MzStdCategoriesLower = data1949MzStdWithoutTotal.filter(
-    (category) => category.skupina !== 'Nemoci oběhové soustavy'
+    (category) => !['Nemoci oběhové soustavy', 'Novotvary'].includes(category.skupina)
   );
 
   // Prepare data functions
