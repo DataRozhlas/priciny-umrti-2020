@@ -213,34 +213,44 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
     </div>
     <div class="priciny-umrti-top-mkn-diagnozy-obsah">
       <div data-mkn="mkn-2" data-mkn-active class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_2.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_2_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_2_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-3" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_3.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_3_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_3_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-4" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_4.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_4_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_4_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-5" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_5.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_5_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_5_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-6" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_6.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_6_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_6_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-7" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_7.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_7_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_7_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-8" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_8.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_8_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_8_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-9" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_9.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_9_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_9_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-10-i" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_10_I.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_10_I_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_10_I_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-10-ii" class="">
-        <img loading="lazy" src="assets/svg/3.1_mkn_10_II.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_10_II_des.svg" class="desktop">
+        <img loading="lazy" src="assets/svg/mkn_10_II_mob.svg" class="mobile">
       </div>
     </div>
     <div class="source-reference">
@@ -680,7 +690,8 @@ První krok při určování příčiny úmrtí má na starosti ohledávající 
 „V zásadě by ohledávající lékař měl vyslovit návrh k pitvě vždy při pochybnosti o příčině smrti u osob zemřelých náhle, u osob žijících osaměle, zemřelých mimo zdravotnická zařízení a v případě, že je nucen uvést diagnózu _příčina smrti neznámá_,“ popisuje manuál pro lékaře.
 
 <figure>
-  <img loading="lazy" src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%">
+  <!-- <img loading="lazy" src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%"> -->
+  <img loading="lazy" src="assets/svg/lpz.svg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%">
   <figcaption>Současná verze listu o prohlídce zemřelého</figcaption>
 </figure>
 
@@ -696,10 +707,12 @@ List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. 
 
 <wide>
   <figure id="posloupnosti" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;">
+    <img loading="lazy" src="assets/svg/radiator_chart_des.svg" class="desktop">
+    <img loading="lazy" src="assets/svg/radiator_chart_des.svg" class="mobile">
+    <!-- <img loading="lazy" src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;"> -->
     <div class="source-reference">
       Zdroj: <a href="https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf">Jak správně postupovat při vyplňování Listu o prohlídce mrtvého, ÚZIS</a>
-    </div>
+    </div> 
   </figure>
 </wide>
 
