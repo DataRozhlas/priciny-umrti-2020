@@ -797,7 +797,7 @@ Detailní zkoumání covidových úmrtí vyústilo ve studii, jaké další zdra
 
 Ministerská komise slibuje detailní data o covidových úmrtích, ale až s časovým odstupem. Ministr upozorňuje, že shromáždit stoprocentní data k příčinám úmrtí potrvá měsíce. Slibuje sice, že část bude k dispozici na konci února, finální data ale zřejmě mnohem později.
 
-A tak nejlepší evidence, kterou k počtu obětí covidu aktuálně máme, je _nadúmrtnost_, tedy počet zemřelých nad dlouhodobým průměrem. I tato data mají proti skutečnému stavu zpoždění, ale jen několikatýdenní. Srovnání oficiálních a poměrně nepřesných covidových úmrtí a dat o nadúmrtnosti ukazují na rozdíl: covidových obětí bylo od ledna do listopadu XXX, nadúmrtnost XXX lidí.
+A tak nejlepší evidence, kterou k počtu obětí covidu aktuálně máme, je _nadúmrtnost_, tedy počet zemřelých nad dlouhodobým průměrem. I tato data mají proti skutečnému stavu zpoždění, ale jen několikatýdenní. Srovnání oficiálních a poměrně nepřesných covidových úmrtí a dat o nadúmrtnosti ukazují na rozdíl: covidových obětí bylo od ledna do 22. listopadu 7554, nadúmrtnost 11 651 lidí.
 
 <wide>
   <figure id="graf-excess-mortality" class="priciny-umrti-vis-static">
