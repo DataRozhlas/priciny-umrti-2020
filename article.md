@@ -42,13 +42,13 @@ Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl sr
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
-    <img src="assets/1_ilustrace_kapitoly/001.jpg" alt="" class="active">
-    <img src="assets/1_ilustrace_kapitoly/002.jpg" alt="">
-    <img src="assets/1_ilustrace_kapitoly/003.jpg" alt="">
-    <img src="assets/1_ilustrace_kapitoly/004.jpg" alt="">
-    <img src="assets/1_ilustrace_kapitoly/005.jpg" alt="">
-    <img src="assets/1_ilustrace_kapitoly/006.jpg" alt="">
-    <img src="assets/1_ilustrace_kapitoly/007.jpg" alt="">
+    <img data-src="assets/1_ilustrace_kapitoly/001.jpg" alt="Ilustrace k první kapitole, snímek 1" class="active">
+    <img data-src="assets/1_ilustrace_kapitoly/002.jpg" alt="Ilustrace k první kapitole, snímek 2">
+    <img data-src="assets/1_ilustrace_kapitoly/003.jpg" alt="Ilustrace k první kapitole, snímek 3">
+    <img data-src="assets/1_ilustrace_kapitoly/004.jpg" alt="Ilustrace k první kapitole, snímek 4">
+    <img data-src="assets/1_ilustrace_kapitoly/005.jpg" alt="Ilustrace k první kapitole, snímek 5">
+    <img data-src="assets/1_ilustrace_kapitoly/006.jpg" alt="Ilustrace k první kapitole, snímek 6">
+    <img data-src="assets/1_ilustrace_kapitoly/007.jpg" alt="Ilustrace k první kapitole, snímek 7">
   </div>
 </wide>
 
@@ -129,12 +129,12 @@ Slabé válečné ročníky se zařezávají do statistiky dodnes: trend, kdy js
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-2">
-    <img src="assets/2_ilustrace_kapitoly/001.jpg" alt="" class="active">
-    <img src="assets/2_ilustrace_kapitoly/002.jpg" alt="">
-    <img src="assets/2_ilustrace_kapitoly/003.jpg" alt="">
-    <img src="assets/2_ilustrace_kapitoly/004.jpg" alt="">
-    <img src="assets/2_ilustrace_kapitoly/005.jpg" alt="">
-    <img src="assets/2_ilustrace_kapitoly/006.jpg" alt="">
+    <img data-src="assets/2_ilustrace_kapitoly/001.jpg" alt="Ilustrace k druhé kapitole, snímek 1" class="active">
+    <img data-src="assets/2_ilustrace_kapitoly/002.jpg" alt="Ilustrace k druhé kapitole, snímek 2">
+    <img data-src="assets/2_ilustrace_kapitoly/003.jpg" alt="Ilustrace k druhé kapitole, snímek 3">
+    <img data-src="assets/2_ilustrace_kapitoly/004.jpg" alt="Ilustrace k druhé kapitole, snímek 4">
+    <img data-src="assets/2_ilustrace_kapitoly/005.jpg" alt="Ilustrace k druhé kapitole, snímek 5">
+    <img data-src="assets/2_ilustrace_kapitoly/006.jpg" alt="Ilustrace k druhé kapitole, snímek 6">
   </div>
 </wide>
 
@@ -167,7 +167,6 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
 
 <wide>
   <figure class="priciny-umrti-vis-static priciny-umrti-top-mkn-diagnozy">
-    <div class="priciny-umrti-top-mkn-nadpis">Nejčastější příčiny úmrtí v&nbsp;klasifikaci MKN</div>
     <div class="priciny-umrti-top-mkn-diagnozy-osa">
       <button type="button" data-mkn="mkn-2" data-mkn-active>
         MKN-2
@@ -390,12 +389,12 @@ Na rozdíl od první světové války ovšem nedošlo k většímu propadu porod
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-3">
-    <img src="assets/3_ilustrace_kapitoly/001.jpg" alt="" class="active">
-    <img src="assets/3_ilustrace_kapitoly/002.jpg" alt="">
-    <img src="assets/3_ilustrace_kapitoly/003.jpg" alt="">
-    <img src="assets/3_ilustrace_kapitoly/004.jpg" alt="">
-    <img src="assets/3_ilustrace_kapitoly/005.jpg" alt="">
-    <img src="assets/3_ilustrace_kapitoly/006.jpg" alt="">
+    <img data-src="assets/3_ilustrace_kapitoly/001.jpg" alt="Ilustrace ke třetí kapitole, snímek 1" class="active">
+    <img data-src="assets/3_ilustrace_kapitoly/002.jpg" alt="Ilustrace ke třetí kapitole, snímek 2">
+    <img data-src="assets/3_ilustrace_kapitoly/003.jpg" alt="Ilustrace ke třetí kapitole, snímek 3">
+    <img data-src="assets/3_ilustrace_kapitoly/004.jpg" alt="Ilustrace ke třetí kapitole, snímek 4">
+    <img data-src="assets/3_ilustrace_kapitoly/005.jpg" alt="Ilustrace ke třetí kapitole, snímek 5">
+    <img data-src="assets/3_ilustrace_kapitoly/006.jpg" alt="Ilustrace ke třetí kapitole, snímek 6">
   </div>
 </wide>
 
@@ -537,12 +536,12 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4">
-    <img src="assets/4_ilustrace_kapitoly/001.jpg" alt="" class="active">
-    <img src="assets/4_ilustrace_kapitoly/002.jpg" alt="">
-    <img src="assets/4_ilustrace_kapitoly/003.jpg" alt="">
-    <img src="assets/4_ilustrace_kapitoly/004.jpg" alt="">
-    <img src="assets/4_ilustrace_kapitoly/005.jpg" alt="">
-    <img src="assets/4_ilustrace_kapitoly/006.jpg" alt="">
+    <img data-src="assets/4_ilustrace_kapitoly/001.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 1" class="active">
+    <img data-src="assets/4_ilustrace_kapitoly/002.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 2">
+    <img data-src="assets/4_ilustrace_kapitoly/003.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 3">
+    <img data-src="assets/4_ilustrace_kapitoly/004.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 4">
+    <img data-src="assets/4_ilustrace_kapitoly/005.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 5">
+    <img data-src="assets/4_ilustrace_kapitoly/006.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 6">
   </div>
 </wide>
 
@@ -657,12 +656,12 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
-    <img src="assets/5_ilustrace_kapitoly/001.jpg" alt="" class="active">
-    <img src="assets/5_ilustrace_kapitoly/002.jpg" alt="">
-    <img src="assets/5_ilustrace_kapitoly/003.jpg" alt="">
-    <img src="assets/5_ilustrace_kapitoly/004.jpg" alt="">
-    <img src="assets/5_ilustrace_kapitoly/005.jpg" alt="">
-    <img src="assets/5_ilustrace_kapitoly/006.jpg" alt="">
+    <img data-src="assets/5_ilustrace_kapitoly/001.jpg" alt="Ilustrace k páté kapitole, snímek 1" class="active">
+    <img data-src="assets/5_ilustrace_kapitoly/002.jpg" alt="Ilustrace k páté kapitole, snímek 2">
+    <img data-src="assets/5_ilustrace_kapitoly/003.jpg" alt="Ilustrace k páté kapitole, snímek 3">
+    <img data-src="assets/5_ilustrace_kapitoly/004.jpg" alt="Ilustrace k páté kapitole, snímek 4">
+    <img data-src="assets/5_ilustrace_kapitoly/005.jpg" alt="Ilustrace k páté kapitole, snímek 5">
+    <img data-src="assets/5_ilustrace_kapitoly/006.jpg" alt="Ilustrace k páté kapitole, snímek 6">
   </div>
 </wide>
 
