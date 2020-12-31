@@ -165,7 +165,7 @@ const build = async (mode) => {
   const packedScript = await promise;
 
   // injecting the JS and finishing up
-  template = `${template}<script>${packedScript}</script>`;
+  template = `${template}<script defer>${packedScript}</script>`;
   fs.writeFileSync("./output.html", template);
 
   // writing a dummy index
