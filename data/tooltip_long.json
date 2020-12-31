@@ -284,6 +284,10 @@
     "rok": 1919,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 28487
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 3114
       },
@@ -368,16 +372,6 @@
       {
         "nazev": "Sebevražda jiným způsobem",
         "celkem": 125
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1919,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 28487
       }
     ]
   },
@@ -764,6 +758,10 @@
     "rok": 1920,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 24861
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 2405
       },
@@ -848,16 +846,6 @@
       {
         "nazev": "Sebevražda jiným způsobem",
         "celkem": 110
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1920,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 24861
       }
     ]
   },
@@ -1244,6 +1232,10 @@
     "rok": 1921,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 21492
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 2644
       },
@@ -1328,16 +1320,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 108
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1921,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 21492
       }
     ]
   },
@@ -1724,6 +1706,10 @@
     "rok": 1922,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 23788
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 2943
       },
@@ -1808,16 +1794,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 141
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1922,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 23788
       }
     ]
   },
@@ -2204,6 +2180,10 @@
     "rok": 1923,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 19674
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 1605
       },
@@ -2288,16 +2268,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 157
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1923,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 19674
       }
     ]
   },
@@ -2684,6 +2654,10 @@
     "rok": 1924,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 20182
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 1735
       },
@@ -2768,16 +2742,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 154
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1924,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 20182
       }
     ]
   },
@@ -3164,6 +3128,10 @@
     "rok": 1925,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 18014
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 2127
       },
@@ -3248,16 +3216,6 @@
       {
         "nazev": "Sebevražda otravou jedy",
         "celkem": 148
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1925,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 18014
       }
     ]
   },
@@ -3662,6 +3620,10 @@
     "rok": 1926,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 15392
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 1583
       },
@@ -3746,16 +3708,6 @@
       {
         "nazev": "Sebevražda otravou jedy",
         "celkem": 162
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1926,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 15392
       }
     ]
   },
@@ -4160,6 +4112,10 @@
     "rok": 1927,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 16699
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 1267
       },
@@ -4244,16 +4200,6 @@
       {
         "nazev": "Sebevražda otravou jedy",
         "celkem": 126
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1927,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 16699
       }
     ]
   },
@@ -4658,6 +4604,10 @@
     "rok": 1928,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 15053
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 1219
       },
@@ -4742,16 +4692,6 @@
       {
         "nazev": "Sebevražda otravou požitím žíravin",
         "celkem": 150
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1928,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 15053
       }
     ]
   },
@@ -5156,6 +5096,10 @@
     "rok": 1929,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 16234
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 1083
       },
@@ -5166,10 +5110,6 @@
       {
         "nazev": "Náhlé úmrtí",
         "celkem": 12
-      },
-      {
-        "nazev": "Násilná smrt neznáme příčiny",
-        "celkem": 0
       }
     ]
   },
@@ -5240,16 +5180,6 @@
       {
         "nazev": "Sebevražda otravou požitím žíravin",
         "celkem": 139
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1929,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 16234
       }
     ]
   },
@@ -5654,6 +5584,10 @@
     "rok": 1930,
     "data": [
       {
+        "nazev": "Stáří",
+        "celkem": 13195
+      },
+      {
         "nazev": "Nemoci nespecifikované nebo špatně definované",
         "celkem": 837
       },
@@ -5738,16 +5672,6 @@
       {
         "nazev": "Sebevražda otravou požitím žíravin",
         "celkem": 161
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1930,
-    "data": [
-      {
-        "nazev": "Stáří",
-        "celkem": 13195
       }
     ]
   },
@@ -6156,8 +6080,16 @@
     "rok": 1931,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 14416
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 875
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 353
       },
       {
         "nazev": "Náhlá smrt",
@@ -6244,20 +6176,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 286
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1931,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 14416
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 353
       }
     ]
   },
@@ -6690,8 +6608,16 @@
     "rok": 1932,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 13313
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 666
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 473
       },
       {
         "nazev": "Náhlá smrt",
@@ -6778,20 +6704,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 298
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1932,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 13313
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 473
       }
     ]
   },
@@ -7224,8 +7136,16 @@
     "rok": 1933,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 13326
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 575
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 505
       },
       {
         "nazev": "Náhlá smrt",
@@ -7312,20 +7232,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 274
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1933,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 13326
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 505
       }
     ]
   },
@@ -7758,8 +7664,16 @@
     "rok": 1934,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 12213
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 599
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 520
       },
       {
         "nazev": "Náhlá smrt",
@@ -7846,20 +7760,6 @@
       {
         "nazev": "Sebevražda utopením",
         "celkem": 279
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1934,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 12213
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 520
       }
     ]
   },
@@ -7996,10 +7896,6 @@
       {
         "nazev": "při dopravě vzduchem",
         "celkem": 17
-      },
-      {
-        "nazev": "při dopravě po vodě",
-        "celkem": 0
       }
     ]
   },
@@ -8292,6 +8188,14 @@
     "rok": 1935,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 13818
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 528
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 480
       },
@@ -8320,14 +8224,6 @@
       {
         "nazev": "Vleklé otravy látkami anorganickými: jiné",
         "celkem": 1
-      },
-      {
-        "nazev": "Vleklé otravy látkami anorganickými: živnostenské",
-        "celkem": 0
-      },
-      {
-        "nazev": "Vleklé otravy látkami organickými: jiné",
-        "celkem": 0
       }
     ]
   },
@@ -8380,20 +8276,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 248
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1935,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 13818
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 528
       }
     ]
   },
@@ -8826,6 +8708,14 @@
     "rok": 1936,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 12573
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 486
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 412
       },
@@ -8854,14 +8744,6 @@
       {
         "nazev": "Vleklé otravy látkami anorganickými: jiné",
         "celkem": 2
-      },
-      {
-        "nazev": "Vleklé otravy látkami anorganickými: živnostenské",
-        "celkem": 0
-      },
-      {
-        "nazev": "Vleklé otravy látkami organickými: jiné",
-        "celkem": 0
       }
     ]
   },
@@ -8914,20 +8796,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 235
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1936,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 12573
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 486
       }
     ]
   },
@@ -9360,6 +9228,14 @@
     "rok": 1937,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 12300
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 465
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 464
       },
@@ -9448,20 +9324,6 @@
       {
         "nazev": "Sebevražda požitím jedů pevných a tekutých, nebo látek žíravých",
         "celkem": 233
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1937,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 12300
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 465
       }
     ]
   },
@@ -9894,6 +9756,14 @@
     "rok": 1938,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 7778
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 247
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 174
       },
@@ -9982,20 +9852,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 135
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1938,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 7778
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 247
       }
     ]
   },
@@ -10132,10 +9988,6 @@
       {
         "nazev": "při dopravě vzduchem",
         "celkem": 40
-      },
-      {
-        "nazev": "při dopravě po vodě",
-        "celkem": 0
       }
     ]
   },
@@ -10428,6 +10280,14 @@
     "rok": 1939,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 7525
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 279
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 176
       },
@@ -10456,14 +10316,6 @@
       {
         "nazev": "Vleklé otravy látkami organickými: jiné",
         "celkem": 2
-      },
-      {
-        "nazev": "Vleklé otravy látkami anorganickými: živnostenské",
-        "celkem": 0
-      },
-      {
-        "nazev": "Vleklé otravy látkami anorganickými: jiné",
-        "celkem": 0
       }
     ]
   },
@@ -10516,20 +10368,6 @@
       {
         "nazev": "Sebevražda rozdrcením",
         "celkem": 105
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1939,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 7525
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 279
       }
     ]
   },
@@ -10666,10 +10504,6 @@
       {
         "nazev": "při dopravě vzduchem",
         "celkem": 3
-      },
-      {
-        "nazev": "při dopravě po vodě",
-        "celkem": 0
       }
     ]
   },
@@ -10962,6 +10796,14 @@
     "rok": 1940,
     "data": [
       {
+        "nazev": "Stařecká sešlost bez zblbělosti starobní",
+        "celkem": 7790
+      },
+      {
+        "nazev": "Stařecká sešlost se zblbělostí starobní",
+        "celkem": 296
+      },
+      {
         "nazev": "Nerozlišené nebo nedostatečně určené příčiny",
         "celkem": 173
       },
@@ -10994,10 +10836,6 @@
       {
         "nazev": "Vleklé otravy látkami organickými: jiné",
         "celkem": 1
-      },
-      {
-        "nazev": "Vleklé otravy látkami anorganickými: jiné",
-        "celkem": 0
       }
     ]
   },
@@ -11050,20 +10888,6 @@
       {
         "nazev": "Sebevražda střelnými zbraněmi",
         "celkem": 89
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1940,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost bez zblbělosti starobní",
-        "celkem": 7790
-      },
-      {
-        "nazev": "Stařecká sešlost se zblbělostí starobní",
-        "celkem": 296
       }
     ]
   },
@@ -11496,6 +11320,14 @@
     "rok": 1941,
     "data": [
       {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
+        "celkem": 6200
+      },
+      {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
+        "celkem": 229
+      },
+      {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: mrtvice, srdeční slabost, ochrnutí srdce bez jakéhokoliv vysvětlujícího údaje",
         "celkem": 218
       },
@@ -11532,10 +11364,6 @@
       {
         "nazev": "Vleklé otravy jinými látkami neústrojnými a ústrojnými",
         "celkem": 1
-      },
-      {
-        "nazev": "Otrava olovem: neoznačená jako z povolání",
-        "celkem": 0
       }
     ]
   },
@@ -11588,20 +11416,6 @@
       {
         "nazev": "Jiné sebevraždy střelnými zbraněmi a výbušnými látkami",
         "celkem": 56
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1941,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
-        "celkem": 6200
-      },
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
-        "celkem": 229
       }
     ]
   },
@@ -12046,8 +11860,16 @@
     "rok": 1942,
     "data": [
       {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
+        "celkem": 6287
+      },
+      {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: mrtvice, srdeční slabost, ochrnutí srdce bez jakéhokoliv vysvětlujícího údaje",
         "celkem": 256
+      },
+      {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
+        "celkem": 189
       },
       {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: ostatní nedostatečně udané příčiny",
@@ -12082,10 +11904,6 @@
       {
         "nazev": "Otrava olovem: označená jako z povolání",
         "celkem": 1
-      },
-      {
-        "nazev": "Otrava olovem: neoznačená jako z povolání",
-        "celkem": 0
       }
     ]
   },
@@ -12138,20 +11956,6 @@
       {
         "nazev": "Sebevražda otravou léky utišujícími a látkami omamnými",
         "celkem": 75
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1942,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
-        "celkem": 6287
-      },
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
-        "celkem": 189
       }
     ]
   },
@@ -12214,18 +12018,6 @@
       {
         "nazev": "Soudní poprava",
         "celkem": 1790
-      },
-      {
-        "nazev": "Úmrtí vojenských osob při válečných akcích",
-        "celkem": 0
-      },
-      {
-        "nazev": "Úmrtí civilních osob při válečných akcích",
-        "celkem": 0
-      },
-      {
-        "nazev": "Smrt ve vězení a následky vězení",
-        "celkem": 0
       }
     ]
   },
@@ -12596,6 +12388,10 @@
     "rok": 1943,
     "data": [
       {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
+        "celkem": 6289
+      },
+      {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: mrtvice, srdeční slabost, ochrnutí srdce bez jakéhokoliv vysvětlujícího údaje",
         "celkem": 251
       },
@@ -12604,12 +12400,12 @@
         "celkem": 219
       },
       {
-        "nazev": "Náhlá smrt",
-        "celkem": 36
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
+        "celkem": 166
       },
       {
-        "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: nalezené mrtvoly, u nichž je příčina smrti neznáma",
-        "celkem": 2
+        "nazev": "Náhlá smrt",
+        "celkem": 36
       }
     ]
   },
@@ -12624,18 +12420,6 @@
       {
         "nazev": "Alkoholismus prudký",
         "celkem": 7
-      },
-      {
-        "nazev": "Otrava olovem: označená jako z povolání",
-        "celkem": 0
-      },
-      {
-        "nazev": "Otrava olovem: neoznačená jako z povolání",
-        "celkem": 0
-      },
-      {
-        "nazev": "Vleklé otravy jinými látkami neústrojnými a ústrojnými",
-        "celkem": 0
       }
     ]
   },
@@ -12688,20 +12472,6 @@
       {
         "nazev": "Jiné sebevraždy nástroji řeznými a bodnými",
         "celkem": 40
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1943,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
-        "celkem": 6289
-      },
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
-        "celkem": 166
       }
     ]
   },
@@ -12768,14 +12538,6 @@
       {
         "nazev": "Úmrtí civilních osob při válečných akcích",
         "celkem": 54
-      },
-      {
-        "nazev": "Úmrtí vojenských osob při válečných akcích",
-        "celkem": 0
-      },
-      {
-        "nazev": "Smrt ve vězení a následky vězení",
-        "celkem": 0
       }
     ]
   },
@@ -13146,6 +12908,10 @@
     "rok": 1944,
     "data": [
       {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
+        "celkem": 6732
+      },
+      {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: mrtvice, srdeční slabost, ochrnutí srdce bez jakéhokoliv vysvětlujícího údaje",
         "celkem": 287
       },
@@ -13154,12 +12920,12 @@
         "celkem": 217
       },
       {
-        "nazev": "Náhlá smrt",
-        "celkem": 39
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
+        "celkem": 167
       },
       {
-        "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: nalezené mrtvoly, u nichž je příčina smrti neznáma",
-        "celkem": 2
+        "nazev": "Náhlá smrt",
+        "celkem": 39
       }
     ]
   },
@@ -13182,10 +12948,6 @@
       {
         "nazev": "Otrava olovem: označená jako z povolání",
         "celkem": 1
-      },
-      {
-        "nazev": "Otrava olovem: neoznačená jako z povolání",
-        "celkem": 0
       }
     ]
   },
@@ -13238,20 +13000,6 @@
       {
         "nazev": "Jiné sebevraždy skokem s výše",
         "celkem": 35
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1944,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
-        "celkem": 6732
-      },
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
-        "celkem": 167
       }
     ]
   },
@@ -13696,6 +13444,10 @@
     "rok": 1945,
     "data": [
       {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
+        "celkem": 7970
+      },
+      {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: mrtvice, srdeční slabost, ochrnutí srdce bez jakéhokoliv vysvětlujícího údaje",
         "celkem": 590
       },
@@ -13704,12 +13456,12 @@
         "celkem": 455
       },
       {
-        "nazev": "Náhlá smrt",
-        "celkem": 41
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
+        "celkem": 132
       },
       {
-        "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: nalezené mrtvoly, u nichž je příčina smrti neznáma",
-        "celkem": 14
+        "nazev": "Náhlá smrt",
+        "celkem": 41
       }
     ]
   },
@@ -13732,10 +13484,6 @@
       {
         "nazev": "Vleklé otravy jinými látkami neústrojnými a ústrojnými",
         "celkem": 1
-      },
-      {
-        "nazev": "Otrava olovem: neoznačená jako z povolání",
-        "celkem": 0
       }
     ]
   },
@@ -13788,20 +13536,6 @@
       {
         "nazev": "Jiné sebevraždy přejetím",
         "celkem": 106
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1945,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
-        "celkem": 7970
-      },
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
-        "celkem": 132
       }
     ]
   },
@@ -14246,6 +13980,10 @@
     "rok": 1946,
     "data": [
       {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
+        "celkem": 6571
+      },
+      {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: mrtvice, srdeční slabost, ochrnutí srdce bez jakéhokoliv vysvětlujícího údaje",
         "celkem": 493
       },
@@ -14254,12 +13992,12 @@
         "celkem": 188
       },
       {
-        "nazev": "Náhlá smrt",
-        "celkem": 39
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
+        "celkem": 107
       },
       {
-        "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: nalezené mrtvoly, u nichž je příčina smrti neznáma",
-        "celkem": 5
+        "nazev": "Náhlá smrt",
+        "celkem": 39
       }
     ]
   },
@@ -14274,18 +14012,6 @@
       {
         "nazev": "Alkoholismus prudký",
         "celkem": 17
-      },
-      {
-        "nazev": "Otrava olovem: označená jako z povolání",
-        "celkem": 0
-      },
-      {
-        "nazev": "Otrava olovem: neoznačená jako z povolání",
-        "celkem": 0
-      },
-      {
-        "nazev": "Vleklé otravy jinými látkami neústrojnými a ústrojnými",
-        "celkem": 0
       }
     ]
   },
@@ -14338,20 +14064,6 @@
       {
         "nazev": "Sebevražda otravou jinými blíže neoznačenými jedy pevnými a tekutými",
         "celkem": 64
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1946,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
-        "celkem": 6571
-      },
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
-        "celkem": 107
       }
     ]
   },
@@ -14796,8 +14508,16 @@
     "rok": 1947,
     "data": [
       {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
+        "celkem": 6378
+      },
+      {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: mrtvice, srdeční slabost, ochrnutí srdce bez jakéhokoliv vysvětlujícího údaje",
         "celkem": 451
+      },
+      {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
+        "celkem": 146
       },
       {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: ostatní nedostatečně udané příčiny",
@@ -14806,10 +14526,6 @@
       {
         "nazev": "Náhlá smrt",
         "celkem": 43
-      },
-      {
-        "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: nalezené mrtvoly, u nichž je příčina smrti neznáma",
-        "celkem": 1
       }
     ]
   },
@@ -14832,10 +14548,6 @@
       {
         "nazev": "Otrava olovem: označená jako z povolání",
         "celkem": 3
-      },
-      {
-        "nazev": "Otrava olovem: neoznačená jako z povolání",
-        "celkem": 0
       }
     ]
   },
@@ -14888,20 +14600,6 @@
       {
         "nazev": "Sebevražda otravou svítiplynem",
         "celkem": 76
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1947,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
-        "celkem": 6378
-      },
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
-        "celkem": 146
       }
     ]
   },
@@ -14964,18 +14662,6 @@
       {
         "nazev": "Soudní poprava",
         "celkem": 235
-      },
-      {
-        "nazev": "Úmrtí vojenských osob při válečných akcích",
-        "celkem": 0
-      },
-      {
-        "nazev": "Úmrtí civilních osob při válečných akcích",
-        "celkem": 0
-      },
-      {
-        "nazev": "Smrt ve vězení a následky vězení",
-        "celkem": 0
       }
     ]
   },
@@ -15346,8 +15032,16 @@
     "rok": 1948,
     "data": [
       {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
+        "celkem": 4927
+      },
+      {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: mrtvice, srdeční slabost, ochrnutí srdce bez jakéhokoliv vysvětlujícího údaje",
         "celkem": 347
+      },
+      {
+        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
+        "celkem": 188
       },
       {
         "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: ostatní nedostatečně udané příčiny",
@@ -15356,10 +15050,6 @@
       {
         "nazev": "Náhlá smrt",
         "celkem": 26
-      },
-      {
-        "nazev": "Blíže neoznačené nebo nedostatečně určené příčiny: nalezené mrtvoly, u nichž je příčina smrti neznáma",
-        "celkem": 1
       }
     ]
   },
@@ -15382,10 +15072,6 @@
       {
         "nazev": "Otrava olovem: neoznačená jako z povolání",
         "celkem": 1
-      },
-      {
-        "nazev": "Otrava olovem: označená jako z povolání",
-        "celkem": 0
       }
     ]
   },
@@ -15438,20 +15124,6 @@
       {
         "nazev": "Jiné sebevraždy skokem s výše",
         "celkem": 80
-      }
-    ]
-  },
-  {
-    "skupina": "Stařecká sešlost",
-    "rok": 1948,
-    "data": [
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: bez údaje o stařecké demenci",
-        "celkem": 4927
-      },
-      {
-        "nazev": "Stařecká sešlost u osob ve věku 65 a více let: s demencí stařeckou",
-        "celkem": 188
       }
     ]
   },
@@ -43802,7 +43474,7 @@
     "rok": 1994,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 56
       },
       {
@@ -43810,11 +43482,11 @@
         "celkem": 9
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním opioidů",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním opioidů",
         "celkem": 6
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním více drog a psychoaktivních látek",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním více drog a psychoaktivních látek",
         "celkem": 1
       },
       {
@@ -44396,7 +44068,7 @@
     "rok": 1995,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 44
       },
       {
@@ -44990,7 +44662,7 @@
     "rok": 1996,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 37
       },
       {
@@ -45584,7 +45256,7 @@
     "rok": 1997,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 36
       },
       {
@@ -45600,7 +45272,7 @@
         "celkem": 2
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním více drog a psychoaktivních látek",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním více drog a psychoaktivních látek",
         "celkem": 1
       }
     ]
@@ -46178,7 +45850,7 @@
     "rok": 1998,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 65
       },
       {
@@ -46772,7 +46444,7 @@
     "rok": 1999,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 61
       },
       {
@@ -47366,7 +47038,7 @@
     "rok": 2000,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 90
       },
       {
@@ -47378,7 +47050,7 @@
         "celkem": 4
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním opioidů",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním opioidů",
         "celkem": 3
       },
       {
@@ -47960,7 +47632,7 @@
     "rok": 2001,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 101
       },
       {
@@ -47968,7 +47640,7 @@
         "celkem": 8
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním opioidů",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním opioidů",
         "celkem": 2
       },
       {
@@ -48554,7 +48226,7 @@
     "rok": 2002,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 103
       },
       {
@@ -48562,7 +48234,7 @@
         "celkem": 6
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním jiných stimulancií včetně kofeinu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním jiných stimulancií včetně kofeinu",
         "celkem": 1
       },
       {
@@ -49148,7 +48820,7 @@
     "rok": 2003,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 153
       },
       {
@@ -49156,11 +48828,11 @@
         "celkem": 8
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním opioidů",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním opioidů",
         "celkem": 1
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním více drog a psychoaktivních látek",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním více drog a psychoaktivních látek",
         "celkem": 1
       },
       {
@@ -49742,7 +49414,7 @@
     "rok": 2004,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 167
       },
       {
@@ -49750,15 +49422,15 @@
         "celkem": 9
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním více drog a psychoaktivních látek",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním více drog a psychoaktivních látek",
         "celkem": 2
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním jiných stimulancií včetně kofeinu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním jiných stimulancií včetně kofeinu",
         "celkem": 1
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním prchavých rozpustidel",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním prchavých rozpustidel",
         "celkem": 1
       }
     ]
@@ -50336,7 +50008,7 @@
     "rok": 2005,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 260
       },
       {
@@ -50344,7 +50016,7 @@
         "celkem": 15
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním opioidů",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním opioidů",
         "celkem": 2
       },
       {
@@ -50930,7 +50602,7 @@
     "rok": 2006,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 201
       },
       {
@@ -50946,7 +50618,7 @@
         "celkem": 3
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním opioidů",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním opioidů",
         "celkem": 2
       }
     ]
@@ -51514,7 +51186,7 @@
     "rok": 2007,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 201
       },
       {
@@ -51530,7 +51202,7 @@
         "celkem": 2
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním více drog a psychoaktivních látek",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním více drog a psychoaktivních látek",
         "celkem": 2
       }
     ]
@@ -52078,7 +51750,7 @@
     "rok": 2008,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 216
       },
       {
@@ -52086,7 +51758,7 @@
         "celkem": 7
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním tabáku",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním tabáku",
         "celkem": 2
       },
       {
@@ -52644,7 +52316,7 @@
     "rok": 2009,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 142
       },
       {
@@ -52652,7 +52324,7 @@
         "celkem": 5
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním tabáku",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním tabáku",
         "celkem": 5
       },
       {
@@ -53202,7 +52874,7 @@
     "rok": 2010,
     "data": [
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 139
       },
       {
@@ -53778,7 +53450,7 @@
         "celkem": 151
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 137
       },
       {
@@ -54338,7 +54010,7 @@
         "celkem": 635
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 137
       },
       {
@@ -54904,7 +54576,7 @@
         "celkem": 891
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 133
       },
       {
@@ -55482,7 +55154,7 @@
         "celkem": 136
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 122
       },
       {
@@ -56072,7 +55744,7 @@
         "celkem": 214
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 136
       },
       {
@@ -56640,7 +56312,7 @@
         "celkem": 143
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 134
       },
       {
@@ -57200,7 +56872,7 @@
         "celkem": 212
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 129
       },
       {
@@ -57768,7 +57440,7 @@
         "celkem": 254
       },
       {
-        "nazev": "Poruchy duševní a poruchy chovánízpůsobené užíváním alkoholu",
+        "nazev": "Poruchy duševní a poruchy chování způsobené užíváním alkoholu",
         "celkem": 132
       },
       {

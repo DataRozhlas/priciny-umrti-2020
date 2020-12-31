@@ -146,8 +146,12 @@ export const prepareTooltipData = ({ dataMzAbs, dataTooltip }) => {
   });
 
   dataTooltip.forEach((category) => {
-    const categoryName = category.skupina;
+    let categoryName = category.skupina;
     const year = category.rok;
+
+    if (year <= 1948) {
+      categoryName = oldCategoryNamesToNewCategoryNamesMap[categoryName];
+    }
 
     if (!tooltipData[categoryName]) {
       tooltipData[categoryName] = {};
@@ -160,10 +164,12 @@ export const prepareTooltipData = ({ dataMzAbs, dataTooltip }) => {
     category.data.forEach((datum) => {
       const { nazev: name, celkem: absValue } = datum;
 
-      tooltipData[categoryName][year].diagnoses.push({
-        name,
-        absValue,
-      });
+      if (absValue > 0) {
+        tooltipData[categoryName][year].diagnoses.push({
+          name,
+          absValue,
+        });
+      }
     });
   });
 
@@ -171,3 +177,29 @@ export const prepareTooltipData = ({ dataMzAbs, dataTooltip }) => {
 };
 
 const formatNumber = (number) => number.toLocaleString('cs-CZ').replace(' ', '\u2009');
+
+const oldCategoryNamesToNewCategoryNamesMap = {
+  'Nemoci nakažlivé a cizopasné': 'Některé infekční a parazitární nemoci',
+  'Rakovina a jiné nádory': 'Novotvary',
+  'Nemoci rheumatické, výživové, žláz s vnitřním vyměšováním, jiné nemoci celkové a avitaminos':
+    'Nemoci endokrinní, výživy a přeměny látek',
+  'Nemoci krve a ústrojů krvetvorných':
+    'Nemoci krve, krvetvorných orgánů a některé poruchy týkající se mechanismu imunity',
+  'Nemoci ústrojí oběhu krevního': 'Nemoci oběhové soustavy',
+  'Nemoci ústrojů dýchacích': 'Nemoci dýchací soustavy',
+  'Nemoci ústrojí zažívacího': 'Nemoci trávicí soustavy',
+  'Nemoci ústrojí močového a pohlavního': 'Nemoci močové a pohlavní soustavy',
+  'Nemoci těhotenství, porodu a stavu poporodního': 'Těhotenství, porod a šestinedělí',
+  'Nemoci kůže a vaziva podkožního': 'Nemoci kůže a podkožního vaziva',
+  'Nemoci kostí a ústrojí pohybu': 'Nemoci svalové a kosterní soustavy a pojivové tkáně',
+  'Vrozené vady vývojové': 'Vrozené vady, deformace a chromosomální abnormality',
+  'Zvláštní nemoci útlého věku': 'Některé stavy vzniklé v perinatálním období',
+  Sebevraždy: 'Úmyslné sebepoškození',
+  'Vraždy a zabití': 'Napadení (útok)',
+  'Úrazy při dopravě': 'Dopravní nehody',
+  'Úrazy a otravy mimo dopravu': 'Ostatní vnější příčiny poranění a otrav',
+  'Válečné akce a soudní poprava': 'Zákonný zákrok a válečné operace',
+  'Neurčité příčiny smrti': 'Příznaky, znaky a abnormální klinické a laboratorní nálezy nezařazené jinde',
+  'Nemoci soustavy nervové a smyslových ústrojů': 'Nemoci nervové soustavy',
+  'Otravy vleklé': 'Poruchy duševní a poruchy chování',
+};

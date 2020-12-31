@@ -160,10 +160,12 @@ export const prepareTooltipData = ({ dataMzAbs, dataTooltip }) => {
     category.data.forEach((datum) => {
       const { nazev: name, celkem: absValue } = datum;
 
-      tooltipData[categoryName][year].diagnoses.push({
-        name,
-        absValue,
-      });
+      if (absValue > 0) {
+        tooltipData[categoryName][year].diagnoses.push({
+          name,
+          absValue,
+        });
+      }
     });
   });
 
