@@ -1,8 +1,16 @@
 .priciny-umrti-top-mkn-diagnozy {
+  .priciny-umrti-top-mkn-nadpis {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    color: black;
+    font-weight: 500;
+  }
+
   .priciny-umrti-top-mkn-diagnozy-osa {
     display: flex;
     flex-direction: row;
-    margin: 0 -15px;
+    margin: 30px -15px 0 -15px;
     padding: 0 15px 30px 15px;
     overflow-x: auto;
 
