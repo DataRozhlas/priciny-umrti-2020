@@ -1,6 +1,7 @@
 import 'intersection-observer';
 import scrollama from 'scrollama';
 import debounce from 'lodash/debounce';
+import throttle from 'lodash/throttle';
 
 const ilustraceKapitol = () => {
   initIlustraceKapitolyScrolly('.priciny-umrti-kapitola-1');
@@ -47,7 +48,7 @@ const ilustraceKapitol = () => {
     }
   };
 
-  window.addEventListener('scroll', debounce(onScroll, 100));
+  window.addEventListener('scroll', throttle(onScroll, 100));
   onScroll();
 };
 
