@@ -1,6 +1,6 @@
 title: "Od moru ke covidu: unikátní data, jak se měnily příčiny úmrtí Čechů od císaře pána do dneška"
 perex: "<i>S covidem</i>, nebo <i>na covid</i>? Na otázku, která na jaře zamotala hlavu celé civilizaci – tedy co považovat za příčinu úmrtí – hledá medicína odpověď přes sto let."
-coverimg: assets/0_uvodni_ilustrace.jpg
+coverimg: https://data.irozhlas.cz/priciny-umrti-2020/assets/0_uvodni_ilustrace.jpg
 coverimg_note: ""
 styles: [https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600]
 libraries: [] #jquery, d3, highcharts, datatables
@@ -18,8 +18,8 @@ Přesvědčivě to dokládají data o 407 zemřelých během první poloviny rok
 
 <wide>
   <figure id="graf-komorbidity" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="assets/svg/0.1_komorbidity_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/0.1_komorbidity_mob.svg" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/0.1_komorbidity_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/0.1_komorbidity_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://koronavirus.mzcr.cz/wp-content/uploads/2020/11/Data-o-celkov%C3%A9-mortalit%C4%9B-a-o-p%C5%99%C3%AD%C4%8Din%C3%A1ch-%C3%BAmrt%C3%AD-pacient%C5%AF-s-covid-19.pdf">Data o celkové mortalitě a o příčinách úmrtí pacientů s COVID-19, prezentace MZ ČR</a>
     </div>
@@ -42,13 +42,13 @@ Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl sr
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
-    <img data-src="assets/1_ilustrace_kapitoly/001.jpg" alt="Ilustrace k první kapitole, snímek 1" class="active">
-    <img data-src="assets/1_ilustrace_kapitoly/002.jpg" alt="Ilustrace k první kapitole, snímek 2">
-    <img data-src="assets/1_ilustrace_kapitoly/003.jpg" alt="Ilustrace k první kapitole, snímek 3">
-    <img data-src="assets/1_ilustrace_kapitoly/004.jpg" alt="Ilustrace k první kapitole, snímek 4">
-    <img data-src="assets/1_ilustrace_kapitoly/005.jpg" alt="Ilustrace k první kapitole, snímek 5">
-    <img data-src="assets/1_ilustrace_kapitoly/006.jpg" alt="Ilustrace k první kapitole, snímek 6">
-    <img data-src="assets/1_ilustrace_kapitoly/007.jpg" alt="Ilustrace k první kapitole, snímek 7">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/001.jpg" alt="Ilustrace k první kapitole, snímek 1" class="active">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/002.jpg" alt="Ilustrace k první kapitole, snímek 2">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/003.jpg" alt="Ilustrace k první kapitole, snímek 3">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/004.jpg" alt="Ilustrace k první kapitole, snímek 4">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/005.jpg" alt="Ilustrace k první kapitole, snímek 5">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/006.jpg" alt="Ilustrace k první kapitole, snímek 6">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/007.jpg" alt="Ilustrace k první kapitole, snímek 7">
   </div>
 </wide>
 
@@ -61,8 +61,8 @@ Když na úvod článku trochu předběhneme, během necelých dvou století se 
 
 <wide>
   <figure id="graf-nadeje-doziti-celek" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="assets/svg/1.1_nadeje_doziti_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/1.1_nadeje_doziti_mob.svg" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.1_nadeje_doziti_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.1_nadeje_doziti_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a>
     </div>
@@ -99,7 +99,7 @@ Patent předpokládal také vznik evidence příčin úmrtí. Primárním cílem
 „Pokud jde o epidemické nemoci, byl největší zájem věnován neštovicím a choleře,“ píše Srb. „V roce 1808 vyšel dvorský dekret, který předpisoval lékařům hlášení hromadného výskytu úmrtí v obci na stejnou, ale kteroukoliv nemoc nadřízeným úřadům. Byla to jakási primitivní epidemiologická ohlašovací služba.“
 
 <figure>
-  <img loading="lazy" src="assets/1_priciny_1828.jpg" alt="Nejstarší dochovaná data o příčinách úmrtí, rok 1828" style="width: 100%">
+  <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_priciny_1828.jpg" alt="Nejstarší dochovaná data o příčinách úmrtí, rok 1828" style="width: 100%">
   <figcaption>Nejstarší dochovaná data o příčinách úmrtí, rok 1828</figcaption>
 </figure>
 
@@ -109,8 +109,8 @@ Snížení úmrtnosti na konci století pak znamenalo také méně dětí – [s
 
 <wide>
   <figure id="graf-narozeni-zemreli" class="priciny-umrti-vis-static">
-    <img loading="lazy"  src="assets/svg/1.2_narozeni_zemreli_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/1.2_narozeni_zemreli_mob.svg" class="mobile">
+    <img loading="lazy"  src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.2_narozeni_zemreli_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.2_narozeni_zemreli_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a>
     </div>
@@ -129,12 +129,12 @@ Slabé válečné ročníky se zařezávají do statistiky dodnes: trend, kdy js
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-2">
-    <img data-src="assets/2_ilustrace_kapitoly/001.jpg" alt="Ilustrace k druhé kapitole, snímek 1" class="active">
-    <img data-src="assets/2_ilustrace_kapitoly/002.jpg" alt="Ilustrace k druhé kapitole, snímek 2">
-    <img data-src="assets/2_ilustrace_kapitoly/003.jpg" alt="Ilustrace k druhé kapitole, snímek 3">
-    <img data-src="assets/2_ilustrace_kapitoly/004.jpg" alt="Ilustrace k druhé kapitole, snímek 4">
-    <img data-src="assets/2_ilustrace_kapitoly/005.jpg" alt="Ilustrace k druhé kapitole, snímek 5">
-    <img data-src="assets/2_ilustrace_kapitoly/006.jpg" alt="Ilustrace k druhé kapitole, snímek 6">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/001.jpg" alt="Ilustrace k druhé kapitole, snímek 1" class="active">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/002.jpg" alt="Ilustrace k druhé kapitole, snímek 2">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/003.jpg" alt="Ilustrace k druhé kapitole, snímek 3">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/004.jpg" alt="Ilustrace k druhé kapitole, snímek 4">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/005.jpg" alt="Ilustrace k druhé kapitole, snímek 5">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/006.jpg" alt="Ilustrace k druhé kapitole, snímek 6">
   </div>
 </wide>
 
@@ -150,7 +150,7 @@ Víme to díky tomu, že Československo – v rámci loučení se se vším rak
 <div class="b-inline">
   <div class="b-inline__wrap">
     <div class="b-inline__content">
-      <img loading="lazy" src="assets/2_ilustrace_podivne_diagnozy.jpg" alt="" class="priciny-umrti-ilustrace-podivne-diagnozy-img">
+      <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_podivne_diagnozy.jpg" alt="" class="priciny-umrti-ilustrace-podivne-diagnozy-img">
       <p class="text-sm text-bold text-uppercase">Podivné diagnózy</p>
       <p class="text-sm">
         <em>Sešlost stařecká se zblbělostí</em>, <em>zrůdnost vrozená</em>, <em>vrozený nesprávný tvar srdce</em>… Jakkoliv je téma vážné, některé diagnózy z minulosti dnes působí poněkud poeticky až humorně. Dodnes ovšem najdeme <a href="https://mkn10.uzis.cz/">na seznamu oficiálních diagnóz</a> <em>kousnutí nebo úder psem</em>, <em>uhození se o jinou osobu</em> i <em>nehodu vesmírné lodi</em>.
@@ -213,44 +213,44 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
     </div>
     <div class="priciny-umrti-top-mkn-diagnozy-obsah">
       <div data-mkn="mkn-2" data-mkn-active class="">
-        <img loading="lazy" src="assets/svg/mkn_2_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_2_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_2_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_2_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-3" class="">
-        <img loading="lazy" src="assets/svg/mkn_3_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_3_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_3_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_3_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-4" class="">
-        <img loading="lazy" src="assets/svg/mkn_4_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_4_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_4_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_4_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-5" class="">
-        <img loading="lazy" src="assets/svg/mkn_5_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_5_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_5_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_5_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-6" class="">
-        <img loading="lazy" src="assets/svg/mkn_6_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_6_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_6_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_6_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-7" class="">
-        <img loading="lazy" src="assets/svg/mkn_7_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_7_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_7_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_7_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-8" class="">
-        <img loading="lazy" src="assets/svg/mkn_8_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_8_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_8_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_8_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-9" class="">
-        <img loading="lazy" src="assets/svg/mkn_9_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_9_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_9_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_9_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-10-i" class="">
-        <img loading="lazy" src="assets/svg/mkn_10_I_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_10_I_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_10_I_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_10_I_mob.svg" class="mobile">
       </div>
       <div data-mkn="mkn-10-ii" class="">
-        <img loading="lazy" src="assets/svg/mkn_10_II_des.svg" class="desktop">
-        <img loading="lazy" src="assets/svg/mkn_10_II_mob.svg" class="mobile">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_10_II_des.svg" class="desktop">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/mkn_10_II_mob.svg" class="mobile">
       </div>
     </div>
     <div class="source-reference">
@@ -273,7 +273,7 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
       </div>
       <div class="b-inline__img">
         <!-- TODO: alt text -->
-        <img loading="lazy" src="assets/gif/abs_rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/gif/abs_rel.gif" alt="" class="priciny-umrti-hrb-std-box-img">
       </div>
     </div>
     <div class="b-inline__wrap priciny-umrti-hrb-std-box-std">
@@ -291,7 +291,7 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
       </div>
       <div class="b-inline__img">
         <!-- TODO: alt text -->
-        <img loading="lazy" src="assets/gif/rel_std.gif" alt="" class="priciny-umrti-hrb-std-box-img">
+        <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/gif/rel_std.gif" alt="" class="priciny-umrti-hrb-std-box-img">
       </div>
     </div>
   </div>
@@ -365,8 +365,8 @@ Podrobnější pohled prozradí věk válečných obětí nebo v čem je zákeř
 
 <wide>
   <figure id="graf-heatmap" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="assets/svg/2.4_heatmapa_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/2.4_heatmapa_mob.svg" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/2.4_heatmapa_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/2.4_heatmapa_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
     </div>
@@ -400,12 +400,12 @@ Na rozdíl od první světové války ovšem nedošlo k většímu propadu porod
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-3">
-    <img data-src="assets/3_ilustrace_kapitoly/001.jpg" alt="Ilustrace ke třetí kapitole, snímek 1" class="active">
-    <img data-src="assets/3_ilustrace_kapitoly/002.jpg" alt="Ilustrace ke třetí kapitole, snímek 2">
-    <img data-src="assets/3_ilustrace_kapitoly/003.jpg" alt="Ilustrace ke třetí kapitole, snímek 3">
-    <img data-src="assets/3_ilustrace_kapitoly/004.jpg" alt="Ilustrace ke třetí kapitole, snímek 4">
-    <img data-src="assets/3_ilustrace_kapitoly/005.jpg" alt="Ilustrace ke třetí kapitole, snímek 5">
-    <img data-src="assets/3_ilustrace_kapitoly/006.jpg" alt="Ilustrace ke třetí kapitole, snímek 6">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/001.jpg" alt="Ilustrace ke třetí kapitole, snímek 1" class="active">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/002.jpg" alt="Ilustrace ke třetí kapitole, snímek 2">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/003.jpg" alt="Ilustrace ke třetí kapitole, snímek 3">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/004.jpg" alt="Ilustrace ke třetí kapitole, snímek 4">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/005.jpg" alt="Ilustrace ke třetí kapitole, snímek 5">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/006.jpg" alt="Ilustrace ke třetí kapitole, snímek 6">
   </div>
 </wide>
 
@@ -423,8 +423,8 @@ Jenže na rozdíl od západu Evropy Československu optimismus dlouho nevydržel
 <wide>
   <figure id="graf-nadeje-doziti-komunismus" class="priciny-umrti-vis-static">
     <!-- TODO: alt texty -->
-    <img loading="lazy" src="assets/svg/3.1_nadeje_doziti_des.svg" alt="" class="desktop">
-    <img loading="lazy" src="assets/svg/3.1_nadeje_doziti_mob.svg" alt="" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/3.1_nadeje_doziti_des.svg" alt="" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/3.1_nadeje_doziti_mob.svg" alt="" class="mobile">
     <div class="source-reference">
       Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka">Demografická příručka ČSÚ</a>
     </div>
@@ -446,8 +446,8 @@ Podobné změny se ale mohou objevit na každém švu mezi dvěma revizemi. Nejv
 <wide>
   <figure id="graf-zlom" class="priciny-umrti-vis-static">
     <!-- TODO: alt texty -->
-    <img loading="lazy" src="assets/svg/3.2_zlom_umrti_des.svg" alt="" class="desktop">
-    <img loading="lazy" src="assets/svg/3.2_zlom_umrti_mob.svg" alt="" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/3.2_zlom_umrti_des.svg" alt="" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/3.2_zlom_umrti_mob.svg" alt="" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
     </div>
@@ -465,8 +465,8 @@ Pohledem současné medicíny jde o chybný údaj – lékaři by měli být sch
 <wide>
   <figure id="graf-nepresne-urcene-priciny" class="priciny-umrti-vis-static">
     <!-- TODO: alt texty -->
-    <img loading="lazy" src="assets/svg/3.3_nepresne_priciny_des.svg" alt="" class="desktop">
-    <img loading="lazy" src="assets/svg/3.3_nepresne_priciny_mob.svg" alt="" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/3.3_nepresne_priciny_des.svg" alt="" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/3.3_nepresne_priciny_mob.svg" alt="" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg">Zemřelí podle podrobného seznamu příčin smrti, pohlaví a věku, ČSÚ</a>
     </div>
@@ -547,12 +547,12 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4">
-    <img data-src="assets/4_ilustrace_kapitoly/001.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 1" class="active">
-    <img data-src="assets/4_ilustrace_kapitoly/002.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 2">
-    <img data-src="assets/4_ilustrace_kapitoly/003.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 3">
-    <img data-src="assets/4_ilustrace_kapitoly/004.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 4">
-    <img data-src="assets/4_ilustrace_kapitoly/005.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 5">
-    <img data-src="assets/4_ilustrace_kapitoly/006.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 6">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/001.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 1" class="active">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/002.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 2">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/003.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 3">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/004.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 4">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/005.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 5">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/006.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 6">
   </div>
 </wide>
 
@@ -570,8 +570,8 @@ Pivo a párek ostatně stále patří k obrazu spokojeného Čecha a <a href="ht
 <wide>
   <figure id="graf-nadeje-doziti-soucasnost" class="priciny-umrti-vis-static">
     <!-- TODO: alt texty -->
-    <img loading="lazy" src="assets/svg/4.1_nadeje_doziti_des.svg" alt="" class="desktop">
-    <img loading="lazy" src="assets/svg/4.1_nadeje_doziti_mob.svg" alt="" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/4.1_nadeje_doziti_des.svg" alt="" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/4.1_nadeje_doziti_mob.svg" alt="" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Demografická příručka ČSÚ</a>
     </div>
@@ -589,8 +589,8 @@ Přesto je i dnes v datech o délce dožití patrné, <a href="https://interakti
 <wide>
   <figure id="graf-zelezna-opona" class="priciny-umrti-vis-static">
     <!-- TODO: alt texty -->
-    <img loading="lazy" src="assets/svg/4.2_mapa_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/4.2_mapa_mob.svg" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/4.2_mapa_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/4.2_mapa_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://ec.europa.eu/eurostat/databrowser/view/tgs00101/default/table?lang=en">Life expectancy at birth by sex and NUTS 2 region, Eurostat</a>
     </div>
@@ -667,12 +667,12 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
-    <img data-src="assets/5_ilustrace_kapitoly/001.jpg" alt="Ilustrace k páté kapitole, snímek 1" class="active">
-    <img data-src="assets/5_ilustrace_kapitoly/002.jpg" alt="Ilustrace k páté kapitole, snímek 2">
-    <img data-src="assets/5_ilustrace_kapitoly/003.jpg" alt="Ilustrace k páté kapitole, snímek 3">
-    <img data-src="assets/5_ilustrace_kapitoly/004.jpg" alt="Ilustrace k páté kapitole, snímek 4">
-    <img data-src="assets/5_ilustrace_kapitoly/005.jpg" alt="Ilustrace k páté kapitole, snímek 5">
-    <img data-src="assets/5_ilustrace_kapitoly/006.jpg" alt="Ilustrace k páté kapitole, snímek 6">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/001.jpg" alt="Ilustrace k páté kapitole, snímek 1" class="active">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/002.jpg" alt="Ilustrace k páté kapitole, snímek 2">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/003.jpg" alt="Ilustrace k páté kapitole, snímek 3">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/004.jpg" alt="Ilustrace k páté kapitole, snímek 4">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/005.jpg" alt="Ilustrace k páté kapitole, snímek 5">
+    <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/006.jpg" alt="Ilustrace k páté kapitole, snímek 6">
   </div>
 </wide>
 
@@ -691,10 +691,10 @@ První krok při určování příčiny úmrtí má na starosti ohledávající 
 
 <wide>
   <figure id="lpz" class="priciny-umrti-vis-static">
-      <img loading="lazy" src="assets/svg/5.1_lpz_des.svg" class="desktop">
-      <img loading="lazy" src="assets/svg/5.1_lpz_mob.svg" class="mobile">
-    <!-- <img loading="lazy" src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%"> -->
-    <!-- <img loading="lazy" src="assets/svg/lpz.svg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%"> -->
+      <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.1_lpz_des.svg" class="desktop">
+      <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.1_lpz_mob.svg" class="mobile">
+    <!-- <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%"> -->
+    <!-- <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/lpz.svg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%"> -->
     <!-- <figcaption>Současná verze listu o prohlídce zemřelého</figcaption> -->
     <div class="source-reference">
       Zdroj: <a href="">Nevím, ÚZIS</a>
@@ -714,8 +714,8 @@ List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. 
 
 <wide>
   <figure id="radiator" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="assets/svg/5.2_radiator_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/5.2_radiator_mob.svg" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_radiator_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_radiator_mob.svg" class="mobile">
     <!-- <img loading="lazy" src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;"> -->
     <div class="source-reference">
       Zdroj: <a href="https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf">Jak správně postupovat při vyplňování Listu o prohlídce mrtvého, ÚZIS</a>
@@ -737,8 +737,8 @@ To je důležité i pro statistiku covidových úmrtí. U něj pravidlo říká,
 
 <wide>
   <figure id="radiator-covid" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="assets/svg/5.3_radiator_covid_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/5.3_radiator_covid_mob.svg" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.3_radiator_covid_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.3_radiator_covid_mob.svg" class="mobile">
     <!-- <img loading="lazy" src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;"> -->
     <div class="source-reference">
       Zdroj: <a href="https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf">Jak správně postupovat při vyplňování Listu o prohlídce mrtvého, ÚZIS</a>
@@ -756,8 +756,8 @@ Na nečekaně masivní změně některých diagnóz, třeba právě diabetu, se 
 
 <wide>
   <figure id="graf-ateroskleroza" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="assets/svg/5.2_strojove_kodovani_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/5.2_strojove_kodovani_mob.svg" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_strojove_kodovani_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_strojove_kodovani_mob.svg" class="mobile">
     <div class="source-reference"> 
       Zdroj: <a href="http://www.demografie.info/?cz_detail_clanku&artclID=840">Demografie.info</a>
     </div>
