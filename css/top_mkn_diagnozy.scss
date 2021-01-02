@@ -126,10 +126,18 @@
     margin-top: 5px;
 
     > * {
+      height: 0;
+      // Mobile version has resolution 530px x 605px
+      padding-bottom: 114.151%;
       display: none;
 
       &[data-mkn-active] {
         display: block;
+      }
+
+      @media (min-width: 768px) {
+        // Desktop version has resolution 820px x 608px
+        padding-bottom: 74.146%;
       }
     }
   }
