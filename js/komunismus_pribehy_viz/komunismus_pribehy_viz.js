@@ -40,7 +40,7 @@ export const initViz = (svgSelector, data) => {
 
   svg.attr('viewBox', [0, 0, width, height]);
 
-  const { data1949MzStd, data1949MStd, data1949ZStd, data1949MzAbs, dataTooltip1989 } = data;
+  const { data1949MzStd, data1949MzAbs, dataTooltip1989 } = data;
   const data1949MzStdWithoutTotal = data1949MzStd.filter((category) => category.skupina !== 'Celkem');
   const data1949MzStdCategoriesLower = data1949MzStdWithoutTotal.filter(
     (category) => !['Nemoci oběhové soustavy', 'Novotvary'].includes(category.skupina)
@@ -112,13 +112,7 @@ export const initViz = (svgSelector, data) => {
     svg,
 
     data1949MzStd,
-    data1949MStd,
-    data1949ZStd,
-
     dataMzStd: data1949MzStd,
-    dataMStd: data1949MStd,
-    dataZStd: data1949ZStd,
-
     dataMzStdCategoriesLower: data1949MzStdCategoriesLower,
 
     tooltipData: tooltip.prepareTooltipData({ dataMzAbs: data1949MzAbs, dataTooltip: dataTooltip1989 }),

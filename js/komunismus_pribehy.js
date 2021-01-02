@@ -53,34 +53,17 @@ const fetchData = () => {
     fetch(`${window.dataRozhlasBaseUrl}data/1949_mz_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch(`${window.dataRozhlasBaseUrl}data/1949_m_std.json`).then((response) => {
-      return !response.error ? response.json() : Promise.reject();
-    }),
-    fetch(`${window.dataRozhlasBaseUrl}data/1949_z_std.json`).then((response) => {
-      return !response.error ? response.json() : Promise.reject();
-    }),
     fetch(`${window.dataRozhlasBaseUrl}data/1949_mz_abs.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
     fetch(`${window.dataRozhlasBaseUrl}data/tooltip_1989.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-  ]).then(([data1949MzStd, data1949MStd, data1949ZStd, data1949MzAbs, dataTooltip1989]) => {
+  ]).then(([data1949MzStd, data1949MzAbs, dataTooltip1989]) => {
     return {
       data1949MzStd,
-      data1949MStd: filterDataToNeededYears(data1949MStd),
-      data1949ZStd: filterDataToNeededYears(data1949ZStd),
       data1949MzAbs,
       dataTooltip1989,
-    };
-  });
-};
-
-const filterDataToNeededYears = (data) => {
-  return data.map((category) => {
-    return {
-      ...category,
-      data: category.data.filter((d) => d.rok <= 1989),
     };
   });
 };
