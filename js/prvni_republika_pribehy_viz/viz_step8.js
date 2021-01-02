@@ -100,6 +100,13 @@ export default {
           activeColor: colors.categoryColorsActive[category.skupina],
           duration: 700,
         });
+
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName: category.skupina,
+          x: viz.x,
+          y: viz.yCategories,
+          activeColor: 'transparent',
+        });
       } else {
         lines.removeCategoryLine({
           svg,
@@ -128,6 +135,8 @@ export default {
           x: viz.xExplore,
           y: viz.yExplore,
           activeColor: colors.categoryColorsActive[category.skupina],
+          delay: 700,
+          duration: 700,
         });
       }
     });
@@ -186,6 +195,8 @@ export default {
     data1919MzStdWithoutTotal.forEach((category) => {
       const categoryName = category.skupina;
 
+      tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
+
       if (!lines.isAddedCategoryLine(viz, { categoryName })) {
         lines.addCategoryLine({
           svg,
@@ -201,8 +212,6 @@ export default {
           style: 'context',
         });
       }
-
-      tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
     });
 
     lines.changeCategoryLine({ svg, categoryName: categoryWarName, style: 'active', opacity: 0 });

@@ -92,7 +92,16 @@ export default {
         categoryName: category.skupina,
         x: viz.xExplore,
         y: viz.yExplore,
+        activeColor: 'transparent',
+      });
+
+      tooltip.updateCategoryLineTooltipTriggers(viz, {
+        categoryName: category.skupina,
+        x: viz.xExplore,
+        y: viz.yExplore,
         activeColor: colors.categoryColorsActive[category.skupina],
+        duration: 700,
+        delay: 2100,
       });
     });
 

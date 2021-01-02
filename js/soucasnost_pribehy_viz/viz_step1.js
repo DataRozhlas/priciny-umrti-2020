@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import * as axes from './axes';
 import * as colors from './colors';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 
 export default {
   onScrollDownToStep: (viz) => {
@@ -71,12 +72,10 @@ export default {
 
     // 5. Highlight category
 
-    lines.changeActiveNonTotalCategoryLines({
-      svg: viz.svg,
+    lines.changeActiveNonTotalCategoryLines(viz, {
       line: viz.lineCategories,
       x: viz.x,
       y: viz.yCategories,
-      dataMzStd: viz.dataMzStd,
       activeCategoryNames: ['Nemoci oběhové soustavy'],
       delay: 1400,
     });
@@ -105,6 +104,7 @@ export default {
     });
 
     lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Nemoci oběhové soustavy' });
+    tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName: 'Nemoci oběhové soustavy' });
 
     dataMzStdWithoutTotal.forEach((category) => {
       lines.removeCategoryLine({ svg: viz.svg, categoryName: category.skupina });

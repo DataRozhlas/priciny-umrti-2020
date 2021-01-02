@@ -2,23 +2,21 @@ import * as lines from './lines';
 
 export default {
   onScrollDownToStep: (viz) => {
-    lines.changeActiveNonTotalCategoryLines({
-      svg: viz.svg,
+    lines.changeActiveNonTotalCategoryLines(viz, {
       line: viz.lineCategoriesLower,
       x: viz.x,
       y: viz.yCategoriesLower,
-      dataMzStd: viz.dataMzStdCategoriesLower,
       activeCategoryNames: ['Některé infekční a parazitární nemoci'],
+      excludeCategoryNames: ['Nemoci oběhové soustavy', 'Novotvary'],
     });
   },
   onScrollUpFromStep: (viz) => {
-    lines.changeActiveNonTotalCategoryLines({
-      svg: viz.svg,
+    lines.changeActiveNonTotalCategoryLines(viz, {
       line: viz.lineCategoriesLower,
       x: viz.x,
       y: viz.yCategoriesLower,
-      dataMzStd: viz.dataMzStdCategoriesLower,
       activeCategoryNames: ['Úmyslné sebepoškození'],
+      excludeCategoryNames: ['Nemoci oběhové soustavy', 'Novotvary'],
     });
   },
 };

@@ -10,6 +10,7 @@ import * as xAxisAnnotations from './x_axis_annotations';
 export default {
   onScrollDownToStep: (viz) => {
     lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Dopravní nehody' });
+    tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName: 'Dopravní nehody' });
 
     const exploreCategoryNames = ['Některé infekční a parazitární nemoci', 'Nemoci oběhové soustavy', 'Novotvary'];
 
@@ -28,7 +29,16 @@ export default {
           categoryName: category.skupina,
           x: viz.xExplore,
           y: viz.yExplore,
+          activeColor: 'transparent',
+        });
+
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName: category.skupina,
+          x: viz.xExplore,
+          y: viz.yExplore,
           activeColor: colors.categoryColorsActive[category.skupina],
+          duration: 700,
+          delay: 700,
         });
       } else {
         lines.removeCategoryLine({
@@ -90,13 +100,12 @@ export default {
       tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
     });
 
-    lines.changeActiveNonTotalCategoryLines({
-      svg: viz.svg,
+    lines.changeActiveNonTotalCategoryLines(viz, {
       line: viz.lineCategoriesLower,
       x: viz.x,
       y: viz.yCategoriesLower,
-      dataMzStd: viz.dataMzStd,
       activeCategoryNames: ['Dopravní nehody'],
+      excludeCategoryNames: ['Nemoci oběhové soustavy', 'Novotvary'],
     });
 
     axes.updateXAxis(viz, { x: viz.x, margin: viz.margin, duration: 700 });

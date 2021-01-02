@@ -48,13 +48,17 @@
 
   .g-tooltip-triggers {
     circle {
-      fill: transparent;
+      fill: currentColor;
       stroke: transparent;
-      stroke-width: 10px;
+      // stroke-width: 10px;
 
-      &.active {
-        fill: currentColor;
-      }
+      // &.mouseover {
+      //   stroke-width: 8.5px;
+      // }
+    }
+
+    .style-context circle {
+      fill: transparent;
     }
   }
 

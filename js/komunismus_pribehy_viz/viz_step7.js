@@ -9,8 +9,10 @@ import * as xAxisAnnotations from './x_axis_annotations';
 
 export default {
   onScrollDownToStep: (viz) => {
-    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Některé stavy vzniklé v perinatálním období' });
-    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Těhotenství, porod a šestinedělí' });
+    ['Některé stavy vzniklé v perinatálním období', 'Těhotenství, porod a šestinedělí'].map((categoryName) => {
+      lines.removeCategoryLineLabel({ svg: viz.svg, categoryName });
+      tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
+    });
 
     const exploreCategoryNames = ['Některé infekční a parazitární nemoci', 'Nemoci oběhové soustavy', 'Novotvary'];
 
@@ -29,7 +31,16 @@ export default {
           categoryName: category.skupina,
           x: viz.xExplore,
           y: viz.yExplore,
+          activeColor: 'transparent',
+        });
+
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName: category.skupina,
+          x: viz.xExplore,
+          y: viz.yExplore,
           activeColor: colors.categoryColorsActive[category.skupina],
+          duration: 700,
+          delay: 700,
         });
       } else {
         lines.removeCategoryLine({
@@ -100,13 +111,12 @@ export default {
       tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
     });
 
-    lines.changeActiveNonTotalCategoryLines({
-      svg: viz.svg,
+    lines.changeActiveNonTotalCategoryLines(viz, {
       line: viz.lineCategoriesLower,
       x: viz.x,
       y: viz.yCategoriesLower,
-      dataMzStd: viz.dataMzStdCategoriesLower,
       activeCategoryNames: ['Některé stavy vzniklé v perinatálním období', 'Těhotenství, porod a šestinedělí'],
+      excludeCategoryNames: ['Nemoci oběhové soustavy', 'Novotvary'],
     });
 
     axes.updateXAxis(viz, { x: viz.x, margin: viz.margin, duration: 700 });

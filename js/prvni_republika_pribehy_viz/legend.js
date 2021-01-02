@@ -175,6 +175,11 @@ const renderInsidesOfScrollContainer = (
         style: categoryName === mouseoverCategoryName ? 'active' : 'context',
         activeColor: colors.categoryColorsActive[categoryName],
       });
+
+      tooltip.changeCategoryLineTooltipTriggersStyle(viz, {
+        categoryName,
+        style: categoryName === mouseoverCategoryName ? 'active' : 'context',
+      });
     });
 
     lines.bringCategoryLineToFront({ svg: viz.svg, categoryName: mouseoverCategoryName });
@@ -192,6 +197,11 @@ const renderInsidesOfScrollContainer = (
         categoryName,
         style: 'active',
         activeColor: colors.categoryColorsActive[categoryName],
+      });
+
+      tooltip.changeCategoryLineTooltipTriggersStyle(viz, {
+        categoryName,
+        style: 'active',
       });
     });
   };
@@ -244,7 +254,12 @@ const renderInsidesOfScrollContainer = (
           activeColor,
         });
 
-        tooltip.updateCategoryLineTooltipTriggers(viz, { categoryName, x: viz.xExplore, y: yCustom, activeColor });
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName,
+          x: viz.xExplore,
+          y: yCustom,
+          activeColor,
+        });
       } else if (show && isAdded) {
         lines.changeCategoryLine({
           svg: viz.svg,
@@ -255,7 +270,13 @@ const renderInsidesOfScrollContainer = (
           duration: 700,
         });
 
-        tooltip.updateCategoryLineTooltipTriggers(viz, { categoryName, x: viz.xExplore, y: yCustom, activeColor });
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName,
+          x: viz.xExplore,
+          y: yCustom,
+          activeColor,
+          duration: 700,
+        });
       } else if (!show && isAdded) {
         lines.removeCategoryLine({
           svg: viz.svg,

@@ -10,27 +10,44 @@ export const createTooltipTriggersGroup = (viz) => {
 
 export const getTooltipTriggersGroup = (viz) => viz.svg.select('.g-tooltip-triggers');
 
-export const updateCategoryLineTooltipTriggers = (viz, { categoryName, x, y, activeColor }) => {
+export const updateCategoryLineTooltipTriggers = (
+  viz,
+  { categoryName, x, y, activeColor, duration = 0, delay = 0 }
+) => {
   const tooltipTriggersGroup = getTooltipTriggersGroup(viz);
 
   let categoryLineGroup = tooltipTriggersGroup.select(`.${kebabCase(categoryName)}`);
   if (categoryLineGroup.empty()) {
     categoryLineGroup = tooltipTriggersGroup
       .append('g')
-      .attr('class', kebabCase(categoryName))
+      .attr('class', `${kebabCase(categoryName)} style-active`)
       .attr('color', activeColor);
   }
 
+  categoryLineGroup.transition().duration(duration).delay(delay).attr('color', activeColor);
+
   const categoryData = viz.dataMzStd.find((category) => category.skupina === categoryName).data;
 
-  const radius = 4;
+  const radius = 2.5;
+  const activeRadius = 4;
+  let strokeWidth = 3;
+  let activeStrokeWidth = 0;
 
-  categoryLineGroup
-    .selectAll('dot')
-    .data(categoryData)
+  const yearPixels = Math.floor(
+    x(d3.timeParse('%Y')(categoryData[1].rok)) - x(d3.timeParse('%Y')(categoryData[0].rok))
+  );
+  if (yearPixels > 5) {
+    strokeWidth = (Math.min(16, yearPixels) / 2 - 2.5) * 2;
+    activeStrokeWidth = strokeWidth - 3;
+  }
+
+  const updateSelection = categoryLineGroup.selectAll('circle').data(categoryData);
+
+  updateSelection
     .enter()
     .append('circle')
     .attr('r', radius)
+    .attr('stroke-width', strokeWidth)
     .attr('cx', function (d) {
       return x(d3.timeParse('%Y')(d.rok));
     })
@@ -38,24 +55,60 @@ export const updateCategoryLineTooltipTriggers = (viz, { categoryName, x, y, act
       return y(d.value);
     })
     .on('mouseover', function (e, datum) {
-      e.currentTarget.classList.add('active');
+      e.currentTarget.setAttribute('r', activeRadius);
+      e.currentTarget.setAttribute('stroke-width', activeStrokeWidth);
 
       showTooltip(viz, { categoryName, datum, tooltipTriggerEl: e.currentTarget });
     })
     .on('mouseout', function (e, datum) {
-      e.currentTarget.classList.remove('active');
+      e.currentTarget.setAttribute('r', radius);
+      e.currentTarget.setAttribute('stroke-width', strokeWidth);
 
       hideTooltip(viz);
     });
+
+  updateSelection.exit().transition().duration(duration).delay(delay).remove();
+
+  updateSelection
+    .transition()
+    .duration(duration)
+    .delay(delay)
+    .attr('cx', function (d) {
+      return x(d3.timeParse('%Y')(d.rok));
+    })
+    .attr('cy', function (d) {
+      return y(d.value);
+    });
 };
 
-export const removeCategoryLineTooltipTriggers = (viz, { categoryName }) => {
+export const removeCategoryLineTooltipTriggers = (viz, { categoryName, delay = 0 }) => {
   const tooltipTriggersGroup = getTooltipTriggersGroup(viz);
 
   const categoryLineGroup = tooltipTriggersGroup.select(`.${kebabCase(categoryName)}`);
-  if (categoryLineGroup) {
-    categoryLineGroup.remove();
+  if (!categoryLineGroup.empty()) {
+    if (delay > 0) {
+      categoryLineGroup.transition().delay(delay).remove();
+    } else {
+      categoryLineGroup.remove();
+    }
   }
+};
+
+export const changeCategoryLineTooltipTriggersStyle = (viz, { categoryName, style }) => {
+  const tooltipTriggersGroup = getTooltipTriggersGroup(viz);
+
+  let categoryLineGroup = tooltipTriggersGroup.select(`.${kebabCase(categoryName)}`);
+  if (!categoryLineGroup.empty()) {
+    categoryLineGroup.attr('class', `${kebabCase(categoryName)} style-${style}`);
+  }
+};
+
+export const areAddedCategoryLineTooltipTriggers = (viz, { categoryName }) => {
+  const tooltipTriggersGroup = getTooltipTriggersGroup(viz);
+
+  let categoryLineGroup = tooltipTriggersGroup.select(`.${kebabCase(categoryName)}`);
+
+  return !categoryLineGroup.empty();
 };
 
 const showTooltip = (viz, { categoryName, datum, tooltipTriggerEl }) => {

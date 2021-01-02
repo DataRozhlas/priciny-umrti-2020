@@ -2,25 +2,31 @@ import * as d3 from 'd3';
 
 import * as colors from './colors';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 
 export default {
-  onScrollDownToStep: ({ svg, data1919MzStd, data1919MStd, data1919ZStd, x, yCategories, lineCategories }) => {
+  onScrollDownToStep: (viz) => {
     const categoryWarName = 'Válečné akce a soudní poprava';
 
-    const data1919MzStdCategoryWar = data1919MzStd.find((category) => category.skupina === categoryWarName);
-    const data1919MStdCategoryWar = data1919MStd.find((category) => category.skupina === categoryWarName);
-    const data1919ZStdCategoryWar = data1919ZStd.find((category) => category.skupina === categoryWarName);
+    const dataMzStdCategoryWar = viz.dataMzStd.find((category) => category.skupina === categoryWarName);
+    const dataMStdCategoryWar = viz.dataMStd.find((category) => category.skupina === categoryWarName);
+    const dataZStdCategoryWar = viz.dataZStd.find((category) => category.skupina === categoryWarName);
 
     // 1. Instantly hide the men+women category war line and the label
 
-    lines.changeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava', style: 'active', opacity: 0 });
+    lines.changeCategoryLine({
+      svg: viz.svg,
+      categoryName: 'Válečné akce a soudní poprava',
+      style: 'active',
+      opacity: 0,
+    });
 
     lines.changeCategoryLineLabel({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava',
       position: {
-        x: x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava'].x),
-        y: yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava'].y),
+        x: viz.x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava'].x),
+        y: viz.yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava'].y),
         textAnchor: lines.categoryLineLabelPositions['Válečné akce a soudní poprava'].textAnchor,
       },
       opacity: 0,
@@ -28,23 +34,25 @@ export default {
     });
 
     lines.removeCategoryLineLabel({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava',
     });
+
+    tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName: 'Válečné akce a soudní poprava' });
 
     // 2. Instantly add separate men and women lines using the men+women data
 
     lines.addCategoryLine({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava - muži',
-      d: lineCategories(data1919MzStdCategoryWar.data),
+      d: viz.lineCategories(dataMzStdCategoryWar.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava'],
     });
     lines.addCategoryLine({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava - ženy',
-      d: lineCategories(data1919MzStdCategoryWar.data),
+      d: viz.lineCategories(dataMzStdCategoryWar.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava'],
     });
@@ -52,38 +60,38 @@ export default {
     // 3. Break the men+women line to the separate lines using animation, add labels, and hide annotations
 
     lines.changeCategoryLine({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava - muži',
-      d: lineCategories(data1919MStdCategoryWar.data),
+      d: viz.lineCategories(dataMStdCategoryWar.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava - muži'],
       duration: 700,
     });
     lines.changeCategoryLine({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava - ženy',
-      d: lineCategories(data1919ZStdCategoryWar.data),
+      d: viz.lineCategories(dataZStdCategoryWar.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava - ženy'],
       duration: 700,
     });
 
     lines.addCategoryLineLabel({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava - muži',
       position: {
-        x: x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].x),
-        y: yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].y),
+        x: viz.x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].x),
+        y: viz.yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].y),
         textAnchor: lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].textAnchor,
       },
       opacity: 0,
     });
     lines.changeCategoryLineLabel({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava - muži',
       position: {
-        x: x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].x),
-        y: yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].y),
+        x: viz.x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].x),
+        y: viz.yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].y),
         textAnchor: lines.categoryLineLabelPositions['Válečné akce a soudní poprava - muži'].textAnchor,
       },
       opacity: 1,
@@ -91,63 +99,61 @@ export default {
     });
 
     lines.addCategoryLineLabel({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava - ženy',
       position: {
-        x: x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].x),
-        y: yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].y),
+        x: viz.x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].x),
+        y: viz.yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].y),
         textAnchor: lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].textAnchor,
       },
       opacity: 0,
     });
     lines.changeCategoryLineLabel({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava - ženy',
       position: {
-        x: x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].x),
-        y: yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].y),
+        x: viz.x(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].x),
+        y: viz.yCategories(lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].y),
         textAnchor: lines.categoryLineLabelPositions['Válečné akce a soudní poprava - ženy'].textAnchor,
       },
       opacity: 1,
       duration: 700,
     });
 
-    svg.select('.line-annotation-heydrich').transition().duration(700).attr('opacity', 0).remove();
+    viz.svg.select('.line-annotation-heydrich').transition().duration(700).attr('opacity', 0).remove();
 
-    svg.select('.line-annotation-freeing').transition().duration(700).attr('opacity', 0).remove();
+    viz.svg.select('.line-annotation-freeing').transition().duration(700).attr('opacity', 0).remove();
   },
-  onScrollUpFromStep: ({ svg, data1919MzStd, x, yCategories, lineCategories }) => {
-    lines.removeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava - muži' });
-    lines.removeCategoryLine({ svg, categoryName: 'Válečné akce a soudní poprava - ženy' });
+  onScrollUpFromStep: (viz) => {
+    lines.removeCategoryLine({ svg: viz.svg, categoryName: 'Válečné akce a soudní poprava - muži' });
+    lines.removeCategoryLine({ svg: viz.svg, categoryName: 'Válečné akce a soudní poprava - ženy' });
 
-    lines.removeCategoryLineLabel({ svg, categoryName: 'Válečné akce a soudní poprava - muži' });
-    lines.removeCategoryLineLabel({ svg, categoryName: 'Válečné akce a soudní poprava - ženy' });
+    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Válečné akce a soudní poprava - muži' });
+    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Válečné akce a soudní poprava - ženy' });
 
     const categoryWarName = 'Válečné akce a soudní poprava';
-    const data1919MzStdCategoryWar = data1919MzStd.find((category) => category.skupina === categoryWarName);
+    const dataMzStdCategoryWar = viz.dataMzStd.find((category) => category.skupina === categoryWarName);
 
     lines.changeCategoryLine({
-      svg,
+      svg: viz.svg,
       categoryName: 'Válečné akce a soudní poprava',
-      d: lineCategories(data1919MzStdCategoryWar.data),
+      d: viz.lineCategories(dataMzStdCategoryWar.data),
       style: 'active',
       activeColor: colors.categoryColorsActive['Válečné akce a soudní poprava'],
     });
 
-    lines.changeActiveNonTotalCategoryLines({
-      svg,
-      line: lineCategories,
-      x,
-      y: yCategories,
-      data1919MzStd,
+    lines.changeActiveNonTotalCategoryLines(viz, {
+      line: viz.lineCategories,
+      x: viz.x,
+      y: viz.yCategories,
       activeCategoryNames: ['Válečné akce a soudní poprava'],
     });
 
-    svg
+    viz.svg
       .append('image')
       .attr('class', 'line-annotation-heydrich')
-      .attr('x', x(d3.timeParse('%Y')(1942)) - 93 + 6)
-      .attr('y', yCategories(35) - 63)
+      .attr('x', viz.x(d3.timeParse('%Y')(1942)) - 93 + 6)
+      .attr('y', viz.yCategories(35) - 63)
       .attr('width', 93)
       .attr('height', 63)
       .attr('href', 'assets/2_3_kompletni_priciny_umrti/valecne_akce_sipka_heydrichiada.svg')
@@ -156,11 +162,11 @@ export default {
       .duration(700)
       .attr('opacity', 1);
 
-    svg
+    viz.svg
       .append('image')
       .attr('class', 'line-annotation-freeing')
-      .attr('x', x(d3.timeParse('%Y')(1945)) - 124 + 6)
-      .attr('y', yCategories(165) - 64)
+      .attr('x', viz.x(d3.timeParse('%Y')(1945)) - 124 + 6)
+      .attr('y', viz.yCategories(165) - 64)
       .attr('width', 124)
       .attr('height', 64)
       .attr('href', 'assets/2_3_kompletni_priciny_umrti/valecne_akce_sipka_osvobozovaci_boje.svg')

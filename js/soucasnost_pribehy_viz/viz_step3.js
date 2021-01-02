@@ -1,6 +1,7 @@
 import * as axes from './axes';
 import * as colors from './colors';
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 
 export default {
   onScrollDownToStep: (viz) => {
@@ -8,6 +9,8 @@ export default {
 
     ['Nemoci oběhové soustavy', 'Novotvary'].forEach((categoryName) => {
       lines.removeCategoryLineLabel({ svg: viz.svg, categoryName });
+
+      tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName });
 
       lines.changeCategoryLine({
         svg: viz.svg,
@@ -22,36 +25,33 @@ export default {
 
     axes.updateYAxis(viz, { y: viz.yCategoriesLower, margin: viz.margin, delay: 700, duration: 700 });
 
-    lines.changeActiveNonTotalCategoryLines({
-      svg: viz.svg,
+    lines.changeActiveNonTotalCategoryLines(viz, {
       line: viz.lineCategoriesLower,
       x: viz.x,
       y: viz.yCategoriesLower,
-      dataMzStd: viz.dataMzStdCategoriesLower,
       activeCategoryNames: [],
+      excludeCategoryNames: ['Nemoci oběhové soustavy', 'Novotvary'],
       delay: 700,
     });
 
-    lines.changeActiveNonTotalCategoryLines({
-      svg: viz.svg,
+    lines.changeActiveNonTotalCategoryLines(viz, {
       line: viz.lineCategoriesLower,
       x: viz.x,
       y: viz.yCategoriesLower,
-      dataMzStd: viz.dataMzStdCategoriesLower,
       activeCategoryNames: ['Nemoci endokrinní, výživy a přeměny látek'],
+      excludeCategoryNames: ['Nemoci oběhové soustavy', 'Novotvary'],
       delay: 1400,
     });
   },
   onScrollUpFromStep: (viz) => {
     axes.updateYAxis(viz, { y: viz.yCategories, margin: viz.margin, duration: 700 });
 
-    lines.changeActiveNonTotalCategoryLines({
-      svg: viz.svg,
+    lines.changeActiveNonTotalCategoryLines(viz, {
       line: viz.lineCategories,
       x: viz.x,
       y: viz.yCategories,
-      dataMzStd: viz.dataMzStdCategoriesLower,
       activeCategoryNames: [],
+      excludeCategoryNames: ['Nemoci oběhové soustavy', 'Novotvary'],
     });
 
     ['Nemoci oběhové soustavy', 'Novotvary'].forEach((categoryName) => {
@@ -95,6 +95,22 @@ export default {
         textAnchor: lines.categoryLineLabelPositions['Novotvary'].textAnchor,
       },
       opacity: 1,
+      duration: 700,
+      delay: 700,
+    });
+
+    tooltip.updateCategoryLineTooltipTriggers(viz, {
+      categoryName: 'Novotvary',
+      x: viz.x,
+      y: viz.yCategories,
+      activeColor: 'transparent',
+    });
+
+    tooltip.updateCategoryLineTooltipTriggers(viz, {
+      categoryName: 'Novotvary',
+      x: viz.x,
+      y: viz.yCategories,
+      activeColor: colors.categoryColorsActive['Novotvary'],
       duration: 700,
       delay: 700,
     });

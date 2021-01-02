@@ -3,6 +3,7 @@ import kebabCase from 'lodash/kebabCase';
 
 import * as colors from './colors';
 import * as texts from './texts';
+import * as tooltip from './tooltip';
 
 export const createLinesGroup = (viz) => {
   viz.svg.append('g').attr('class', 'g-lines');
@@ -12,7 +13,16 @@ export const createLineLabelsGroup = (viz) => {
   viz.svg.append('g').attr('class', 'g-line-labels');
 };
 
-export const changeCategoryLine = ({ svg, categoryName, d, style, activeColor, duration = 0, delay = 0 }) => {
+export const changeCategoryLine = ({
+  svg,
+  categoryName,
+  d,
+  style,
+  activeColor,
+  duration = 0,
+  delay = 0,
+  opacity = 1,
+}) => {
   let stroke;
   let strokeWidth;
   if (style === 'context') {
@@ -39,7 +49,8 @@ export const changeCategoryLine = ({ svg, categoryName, d, style, activeColor, d
     .attr('stroke-width', strokeWidth)
     .attr('stroke-linejoin', 'round')
     .attr('stroke-linecap', 'round')
-    .attr('fill', 'none');
+    .attr('fill', 'none')
+    .attr('opacity', opacity);
 };
 
 export const changeCategoryLineStyle = (viz, { categoryName, style, activeColor }) => {
@@ -131,10 +142,10 @@ export const isAddedCategoryLineLabel = ({ svg, categoryName }) => {
   return !svg.select(`.g-line-labels .${kebabCase(categoryName)}`).empty();
 };
 
-export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x, y, activeCategoryNames }) => {
-  const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+export const changeActiveNonTotalCategoryLines = (viz, { line, x, y, activeCategoryNames }) => {
+  const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
-  data1919MzStdWithoutTotal.forEach((category) => {
+  dataMzStdWithoutTotal.forEach((category) => {
     let style = 'context';
     let activeColor;
     if (activeCategoryNames.includes(category.skupina)) {
@@ -143,7 +154,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
     }
 
     changeCategoryLine({
-      svg,
+      svg: viz.svg,
       categoryName: category.skupina,
       d: line(category.data),
       style,
@@ -152,13 +163,13 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
     });
 
     const labelExists = isAddedCategoryLineLabel({
-      svg,
+      svg: viz.svg,
       categoryName: category.skupina,
     });
 
     if (activeCategoryNames.includes(category.skupina) && !labelExists) {
       addCategoryLineLabel({
-        svg,
+        svg: viz.svg,
         categoryName: category.skupina,
         position: {
           x: x(categoryLineLabelPositions[category.skupina].x),
@@ -169,7 +180,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
       });
 
       changeCategoryLineLabel({
-        svg,
+        svg: viz.svg,
         categoryName: category.skupina,
         position: {
           x: x(categoryLineLabelPositions[category.skupina].x),
@@ -181,7 +192,7 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
       });
     } else if (!activeCategoryNames.includes(category.skupina) && labelExists) {
       changeCategoryLineLabel({
-        svg,
+        svg: viz.svg,
         categoryName: category.skupina,
         position: {
           x: x(categoryLineLabelPositions[category.skupina].x),
@@ -193,15 +204,48 @@ export const changeActiveNonTotalCategoryLines = ({ svg, data1919MzStd, line, x,
       });
 
       removeCategoryLineLabel({
-        svg,
+        svg: viz.svg,
+        categoryName: category.skupina,
+        delay: 700,
+      });
+    }
+
+    if (activeCategoryNames.includes(category.skupina)) {
+      if (!tooltip.areAddedCategoryLineTooltipTriggers(viz, { categoryName: category.skupina })) {
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName: category.skupina,
+          x,
+          y,
+          activeColor: 'transparent',
+        });
+      }
+
+      tooltip.updateCategoryLineTooltipTriggers(viz, {
+        categoryName: category.skupina,
+        x,
+        y,
+        activeColor,
+        duration: 700,
+      });
+    } else {
+      tooltip.updateCategoryLineTooltipTriggers(viz, {
+        categoryName: category.skupina,
+        x,
+        y,
+        activeColor: 'transparent',
+      });
+
+      tooltip.removeCategoryLineTooltipTriggers(viz, {
         categoryName: category.skupina,
         delay: 700,
       });
     }
   });
 
+  tooltip.hideTooltip();
+
   activeCategoryNames.forEach((categoryName) => {
-    bringCategoryLineToFront({ svg, categoryName });
+    bringCategoryLineToFront({ svg: viz.svg, categoryName });
   });
 };
 

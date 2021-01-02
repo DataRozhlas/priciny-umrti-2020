@@ -1,30 +1,30 @@
 import * as d3 from 'd3';
 
 import * as lines from './lines';
+import * as tooltip from './tooltip';
 
 export default {
-  onScrollDownToStep: ({ svg, x, yCategories, lineCategories, data1919MzStd }) => {
-    lines.changeActiveNonTotalCategoryLines({
-      svg,
-      line: lineCategories,
-      x,
-      y: yCategories,
-      data1919MzStd,
+  onScrollDownToStep: (viz) => {
+    lines.changeActiveNonTotalCategoryLines(viz, {
+      line: viz.lineCategories,
+      x: viz.x,
+      y: viz.yCategories,
       activeCategoryNames: ['Stařecká sešlost'],
     });
   },
-  onScrollUpFromStep: ({ svg, lineCategories, data1919MzStd }) => {
-    const data1919MzStdWithoutTotal = data1919MzStd.filter((category) => category.skupina !== 'Celkem');
+  onScrollUpFromStep: (viz) => {
+    const dataMzStdWithoutTotal = viz.dataMzStd.filter((category) => category.skupina !== 'Celkem');
 
-    data1919MzStdWithoutTotal.forEach((category) => {
+    dataMzStdWithoutTotal.forEach((category) => {
       lines.changeCategoryLine({
-        svg,
+        svg: viz.svg,
         categoryName: category.skupina,
-        d: lineCategories(category.data),
+        d: viz.lineCategories(category.data),
         style: 'anonymous',
       });
     });
 
-    lines.removeCategoryLineLabel({ svg, categoryName: 'Stařecká sešlost' });
+    lines.removeCategoryLineLabel({ svg: viz.svg, categoryName: 'Stařecká sešlost' });
+    tooltip.removeCategoryLineTooltipTriggers(viz, { categoryName: 'Stařecká sešlost' });
   },
 };
