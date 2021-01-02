@@ -50,19 +50,19 @@ const prvniRepublikaPribehy = async () => {
 
 const fetchData = () => {
   return Promise.all([
-    fetch('data/1919_mz_std.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1919_mz_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1919_m_std.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1919_m_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1919_z_std.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1919_z_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1919_mz_abs.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1919_mz_abs.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/tooltip_1948.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/tooltip_1948.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
   ]).then(([data1919MzStd, data1919MStd, data1919ZStd, data1919MzAbs, dataTooltip1948]) => {

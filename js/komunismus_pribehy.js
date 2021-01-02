@@ -50,19 +50,19 @@ const komunismusPribehy = async () => {
 
 const fetchData = () => {
   return Promise.all([
-    fetch('data/1949_mz_std.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1949_mz_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1949_m_std.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1949_m_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1949_z_std.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1949_z_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1949_mz_abs.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1949_mz_abs.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/tooltip_1989.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/tooltip_1989.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
   ]).then(([data1949MzStd, data1949MStd, data1949ZStd, data1949MzAbs, dataTooltip1989]) => {

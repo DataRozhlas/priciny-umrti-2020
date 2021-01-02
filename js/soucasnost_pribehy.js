@@ -50,13 +50,13 @@ const soucasnostPribehy = async () => {
 
 const fetchData = () => {
   return Promise.all([
-    fetch('data/1990_mz_std.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1990_mz_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/1990_mz_abs.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/1990_mz_abs.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/tooltip_2018.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/tooltip_2018.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
   ]).then(([data1990MzStd, data1990MzAbs, dataTooltip2018]) => {

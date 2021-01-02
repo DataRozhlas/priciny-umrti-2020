@@ -50,13 +50,13 @@ const stoletiExplorace = async () => {
 
 const fetchData = () => {
   return Promise.all([
-    fetch('data/long_mz_std.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/long_mz_std.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/long_mz_abs.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/long_mz_abs.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
-    fetch('data/tooltip_long.json').then((response) => {
+    fetch(`${window.dataRozhlasBaseUrl}data/tooltip_long.json`).then((response) => {
       return !response.error ? response.json() : Promise.reject();
     }),
   ]).then(([dataLongMzStd, dataLongMzAbs, dataTooltipLong]) => {

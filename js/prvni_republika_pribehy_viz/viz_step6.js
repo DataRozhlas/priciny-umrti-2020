@@ -20,7 +20,10 @@ export default {
       .attr('y', yCategories(35) - 63)
       .attr('width', 93)
       .attr('height', 63)
-      .attr('href', 'assets/2_3_kompletni_priciny_umrti/valecne_akce_sipka_heydrichiada.svg')
+      .attr(
+        'href',
+        `${window.dataRozhlasBaseUrl}assets/2_3_kompletni_priciny_umrti/valecne_akce_sipka_heydrichiada.svg`
+      )
       .attr('opacity', 0)
       .transition()
       .duration(700)
@@ -33,7 +36,10 @@ export default {
       .attr('y', yCategories(165) - 64)
       .attr('width', 124)
       .attr('height', 64)
-      .attr('href', 'assets/2_3_kompletni_priciny_umrti/valecne_akce_sipka_osvobozovaci_boje.svg')
+      .attr(
+        'href',
+        `${window.dataRozhlasBaseUrl}assets/2_3_kompletni_priciny_umrti/valecne_akce_sipka_osvobozovaci_boje.svg`
+      )
       .attr('opacity', 0)
       .transition()
       .duration(700)
