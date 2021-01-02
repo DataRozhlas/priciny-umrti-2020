@@ -689,11 +689,18 @@ První krok při určování příčiny úmrtí má na starosti ohledávající 
 
 „V zásadě by ohledávající lékař měl vyslovit návrh k pitvě vždy při pochybnosti o příčině smrti u osob zemřelých náhle, u osob žijících osaměle, zemřelých mimo zdravotnická zařízení a v případě, že je nucen uvést diagnózu _příčina smrti neznámá_,“ popisuje manuál pro lékaře.
 
-<figure>
-  <!-- <img loading="lazy" src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%"> -->
-  <img loading="lazy" src="assets/svg/lpz.svg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%">
-  <figcaption>Současná verze listu o prohlídce zemřelého</figcaption>
-</figure>
+<wide>
+  <figure id="lpz" class="priciny-umrti-vis-static">
+      <img loading="lazy" src="assets/svg/5.1_lpz_des.svg" class="desktop">
+      <img loading="lazy" src="assets/svg/5.1_lpz_mob.svg" class="mobile">
+    <!-- <img loading="lazy" src="assets/5_lpz.jpg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%"> -->
+    <!-- <img loading="lazy" src="assets/svg/lpz.svg" alt="Současná verze listu o prohlídce zemřelého" style="width: 100%"> -->
+    <!-- <figcaption>Současná verze listu o prohlídce zemřelého</figcaption> -->
+    <div class="source-reference">
+      Zdroj: <a href="">Nevím, ÚZIS</a>
+    </div> 
+  </figure>
+</wide>
 
 Lékařská část _listu o prohlídce zemřelého_ má dva oddíly, klíčový je první: v jeho nejvyšším řádku lékař uvede _bezprostřední příčinu smrti_, tedy stav, který úmrtí přímo způsobil. Od něj se postupně odvíjí řetězec zdravotních příčin, které ke kritickému stavu vedly; až k nemoci nebo zranění, které vše vyvolaly. Ty se označí za _základní příčinu smrti_. U každého stavu pak lékař doplní, jak dlouho před smrtí nastal.
 
@@ -706,9 +713,9 @@ List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. 
 „Některé triviální příčiny, jako je například padání vlasů, by neměly vést ke smrti,“ připomíná [na webu, věnovanému demografii](http://www.demografie.info/?cz_detail_clanku&artclID=840) na nejbizarnější chyby.
 
 <wide>
-  <figure id="posloupnosti" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="assets/svg/radiator_chart_des.svg" class="desktop">
-    <img loading="lazy" src="assets/svg/radiator_chart_des.svg" class="mobile">
+  <figure id="radiator" class="priciny-umrti-vis-static">
+    <img loading="lazy" src="assets/svg/5.2_radiator_des.svg" class="desktop">
+    <img loading="lazy" src="assets/svg/5.2_radiator_mob.svg" class="mobile">
     <!-- <img loading="lazy" src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;"> -->
     <div class="source-reference">
       Zdroj: <a href="https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf">Jak správně postupovat při vyplňování Listu o prohlídce mrtvého, ÚZIS</a>
@@ -727,6 +734,17 @@ Jenže ne všechny. Se zbylými deseti procenty, tedy asi deseti tisíci listů 
 Když riskneme rychlý pohled do střev algoritmu, narazíme na signifikantní záhyb – tabulky, které určují, jak na sebe diagnózy mohou navazovat. Je _pád ze žebříku_ a následná _zlomenina stehenní kosti_ platná posloupnost? Pravděpodobně ano. Zatímco _pád ze žebříku_ a následný _pásový opar_ není.
 
 To je důležité i pro statistiku covidových úmrtí. U něj pravidlo říká, že nemůže být následkem žádné jiné nemoci. Pokud se tedy objeví v řetězci, který vedl ke smrti, je pro statistiky příčinou úmrtí právě covid.
+
+<wide>
+  <figure id="radiator-covid" class="priciny-umrti-vis-static">
+    <img loading="lazy" src="assets/svg/5.3_radiator_covid_des.svg" class="desktop">
+    <img loading="lazy" src="assets/svg/5.3_radiator_covid_mob.svg" class="mobile">
+    <!-- <img loading="lazy" src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;"> -->
+    <div class="source-reference">
+      Zdroj: <a href="https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf">Jak správně postupovat při vyplňování Listu o prohlídce mrtvého, ÚZIS</a>
+    </div> 
+  </figure>
+</wide>
 
 Zmíněné tabulky povolených příčin a následků se v Česku využívají od roku 2007, předtím statistici řetězce kódovali ručně. Celý IRIS běží od roku 2011. Právě v těchto letech se u některých příčin časová řada láme.
 
