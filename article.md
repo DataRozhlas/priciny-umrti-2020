@@ -168,6 +168,7 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
 <wide>
   <figure class="priciny-umrti-vis-static priciny-umrti-top-mkn-diagnozy">
     <div class="priciny-umrti-top-mkn-nadpis">Nejčastější příčiny úmrtí v&nbsp;klasifikaci MKN</div>
+    <div class="priciny-umrti-top-mkn-podnadpis">Za snižování počtu obětí nejčastějších diagnóz může jednak snižování úmrtnosti, ale také rozvětvování číselníku. MKN-2 využívala dvě stovky diagnóz, MKN-10 osm stovek.</div>
     <div class="priciny-umrti-top-mkn-diagnozy-osa">
       <button type="button" data-mkn="mkn-2" data-mkn-active>
         MKN-2
