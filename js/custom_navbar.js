@@ -1,13 +1,145 @@
+import throttle from 'lodash/throttle';
+
 const customNavbar = () => {
   const navbarEl = document.createElement('div');
   navbarEl.classList.add('priciny-umrti-custom-navbar');
   navbarEl.innerHTML = `
-    <div class="custom-navbar-inner">
-      <a href="/" class="irozhlas-logo">${irozhlasLogoSvg}</a>
-    </div>
+    <a href="/" class="irozhlas-logo">${irozhlasLogoSvg}</a>
+    <button class="chapter-mobile-dropdown">Úvod</button>
+    <nav class="toc" aria-label="Kapitoly">
+      <ol>
+        <li><a data-chapter="0" class="active" href="#top">Úvod</a></li>
+        <li><a data-chapter="1" href="#za-cisare-pana">Za císaře pána</a></li>
+        <li><a data-chapter="2" href="#prvni-republika">První republika</a></li>
+        <li><a data-chapter="3" href="#komunismus">Komunismus</a></li>
+        <li><a data-chapter="4" href="#soucasnost">Současnost</a></li>
+        <li><a data-chapter="5" href="#do-strev">Do střev</a></li>
+        <li><a data-chapter="6" href="#covidova-poprve">Covidová poprvé</a></li>
+      </ol>
+    </nav>
   `;
 
   document.body.append(navbarEl);
+
+  const chapterMobileDropdownEl = navbarEl.querySelector('.chapter-mobile-dropdown');
+
+  chapterMobileDropdownEl.addEventListener('click', () => {
+    if (navbarEl.classList.contains('chapter-mobile-dropdown-open')) {
+      navbarEl.classList.remove('chapter-mobile-dropdown-open');
+    } else {
+      navbarEl.classList.add('chapter-mobile-dropdown-open');
+    }
+  });
+
+  const chapters = {
+    0: document.querySelector('#top'),
+    1: document.querySelector('#za-cisare-pana'),
+    2: document.querySelector('#prvni-republika'),
+    3: document.querySelector('#komunismus'),
+    4: document.querySelector('#soucasnost'),
+    5: document.querySelector('#do-strev'),
+    6: document.querySelector('#covidova-poprve'),
+  };
+
+  let scrollingTimeout = null;
+  // let lastLastScrollTop = document.documentElement.scrollTop;
+  let lastScrollTop = document.documentElement.scrollTop;
+  let scrollUp = 0;
+
+  const onScroll = () => {
+    if (scrollingTimeout !== null) {
+      return;
+    }
+
+    const hideMobileNavbar = !(window.scrollY <= 0 || scrollUp > 250);
+    if (hideMobileNavbar && !navbarEl.classList.contains('mobile-hide')) {
+      navbarEl.classList.add('mobile-hide');
+    } else if (!hideMobileNavbar && navbarEl.classList.contains('mobile-hide')) {
+      navbarEl.classList.remove('mobile-hide');
+    }
+
+    if (lastScrollTop > document.documentElement.scrollTop) {
+      scrollUp += lastScrollTop - document.documentElement.scrollTop;
+    } else {
+      scrollUp = 0;
+    }
+
+    lastScrollTop = document.documentElement.scrollTop;
+
+    const { y: chapter1Y } = chapters['1'].getBoundingClientRect();
+    const { y: chapter2Y } = chapters['2'].getBoundingClientRect();
+    const { y: chapter3Y } = chapters['3'].getBoundingClientRect();
+    const { y: chapter4Y } = chapters['4'].getBoundingClientRect();
+    const { y: chapter5Y } = chapters['5'].getBoundingClientRect();
+    const { y: chapter6Y } = chapters['6'].getBoundingClientRect();
+
+    let activeChapter = 0;
+    if (chapter6Y < 60) {
+      activeChapter = 6;
+    } else if (chapter5Y < 60) {
+      activeChapter = 5;
+    } else if (chapter4Y < 60) {
+      activeChapter = 4;
+    } else if (chapter3Y < 60) {
+      activeChapter = 3;
+    } else if (chapter2Y < 60) {
+      activeChapter = 2;
+    } else if (chapter1Y < 60) {
+      activeChapter = 1;
+    }
+
+    navbarEl.querySelectorAll('.toc ol li a').forEach((linkEl) => {
+      const chapter = parseInt(linkEl.dataset.chapter, 10);
+
+      if (chapter === activeChapter) {
+        linkEl.classList.add('active');
+        chapterMobileDropdownEl.textContent = linkEl.textContent;
+      } else {
+        linkEl.classList.remove('active');
+      }
+    });
+  };
+
+  navbarEl.querySelectorAll('.toc ol li a').forEach((linkEl) => {
+    linkEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const { top: bodyTop } = document.body.getBoundingClientRect();
+
+      const activeChapter = linkEl.dataset.chapter;
+      const chapterEl = chapters[activeChapter];
+      const { top: chapterTop } = chapterEl.getBoundingClientRect();
+
+      document.location.hash = linkEl.getAttribute('href');
+
+      window.scrollTo({ top: chapterTop - bodyTop - 50, left: 0, behavior: 'smooth' });
+
+      navbarEl.querySelectorAll('.toc ol li a').forEach((linkEl) => {
+        const chapter = linkEl.dataset.chapter;
+
+        if (chapter === activeChapter) {
+          linkEl.classList.add('active');
+          chapterMobileDropdownEl.textContent = linkEl.textContent;
+        } else {
+          linkEl.classList.remove('active');
+        }
+      });
+
+      navbarEl.classList.remove('chapter-mobile-dropdown-open');
+
+      if (scrollingTimeout !== null) {
+        window.clearTimeout(scrollingTimeout);
+      }
+      scrollingTimeout = window.setTimeout(() => {
+        scrollingTimeout = null;
+        onScroll();
+      }, 1000);
+    });
+  });
+
+  window.addEventListener('scroll', throttle(onScroll, 100));
+  onScroll();
 };
 
 document.addEventListener('DOMContentLoaded', customNavbar);

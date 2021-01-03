@@ -19,7 +19,7 @@ Přesvědčivě to dokládají data o 407 zemřelých během první poloviny rok
 
 <wide>
   <figure id="graf-komorbidity" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/0.1_komorbidity_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/0.1_komorbidity_des.svg" class="desktop" width="219" height="150" style="width: 100%; height: 100%;">
     <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/0.1_komorbidity_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="https://koronavirus.mzcr.cz/wp-content/uploads/2020/11/Data-o-celkov%C3%A9-mortalit%C4%9B-a-o-p%C5%99%C3%AD%C4%8Din%C3%A1ch-%C3%BAmrt%C3%AD-pacient%C5%AF-s-covid-19.pdf" target="_blank">Data o celkové mortalitě a o příčinách úmrtí pacientů s COVID-19, prezentace MZ ČR</a>
@@ -42,7 +42,7 @@ Moderní medicínská statistika nechává odpověď na lékaři. U chřipky bud
 Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl srovnávat počty obětí mezi zeměmi a co vlastně spojení _příčina úmrtí_ doopravdy znamená, musíme se vrátit ještě do doby, kdy byly české země součástí Svaté říše Římské a ve stínu morových ran se moderní demografie a epidemiologie teprve rodila.
 
 <wide>
-  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1" id="za-cisare-pana">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/001.jpg" alt="Ilustrace k první kapitole, snímek 1" class="active">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/002.jpg" alt="Ilustrace k první kapitole, snímek 2">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_ilustrace_kapitoly/003.jpg" alt="Ilustrace k první kapitole, snímek 3">
@@ -62,7 +62,7 @@ Když na úvod trochu předběhneme, během necelých dvou století se délka ž
 
 <wide>
   <figure id="graf-nadeje-doziti-celek" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.1_nadeje_doziti_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.1_nadeje_doziti_des.svg" class="desktop" width="300" height="145">
     <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.1_nadeje_doziti_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka" target="_blank">Demografická příručka ČSÚ</a>
@@ -102,7 +102,7 @@ Patent uvedl také evidenci příčin úmrtí. Primárním cílem statistiky byl
 „Pokud jde o epidemické nemoci, byl největší zájem věnován neštovicím a choleře,“ píše Srb. „V roce 1808 vyšel dvorský dekret, který předpisoval lékařům hlášení hromadného výskytu úmrtí v obci na stejnou, ale kteroukoliv nemoc nadřízeným úřadům. Byla to jakási primitivní epidemiologická ohlašovací služba.“
 
 <figure>
-  <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_priciny_1828.jpg" alt="Nejstarší dochovaná data o příčinách úmrtí, rok 1828" style="width: 100%">
+  <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/1_priciny_1828.jpg" alt="Nejstarší dochovaná data o příčinách úmrtí, rok 1828" width="1999" height="1341" style="width: 100%; height: 100%;">
   <figcaption>Nejstarší dochovaná data o příčinách úmrtí, rok 1828</figcaption>
 </figure>
 
@@ -114,7 +114,7 @@ Linky porodnosti i úmrtnosti jsou v této době provázané: zemřelé bylo tř
 
 <wide>
   <figure id="graf-narozeni-zemreli" class="priciny-umrti-vis-static">
-    <img loading="lazy"  src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.2_narozeni_zemreli_des.svg" class="desktop">
+    <img loading="lazy"  src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.2_narozeni_zemreli_des.svg" class="desktop" width="215" height="150">
     <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/1.2_narozeni_zemreli_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: Vladimír Srb: 1000 let obyvatelstva českých zemí, <a href="https://www.czso.cz/csu/czso/demograficka-prirucka" target="_blank">Demografická příručka ČSÚ</a>
@@ -131,7 +131,7 @@ Podle Srba jsou ovšem pro české země demograficky podstatnější nepřímé
 Slabé válečné ročníky se zařezávají do statistiky dodnes: trend, kdy jsou české školky několik let poloprázdné a vzápětí přeplněné, spustilo právě rozkolísání dlouhodobě stabilní porodnosti za první světové války. Později se k nim přidala husákovská propopulační opatření a odklad dětí na vyšší věk po sametové revoluci. Problém s nenarozenými válečnými dětmi řeší většina evropských zemí, u některých se ještě prohloubil za druhé války. Nejpalčivěji nenarozená generace <a href="https://www.irozhlas.cz/zpravy-svet/rusove-proti-rusum-zeme-v-nevyhlasene-obcanske-valce_1504291200_zlo" target="_blank">chybí Rusku</a>.
 
 <wide>
-  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-2">
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-2" id="prvni-republika">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/001.jpg" alt="Ilustrace k druhé kapitole, snímek 1" class="active">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/002.jpg" alt="Ilustrace k druhé kapitole, snímek 2">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_kapitoly/003.jpg" alt="Ilustrace k druhé kapitole, snímek 3">
@@ -157,7 +157,7 @@ Autoři MKN navíc počítali s tím, že s rozvojem medicíny bude třeba klasi
 <div class="b-inline">
   <div class="b-inline__wrap">
     <div class="b-inline__content">
-      <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_podivne_diagnozy.jpg" alt="" class="priciny-umrti-ilustrace-podivne-diagnozy-img">
+      <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/2_ilustrace_podivne_diagnozy.jpg" alt="" class="priciny-umrti-ilustrace-podivne-diagnozy-img" width="1040" height="541" style="width: 100%; height: 100%;">
       <p class="text-sm text-bold text-uppercase">Podivné diagnózy</p>
       <p class="text-sm">
         <em>Sešlost stařecká se zblbělostí</em>, <em>zrůdnost vrozená</em>, <em>vrozený nesprávný tvar srdce</em>, <em>posunčina</em>, <em>změknutí mozku</em>, <em>horečka vlnitá</em>, <em>uhlák</em>… Jakkoliv je téma vážné, některé diagnózy z minulosti dnes působí poněkud poeticky až humorně. Dodnes ovšem najdeme <a href="https://mkn10.uzis.cz/" target="_blank">na seznamu oficiálních diagnóz</a> <em>kousnutí nebo úder psem</em>, <em>uhození se o jinou osobu</em> i <em>nehodu vesmírné lodi</em>.
@@ -408,7 +408,7 @@ Na rozdíl od první světové války ovšem nedošlo k většímu propadu porod
 </div>
 
 <wide>
-  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-3">
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-3" id="komunismus">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/001.jpg" alt="Ilustrace ke třetí kapitole, snímek 1" class="active">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/002.jpg" alt="Ilustrace ke třetí kapitole, snímek 2">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/3_ilustrace_kapitoly/003.jpg" alt="Ilustrace ke třetí kapitole, snímek 3">
@@ -561,7 +561,7 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
 </wide>
 
 <wide>
-  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4">
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-4" id="soucasnost">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/001.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 1" class="active">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/002.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 2">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/4_ilustrace_kapitoly/003.jpg" alt="Ilustrace ke čtvrté kapitole, snímek 3">
@@ -683,7 +683,7 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
 </wide>
 
 <wide>
-  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5">
+  <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-5" id="do-strev">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/001.jpg" alt="Ilustrace k páté kapitole, snímek 1" class="active">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/002.jpg" alt="Ilustrace k páté kapitole, snímek 2">
     <img data-src="https://data.irozhlas.cz/priciny-umrti-2020/assets/5_ilustrace_kapitoly/003.jpg" alt="Ilustrace k páté kapitole, snímek 3">
@@ -731,7 +731,7 @@ List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. 
 
 <wide>
   <figure id="radiator" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_radiator_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_radiator_des.svg" class="desktop" width="107" height="150">
     <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_radiator_mob.svg" class="mobile">
     <!-- <img loading="lazy" src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;"> -->
     <div class="source-reference">
@@ -754,7 +754,7 @@ To je důležité i pro statistiku covidových úmrtí. U něj pravidlo říká,
 
 <wide>
   <figure id="radiator-covid" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.3_radiator_covid_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.3_radiator_covid_des.svg" class="desktop" width="199" height="150">
     <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.3_radiator_covid_mob.svg" class="mobile">
     <!-- <img loading="lazy" src="https://lh5.googleusercontent.com/0YUgxSFNbkjPyrVKM1kuBXF7QWqjKPofCHzQl1M6n77_UJ8ufAhUd7B-3bRp7Yg-AZHL8xcXivmlsu_tRTsLdlX07NujwsIB9NsTkuEvP5SkTkDadszNJnUcbdA3U-Paf3UBnL4a" style="width:100%;"> -->
     <div class="source-reference">
@@ -773,7 +773,7 @@ Na nečekaně masivní změně některých diagnóz, třeba právě diabetu, se 
 
 <wide>
   <figure id="graf-ateroskleroza" class="priciny-umrti-vis-static">
-    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_strojove_kodovani_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_strojove_kodovani_des.svg" class="desktop" width="284" height="150">
     <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/5.2_strojove_kodovani_mob.svg" class="mobile">
     <div class="source-reference">
       Zdroj: <a href="http://www.demografie.info/?cz_detail_clanku&artclID=840" target="_blank">Demografie.info</a>
@@ -828,7 +828,7 @@ Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi um�
   </div>
 </wide>
 
-<h2 class="priciny-umrti-nadpis-posledni-kapitoly">Covidová poprvé</h2>
+<h2 class="priciny-umrti-nadpis-posledni-kapitoly" id="covidova-poprve">Covidová poprvé</h2>
 
 „Značná část zemřelých, 64 procent, vykazovala řadu komorbidit, která průběh nemoci komplikovala,“ vysvětloval ministr zdravotnictví Jan Blatný (za ANO) na tiskové konferenci, kterou jsme článek otvírali. Na stejném místě ho i uzavřeme.
 

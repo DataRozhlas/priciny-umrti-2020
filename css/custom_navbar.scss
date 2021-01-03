@@ -7,24 +7,152 @@
   background-color: white;
   border-bottom: 1px solid black;
   z-index: 5;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
 
-  .custom-navbar-inner {
-    max-width: 1040px;
-    height: 100%;
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+  transition: top 200ms ease 0s;
 
   .irozhlas-logo {
+    position: absolute;
+    left: 87px;
+    top: 0;
     display: block;
     width: 156px;
     height: 100%;
 
     svg {
       fill: #d52834;
+    }
+  }
+
+  .toc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+
+    ol {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      list-style-type: none;
+
+      li {
+        display: block;
+        margin: 0 10px;
+        padding: 0;
+
+        a {
+          color: #7e7e7e;
+          text-decoration: underline;
+
+          &:hover, &:focus {
+            color: black;
+            text-decoration: underline;
+          }
+
+          &.active {
+            color: black;
+            text-decoration: none;
+          }
+        }
+
+        &:before {
+          content: '';
+          display: none;
+        }
+      }
+    }
+  }
+
+  .chapter-mobile-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 195px;
+    height: 39px;
+
+    margin: 0;
+    padding: 0 30px 0 0;
+    
+    background: none;
+    border: none;
+
+    &:after {
+      content: '';
+      background: url('/assets/chevron-down.svg');
+      display: block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 12px;
+      right: 9px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .irozhlas-logo {
+      left: 17px;
+    }
+
+    .toc {
+      left: 185px;
+
+      ol {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .toc {
+      display: none;
+      left: 0;
+      top: 39px;
+      height: auto;
+      background: white;
+      border-bottom: 1px solid black;
+
+      ol {
+        flex-direction: column;
+        align-items: stretch;
+
+        li {
+
+          a {
+            display: block;
+            width: 100%;
+            padding: 8px 0;
+            text-align: center;
+          }
+        }
+      }
+    } 
+
+    .chapter-mobile-dropdown {
+      display: block;
+    }
+
+    &.mobile-hide {
+      top: -40px;
+    }
+
+    &.chapter-mobile-dropdown-open {
+      top: 0;
+
+      .toc {
+        display: block;
+      }
+
+      .chapter-mobile-dropdown::after {
+        background: url('/assets/chevron-up.svg');
+      }
     }
   }
 }
