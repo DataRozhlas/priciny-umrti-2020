@@ -7,11 +7,11 @@ libraries: [] #jquery, d3, highcharts, datatables
 options: [] #wide, noheader (, nopic)
 ---
 
-Představte si situaci: pacient, který se celoživotně léčí s cukrovkou, se nakazí nemocí covid-19 a následně zemře. Jaká je příčina smrti? Diabetes, nebo covid?
+Představte si situaci: pacient, který se celoživotně léčí s cukrovkou, se nakazí nemocí covid-19 a zemře. Jaká je příčina smrti? Diabetes, nebo covid?
 
 Pod svícnem pandemie se zdá jasné, že koronavirus. Jenže bez souběžných zdravotních problémů – _komorbidit_ – nemoc zabíjí málokdy.
 
-Přesvědčivě to dokládají data o 407 zemřelých během první poloviny roku 2020 s pozitivním testem na covid. Ministr zdravotnictví Jan Blatný při <a href="https://www.facebook.com/watch/?v=411624583222188" target="_blank">prezentaci závěrů</a> dosud nezveřejněné studie rozdělil oběti do tří skupin:
+Přesvědčivě to dokládají data o 407 zemřelých během první poloviny roku 2020 s pozitivním testem na covid. Ministr zdravotnictví Jan Blatný (za ANO) při <a href="https://www.facebook.com/watch/?v=411624583222188" target="_blank">prezentaci závěrů</a> dosud nezveřejněné studie rozdělil oběti do tří skupin:
 
 - 27 procent zemřelo pravděpodobně <b>na covid</b>, neměli žádné další závažné potíže
 - 64 procent mělo kromě covidu také <b>chronickou nemoc</b>, obvykle srdeční poruchu, diabetes nebo zhoubný nádor
@@ -27,19 +27,19 @@ Přesvědčivě to dokládají data o 407 zemřelých během první poloviny rok
   </figure>
 </wide>
 
-U první a poslední skupiny má otázka po příčině úmrtí jednoznačnou odpověď. Jenže u prostřední – a největší – skupiny taková odpověď prostě neexistuje. Epidemiologie se proto nejméně od první světové války snaží na základě dobových vědeckých poznatků rozhodnout, které z nemocí smrt spíše připsat.
+U první a poslední skupiny má otázka po příčině úmrtí jednoznačnou odpověď. Jenže u té prostřední – a největší – taková odpověď prostě neexistuje. Lékařská statistika se proto nejméně od první světové války snaží na základě dobových vědeckých poznatků rozhodnout, které z nemocí smrt spíše připsat.
 
 Nejde vůbec o akademický spor: odpověď často ovlivní rozvoj medicíny na desítky let dopředu. Nemoci, které se mezi příčinami úmrtí objevují nejčastěji, mají také největší pozornost odborné komunity. Ta se zase často přeleje do rozpočtů.
 
-Lékařská statistika většinou předpokládá, že příčina úmrtí je jen jedna. Mají lékaři při rozhodování, zda zabíjel diabetes či covid, upřednostnit dlouhodobé zdravotní potíže, nebo krátkou intenzivní nemoc? Ať už zvolí jedno nebo druhé, pak nutně zmizí část informace.
+Statistika většinou předpokládá, že příčina úmrtí je jen jedna. Mají lékaři při rozhodování, zda zabíjel diabetes či covid, upřednostnit dlouhodobé zdravotní potíže, nebo krátkou intenzivní nemoc? Ať už zvolí jedno nebo druhé, pak nutně zmizí část informace.
 
 _Příčina úmrtí: covid-19_ skrývá, že jde o pacienta s dlouhodobými potížemi. Opačný případ, kdy by statistika upřednostnila diabetes, zase opomíjí fakt, že bez covidu by žil podstatně déle. Podle lékařů není výjimka, když virus zkrátí život o deset i dvacet let.
 
 Nahraďte koronavirus v příkladu chřipkou a máte představu o dilematu, se kterým se zdravotnictví musí vypořádat. Zabíjela cukrovka, nebo chřipka?
 
-Dnešní epidemiologie nechává odpověď na lékaři. U chřipky bude opatrnější – nakažlivé nemoci považuje za celospolečenské riziko, stejně jako v dobách, kdy řádila cholera nebo pravé neštovice. Poslední rok možná překvapivě ukázal, že opatrnost je oprávněná: dnešní společnost je vůči epidemiím podobně křehká jako před dvěma sty lety.
+Moderní medicínská statistika nechává odpověď na lékaři. U chřipky bude opatrnější – nakažlivé nemoci považuje za celospolečenské riziko, stejně jako v dobách, kdy řádily cholera nebo pravé neštovice. Poslední rok možná překvapivě ukázal, že opatrnost je oprávněná: dnešní společnost je vůči epidemiím podobně křehká jako před dvěma sty lety.
 
-Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl srovnávat počty obětí mezi zeměmi a co vlastně spojení _příčina úmrtí_ doopravdy znamená, musíme se vrátit ještě do doby, kdy byly české země součástí Svaté říše Římské a ve stínu morových ran se moderní epidemiologie teprve rodila.
+Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl srovnávat počty obětí mezi zeměmi a co vlastně spojení _příčina úmrtí_ doopravdy znamená, musíme se vrátit ještě do doby, kdy byly české země součástí Svaté říše Římské a ve stínu morových ran se moderní demografie a epidemiologie teprve rodila.
 
 <wide>
   <div class="priciny-umrti-ilustrace-kapitoly priciny-umrti-kapitola-1">
@@ -56,9 +56,9 @@ Pokud chceme pochopit, co znamená _na covid_ nebo _s covidem_, zda má smysl sr
 <h2 class="priciny-umrti-nadpis-kapitoly">Od faráře k demografovi: jak se umíralo za císaře pána</h2>
 <h2 class="priciny-umrti-podnadpis-kapitoly">1785 až 1918</h2>
 
-Neuvěřitelně působí fakt, že ještě před dvěma sty lety se naši předci dožívali podobného věku jako ve středověku – průměrně méně než třiceti let. Na základě kosterních nálezů odhadují historici naději dožití v devátém století u kmenů, které žily na dnešním českém území, na 27,5 roku. O tisíc let později to bylo podle císařských dat 28,2 roku.
+Neuvěřitelně působí fakt, že ještě před 200 lety se naši předci dožívali podobného věku jako ve středověku – průměrně méně než třiceti let. Na základě kosterních nálezů odhadují historici naději dožití v devátém století u kmenů, které žily na dnešním českém území, na 27,5 roku. O tisíc let později to bylo podle císařských dat 28,2 roku.
 
-Když na úvod trochu předběhneme, během necelých dvou století se délka života protáhla z 28 na bezmála 80 let. Nešlo o plynulou změnu: jsou období jako přelom 19. a 20. století, kdy se během jedné generace život prodloužil o 40 procent, světové válce navzdory. V jiných dobách se růst délky života zpomalil nebo zastavil. V komunistických 60. letech minulého století se dokonce u mužů na celé desetiletí obrátil.
+Když na úvod trochu předběhneme, během necelých dvou století se délka života protáhla z 28 na bezmála 80 let. Nešlo o plynulou změnu: jsou období, jako přelom 19. a 20. století, kdy se život během jedné generace prodloužil o 40 procent, světové válce navzdory. V jiných dobách se růst délky života zpomalil nebo zastavil. V komunistických 60. letech minulého století se dokonce u mužů na celé desetiletí obrátil.
 
 <wide>
   <figure id="graf-nadeje-doziti-celek" class="priciny-umrti-vis-static">
@@ -85,7 +85,7 @@ S délkou života úzce souvisí méně příjemný ukazatel: míra úmrtnosti. 
 
 V každém historickém období se příčiny úmrtí mění. Za císaře, během první republiky obklíčené válkami, za komunistické totality i po sametové revoluci rozhodovaly o délce a kvalitě života jiné nemoci, nehody nebo násilná úmrtí.
 
-Důvod, proč začali panovníci hlídat, kolik a jak starých poddaných mají, byly války. Důvod, proč začali sledovat, na co umírají, epidemie.
+Důvod, proč začali panovníci hlídat, kolik a jak starých poddaných mají, byly války. Důvod, proč začali sledovat, na co umírají, zase epidemie.
 
 V sedmnáctém století Evropu děsil mor. Z té doby pocházejí <a href="https://en.wikisource.org/wiki/Natural_and_Political_Observations_Made_upon_the_Bills_of_Mortality_(Graunt_1676)" target="_blank">první ručně kreslené úmrtnostní tabulky</a> a pokusy odhadnout dětskou úmrtnost. Jejich autor, Londýňan John Graunt, je považován za zakladatele demografie i moderní epidemiologie jako vědy o zdraví populace.
 
@@ -106,7 +106,9 @@ Patent uvedl také evidenci příčin úmrtí. Primárním cílem statistiky byl
   <figcaption>Nejstarší dochovaná data o příčinách úmrtí, rok 1828</figcaption>
 </figure>
 
-Až do první světové války přesnější rozlišení příčin úmrtí chybí. Poměrně spolehlivá jsou ale data o počtu narozených a zemřelých. Z výkyvů umíme poměrně dobře odhadnout, které události život zkracovaly. O největší zuby v lince úmrtnosti se v 19. století postaraly napoleonské války, revoluční rok 1848, epidemie neštovic i záškrtu. Druhá z nemocí měla v té době smrtnost – podíl zemřelých nakažených – kolem 40 procent.
+Až do první světové války přesnější rozlišení příčin úmrtí chybí. Poměrně spolehlivá jsou ale data o počtu narozených a zemřelých. Z výkyvů umíme relativně dobře odhadnout, které události život zkracovaly.
+
+O největší „zuby“ v lince úmrtnosti se v 19. století postaraly napoleonské války, revoluční rok 1848, epidemie neštovic i záškrtu. Druhá z nemocí měla v té době smrtnost – podíl zemřelých nakažených – kolem 40 procent.
 
 Linky porodnosti i úmrtnosti jsou v této době provázané: zemřelé bylo třeba „nahradit“ dětmi. Vysoká kojenecká a dětská úmrtnost znamenala vysokou porodnost. Snížení úmrtnosti na konci století pak vedlo k méně dětem – <a href="https://www.irozhlas.cz/zivotni-styl/spolecnost/datova-zurnalistika-faktomluva-hans-rosling_1811270630_zlo" target="_blank">stejný trend</a>, který v knize Faktomluva popisuje lékař a demograf Hans Rösling v souvislosti se zeměmi třetího světa.
 
@@ -120,13 +122,11 @@ Linky porodnosti i úmrtnosti jsou v této době provázané: zemřelé bylo tř
   </figure>
 </wide>
 
-Jedním z nejúspěšnějších období, co se týče prodloužení délky života, je přelom 19. a 20. století. Během jedné generace se – navzdory válce – život v českých zemích prodloužil téměř o polovinu.
-
-Klíčem k tomuto prvnímu zlomu v délce života byl zrod veřejného zdravotnictví v 80. letech 19. století. Experiment s všeobecnou zdravotní péčí si císař nejprve otestoval v koutě říše – na Moravě – kde se po úmrtnost na infekční nemoci rychle propadla na polovinu. Z periferie se experiment rozšířil do průmyslových center rakouského mocnářství.
+Jedním z nejúspěšnějších období, co se týče prodloužení délky života, je přelom 19. a 20. století. Klíčem k tomuto prvnímu zlomu byl zrod veřejného zdravotnictví. Experiment s všeobecnou zdravotní péčí si císař nejprve v 80. letech 19. století otestoval v koutě říše – na Moravě. Nedlouho nato se úmrtnost na infekční nemoci propadla na polovinu. Z periferie se vzápětí experiment rozšířil do průmyslových center rakouského mocnářství.
 
 První světová válka si mezi Čechy, Moravany a Slezany vyžádala asi 200 tisíc vojenských obětí, které ovšem v oficiální <a href="https://cs.wikipedia.org/wiki/C._k." target="_blank">c. a k.</a> statistice chybí. S odhadem počtu obětí přišli historici a demografové až zpětně. Pomohly jim nepřímé metody jako sčítání vdov po padlých.
 
-Podle Srba jsou ovšem pro české země demograficky podstatnější nepřímé oběti: odhaduje, že kvůli válce <a href="https://www.czso.cz/csu/czso/demograficky_obraz_zemi_koruny_ceske_za_prvni_svetove_valky_v_publikaci_csu" target="_blank">nepřišlo na svět 910 tisíc dětí</a>.
+Podle Srba jsou ovšem pro české země demograficky podstatnější nepřímé oběti: odhaduje, že se kvůli válce <a href="https://www.czso.cz/csu/czso/demograficky_obraz_zemi_koruny_ceske_za_prvni_svetove_valky_v_publikaci_csu" target="_blank">nenarodilo 910 tisíc dětí</a>. Pro srovnání, je to asi 8,8 procenta tehdejší české populace.
 
 Slabé válečné ročníky se zařezávají do statistiky dodnes: trend, kdy jsou české školky několik let poloprázdné a vzápětí přeplněné, spustilo právě rozkolísání dlouhodobě stabilní porodnosti za první světové války. Později se k nim přidala husákovská propopulační opatření a odklad dětí na vyšší věk po sametové revoluci. Problém s nenarozenými válečnými dětmi řeší většina evropských zemí, u některých se ještě prohloubil za druhé války. Nejpalčivěji nenarozená generace <a href="https://www.irozhlas.cz/zpravy-svet/rusove-proti-rusum-zeme-v-nevyhlasene-obcanske-valce_1504291200_zlo" target="_blank">chybí Rusku</a>.
 
@@ -271,7 +271,7 @@ Pro vizualizaci dat o příčinách úmrtí je třeba představit dva koncepty: 
       <div class="b-inline__content">
         <p class="text-sm text-bold text-uppercase">Hrubá míra úmrtnosti</p>
         <p class="text-sm">
-          <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg" target="_blank">Každoročně publikovaná data Českého statistického úřadu</a> ukazují, kolik na jakou příčinu zemřelo lidí. Když data pouze spojíme do časové řady, narazíme na problém: po roce 1938 přišlo Československo o pohraničí a s ním o část obyvatel.
+          <a href="https://www.czso.cz/csu/czso/zemreli-podle-podrobneho-seznamu-pricin-smrti-pohlavi-a-veku-v-cr-1919-2005-a95l7hehjg" target="_blank">Každoročně publikovaná data Českého statistického úřadu</a> ukazují, kolik na co zemřelo lidí. Když data pouze spojíme do časové řady, narazíme na problém: po roce 1938 přišlo Československo o pohraničí a s ním o část obyvatel.
         </p>
         <p class="text-sm">
           Ze statistik tak zmizely Sudety, s nástupem protektorátu pak i Němci ve vnitrozemí. V absolutních počtech úmrtí je proto po tomto roce schodek.
@@ -337,7 +337,7 @@ A teď už slíbené grafy. Prvnímu období, kdy jsou pro české území dostu
     <div class="datarozhlas-scrolly-step">
       <h3>Být tlustý přestává být výhoda</h3>
       <p>
-        Okamžik, kdy nemoci srdce v úmrtnosti přebraly prvenství od infekcí, je pro medicínu důležitý. U tuberkulózy je obezita ochranným faktorem, u nemocí srdce je riziková. Z denního tisku tak ve třicátých letech zmizely populární inzeráty na bonbóny, po kterých spolehlivě ztloustnete.
+        Okamžik, kdy nemoci srdce v úmrtnosti „přebraly prvenství“ od infekcí, je pro medicínu důležitý. U tuberkulózy je obezita ochranným faktorem, u nemocí srdce je riziková. Z denního tisku tak ve 30. letech 20. století zmizely populární inzeráty na bonbony, po kterých spolehlivě ztloustnete.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
@@ -349,7 +349,7 @@ A teď už slíbené grafy. Prvnímu období, kdy jsou pro české území dostu
     <div class="datarozhlas-scrolly-step">
       <h3>Oběti druhé světové války</h3>
       <p>
-        Za války v protektorátu dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1 790 popravených, při vojenských akcích na konci války mluví o 14 tisících civilních obětí. V datech chybí deportovaní a ti, které evidovaly říšské úřady: Němci a obyvatelé pohraničí.
+        Za války v protektorátu dvakrát prudce přibylo násilných úmrtí: v roce 1942 během heydrichiády eviduje oficiální statistika 1790 popravených, při vojenských akcích na konci války mluví o 14 tisících civilních obětech. V datech chybí deportovaní a ti, které evidovaly říšské úřady: Němci a obyvatelé pohraničí.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
@@ -361,7 +361,7 @@ A teď už slíbené grafy. Prvnímu období, kdy jsou pro české území dostu
     <div class="datarozhlas-scrolly-step">
       <h3>Najděte další příběhy sami</h3>
       <p>
-        Nyní je graf interaktivní, můžete sledovat kteroukoliv skupinu příčin nebo je srovnávat mezi sebou, měřítko se přizpůsobí. Pro lepší orientaci jsme je rozdělili do tří sekcí. Při kliknutí na skupinu a rok uvidíte několik nejčastějších diagnóz v dobovém pojmenování. Linky ukazují standardizovanou míru úmrtnosti podle věkové struktury populace z roku 1948.
+        Nyní je graf interaktivní, můžete sledovat kteroukoliv skupinu příčin, případně je srovnávat mezi sebou, měřítko se přizpůsobí. Pro lepší orientaci jsme je rozdělili do tří sekcí. Při kliknutí na skupinu a rok uvidíte několik nejčastějších diagnóz v dobovém pojmenování. Linky ukazují standardizovanou míru úmrtnosti podle věkové struktury populace z roku 1948.
       </p>
     </div>
     <div class="datarozhlas-scrolly-sticky">
@@ -421,11 +421,11 @@ Na rozdíl od první světové války ovšem nedošlo k většímu propadu porod
 <h2 class="priciny-umrti-nadpis-kapitoly">Pivo, bůček, cigára: temná éra pro srdce</h2>
 <h2 class="priciny-umrti-podnadpis-kapitoly">1949 až 1989</h2>
 
-I po druhé světové válce následovala éra, kdy úmrtnost padala a věk se prodlužoval: díky antibiotikům – a později také očkování – se povedlo vymýtit strašidlo dětské tuberkulózy, spály nebo záškrtu. Podobný průběh se odehrál v celé Evropě a většině industrializovaných zemí.
+I po druhé světové válce následovala éra, kdy úmrtnost padala a věk se prodlužoval: díky antibiotikům – a později také očkování – se povedlo vymýtit strašidla dětské tuberkulózy, spály nebo záškrtu. Podobný průběh se odehrál v celé Evropě a většině industrializovaných zemí.
 
-Jenže na rozdíl od západu Evropy Československu optimismus dlouho nevydržel.
+Jenže na rozdíl od západu Evropy, Československu optimismus dlouho nevydržel.
 
-„Nejpříznivějších ukazatelů úmrtnosti bylo v Česku dosaženo na začátku 60. let,“ analyzuje vývoj Srb. „Celé Československo a hlavně Česko ztratilo zejména v letech politické normalizace někdejší předstih a zařadilo se mezi země s nejvyšší úmrtností a nejnižšími ukazateli střední délky života (_v Evropě, pozn. red._).“
+„Nejpříznivějších ukazatelů úmrtnosti bylo v Česku dosaženo na začátku 60. let,“ analyzuje vývoj Srb. „Celé Československo a hlavně Česko ztratilo zejména v letech politické normalizace někdejší předstih a zařadilo se mezi země s nejvyšší úmrtností a nejnižšími ukazateli střední délky života _(v Evropě, pozn. red.)_.“
 
 „Rostla úmrtnost na civilizační choroby, jako jsou nemoci oběhové soustavy a novotvary, protože vývoj léků kardiovaskulárních nemocí a vývoj cytostatik (_léků na ničení nádorových buněk, pozn. red._) nepřinášel předpokládané rychlé pozitivní účinky,“ pokračuje. „Úmrtnost v českých zemích neodpovídala vysoké úrovni českého zdravotnictví. Jeho efekty byly nižší než prostředky do něho vynakládané. Nelze pochybovat, že se na tom podílela i situace ekonomická a psychosociální.“
 
@@ -444,17 +444,17 @@ Mimo hlavní trendy pak Srb na počátku komunistické totality zmiňuje neblah�
   </figure>
 </wide>
 
-Optikou příčin úmrtí se 20. století dělí na období do roku 1948 a období po něm. V tomto roce, na švu mezi pátou a šestou revizí, proběhl radikální řez: výrazně se proměnilo uspořádání diagnóz do skupin, změnila se také logika sledování vnějších příčin úmrtí – kromě otázky, _jak_ k němu došlo, přibyl anatomický pohled, _jaká část těla_ byla poraněna. Fakt, že zároveň s touto revolucí rozdělil československé 20. století také komunistický puč, je sympatická náhoda; umožňuje odděleně sledovat vývoj úmrtnosti ve starém a novém politickém režimu.
+Optikou příčin úmrtí se 20. století dělí na období do roku 1948 a období po něm. V tomto roce, na švu mezi pátou a šestou revizí MKN, proběhl radikální řez: výrazně se proměnilo uspořádání diagnóz do skupin, změnila se také logika sledování vnějších příčin úmrtí – kromě otázky, _jak_ k němu došlo, přibyl anatomický pohled, _jaká část těla_ byla poraněna. Fakt, že zároveň s touto revolucí rozdělil československé 20. století také komunistický puč, umožňuje odděleně sledovat vývoj úmrtnosti ve starém a novém politickém režimu.
 
 Hlavní změna – z pohledu epidemiologie – se ale týká otázky, _co považovat za skutečnou příčinu úmrtí_.
 
 Úmrtí obvykle nepřichází ze dne na den, je výsledkem vývoje, řetězce příčin. Na počátku takového řetězce může být relativně nevinný zdravotní problém, například vysoký tlak, na konci akutní problém, typicky srdeční infarkt. Lékař, který pacienta ošetřoval a vyplňuje takzvaný _list o prohlídce zemřelého_, vyplní obě diagnózy, první i poslední. Případně celý řetězec diagnóz mezi nimi. Z nich pak statistik vybere jednu položku, kterou uvede jako příčinu úmrtí.
 
-A právě způsob, jakým položku vybere, se v roce 1948 změnil. První revize MKN považovaly za rozhodující _bezprostřední příčinu úmrtí_, tedy poslední údaj v řetězci, v našem případě srdeční infarkt. Šestá revize, která vstoupila v platnost právě roku 1948, to změnila: nyní byl za příčinu úmrtí považován začátek řetězce, tedy vysoký tlak.
+A právě způsob, jakým položku vybere, se v roce 1948 změnil. První revize MKN považovaly za rozhodující _bezprostřední příčinu úmrtí_, tedy poslední údaj v řetězci, v našem případě srdeční infarkt. Šestá revize, která vstoupila v platnost právě roku 1948, to změnila. Nyní byl za příčinu úmrtí považován začátek řetězce, tedy vysoký tlak.
 
 V Československu se nová pravidla začala uplatňovat až v roce 1954 a projevila se zřejmě až postupně – v žádné skupině příčin se počty úmrtí nezměnily skokově.
 
-Podobné změny se ale mohou objevit na každém švu mezi dvěma revizemi. Nejviditelnější je zlom na přelomu let 1967 a 1968: z roku na rok přibylo téměř dvacet tisíc obětí oběhových nemocí, naopak u nemocí nervové soustavy spadla úmrtnost téměř na nulu. Nejde o zamlčený důsledek sovětské okupace – je to tím, že _mozkovou mrtvici_ nová klasifikace považuje za problém cév, nikoli nervů jako do té doby.
+Podobné změny se ale mohou objevit na každém švu mezi dvěma revizemi. Nejviditelnější je zlom na přelomu let 1967 a 1968: z roku na rok přibylo téměř 20 tisíc obětí oběhových nemocí, naopak u nemocí nervové soustavy spadla úmrtnost téměř na nulu. Nejde o zamlčený důsledek sovětské okupace – je to tím, že _mozkovou mrtvici_ nová klasifikace považuje za problém cév, nikoli nervů jako do té doby.
 
 <wide>
   <figure id="graf-zlom" class="priciny-umrti-vis-static">
@@ -467,9 +467,9 @@ Podobné změny se ale mohou objevit na každém švu mezi dvěma revizemi. Nejv
   </figure>
 </wide>
 
-Ještě jeden faktor hraje při výkladu dat podstatnou roli: podíl _nepřesně určených příčin úmrtí_. Ukazují to data z prvních let po vzniku Československa, kdy byla nejčastější příčinou úmrtí _stařecká sešlost_. V roce 1919 jí statistika připisuje 28 tisíc, tedy asi 16 procent všech úmrtí.
+Ještě jeden faktor hraje při výkladu dat podstatnou roli: podíl _nepřesně určených příčin úmrtí_. Ukazují to data z prvních let po vzniku Československa, kdy byla nejčastěji uváděna _stařecká sešlost_. V roce 1919 jí statistika připisuje 28 tisíc, tedy asi 16 procent všech úmrtí.
 
-Pohledem současné statistiky jde o chybný údaj – lékaři by měli být schopni určit příčinu přesněji. Podobných diagnóz je přitom v klasifikacích více. Většina z nich se sdružuje ve zvláštní skupině diagnóz, které se nevešly jinam, pojmenované nejprve _nemoci špatně definované_, dnes _příznaky, znaky a abnormální klinické a laboratorní nálezy nezařazené jinde_.
+Pohledem současné statistiky jde o chybný údaj – lékaři by měli být schopni určit příčinu přesněji. Podobných příkladů je v klasifikacích více. Většina z nich se sdružuje ve zvláštní skupině diagnóz, které se nevešly jinam, pojmenované nejprve _nemoci špatně definované_, dnes _příznaky, znaky a abnormální klinické a laboratorní nálezy nezařazené jinde_.
 
 „Statistika, v níž 20 až 25 procent příčin připadá na tuto třídu, se považuje za nekvalitní,“ upozorňuje Srb.
 
@@ -488,7 +488,7 @@ Pohledem současné statistiky jde o chybný údaj – lékaři by měli být sc
 
 Mezinárodní zdravotnická organizace (WHO) vymezuje nespolehlivé diagnózy šířeji, definuje takzvané _garbage_ neboli _odpadní_ diagnózy. <a href="https://www.who.int/healthinfo/global_burden_disease/GlobalCOD_method_2000-2011.pdf" target="_blank">I podle nich</a> je česká statistika poměrně spolehlivá, v roce 2018 se jejich podíl pohyboval mezi 13 a 15 procenty, což nevybočuje z evropského průměru.
 
-V některých částech země se ale historicky dařilo méně. Zatímco v české části federace bylo v padesátých letech nepřesně určených úmrtí kolem pěti procent, na Slovensku čtyřikrát tolik. Jednou z příčin byla existence takzvaných laických ohledačů: ti s určením příčiny úmrtí zastoupili lékaře, pokud se nemohl dostavit. Na Slovensku přitom ještě v padesátých letech třetinu úmrtí určili právě laici.
+V některých částech země se ale historicky dařilo méně. Zatímco v české části federace bylo v 50. letech nepřesně určených úmrtí kolem pěti procent, na Slovensku čtyřikrát tolik. Jednou z příčin byla existence takzvaných laických ohledačů: ti s určením příčiny úmrtí zastoupili lékaře, pokud se nemohl dostavit. Na Slovensku přitom ještě v padesátých letech třetinu úmrtí určili právě laici.
 
 Laičtí ohledači měli tendenci přiklánět se k diagnózám, které byly „zřejmé“ – pokud neznali anamnézu zemřelého, většinou uvedli _stáří_, _selhání srdce_ nebo podobně nekonfliktní příčinu úmrtí.
 
@@ -496,7 +496,7 @@ Kritický pohled na příčiny úmrtí ale připomíná, že problém se neomezu
 
 „Jediný způsob, jak si být _téměř_ jistý příčinou smrti, je pitva,“ <a href="https://ihned.cz/c1-61452430-delka-zdraveho-zivota-u-nas-klesa-prodluzujeme-stonani-je-to-ekonomicka-past-varuje-lekar" target="_blank">vysvětloval autorům článku</a> před lety Jan Holčík, dlouholetý profesor sociálního lékařství na Masarykově univerzitě. „Kdybych to odhadl – a možná je můj odhad naprosto nesprávný – tak se pitvá 10 až 20 procent lidí, u všech ostatních se příčina úmrtí odhaduje na základě dřívější diagnózy.“
 
-Data ÚZIS o počtu pitvaných pacientů Holčíkův odhad potvrzují, ukazují nicméně na rychlý propad v posledních letech. Mezi roky 2010 a 2019 se podíl pitev snížil z 27 na 16 procent.
+Data Ústavu zdravotnických informací a statistiky (ÚZIS) o počtu pitvaných pacientů Holčíkův odhad potvrzují, ukazují nicméně na rychlý propad v posledních letech. Mezi roky 2010 a 2019 se podíl pitev snížil z 27 na 16 procent.
 
 „V mezinárodním srovnání máme sice propitvanost jednu z největších na světě, ale nezbývá než připustit, že příčina smrti u nepitvaných pacientů, tedy u zbývajících 80 procent, je nejistá,“ pokračuje.
 
@@ -507,7 +507,7 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
 <wide>
   <div class="datarozhlas-scrolly priciny-umrti-scrolly komunismus-pribehy-scrolly">
     <div class="datarozhlas-scrolly-step">
-      <h3>Od šedesátých let úmrtnost stagnovala</h3>
+      <h3>Od 60. let úmrtnost stagnovala</h3>
       <p>
         Podobně jako po první, i po druhé světové válce se úmrtnost snižovala: mezi lety 1949 a 1959 klesla standardizovaná míra úmrtnosti z 1584 na 1294 úmrtí na 100 tisíc obyvatel. Jenže od té doby se téměř nezměnila, za dalších třicet let klesla jen minimálně z 1294 na 1233 úmrtí.
       </p>
@@ -515,19 +515,19 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
     <div class="datarozhlas-scrolly-step">
       <h3>Normalizační životní styl</h3>
       <p>
-        Se stárnoucí populací mezi příčinami úmrtí přibývalo nemocí srdce a cév. Maxima tahle linka dosáhla v osmdesátých letech, kdy právě sem spadalo víc než 55 procent všech úmrtí. Může za to hlavně životní styl, který za normalizace zvítězil: pivo, bůček a cigarety.
+        Se stárnoucí populací mezi příčinami úmrtí přibývalo nemocí srdce a cév. Maxima tahle linka dosáhla v 80. letech, kdy právě sem spadalo víc než 55 procent všech úmrtí. Může za to hlavně životní styl, který za normalizace zvítězil: pivo, bůček a cigarety.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
       <h3>Komunistický teror</h3>
       <p>
-        Konec čtyřicátých a začátek padesátých let se do dat propsal nárůstem obětí poprav, a také nehod, do kterých se zřejmě skryla řada násilných úmrtí. Nárůst se ale podle oficiálních čísel vyhnul sebevražednosti. Až do roku 1967 čeští statistici pracovali s příčinou úmrtí <em>Úraz v dole nebo lomu</em>, ačkoliv jiné země ji dávno vyřadily.
+        Konec 40. a začátek 50. let se do dat propsal nárůstem obětí poprav, a také nehod, do kterých se zřejmě skryla řada násilných úmrtí. Nárůst se ale podle oficiálních čísel vyhnul sebevražednosti. Až do roku 1967 čeští statistici pracovali s příčinou úmrtí <em>Úraz v dole nebo lomu</em>, ačkoliv jiné země ji dávno vyřadily.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
       <h3>Nejvíc sebevražd: rok 1970</h3>
       <p>
-        Statistiky sebevražednosti se v celém období, alespoň oficiálně, pohybovaly pod čísly první republiky. Maxima dosáhly na konci šedesátých let, snad i v souvislosti s vpádem vojsk Varšavské dohody. Později, během normalizace, už číslo vytrvale klesalo.
+        Statistiky sebevražednosti se v celém období, alespoň oficiálně, pohybovaly pod čísly první republiky. Maxima dosáhly na konci 60. let, snad i v souvislosti s vpádem vojsk Varšavské smlouvy. Později, během normalizace, už číslo vytrvale klesalo.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
@@ -545,7 +545,7 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
     <div class="datarozhlas-scrolly-step">
       <h3>Radikální propad novorozenecké úmrtnosti</h3>
       <p>
-        V devatenáctém století tvořili třetinu mezi všemi úmrtími v českých zemích kojenci. V padesátých letech to byla desetina, v roce sametové revoluce jen půl procenta. Ruku v ruce s tímto se rychle snižovala i mateřská úmrtnost.
+        V 19. století tvořili třetinu mezi všemi úmrtími v českých zemích kojenci. V 50. letech 20. století to byla desetina, v roce sametové revoluce jen půl procenta. Ruku v ruce s tímto se rychle snižovala i mateřská úmrtnost.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
@@ -574,9 +574,9 @@ Je ale třeba dodat, že ani kritici, kteří příčiny úmrtí označují za m
 <h2 class="priciny-umrti-nadpis-kapitoly">Stín po železné oponě</h2>
 <h2 class="priciny-umrti-podnadpis-kapitoly">1990 až 2018</h2>
 
-Sametová revoluce ze dne na den změnila politický režim. Proměnit tak setrvačný obor jako zdravotnictví je ovšem záležitost na desítky let. Zvlášť ukazatele jako délka dožití se mění zvolna, jelikož starší generace se většinou drží svých životních návyků a zlozvyků, k nim se přidává zdravotní zátěž z minulých let.
+Sametová revoluce ze dne na den změnila politický režim. Proměnit tak setrvačný obor, jako je zdravotnictví, je ovšem záležitost na desítky let. Zvlášť ukazatele jako délka dožití se mění zvolna, jelikož starší generace se většinou drží svých životních návyků a zlozvyků, k nim se přidává zdravotní zátěž z minulých let.
 
-„V medicíně je asi taková setrvačnost, jako když obracíte námořní loď,“ podotkl v <a href="https://www.irozhlas.cz/zivotni-styl/zdravi/psychiatr-uzkost-deprese-antidepresiva-spotreba-leciv-martin-anders_1811080630_jab" target="_blank">rozhovoru pro iROZHLAS.cz</a> Martin Anders, jeden z architektů reformy psychiatrické péče.
+„V medicíně je asi taková setrvačnost, jako když obracíte námořní loď,“ podotkl v <a href="https://www.irozhlas.cz/zivotni-styl/zdravi/psychiatr-uzkost-deprese-antidepresiva-spotreba-leciv-martin-anders_1811080630_jab" target="_blank">rozhovoru pro iROZHLAS.cz</a> Martin Anders, jeden z architektů reformy psychiatrické péče v Česku.
 
 Pivo a párek ostatně stále patří k obrazu spokojeného Čecha a <a href="https://www.vlada.cz/cz/ppov/protidrogova-politika/media/vyrocni-zprava-o-drogach-mira-uzivani-alkoholu--tabaku-nebo-konopnych-latek-zustava-v-cr-vysoka--situace-se-lepsi-u-dospivajicich-184879/" target="_blank">spotřeba alkoholu ani cigaret neklesá</a>. Dobrá zpráva je, že mladší generace pije i kouří méně. Špatná, že oba zlozvyky se tím pádem koncentrují mezi méně staršími lidmi a přibývá rizikových pijáků.
 
@@ -597,11 +597,11 @@ Zaostávali hlavně muži. V roce 1990 dosáhl rozdíl v naději dožití obou p
   </figure>
 </wide>
 
-Do devadesátých let Češi naňahňali <a href="https://cs.wikipedia.org/wiki/Druh%C3%BD_demografick%C3%BD_p%C5%99echod" target="_blank">hodnotovou revoluci</a>, která na Západě probíhá od let šedesátých.  V zemi tak během několika roků po pádu režimu stoupl věk, kdy žena povine první dítě, o pět let; první svatba se posunula o sedm let. Polovina manželství v té době končila rozvodem. Poměr dětí a seniorů se v tomto období <a href="https://www.irozhlas.cz/zpravy-domov/-v-roce-1989-bylo-v-cesku-deti-skoro-dvakrat-vic-nez-senioru-pomer-se-otaci_201411100044_vkourimsky" target="_blank">změnil ve prospěch seniorů</a>. Rychlost i rozsah změn ukazujeme v <a href="https://www.irozhlas.cz/zpravy-domov/kalkulacka-spocitejte-si-kdy-vas-ceka-svatba-dite-rozvod-nebo-umrti_1704241238_sam" target="_blank">interaktivní kalkulačce</a>.
+Do devadesátých let Češi „naňahňali“ <a href="https://cs.wikipedia.org/wiki/Druh%C3%BD_demografick%C3%BD_p%C5%99echod" target="_blank">hodnotovou revoluci</a>, která na Západě probíhá od let šedesátých. V zemi tak během několika roků po pádu režimu stoupl věk, kdy žena přivede na svět první dítě, o pět let; první svatba se posunula o sedm let. Polovina manželství v té době končila rozvodem. Poměr dětí a seniorů se <a href="https://www.irozhlas.cz/zpravy-domov/-v-roce-1989-bylo-v-cesku-deti-skoro-dvakrat-vic-nez-senioru-pomer-se-otaci_201411100044_vkourimsky" target="_blank">změnil ve prospěch seniorů</a>. Rychlost i rozsah změn ukazujeme v <a href="https://www.irozhlas.cz/zpravy-domov/kalkulacka-spocitejte-si-kdy-vas-ceka-svatba-dite-rozvod-nebo-umrti_1704241238_sam" target="_blank">interaktivní kalkulačce</a>.
 
 Radikální experiment s hledáním štěstí <em>teď hned</em> se vyčerpal během nultých let, od té doby se demografické ukazatele ustálily na nové hladině.
 
-S nástupem individualismu se zvýšila také životní úroveň a s ní délka života. Po šedivých normalizačních letech se tak život Čechů začal znovu prodlužovat. Jazykem epidemiologie proběhla tranzice z <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2690264/"><em>období degenerativních a člověkem způsobených nemocí</em></a> do <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5429583/" target="_blank"><em>věku opožděných degenerativních onemocnění</em></a>.
+S nástupem individualismu se zvýšila životní úroveň a s ní délka života. Po šedivých normalizačních letech se život Čechů začal znovu prodlužovat. Jazykem epidemiologie: proběhla tranzice z <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2690264/"><em>období degenerativních a člověkem způsobených nemocí</em></a> do <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5429583/" target="_blank"><em>věku opožděných degenerativních onemocnění</em></a>.
 
 Přesto je i dnes v datech o délce dožití patrné, <a href="https://interaktivni.rozhlas.cz/umrti-rakovina/www/" target="_blank">kudy vedla železná opona</a> mezi Západem a Východem. Třicet let po pádu Berlínské zdi se sice rozdíl v délce dožití mezi některými regiony přiblížil ke dvěma rokům, ale úplnému vymazání vytrvale odolává.
 
@@ -620,7 +620,7 @@ Od sametové revoluce se naděje dožití na obou stranách opony přiblížila.
 
 „Zatímco ‚staré‘ infekce jsou na prahu vyhubení, objevují se nové,“ <a href="https://owncloud.cesnet.cz/index.php/s/m8ngF4L6LB2L4wJ" target="_blank">upozorňuje</a> demografka Markéta Pechholdová z katedry demografie Vysoké školy ekonomické. Jde například o bakterie rezistentní vůči antibiotikům nebo nemoci přenesené ze zvířat. Upozorňuje také na návrat nemocí, proti kterým je vakcína dostupná – spalniček, dětské obrny, záškrtu a černého kašle.
 
-S novými infekcemi jsou spojena nová rizika. Problémy nemocí přenesených ze zvířat není potřeba představovat – zatímco epidemii netopýřího viru SARS v roce 2002 se ještě podařilo zastavit včas, prasečí chřipka v roce 2009 stála po celé planetě půl milionu životů, aktuální pandemie dosud téměř čtyřikrát tolik. Podobně nebezpečná je podle epidemiologů také rezistence bakterií na antibiotika: podle WHO jde o <a href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance" target="_blank">jedno z nejpodceňovanějších zdravotních rizik</a>.
+S novými infekcemi jsou spojena nová rizika. Problémy nemocí přenesených ze zvířat není nutno představovat – zatímco epidemii netopýřího viru SARS v roce 2002 se ještě podařilo zastavit včas, prasečí chřipka v roce 2009 si na celé planetě vyžádala půl milionu životů. A aktuální pandemie koronaviru SARS-CoV-2 pak dosud téměř čtyřikrát tolik. Podobně nebezpečná je podle epidemiologů také rezistence bakterií na antibiotika: Světová zdravotnická organizace (WHO) ji označuje za <a href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance" target="_blank">jedno z nejpodceňovanějších zdravotních rizik</a>.
 
 Oproti klasickým civilizačním nemocem navíc nákazy často zabíjejí v nižším věku, některé výrazně – například AIDS. Pokud bychom se tedy ptali, o kolik roků nemoc zkrátila život, infekční nemoci budou hrát větší roli než aktuální dvě procenta v celkové úmrtnosti.
 
@@ -643,7 +643,7 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
     <div class="datarozhlas-scrolly-step">
       <h3>Delší život, vyšší podíl rakoviny</h3>
       <p>
-        Rakovina patří k nemocem, které obvykle nastupují ve vyšším věku. S rostoucí nadějí dožití se proto také zvyšuje podíl rakoviny na všech úmrtích. Dnes má na svědomí asi 25 procent všech úmrtí, u mužů o procento více, u žen méně. Nejvíc obětí mezi nádory má dlouhodobě rakovina průdušky a plíce.
+        Rakovina patří k nemocem, které obvykle nastupují ve vyšším věku. S rostoucí nadějí dožití se proto také zvyšuje podíl rakoviny na všech úmrtích, který v současnosti tvoří asi 25 procent všech úmrtí, u mužů o procento více, u žen méně. Nejvíc obětí mezi nádory má dlouhodobě rakovina průdušky a plíce.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
@@ -661,7 +661,7 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
     <div class="datarozhlas-scrolly-step">
       <h3>Ekonomická krize a sebevraždy</h3>
       <p>
-        Od šedesátých let pokračuje trend snižování počtu sebevražd. Výjimkou je období po globální ekonomické krizi – v letech 2009 až 2013 se statistika sebevražednosti načas zhoršila, podobně jako ve třicátých letech minulého století. Přesto dnes vlastní rukou zemře dvojnásobek lidí, než kolik jich zemře na silnicích.
+        Od 60. let pokračuje trend snižování počtu sebevražd. Výjimkou je období po globální ekonomické krizi – v letech 2009 až 2013 se statistika načas zhoršila, podobně jako ve 30. letech minulého století. Přesto dnes vlastní rukou zemře dvojnásobek lidí, než kolik jich přijde o život na silnicích.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
@@ -698,9 +698,9 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
 
 Poslední krok k pochopení úvodní otázky – co znamená _na covid_ a co _s covidem_ – je pohled pod ruce těch, kteří příčiny úmrtí zapisují dnes.
 
-Představa, kde hledat skutečnou příčinu úmrtí, je dnes stejná jako v roce 1948, kdy začala platit šestá revize MKN: u přirozených příčin je to _choroba nebo trauma, které inicializovaly řetězec chorobných stavů přímo vedoucích k smrti_, u náhlých úmrtí _okolnosti nehody nebo násilí, které přivodily smrtelné zranění_.
+Představa, kde hledat skutečnou příčinu úmrtí, je stejná jako v roce 1948, kdy začala platit šestá revize MKN: u přirozených příčin je to _choroba nebo trauma, které inicializovaly řetězec chorobných stavů přímo vedoucích k smrti_, u náhlých úmrtí _okolnosti nehody nebo násilí, které přivodily smrtelné zranění_.
 
-Postupy, jak ji hledat, se ale neustále mění. Na jednu stranu dnes většina zemí na planetě využívá _MKN-10_, která je k dispozici přes 25 let; to je nejdelší období se stejnými pravidly. Jenže od roku 1994, kdy vstoupila v platnost, je minimálně stejně důležitý způsob, _jak_ lékař a po něm statistci příčinu smrti vybírají. Přestože je lidský faktor při rozhodování nezbytný, některá rozhodnutí usnadňuje a zpřesňuje strojové zpracování. Na výsledné statistice se projeví velmi výrazně – v letech, kdy se nástroje zaváděly, se v časových řadách u některých diagnóz objevují výrazné zlomy.
+Postupy, jak ji hledat, se ale neustále mění. Na jednu stranu dnes většina zemí na planetě využívá _MKN-10_, která je k dispozici přes 25 let; to je nejdelší období se stejnými pravidly. Jenže od roku 1994, kdy vstoupila v platnost, je minimálně stejně důležitý způsob, _jak_ lékař a po něm statistici příčinu smrti vybírají. Přestože je lidský faktor při rozhodování nezbytný, některá rozhodnutí usnadňuje a zpřesňuje strojové zpracování. Na výsledné statistice se projeví velmi výrazně – v letech, kdy se nástroje zaváděly, se v časových řadách u některých diagnóz objevují výrazné zlomy.
 
 První krok při určování příčiny úmrtí má na starosti ohledávající lékař, který vyplní _list o prohlídce zemřelého_. K <a href="https://www.uzis.cz/res/f/008309/demozem2018.pdf" target="_blank">necelým dvěma třetinám úmrtí dochází v nemocicích</a>, kde má lékař k dispozici detailní anamnézu mrtvého. Pokud si příčinou není jistý, může nařídit pitvu. V některých situacích to přímo nařizuje <a href="https://www.zakonyprolidi.cz/cs/2011-372#cast7" target="_blank">zákon o zdravotních službách</a>.
 
@@ -725,7 +725,7 @@ V druhé části listu lékař doplní ještě zdravotní problémy zemřelého,
 
 List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. Data vznikají na Českém statistickém úřadě (ČSÚ), ale metodiku hlídá Ústav zdravotnických informací a statistiky (ÚZIS). Ten také spravuje registr, kde se listy shromažďují, školí lékaře nebo hlídá, aby se česká metodika shodovala s obsáhlými pravidly WHO.
 
-„Na rozdíl od lékařů už nemáme přístup ke zdravotní dokumentaci, proto jsme závislí na tom, jak kvalitně list o prohlídce zemřelého vyplní,“ vysvětluje Šárka Daňková z ÚZIS, která je garantkou zmíněných činností. „Nerada bych, aby to vyznělo špatně, ale právě chybně vyplněný list je častý problém.“
+„Na rozdíl od lékařů už nemáme přístup ke zdravotní dokumentaci, proto jsme závislí na tom, jak kvalitně list o prohlídce zemřelého vyplní,“ vysvětluje pro iROZHLAS.cz Šárka Daňková z ÚZIS, která je garantkou zmíněných činností. „Nerada bych, aby to vyznělo špatně, ale právě chybně vyplněný list je častý problém.“
 
 „Některé triviální příčiny, jako je například padání vlasů, by neměly vést ke smrti,“ upozorňuje <a href="http://www.demografie.info/?cz_detail_clanku&artclID=840" target="_blank">na webu, věnovanému demografii</a>, na co u lékařů naráží.
 
@@ -740,11 +740,11 @@ List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. 
   </figure>
 </wide>
 
-Statistici na vyplněném listu o prohlídce zemřelého hledají stav, od kterého se podle lékaře začala posloupnost odvíjet, a označí jej za _základní příčinu smrti_. Ta se pak obvykle objeví v datech o příčinách úmrtí.
+Statistici na vyplněném listu o prohlídce zemřelého hledají stav, od něhož se podle lékaře začala posloupnost odvíjet, a označí jej za _základní příčinu smrti_. Ta se pak obvykle objeví v datech o příčinách úmrtí.
 
 Právě tady do procesu zasáhla automatizace asi nejvýrazněji: od roku 2011 mají statistici k ruce IRIS, software, který na listech o prohlídce zemřelého najde příčinu podle pravidel WHO automaticky. Jejich principy naznačuje zjednodušený <a href="https://www.uzis.cz/sites/default/files/knihovna/lpm_pruvodce_2006.pdf" target="_blank">manuál pro lékaře</a>; <a href="https://www.uzis.cz/res/f/008277/mkn-10-instrukcni-prirucka-20200101.pdf" target="_blank">plné znění</a> je příliš složité, aby je nosily v hlavě a aplikovaly lidské bytosti. Asi devadesát procent případů, které IRIS projde, je bezproblémových.
 
-Jenže ne všechny. Se zbylými deseti procenty, tedy asi deseti tisíci listů ročně, si algoritmus kvůli chybám neví rady. U nich statistici musejí do procesu výběru příčiny smrti zasáhnout manuálně: při hledání správného řetězce pomáhají IRIS najít někde na listu uvedenou příčinu, například si ji „vypůjčit“ z druhé části listu o prohlídce zemřelého.
+Jenže ne všechny. Se zbylými 10 procenty, tedy asi 10 tisíci listů ročně, si algoritmus kvůli chybám neví rady. U nich statistici musejí do procesu výběru příčiny smrti zasáhnout manuálně: při hledání správného řetězce pomáhají IRIS najít někde na listu uvedenou příčinu, například si ji „vypůjčit“ z druhé části listu o prohlídce zemřelého.
 
 „Někdy se ozveme lékaři, který list vyplňoval. Ale to jen ve vzácných případech, kdy je jako příčina úmrtí uvedená cholera, zubní kaz nebo podobná málo četná či triviální diagnóza,“ popisuje Daňková.
 
@@ -830,7 +830,7 @@ Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi um�
 
 <h2 class="priciny-umrti-nadpis-posledni-kapitoly">Covidová poprvé</h2>
 
-„Značná část zemřelých, 64 procent, vykazovala řadu komorbidit, která průběh nemoci komplikovala,“ vysvětloval ministr zdravotnictví Jan Blatný v tiskové konferenci, kterou jsme článek otevírali. Na stejném místě ho i uzavřeme.
+„Značná část zemřelých, 64 procent, vykazovala řadu komorbidit, která průběh nemoci komplikovala,“ vysvětloval ministr zdravotnictví Jan Blatný (za ANO) na tiskové konferenci, kterou jsme článek otevírali. Na stejném místě ho i uzavřeme.
 
 „U této skupiny je vyhodnocení základních příčin smrti velmi obtížné, a proto budou záznamy podrobeny další analýze klinickým expertním týmem a bude provedena kontrola zdravotnické dokumentace,“ řekl Blatný.
 
@@ -842,11 +842,11 @@ Patnáctičlenná komise odborníků pro posouzení příčin úmrtí bude v če
 
 Problematických míst je podle ní několik.
 
-„Pokyny pro vykazování úmrtí za covid uveřejnilo WHO až v dubnu 2020, lékaři proto neměli přesné instrukce a postupovali různě,“ pokračuje. „Kromě toho se vyvíjí také onemocnění jako takové a jeho poznání. V prosinci 2020 WHO zavedlo další kódy pro stavy následující po onemocnění covid-19. Pravidla se tak lékařům mění pod rukama.“
+„Pokyny pro vykazování úmrtí za covid uveřejnila WHO až v dubnu 2020, lékaři proto neměli přesné instrukce a postupovali různě,“ pokračuje. „Kromě toho se vyvíjí také onemocnění jako takové a jeho poznání. V prosinci 2020 WHO zavedlo další kódy pro stavy následující po onemocnění covid-19. Pravidla se tak lékařům mění pod rukama.“
 
 „Snažili jsme se reagovat, ne vždy se však požadovaná informace k lékařům dostala včas. Zejména v začátku epidemie, tedy v prvním pololetí 2020, jsme intenzivně sledovali, co se v praxi děje, procházeli jsme listy o prohlídce zemřelého a snažili se je jeden po druhém vyhodnotit. Bohužel, reálné listy nevypadají jako modelové příklady a jejich vyhodnocení není snadné.“
 
-Detailní zkoumání covidových úmrtí vyústilo ve studii, jaké další zdravotní problémy se u zemřelých na covid objevují nejčastěji – té, kterou ministr cituje na tiskové konferenci. Jde zatím o nejdůkladnější český pokus přiblížit se rozlišení mezi _s covidem_ a _na covid_.
+Detailní zkoumání covidových úmrtí vyústilo ve studii, jaké další zdravotní problémy se u zemřelých na covid objevují nejčastěji – tu samou studii, kterou ministr cituje na tiskové konferenci. Jde zatím o nejdůkladnější český pokus přiblížit se rozlišení mezi _s covidem_ a _na covid_.
 
 Jenže autorka také upozorňuje, že rozlišení obou kategorií není to hlavní.
 
@@ -862,15 +862,15 @@ _Nadúmrtnost_ ukazuje počet zemřelých nad dlouhodobým průměrem. Zatímco 
   </figure>
 </wide>
 
-Rozdíl můžou být ukryté oběti covidu, ale z větší části jde zřejmě o úmrtí spojená s vyšší sebevražedností, dopady osamocení v sociálních zařízeních, s tím, že se lékaři nemohli naplno věnovat pacientům s jinými diagnózami, a podobně.
+Oním rozdílem můžou být ukryté oběti covidu, ale z větší části jde zřejmě o úmrtí spojená s vyšší sebevražedností, dopady osamocení v sociálních zařízeních, s tím, že se lékaři nemohli naplno věnovat pacientům s jinými diagnózami, a podobně.
 
-Výsledek pátrání, který ukazuje, že podíl úmrtí _s covidem_ a _na covid_ je dost obtížné určit, vypadá jako neúspěch. Upřímně řečeno, takové finále není úplně překvapivé. Tušili jsme to předem, jen jsme nevěděli, kde je háček.
+Výsledek pátrání, který ukazuje, že podíl úmrtí _s covidem_ a _na covid_ je dost obtížné určit, vypadá jako neúspěch. Upřímně řečeno, takové finále není úplně překvapivé. Tušili jsme to předem, jen jsme chtěli objevit, kde je háček.
 
 Covid a probuzený zájem o příčiny úmrtí ale umožnil detailní pohled, jak statistika klíčová pro moderní zdravotnictví vzniká, jak ji interpretovat i proč je tak obtížné spolehlivě určit jednu příčinu úmrtí.
 
 Problematická je ostatně už základní úvaha, že fatální je jen jedna konkrétní diagnóza.
 
-Demografka Markéta Pechholdová upozorňuje, že hledání jediné příčiny úmrtí nutně vytváří „neviditelné“ diagnózy – pravidla je upozaďují, takže se ve statistice objevují méně, než by měly. Způsobem, jak podobné diagnózy zviditelnit, je podle ní právě změna uvažování nad tím, _co_ je příčina úmrtí. Skutečnosti lépe odpovídá představa více zdravotních problémů, které se během života nabalují a působí společně. Statistici znají koncept pod názvem _sdružené příčiny úmrtí_.
+Demografka Markéta Pechholdová upozorňuje, že hledání jediné příčiny úmrtí nutně vytváří „neviditelné“ diagnózy – pravidla je upozaďují, takže se ve statistice objevují méně, než by měly. Způsobem, jak podobné diagnózy zviditelnit, je podle ní právě změna uvažování nad tím, _co_ je příčinou úmrtí. Skutečnosti lépe odpovídá představa více zdravotních problémů, které se během života nabalují a působí společně. Statistici znají koncept pod názvem _sdružené příčiny úmrtí_.
 
 Mimochodem, nejde o novinku.
 
