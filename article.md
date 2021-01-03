@@ -857,8 +857,8 @@ _Nadúmrtnost_ ukazuje počet zemřelých nad dlouhodobým průměrem. Zatímco 
 <wide>
   <figure id="graf-excess-mortality" class="priciny-umrti-vis-static">
     <!-- TODO: presunout do naseho repa -->
-    <img loading="lazy" src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" class="desktop">
-    <img loading="lazy" src="https://data.irozhlas.cz/excess-deaths/vis/umrti_cr_des.svg" class="mobile">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/6.1_umrti_cr_des.svg" class="desktop">
+    <img loading="lazy" src="https://data.irozhlas.cz/priciny-umrti-2020/assets/svg/6.1_umrti_cr_mob.svg" class="mobile">
   </figure>
 </wide>
 
