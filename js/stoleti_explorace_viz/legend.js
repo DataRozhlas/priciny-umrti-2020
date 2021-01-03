@@ -27,6 +27,9 @@ export const fadeInLegendOnSide = (viz, { exploreCategoryNames }) => {
   legendContainerEl.classList.add('stoleti-explorace-viz-legend');
   legendContainerEl.classList.add('legend-on-side');
   legendContainerEl.style.maxHeight = `${viz.height - 50}px`;
+  if (viz.svgOffset > 0) {
+    legendContainerEl.style.top = `${viz.svgOffset + 78}px`;
+  }
   vizContainerEl.append(legendContainerEl);
 
   const scrollContainerEl = document.createElement('div');
@@ -160,7 +163,14 @@ const renderInsidesOfScrollContainer = (
 ) => {
   const categoriesGroups = getCategoriesGroupsSortedByRightmostValueInGraph(viz.dataMzStd);
 
+  let legendItemTouched = false;
+  let legendItemTouchedTimeout = null;
+
   const handleLegendItemMouseover = (mouseoverCategoryName) => {
+    if (legendItemTouched) {
+      return;
+    }
+
     if (!lines.isAddedCategoryLine(viz, { categoryName: mouseoverCategoryName })) {
       return;
     }
@@ -206,6 +216,19 @@ const renderInsidesOfScrollContainer = (
         style: 'active',
       });
     });
+  };
+
+  const handleLegendItemTouchstart = () => {
+    legendItemTouched = true;
+
+    if (legendItemTouchedTimeout !== null) {
+      window.clearTimeout(legendItemTouchedTimeout);
+    }
+
+    legendItemTouchedTimeout = window.setTimeout(() => {
+      legendItemTouched = false;
+      legendItemTouchedTimeout = null;
+    }, 1000);
   };
 
   const handleLegendItemCheckboxChange = () => {
@@ -387,6 +410,7 @@ const renderInsidesOfScrollContainer = (
       window.setTimeout(() => {
         labelEl.addEventListener('mouseover', () => handleLegendItemMouseover(categoryName));
         labelEl.addEventListener('mouseout', () => handleLegendItemMouseout());
+        labelEl.addEventListener('touchstart', handleLegendItemTouchstart);
       }, 1400);
 
       groupContainerEl.append(labelEl);

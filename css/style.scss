@@ -17,6 +17,10 @@
     @include datarozhlas-scrolly-height(160px);
   }
 
+  @media (min-height: 1200px) and (min-width: 1400px) {
+    @include datarozhlas-scrolly-height(400px);
+  }
+
   .datarozhlas-scrolly-step {
     max-width: 620px;
     margin: 0 auto;

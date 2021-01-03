@@ -80,6 +80,12 @@ const initIlustraceKapitolyScrolly = (containerSelector) => {
     }
 
     stepsContainerElement.style.height = `${stepsContainerHeight}px`;
+
+    console.log('updateStepsContainerHeight', {
+      vh,
+      containerHeight,
+      stepsContainerHeight,
+    });
   };
   updateStepsContainerHeight();
 
@@ -98,15 +104,18 @@ const initIlustraceKapitolyScrolly = (containerSelector) => {
     });
 
   let windowInnerWidthBefore = window.innerWidth;
+  let windowInnerHeightBefore = window.innerHeight;
+
   window.addEventListener(
     'resize',
     debounce((e) => {
-      if (window.innerWidth !== windowInnerWidthBefore) {
+      if (windowInnerWidthBefore !== window.innerWidth || windowInnerHeightBefore < window.innerHeight) {
         updateStepsContainerHeight();
 
         scroller.resize(e);
 
         windowInnerWidthBefore = window.innerWidth;
+        windowInnerHeightBefore = window.innerHeight;
       }
     }, 200)
   );
