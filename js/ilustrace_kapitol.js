@@ -70,14 +70,28 @@ const initIlustraceKapitolyScrolly = (containerSelector) => {
     stepsContainerElement.append(stepElement);
   });
 
+  const updateStepsContainerHeight = () => {
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    const { height: containerHeight } = containerEl.getBoundingClientRect();
+
+    let stepsContainerHeight = containerHeight + vh * 0.2;
+    if (stepsContainerHeight > vh - containerHeight - 70) {
+      stepsContainerHeight = vh - containerHeight - 70;
+    }
+
+    stepsContainerElement.style.height = `${stepsContainerHeight}px`;
+  };
+  updateStepsContainerHeight();
+
   const frameElements = document.querySelectorAll(`${containerSelector} img`);
 
   const scroller = scrollama();
 
   scroller
     .setup({
-      offset: 0.4,
+      offset: 0.5,
       step: `${containerSelector} .priciny-umrti-ilustrace-kapitoly-steps-container .priciny-umrti-ilustrace-kapitoly-step`,
+      debug: true,
     })
     .onStepEnter(({ element, direction, index }) => {
       frameElements.forEach((el) => el.classList.remove('active'));
@@ -89,9 +103,7 @@ const initIlustraceKapitolyScrolly = (containerSelector) => {
     'resize',
     debounce((e) => {
       if (window.innerWidth !== windowInnerWidthBefore) {
-        const { width } = containerEl.getBoundingClientRect();
-        const height = width * heightToWidthRatio;
-        containerEl.style.height = `${height}px`;
+        updateStepsContainerHeight();
 
         scroller.resize(e);
 
