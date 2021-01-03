@@ -1,7 +1,7 @@
 title: "Od moru ke covidu: unikátní data, jak se měnily příčiny úmrtí Čechů od císaře pána do dneška"
 perex: "<i>S covidem</i>, nebo <i>na covid</i>? Odpověď na otázku, která loni zamotala hlavu celé civilizaci – tedy co považovat za příčinu úmrtí – hledá lékařská statistika přes sto let."
 coverimg: https://data.irozhlas.cz/priciny-umrti-2020/assets/0_uvodni_ilustrace.jpg
-coverimg_note: ""
+coverimg_note: 'Od moru ke covidu. Autorka koláží: <a href="https://veronykajelinek.com/" target="_blank">Veronyka Jelinek</a>'
 styles: [https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600]
 libraries: [] #jquery, d3, highcharts, datatables
 options: [] #wide, noheader (, nopic)
@@ -70,6 +70,10 @@ Když na úvod trochu předběhneme, během necelých dvou století se délka ž
   </figure>
 </wide>
 
+S délkou života úzce souvisí méně příjemný ukazatel: míra úmrtnosti. Nejde přímo o převrácenou hodnotu, ale s trochou zjednodušení můžeme říct, že když délka dožití roste, míra úmrtnosti klesá.
+
+V každém historickém období se příčiny úmrtí mění. Za císaře, během první republiky obklíčené válkami, za komunistické totality i po sametové revoluci rozhodovaly o délce a kvalitě života jiné nemoci, nehody nebo násilná úmrtí.
+
 <div class="b-inline b-inline--right">
   <div class="b-inline__wrap">
     <div class="b-inline__content">
@@ -80,10 +84,6 @@ Když na úvod trochu předběhneme, během necelých dvou století se délka ž
     </div>
   </div>
 </div>
-
-S délkou života úzce souvisí méně příjemný ukazatel: míra úmrtnosti. Nejde přímo o převrácenou hodnotu, ale s trochou zjednodušení můžeme říct, že když délka dožití roste, míra úmrtnosti klesá.
-
-V každém historickém období se příčiny úmrtí mění. Za císaře, během první republiky obklíčené válkami, za komunistické totality i po sametové revoluci rozhodovaly o délce a kvalitě života jiné nemoci, nehody nebo násilná úmrtí.
 
 Důvod, proč začali panovníci hlídat, kolik a jak starých poddaných mají, byly války. Důvod, proč začali sledovat, na co umírají, zase epidemie.
 
@@ -141,7 +141,7 @@ Slabé válečné ročníky se zařezávají do statistiky dodnes: trend, kdy js
   </div>
 </wide>
 
-<h2 class="priciny-umrti-nadpis-kapitoly">Od španělské chřipky k německému exodu</h2>
+<h2 class="priciny-umrti-nadpis-kapitoly">Od španělské chřipky k exodu Němců</h2>
 <h2 class="priciny-umrti-podnadpis-kapitoly">1919 až 1948</h2>
 
 V posledním válečném roce zasáhla Evropu pandemie španělské chřipky s <a href="https://www.czso.cz/documents/10180/123310412/13005320q3_182-196.pdf/1e4ad689-4901-42a4-91ae-c40c02c23947?version=1.1" target="_blank">násobně vyšším počtem obětí</a> než samotná válka. Vzápětí se úmrtnost prudce snížila: ještě v roce 1919 zemřelo v české kotlině téměř 180 tisíc lidí, o čtyři roky později 142 tisíc. Na nižší hladině úmrtnost zůstala po většinu první republiky.
