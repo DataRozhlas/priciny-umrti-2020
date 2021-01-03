@@ -30,7 +30,10 @@ const vizSteps = {
 export const initViz = (svgSelector, data) => {
   const svg = d3.select(svgSelector);
 
-  const { width, height } = svg.node().parentNode.getBoundingClientRect();
+  const { width: stickyWidth, height: stickyHeight } = svg.node().parentNode.getBoundingClientRect();
+
+  const width = stickyWidth;
+  const height = Math.min(stickyHeight, 1000);
 
   // Prepare the margins
   let margin = { top: 50, right: 30, bottom: 100, left: 50 };

@@ -15,17 +15,28 @@ const vizSteps = {
 export const initViz = (svgSelector, data) => {
   const svg = d3.select(svgSelector);
 
-  const { width, height } = svg.node().parentNode.getBoundingClientRect();
+  const { width: stickyWidth, height: stickyHeight } = svg.node().parentNode.getBoundingClientRect();
+
+  const width = stickyWidth;
+  const height = Math.min(stickyHeight, 1000);
+
+  let svgOffset = 0;
+  if (stickyHeight > height) {
+    svgOffset = (stickyHeight - height) / 2;
+  }
 
   // Prepare the margins
   let margin = { top: 130, right: 30, bottom: 80, left: 50 };
   let marginExplore = { ...margin, right: margin.right + 255 }; // legend on the right
   if (!legend.showLegendOnSide({ width })) {
-    margin = { top: 130, right: 20, bottom: 50, left: 40 };
+    margin = { top: 80, right: 20, bottom: 50, left: 40 };
     marginExplore = margin; // legend in dropdown in top right
   }
 
   svg.attr('viewBox', [0, 0, width, height]);
+  if (svgOffset > 0) {
+    svg.attr('style', `margin-top: ${svgOffset}px`);
+  }
 
   const { dataMzStd, dataMzAbs, dataTooltip } = data;
   const dataMzStdWithoutTotal = dataMzStd.filter((category) => category.skupina !== 'Celkem');
@@ -83,6 +94,7 @@ export const initViz = (svgSelector, data) => {
 
   const viz = {
     svg,
+    svgOffset,
 
     dataMzStd,
 

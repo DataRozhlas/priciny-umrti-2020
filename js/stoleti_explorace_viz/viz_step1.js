@@ -76,36 +76,44 @@ export default {
     axes.updateXAxis(viz, { x: viz.xExplore, margin: viz.marginExplore, delay: 1400 });
     axes.updateYAxis(viz, { y: viz.yExplore, margin: viz.marginExplore, delay: 1400 });
 
+    const exploreCategoryNames = ['Některé infekční a parazitární nemoci', 'Nemoci oběhové soustavy', 'Novotvary'];
+
     dataMzStdWithoutTotal.forEach((category) => {
-      lines.changeCategoryLine({
-        svg: viz.svg,
-        categoryName: category.skupina,
-        // We animate to the category data using the categories scale
-        d: viz.lineExplore(category.data),
-        duration: 700,
-        delay: 1400,
-        style: 'active',
-        activeColor: colors.categoryColorsActive[category.skupina],
-      });
+      if (exploreCategoryNames.includes(category.skupina)) {
+        lines.changeCategoryLine({
+          svg: viz.svg,
+          categoryName: category.skupina,
+          // We animate to the category data using the categories scale
+          d: viz.lineExplore(category.data),
+          duration: 700,
+          delay: 1400,
+          style: 'active',
+          activeColor: colors.categoryColorsActive[category.skupina],
+        });
 
-      tooltip.updateCategoryLineTooltipTriggers(viz, {
-        categoryName: category.skupina,
-        x: viz.xExplore,
-        y: viz.yExplore,
-        activeColor: 'transparent',
-      });
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName: category.skupina,
+          x: viz.xExplore,
+          y: viz.yExplore,
+          activeColor: 'transparent',
+        });
 
-      tooltip.updateCategoryLineTooltipTriggers(viz, {
-        categoryName: category.skupina,
-        x: viz.xExplore,
-        y: viz.yExplore,
-        activeColor: colors.categoryColorsActive[category.skupina],
-        duration: 700,
-        delay: 2100,
-      });
+        tooltip.updateCategoryLineTooltipTriggers(viz, {
+          categoryName: category.skupina,
+          x: viz.xExplore,
+          y: viz.yExplore,
+          activeColor: colors.categoryColorsActive[category.skupina],
+          duration: 700,
+          delay: 2100,
+        });
+      } else {
+        lines.removeCategoryLine({
+          svg: viz.svg,
+          categoryName: category.skupina,
+          delay: 1400,
+        });
+      }
     });
-
-    const exploreCategoryNames = viz.dataMzStd.map((category) => category.skupina);
 
     legend.fadeInLegend(viz, { exploreCategoryNames });
   },
