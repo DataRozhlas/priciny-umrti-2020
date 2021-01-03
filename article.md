@@ -1,5 +1,5 @@
 title: "Od moru ke covidu: unikátní data, jak se měnily příčiny úmrtí Čechů od císaře pána do dneška"
-perex: "<i>S covidem</i>, nebo <i>na covid</i>? Na otázku, která na jaře zamotala hlavu celé civilizaci – tedy co považovat za příčinu úmrtí – hledá epidemiologie odpověď přes sto let."
+perex: "<i>S covidem</i>, nebo <i>na covid</i>? Odpověď na otázku, která loni zamotala hlavu celé civilizaci – tedy co považovat za příčinu úmrtí – hledá lékařská statistika přes sto let."
 coverimg: https://data.irozhlas.cz/priciny-umrti-2020/assets/0_uvodni_ilustrace.jpg
 coverimg_note: ""
 styles: [https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600]
