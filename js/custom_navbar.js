@@ -107,7 +107,7 @@ const customNavbar = () => {
 
       const { top: bodyTop } = document.body.getBoundingClientRect();
 
-      const activeChapter = linkEl.dataset.chapter;
+      const activeChapter = String(linkEl.dataset.chapter);
       const chapterEl = chapters[activeChapter];
       const { top: chapterTop } = chapterEl.getBoundingClientRect();
 
