@@ -26,23 +26,31 @@
     font-weight: 500;
   }
 
-  .g-x-axis .tick {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
+  .g-x-axis {
+    color: black;
 
-    line {
-      stroke-width: .5px;
+    .tick {
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+  
+      line {
+        stroke-width: .5px;
+      }
     }
   }
 
-  .g-y-axis .tick {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
-
-    line {
-      stroke-width: .5px;
+  .g-y-axis {
+    color: black;
+    
+    .tick {
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+  
+      line {
+        stroke-width: .5px;
+      }
     }
   }
 
@@ -216,6 +224,8 @@
       font-weight: 500;
       line-height: 1.2;
       letter-spacing: 0;
+      color: black;
+
       margin: 14px 0 5px 0;
   
       &.group-title-first {
@@ -335,6 +345,7 @@
   border: 1px solid #D5D5D5;
   box-shadow: 0 2px 4px 0 rgba(169,169,169,0.50);  
   font-family: 'Fira Sans', sans-serif;
+  color: black;
 
   .tooltip-arrow,
   .tooltip-arrow::before {
