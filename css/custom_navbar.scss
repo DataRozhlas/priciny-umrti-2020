@@ -86,7 +86,7 @@
 
     &:after {
       content: '';
-      background: url('/assets/chevron-down.svg');
+      background: url('https://data.irozhlas.cz/priciny-umrti-2020/assets/chevron-down.svg');
       display: block;
       width: 16px;
       height: 16px;
@@ -151,7 +151,7 @@
       }
 
       .chapter-mobile-dropdown::after {
-        background: url('/assets/chevron-up.svg');
+        background: url('https://data.irozhlas.cz/priciny-umrti-2020/assets/chevron-up.svg');
       }
     }
   }
