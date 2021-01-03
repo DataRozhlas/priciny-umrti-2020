@@ -207,11 +207,11 @@ Příčiny úmrtí jsou v klasifikaci sdružené do nadřazených kapitol, např
         <span class="mkn-rok-do">1994</span>
       </button>
       <button type="button" data-mkn="mkn-10-i">
-        MKN-10 1. edice
+        MKN-10 1.&nbsp;edice
         <span class="mkn-rok-do">2009</span>
       </button>
       <button type="button" data-mkn="mkn-10-ii">
-        MKN-10 2. edice
+        MKN-10 2.&nbsp;edice
         <span class="mkn-rok-do">2019</span>
       </button>
     </div>
