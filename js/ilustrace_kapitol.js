@@ -91,7 +91,6 @@ const initIlustraceKapitolyScrolly = (containerSelector) => {
     .setup({
       offset: 0.5,
       step: `${containerSelector} .priciny-umrti-ilustrace-kapitoly-steps-container .priciny-umrti-ilustrace-kapitoly-step`,
-      debug: true,
     })
     .onStepEnter(({ element, direction, index }) => {
       frameElements.forEach((el) => el.classList.remove('active'));
