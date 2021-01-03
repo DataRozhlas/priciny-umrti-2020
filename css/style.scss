@@ -1,5 +1,9 @@
 @import "./datarozhlas_scrolly_mixins";
 
+body > .header {
+  display: none;
+}
+
 .priciny-umrti-scrolly {
   @include datarozhlas-scrolly-height(300px);
 

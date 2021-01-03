@@ -1,0 +1,30 @@
+.priciny-umrti-custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 39px;
+  background-color: white;
+  border-bottom: 1px solid black;
+  z-index: 5;
+
+  .custom-navbar-inner {
+    max-width: 1040px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .irozhlas-logo {
+    display: block;
+    width: 156px;
+    height: 100%;
+
+    svg {
+      fill: #d52834;
+    }
+  }
+}
