@@ -830,25 +830,25 @@ Nyní již máte dostatek informací, abyste uměli přečíst, na co Češi um�
 
 <h2 class="priciny-umrti-nadpis-posledni-kapitoly">Covidová poprvé</h2>
 
-„Značná část zemřelých, 64 procent, vykazovala řadu komorbidit, která průběh nemoci komplikovala,“ vysvětloval ministr zdravotnictví Jan Blatný (za ANO) na tiskové konferenci, kterou jsme článek otevírali. Na stejném místě ho i uzavřeme.
+„Značná část zemřelých, 64 procent, vykazovala řadu komorbidit, která průběh nemoci komplikovala,“ vysvětloval ministr zdravotnictví Jan Blatný (za ANO) na tiskové konferenci, kterou jsme článek otvírali. Na stejném místě ho i uzavřeme.
 
-„U této skupiny je vyhodnocení základních příčin smrti velmi obtížné, a proto budou záznamy podrobeny další analýze klinickým expertním týmem a bude provedena kontrola zdravotnické dokumentace,“ řekl Blatný.
+„U této skupiny je vyhodnocení základních příčin smrti velmi obtížné, a proto budou záznamy podrobeny další analýze klinickým expertním týmem a bude provedena kontrola zdravotnické dokumentace,“ dodal ministr.
 
 Patnáctičlenná komise odborníků pro posouzení příčin úmrtí bude v českých dějinách unikát.
 
 „Poprvé v historii se zabýváme úmrtností na některou konkrétní příčinu tak podrobně,“ vysvětluje Šárka Daňková z ÚZIS. „Dříve probíhaly validace, například propojením dvou datových zdrojů, či kontroly listu o prohlídce zemřelého za vybrané příčiny úmrtí, nikdy však v takovém rozsahu jako nyní.“
 
-„Jedním z důvodů je mediální tlak,“ dodává. „Jsme neustále oslovováni, abychom rozlišili úmrtí _na covid_ od úmrtí _s covidem_. Přitom to vůbec není tak snadné, jak se může zdát.“
+A dodává, že jedním z důvodů je mediální tlak. „Jsme neustále oslovováni, abychom rozlišili úmrtí _na covid_ od úmrtí _s covidem_. Přitom to vůbec není tak snadné, jak se může zdát.“
 
 Problematických míst je podle ní několik.
 
-„Pokyny pro vykazování úmrtí za covid uveřejnila WHO až v dubnu 2020, lékaři proto neměli přesné instrukce a postupovali různě,“ pokračuje. „Kromě toho se vyvíjí také onemocnění jako takové a jeho poznání. V prosinci 2020 WHO zavedlo další kódy pro stavy následující po onemocnění covid-19. Pravidla se tak lékařům mění pod rukama.“
+„Pokyny pro vykazování úmrtí za covid uveřejnila WHO až v dubnu 2020, lékaři proto neměli přesné instrukce a postupovali různě,“ přibližuje Daňková pro iROZHLAS.cz. „Kromě toho se vyvíjí také onemocnění jako takové a jeho poznání. V prosinci 2020 WHO zavedla další kódy pro stavy následující po onemocnění covid-19. Pravidla se tak lékařům mění pod rukama.“
 
 „Snažili jsme se reagovat, ne vždy se však požadovaná informace k lékařům dostala včas. Zejména v začátku epidemie, tedy v prvním pololetí 2020, jsme intenzivně sledovali, co se v praxi děje, procházeli jsme listy o prohlídce zemřelého a snažili se je jeden po druhém vyhodnotit. Bohužel, reálné listy nevypadají jako modelové příklady a jejich vyhodnocení není snadné.“
 
-Detailní zkoumání covidových úmrtí vyústilo ve studii, jaké další zdravotní problémy se u zemřelých na covid objevují nejčastěji – tu samou studii, kterou ministr cituje na tiskové konferenci. Jde zatím o nejdůkladnější český pokus přiblížit se rozlišení mezi _s covidem_ a _na covid_.
+Detailní zkoumání covidových úmrtí vyústilo ve studii, jaké další zdravotní problémy se u zemřelých na covid objevují nejčastěji – tu samou studii, kterou ministr citoval na tiskové konferenci. Jde zatím o nejdůkladnější český pokus přiblížit se rozlišení mezi _s covidem_ a _na covid_.
 
-Jenže autorka také upozorňuje, že rozlišení obou kategorií není to hlavní.
+Jenže autorka upozorňuje, že rozlišení obou kategorií není to hlavní.
 
 „Není podstatné, zda budou úmrtí ve výsledku vyhodnocena jako _s covidem_ nebo _na covid_. Důležité je, že vidíme, že k častějším úmrtím dochází a nadúmrtnost to potvrzuje.“
 
@@ -862,11 +862,11 @@ _Nadúmrtnost_ ukazuje počet zemřelých nad dlouhodobým průměrem. Zatímco 
   </figure>
 </wide>
 
-Oním rozdílem můžou být ukryté oběti covidu, ale z větší části jde zřejmě o úmrtí spojená s vyšší sebevražedností, dopady osamocení v sociálních zařízeních, s tím, že se lékaři nemohli naplno věnovat pacientům s jinými diagnózami, a podobně.
+Oním rozdílem můžou být zčásti oběti covidu, které statistikům unikly. Větší část jde ale zřejmě na konto vyšší sebevražednosti, dopadů osamocení v sociálních zařízeních, případně tomu, že se lékaři nemohli naplno věnovat pacientům s jinými diagnózami.
 
-Výsledek pátrání, který ukazuje, že podíl úmrtí _s covidem_ a _na covid_ je dost obtížné určit, vypadá jako neúspěch. Upřímně řečeno, takové finále není úplně překvapivé. Tušili jsme to předem, jen jsme chtěli objevit, kde je háček.
+Výsledek pátrání, který ukazuje, že podíl úmrtí _s covidem_ a _na covid_ je dost obtížné určit, vypadá jako neúspěch. Upřímně řečeno, takové finále není úplně překvapivé. Experti o tom mluvili už dřív – nás zajímalo, kde je háček.
 
-Covid a probuzený zájem o příčiny úmrtí ale umožnil detailní pohled, jak statistika klíčová pro moderní zdravotnictví vzniká, jak ji interpretovat i proč je tak obtížné spolehlivě určit jednu příčinu úmrtí.
+Covid a probuzený zájem o příčiny úmrtí umožnil detailní pohled, jak statistika klíčová pro moderní zdravotnictví vzniká, jak ji interpretovat i proč je tak obtížné spolehlivě určit jednu příčinu úmrtí.
 
 Problematická je ostatně už základní úvaha, že fatální je jen jedna konkrétní diagnóza.
 
@@ -876,7 +876,7 @@ Mimochodem, nejde o novinku.
 
 „Také u nás jsme třídili a v letech 1925 až 1937 publikovali tabulky s kombinovanými příčinami smrti,“ píše demograf Vladimír Srb. „Avšak později pro nákladnost třídění a poměrně malé využití dat bylo od třídění upuštěno.“
 
-Daňková připomíná, že ani sdružené příčiny úmrtí se neobejdou bez přesných dat – a ta ani po sto letech od vzniku systému nejsou v ideálním stavu.
+Daňková připomíná, že ani sdružené příčiny úmrtí se neobejdou bez přesných dat – a ta nejsou ani po sto letech od vzniku systému v ideálním stavu.
 
 Nápad rehabilitovat sdružené příčiny úmrtí by nicméně mohl být elegantní odpovědí na otázku, zda _na covid_, nebo _s covidem_. Obojí.
 
