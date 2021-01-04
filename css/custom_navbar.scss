@@ -14,6 +14,7 @@
   transition: top 200ms ease 0s;
 
   .irozhlas-logo {
+    z-index:100;
     position: absolute;
     left: 87px;
     top: 0;
@@ -80,7 +81,7 @@
 
     margin: 0;
     padding: 0 30px 0 0;
-    
+
     background: none;
     border: none;
 
@@ -133,7 +134,7 @@
           }
         }
       }
-    } 
+    }
 
     .chapter-mobile-dropdown {
       display: block;
