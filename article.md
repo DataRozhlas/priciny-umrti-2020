@@ -597,7 +597,7 @@ Zaostávali hlavně muži. V roce 1990 dosáhl rozdíl v naději dožití obou p
   </figure>
 </wide>
 
-Do devadesátých let Češi „naňahňali“ <a href="https://cs.wikipedia.org/wiki/Druh%C3%BD_demografick%C3%BD_p%C5%99echod" target="_blank">hodnotovou revoluci</a>, která na Západě probíhá od let šedesátých. V zemi tak během několika roků po pádu režimu stoupl věk, kdy žena přivede na svět první dítě, o pět let; první svatba se posunula o sedm let. Polovina manželství v té době končila rozvodem. Poměr dětí a seniorů se <a href="https://www.irozhlas.cz/zpravy-domov/-v-roce-1989-bylo-v-cesku-deti-skoro-dvakrat-vic-nez-senioru-pomer-se-otaci_201411100044_vkourimsky" target="_blank">změnil ve prospěch seniorů</a>. Rychlost i rozsah změn ukazujeme v <a href="https://www.irozhlas.cz/zpravy-domov/kalkulacka-spocitejte-si-kdy-vas-ceka-svatba-dite-rozvod-nebo-umrti_1704241238_sam" target="_blank">interaktivní kalkulačce</a>.
+Do devadesátých let Češi „naňahňali“ <a href="https://cs.wikipedia.org/wiki/Druh%C3%BD_demografick%C3%BD_p%C5%99echod" target="_blank">hodnotovou revoluci</a>, která na Západě probíhá od let šedesátých. V zemi tak během několika roků po pádu režimu stoupl věk, kdy žena přivede na svět první dítě, o pět let; první svatba se posunula o sedm let. Polovina manželství v té době končila rozvodem. Poměr dětí a seniorů se změnil ve prospěch seniorů.
 
 Radikální experiment s hledáním štěstí <em>teď hned</em> se vyčerpal během nultých let, od té doby se demografické ukazatele ustálily na nové hladině.
 
@@ -665,9 +665,9 @@ Přes nové problémy je vývoj naděje dožití i úmrtnosti od sametové revol
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
-      <h3>Favorit → Fabia</h3>
+      <h3>Favorit → Felicia</h3>
       <p>
-        U dopravních nehod přinesl začátek devadesátých let nárůst počtu obětí – až do roku 1994, kdy chatrnou Škodu Favorit začala nahrazovat bezpečnější Fabia. Podle dopravních expertů je skutečně mezi poklesem úmrtnosti na silnicích a novým modelem škodovky souvislost.
+        U dopravních nehod přinesl začátek devadesátých let nárůst počtu obětí – až do roku 1994, kdy chatrnou Škodu Favorit začala nahrazovat bezpečnější Felicia. Podle dopravních expertů je skutečně mezi poklesem úmrtnosti na silnicích a novým modelem škodovky souvislost.
       </p>
     </div>
     <div class="datarozhlas-scrolly-step">
