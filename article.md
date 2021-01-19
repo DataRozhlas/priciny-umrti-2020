@@ -725,7 +725,7 @@ V druhé části listu lékař doplní ještě zdravotní problémy zemřelého,
 
 List pak putuje na dva úřady, které pečují o statistiku příčin úmrtí. Data vznikají na Českém statistickém úřadě (ČSÚ), ale metodiku hlídá Ústav zdravotnických informací a statistiky (ÚZIS). Ten také spravuje registr, kde se listy shromažďují, školí lékaře nebo hlídá, aby se česká metodika shodovala s obsáhlými pravidly WHO.
 
-„Na rozdíl od lékařů už nemáme přístup ke zdravotní dokumentaci, proto jsme závislí na tom, jak kvalitně list o prohlídce zemřelého vyplní,“ vysvětluje pro iROZHLAS.cz Šárka Daňková z ÚZIS, která je garantkou zmíněných činností. „Nerada bych, aby to vyznělo špatně, ale právě chybně vyplněný list je častý problém.“
+„Na rozdíl od lékařů už nemáme přístup ke zdravotní dokumentaci, proto jsme závislí na tom, jak kvalitně list o prohlídce zemřelého vyplní,“ vysvětluje pro iROZHLAS.cz Šárka Daňková z ÚZIS, která je garantkou zmíněných činností. „Nerada bych, aby to vyznělo špatně, ale právě chybně vyplněný list je častý problém, který nám komplikuje situaci při vyhodnocení základní příčiny smrti.“
 
 „Některé triviální příčiny, jako je například padání vlasů, by neměly vést ke smrti,“ upozorňuje <a href="http://www.demografie.info/?cz_detail_clanku&artclID=840" target="_blank">na webu, věnovanému demografii</a>, na co u lékařů naráží.
 
@@ -746,7 +746,7 @@ Právě tady do procesu zasáhla automatizace asi nejvýrazněji: od roku 2011 m
 
 Jenže ne všechny. Se zbylými 10 procenty, tedy asi 10 tisíci listů ročně, si algoritmus kvůli chybám neví rady. U nich statistici musejí do procesu výběru příčiny smrti zasáhnout manuálně: při hledání správného řetězce pomáhají IRIS najít někde na listu uvedenou příčinu, například si ji „vypůjčit“ z druhé části listu o prohlídce zemřelého.
 
-„Někdy se ozveme lékaři, který list vyplňoval. Ale to jen ve vzácných případech, kdy je jako příčina úmrtí uvedená cholera, zubní kaz nebo podobná málo četná či triviální diagnóza,“ popisuje Daňková.
+„V některých případech kontaktujeme lékaře, který list vyplňoval, zejména v případech, kdy je jako příčina úmrtí uvedená cholera, zubní kaz nebo podobná málo četná či triviální diagnóza,“ popisuje Daňková. „Dále jej kontaktujeme v případech, kdy je možné, že by dodatečná vyšetření přinesla podrobnější informace, které nejsou na listu zohledněny – například upřesnění malignity novotvaru.“
 
 Když riskneme rychlý pohled do střev algoritmu, narazíme na signifikantní záhyb – tabulky, které určují, jak na sebe diagnózy mohou navazovat. Je _pád ze žebříku_ a následná _zlomenina stehenní kosti_ platná posloupnost? Pravděpodobně ano. Zatímco _pád ze žebříku_ a následný _pásový opar_ není.
 
